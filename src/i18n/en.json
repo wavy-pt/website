@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "cases": "Cases",
+    "about": "About",
+    "contact": "Contact",
+    "diagnosis": "Book a chat"
+  },
+  "footer": {
+    "tagline": "Digital Direction & Marketing — West Zone & Greater Lisbon.",
+    "rights": "© 2026 Wavy. All rights reserved.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact"
+  },
+  "hero": {
+    "tagline": "WESTERN ZONE & GREATER LISBON",
+    "headline": "Digital direction for businesses that have already proven their worth in the real world.",
+    "subtitle": "We do not decorate the shop window while the roof is falling in. We rebuild the digital foundation of established businesses in the Western Zone and Greater Lisbon so digital stops being a headache and becomes a real sales channel.",
+    "cta1": "Find where I am now",
+    "cta1Micro": "3 minutes · no commitment · instant result",
+    "cta2": "Book a chat",
+    "scroll": "CONTINUE",
+    "badge1": "Website Development",
+    "badge2": "Social Media Management",
+    "badge3": "Local SEO"
+  },
+  "forWho": {
+    "label": "recognise yourself?",
+    "title": "You have a real business. Your digital presence still does not reflect that.",
+    "subtitle": "We work with established businesses that have invoiced, grown, and have loyal customers but feel that digital still does not match the quality of what they do. If something here sounds familiar, you are in the right place.",
+    "footer": "We work with different sectors, united by the same profile: local businesses with substance looking for a digital strategy worthy of their history.",
+    "cards": [
+      {
+        "number": "01",
+        "pill": "I FEEL LIKE...",
+        "title": "My digital presence does not represent me.",
+        "desc": "You feel your physical space, product and service are excellent, but anyone who arrives at your website or social media finds an amateur, outdated or cold image.",
+        "quote": "\"It looks like someone else.\""
+      },
+      {
+        "number": "02",
+        "pill": "I FEEL LIKE...",
+        "title": "I am doing a lot without seeing results",
+        "desc": "You post frequently, try to follow every trend, but the phone does not ring and sales do not increase. You feel you are spending energy without a clear strategy.",
+        "quote": "\"So much work, so little impact.\""
+      },
+      {
+        "number": "03",
+        "pill": "I ALREADY TRIED...",
+        "title": "I invested in digital and only got disappointments.",
+        "desc": "You paid someone to manage Instagram, built a website a few years ago, maybe even tried ads. The results never came. Today you feel resistance to investing again and that is legitimate. But you know stopping is not an option either.",
+        "quote": "\"I do not want to spend more without understanding why.\""
+      }
+    ]
+  },
+  "difference": {
+    "label": "what makes us different",
+    "title": "We're not an agency. We're not a freelancer.",
+    "subtitle": "We occupy a specific space in the market: the meeting point between rigorous digital strategy and human sensitivity.",
+    "headers": ["Dimension", "Traditional agencies", "Generic freelancers", "Wavy"],
+    "rows": [
+      { "dim": "Approach", "agency": "Templates and scale", "freelance": "One-off execution", "wavy": "Identity → Strategy → Execution" },
+      { "dim": "Focus", "agency": "Metrics and volume", "freelance": "Low price", "wavy": "Coherence, soul and sustainability" },
+      { "dim": "Relationship", "agency": "One account among many", "freelance": "Transactional", "wavy": "Long-term partnership" },
+      { "dim": "Differentiator", "agency": "Structure and scale", "freelance": "Accessibility", "wavy": "Authenticity and local proximity" }
+    ]
+  },
+  "services": {
+    "label": "WHAT WE DO",
+    "title": "A complete digital system, built to fit your business.",
+    "subtitle": "First we assess. Then we rebuild. Finally, we direct. You enter at the phase that makes most sense for your current reality, but the natural path is always: diagnosis → build → direction.",
+    "scope": ["Strategy", "Website", "Google My Business", "Social Media"],
+    "start": {
+      "tag": "WHERE TO START",
+      "scriptName": "Strategic Diagnosis",
+      "name": "The X-Ray",
+      "desc": "Before any proposal, we analyse what is invisible. In 5 business days you receive a complete map of your digital presence, the 5 priority problems and a concrete action plan for your business. We talk for 30 minutes to explain everything.",
+      "price": "350€",
+      "priceLabel": "FROM",
+      "cta": "Learn more"
+    },
+    "boost": {
+      "tag": "THE NEXT STEP",
+      "scriptName": "Website and Strategic Identity",
+      "name": "The Build",
+      "desc": "We build the digital foundations your business requires. Website, online store, visual identity and strategy, all planned and executed by the same team, from start to finish.",
+      "price": "1,500€",
+      "priceLabel": "FROM",
+      "priceNote": "Each project is quoted after the X-Ray.",
+      "cta": "See what it includes"
+    },
+    "flow": {
+      "tag": "FROM HERE ONWARDS",
+      "scriptName": "Social Media Management and Local SEO",
+      "name": "Direction",
+      "desc": "For brands with history that want to grow without losing control. We handle social media management, Google and maps optimisation (local SEO), content strategy and clear monthly reports.",
+      "price": "750€",
+      "priceLabel": "FROM",
+      "pricePeriod": "/month",
+      "cta": "Meet the plan"
+    },
+    "planLine": "Do not know where to start? The X-Ray is always the first step and the value is deducted from the next project."
+  },
+  "cases": {
+    "label": "real results",
+    "title": "What changed. For those it matters to.",
+    "subtitle": "Every Wavy client is a case study. We do not publish generic results, we document real transformations, with context, numbers and testimony from the person who lived the process.",
+    "testimonials": [
+      {
+        "quote": "I found in Mariana the missing piece for my page and my personal project to develop. Mariana is tireless, goes into the details, shares her opinion and adjusts whatever is necessary. The details make the difference and Mariana makes all the difference to me, thank you for having a project that helps make things possible.",
+        "author": "Vera Barata",
+        "role": "Floral Decorator"
+      },
+      {
+        "quote": "I handed over my company's digital presence to Wavy — social media, website and communication — and I can only say: extraordinary. Maximum standards, outstanding professionalism and a genuine care for every detail. Wavy is not just a company, it is the partner any business needs to grow digitally.",
+        "author": "João Marques",
+        "role": "Tech Company Founder"
+      },
+      {
+        "quote": "The work plan Mariana created was incredible. From the very first moment, she showed an impressive ability to understand my business. She managed to translate ideas I had not yet structured, bringing clarity, strategy and direction to the project. I felt truly supported at every step.",
+        "author": "Ana Lopes",
+        "role": "Organic Products Brand"
+      }
+    ],
+    "stat1": "> 175k",
+    "stat1Label": "organic views generated for the brand",
+    "stat2": "+191%",
+    "stat2Label": "increase in real interactions with published content for one client",
+    "ctaTitle": "Your story could be next.",
+    "ctaSubtitle": "Start with the X-Ray. In 5 days you know exactly where your digital business stands and what to do next.",
+    "ctaButton": "Do the X-Ray"
+  },
+  "faq": {
+    "label": "frequently asked questions",
+    "title": "Still have questions?",
+    "items": [
+      {
+        "q": "Do you work outside the Western Zone or Greater Lisbon?",
+        "a": "Yes, Wavy works with businesses across the country through digital meetings and support. However, our focus for physical proximity and in-person visits is concentrated in the Western Zone and Greater Lisbon. Regardless of your location, if your business has substance and you want to structure your online presence, we have a system prepared to guide you remotely with full clarity."
+      },
+      {
+        "q": "What is the X-Ray and why do I have to start there?",
+        "a": "The X-Ray is the initial strategic diagnosis to assess the digital health of your business. We do not move to website creation or social media management without first analysing what is invisible. In 5 business days, we discover the gaps in your online presence and deliver a plan with the 5 priorities you should fix. Best of all? If you decide to do the \"Build\" with us, the X-Ray value is 100% deducted from your project."
+      },
+      {
+        "q": "What are the delivery timelines for your services?",
+        "a": "The diagnosis (X-Ray) is delivered in 5 business days, while website creation projects take, on average, between 4 to 6 weeks. The exact duration of a transformation project depends on the complexity of your business model (whether it requires an online store, specific integrations or visual identity production). We define a clear timeline from the start so you know exactly when your digital foundation will be ready."
+      },
+      {
+        "q": "Do your services have mandatory loyalty periods?",
+        "a": "We do not apply long loyalty periods, but we work with minimum stay periods to ensure real results: 3 months on the basic plan and 6 months on the advanced plan. Digital marketing and Local SEO require maturation time for algorithms and audiences to react. This period ensures your strategy gets off paper and starts generating revenue. After this initial traction cycle, you are free to renew month by month, with no strings attached, staying with us only for the value we deliver to your business."
+      },
+      {
+        "q": "How does the communication and reporting process work?",
+        "a": "The process is done without technical jargon, with monthly alignment meetings and reports where metrics make sense for your business (sales, contacts and real growth). We do not send you automatic and confusing documents. You have direct access to the team executing your strategy and all decisions are explained simply, honestly and down-to-earth."
+      }
+    ]
+  },
+  "finalCta": {
+    "label": "a final word",
+    "greeting": "Hello. I'm Mariana, founder of Wavy.",
+    "paragraph1": "If you've read this far, something I wrote resonated with you. Maybe you recognise your own business in these challenges. Maybe you've thought about change several times and still haven't found the right partner.",
+    "paragraph2": "Whatever your path, I'd like to meet you. No pressure, no forced proposal, no sales pitch. Just an honest conversation about your business.",
+    "signature": "— Mariana Antunes",
+    "signatureRole": "Founder · Wavy",
+    "primaryCta": "Book 15 minutes with me",
+    "secondaryCta": "Take the quick test",
+    "secondaryNote": "or if you're still exploring:",
+    "contactPrompt": "Prefer to write?",
+    "contactEmail": "geral@wavy.pt",
+    "socialPrompt": "You'll also find me at"
+  }
+}

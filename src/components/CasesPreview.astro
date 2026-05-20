@@ -1,0 +1,196 @@
+---
+import { t, getLocalizedPath } from '../i18n';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+const testimonials = i.cases.testimonials;
+---
+
+<section class="bg-offwhite py-10 md:py-12">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="scroll-reveal">
+      <!-- Header -->
+      <div class="mb-8 md:mb-10">
+        <p class="font-sans text-xs uppercase tracking-widest text-teal mb-3">{i.cases.label}</p>
+        <div class="flex flex-col gap-4">
+          <h2 class="font-serif text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15]">
+            {i.cases.title}
+          </h2>
+          <p class="font-sans text-base text-muted leading-relaxed max-w-xl">
+            {i.cases.subtitle}
+          </p>
+        </div>
+      </div>
+
+      <!-- Bento grid -->
+      <div class="bento-grid grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <!-- Quote card - left, teal -->
+        <div class="bento-card relative lg:col-span-4 bg-teal rounded-[24px] p-6 md:p-8 flex flex-col min-h-[260px]">
+          <div id="testimonial-container" class="relative flex-1">
+            {testimonials.map((item, idx) => (
+              <div
+                class:list={[
+                  'testimonial-slide absolute inset-0 flex flex-col justify-between transition-all duration-700 ease-in-out',
+                  idx === 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none',
+                ]}
+                data-index={idx}
+              >
+                <div>
+                  <div class="flex gap-1 mb-6">
+                    {Array.from({ length: 5 }).map(() => (
+                      <i class="ri-star-fill text-cream text-sm"></i>
+                    ))}
+                  </div>
+                  <blockquote class="font-sans text-lg md:text-xl text-cream leading-relaxed">
+                    &ldquo;{item.quote}&rdquo;
+                  </blockquote>
+                </div>
+                <div class="mt-8 pt-6 border-t border-cream/15">
+                  <p class="font-sans text-sm font-medium text-cream">{item.author}</p>
+                  <p class="font-sans text-xs text-cream/50 mt-1">{item.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Dots -->
+          <div class="flex justify-center gap-2 mt-6 shrink-0">
+            {testimonials.map((_, idx) => (
+              <button
+                class:list={[
+                  'testimonial-dot w-2 h-2 rounded-full transition-all duration-300',
+                  idx === 0 ? 'bg-cream w-5' : 'bg-cream/40 hover:bg-cream/60',
+                ]}
+                data-dot={idx}
+              ></button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="lg:col-span-8 flex flex-col gap-5">
+          <!-- Image card -->
+          <div class="bento-card relative rounded-[24px] overflow-hidden min-h-[120px]">
+            <img
+              src="https://static.readdy.ai/image/5009dd3650e45e305981c297303673fb/9dd033317acc8a271c0ec4cbf8a36527.png"
+              alt="Bastidores Wavy"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+            <div class="absolute bottom-5 left-5">
+              <span class="inline-flex font-sans text-xs font-medium bg-white/90 backdrop-blur-sm text-teal-dark px-4 py-2 rounded-full border border-teal/10">
+                Bastidores Wavy
+              </span>
+            </div>
+          </div>
+
+          <!-- Stats row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 flex-1">
+            <div class="bento-card relative bg-cream rounded-[24px] p-6 md:p-8 flex flex-col justify-center">
+              <div class="flex items-baseline gap-1 mb-2">
+                <span class="font-serif text-3xl md:text-4xl font-medium text-teal-dark">{i.cases.stat1}</span>
+              </div>
+              <p class="font-sans text-sm text-muted">{i.cases.stat1Label}</p>
+            </div>
+            <div class="bento-card relative bg-teal-dark rounded-[24px] p-6 md:p-8 flex flex-col justify-center">
+              <div class="flex items-baseline gap-1 mb-2">
+                <span class="font-serif text-3xl md:text-4xl font-medium text-cream">{i.cases.stat2}</span>
+              </div>
+              <p class="font-sans text-sm text-cream/80">{i.cases.stat2Label}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA card - full width -->
+        <div class="bento-card relative lg:col-span-12 bg-cream rounded-[24px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h3 class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-2">
+              {i.cases.ctaTitle}
+            </h3>
+            <p class="font-sans text-sm text-muted">{i.cases.ctaSubtitle}</p>
+          </div>
+          <a
+            href={getLocalizedPath('/casos', lang)}
+            class="inline-flex items-center gap-2 font-sans text-sm font-medium text-teal-dark hover:text-teal transition-colors whitespace-nowrap group"
+          >
+            {i.cases.ctaButton}
+            <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bento-grid .bento-card {
+    transition:
+      transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 500ms ease,
+      box-shadow 500ms ease,
+      filter 500ms ease;
+    transform-origin: center;
+    will-change: transform, opacity;
+  }
+
+  .bento-grid:hover .bento-card:not(:hover) {
+    transform: scale(0.96);
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+
+  .bento-card:hover {
+    transform: scale(1.04);
+    z-index: 10;
+    box-shadow: 0 30px 60px -15px rgba(28, 60, 60, 0.35);
+  }
+</style>
+
+<script>
+  let activeIndex = 0;
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  const total = slides.length;
+  let paused = false;
+
+  function setActive(idx: number) {
+    slides.forEach((s, i) => {
+      if (i === idx) {
+        s.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        s.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        s.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        s.classList.remove('opacity-100', 'translate-y-0');
+      }
+    });
+    dots.forEach((d, i) => {
+      if (i === idx) {
+        d.classList.add('bg-cream', 'w-5');
+        d.classList.remove('bg-cream/40');
+      } else {
+        d.classList.remove('bg-cream', 'w-5');
+        d.classList.add('bg-cream/40');
+      }
+    });
+    activeIndex = idx;
+  }
+
+  dots.forEach((d, i) => {
+    d.addEventListener('click', () => setActive(i));
+  });
+
+  const container = document.getElementById('testimonial-container');
+  container?.addEventListener('mouseenter', () => (paused = true));
+  container?.addEventListener('mouseleave', () => (paused = false));
+
+  setInterval(() => {
+    if (!paused && total > 1) {
+      setActive((activeIndex + 1) % total);
+    }
+  }, 4000);
+</script>

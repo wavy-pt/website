@@ -1,0 +1,148 @@
+---
+import { t, getLocalizedPath } from '../i18n';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+---
+
+<section class="bg-offwhite py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <!-- Section label -->
+    <div class="scroll-reveal text-center mb-10 md:mb-14">
+      <p class="font-serif italic text-teal text-base md:text-lg mb-3">
+        {i.finalCta.label}
+      </p>
+      <h2 class="font-serif text-4xl md:text-5xl font-medium text-teal-dark leading-tight max-w-2xl mx-auto">
+        {lang === 'en' ? "Two paths. One conversation." : "Dois caminhos. Uma conversa."}
+      </h2>
+    </div>
+
+    <!-- Split block -->
+    <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-2 rounded-[32px] overflow-hidden shadow-xl">
+      <!-- LEFT side — cream (secondary path) -->
+      <div class="bg-cream p-10 md:p-14 flex flex-col relative overflow-hidden min-h-[420px]">
+        <!-- Decorative icon -->
+        <div class="absolute top-8 right-8 md:top-10 md:right-10">
+          <div class="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center">
+            <i class="ri-compass-discover-line text-teal text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Decorative shape -->
+        <span class="absolute bottom-6 right-8 font-serif text-[180px] md:text-[200px] font-medium text-teal/15 leading-none select-none pointer-events-none">
+          ?
+        </span>
+
+        <div class="relative flex flex-col flex-1 max-w-md">
+          <p class="font-sans text-[11px] uppercase tracking-widest text-teal-dark/60 mb-4">
+            {lang === 'en' ? 'Still exploring' : 'Ainda a explorar'}
+          </p>
+          <h3 class="font-serif text-3xl md:text-4xl font-medium text-teal-dark mb-5 leading-tight">
+            {lang === 'en' ? 'Find out where you stand.' : 'Descobre onde estás.'}
+          </h3>
+          <p class="font-sans text-base text-teal-dark/70 leading-relaxed mb-8">
+            {lang === 'en'
+              ? "5 quick questions. In less than 2 minutes you'll know if your digital presence needs a real intervention or just small adjustments."
+              : 'Em menos de 2 minutos, com 5 perguntas, sabes se a tua presença digital precisa de uma intervenção real ou apenas de pequenos ajustes.'}
+          </p>
+
+          <div class="mt-auto">
+            <a
+              href={getLocalizedPath('/contacto', lang)}
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal-dark text-cream font-sans font-medium text-sm hover:bg-teal transition-all duration-300 group"
+            >
+              {i.finalCta.secondaryCta}
+              <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
+            </a>
+            <p class="font-serif italic text-xs text-teal-dark/50 mt-4">
+              {lang === 'en' ? '2 minutes · no commitment' : '2 minutos · sem compromisso'}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT side — teal (primary path) -->
+      <div class="bg-teal p-10 md:p-14 flex flex-col relative overflow-hidden min-h-[420px]">
+        <!-- Decorative icon -->
+        <div class="absolute top-8 right-8 md:top-10 md:right-10">
+          <div class="w-14 h-14 rounded-full bg-cream/15 flex items-center justify-center">
+            <i class="ri-calendar-check-line text-cream text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Decorative big mark -->
+        <span class="absolute bottom-10 right-10 font-sans text-[140px] md:text-[160px] font-light text-cream/30 leading-none select-none pointer-events-none">
+          →
+        </span>
+
+        <div class="relative flex flex-col flex-1 max-w-md">
+          <p class="font-sans text-[11px] uppercase tracking-widest text-cream/60 mb-4">
+            {lang === 'en' ? "Ready to talk" : 'Pronto para conversar'}
+          </p>
+          <h3 class="font-serif text-3xl md:text-4xl font-medium text-cream mb-5 leading-tight">
+            {lang === 'en' ? "Let's have a real conversation." : 'Vamos ter uma conversa a sério.'}
+          </h3>
+          <p class="font-sans text-base text-cream/75 leading-relaxed mb-8">
+            {lang === 'en'
+              ? "15 minutes by video or phone. No proposal, no pressure. We listen to where you are and validate together if Wavy is the right partner for your business."
+              : '15 minutos por vídeo ou telefone. Sem proposta, sem pressão. Ouvimos onde estás e validamos juntos se a Wavy é o parceiro certo para o teu negócio.'}
+          </p>
+
+          <div class="mt-auto">
+            <a
+              href={getLocalizedPath('/contacto', lang)}
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-teal-dark font-sans font-medium text-sm hover:bg-offwhite transition-all duration-300 group"
+            >
+              <i class="ri-calendar-check-line"></i>
+              {lang === 'en' ? 'Book conversation (15 min)' : 'Agendar conversa (15 min)'}
+              <i class="ri-arrow-right-up-line transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+            </a>
+            <p class="font-serif italic text-xs text-cream/50 mt-4">
+              {lang === 'en' ? '15 minutes · no commitment' : '15 minutos · sem compromisso'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact strip -->
+    <div class="scroll-reveal mt-10 md:mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 sm:gap-8 text-sm">
+      <div class="flex items-center gap-2">
+        <i class="ri-mail-line text-teal"></i>
+        <span class="font-sans text-muted">{i.finalCta.contactPrompt}</span>
+        <a
+          href={`mailto:${i.finalCta.contactEmail}`}
+          class="font-sans font-medium text-teal-dark hover:text-teal transition-colors"
+        >
+          {i.finalCta.contactEmail}
+        </a>
+      </div>
+      <span class="hidden sm:inline text-teal-dark/30">·</span>
+      <div class="flex items-center gap-3">
+        <a
+          href="https://instagram.com/wavy.digital.pt"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center text-teal hover:bg-teal hover:text-cream transition-all duration-300"
+          aria-label="Instagram"
+        >
+          <i class="ri-instagram-line text-base"></i>
+        </a>
+        <a
+          href="https://facebook.com/wavy.digital.pt"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center text-teal hover:bg-teal hover:text-cream transition-all duration-300"
+          aria-label="Facebook"
+        >
+          <i class="ri-facebook-line text-base"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

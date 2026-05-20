@@ -1,0 +1,92 @@
+---
+import { t } from '../i18n';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+const faqs = i.faq.items;
+---
+
+<section class="bg-offwhite py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="scroll-reveal bg-cream rounded-[32px] p-8 md:p-12 lg:p-16 relative overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 relative">
+        <!-- Header (left) -->
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-28">
+            <p class="font-sans text-xs uppercase tracking-widest text-teal mb-4">
+              {i.faq.label}
+            </p>
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-teal-dark leading-[1.05] mb-6">
+              {i.faq.title}
+            </h2>
+            <p class="font-serif italic text-base md:text-lg text-muted leading-relaxed max-w-sm">
+              {lang === 'en'
+                ? 'A few honest answers to what comes up most often.'
+                : 'Algumas respostas honestas ao que costuma surgir mais vezes.'}
+            </p>
+          </div>
+        </div>
+
+        <!-- Questions (right) -->
+        <div class="lg:col-span-7">
+          <div class="border-t border-teal-dark/10">
+            {faqs.map((faq) => (
+              <div class="faq-item border-b border-teal-dark/10">
+                <button
+                  type="button"
+                  class="faq-toggle group w-full flex items-center justify-between py-5 md:py-6 gap-6 text-left cursor-pointer"
+                >
+                  <span class="font-serif text-base md:text-lg lg:text-xl font-medium text-teal-dark leading-snug">
+                    {faq.q}
+                  </span>
+                  <span class="faq-icon-wrapper w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-teal/10 text-teal shrink-0 transition-all duration-300 group-hover:bg-teal group-hover:text-cream">
+                    <i class="faq-icon ri-add-line text-lg transition-transform duration-300"></i>
+                  </span>
+                </button>
+                <div class="faq-content overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                  <p class="font-sans text-sm md:text-base text-muted leading-relaxed pb-6 pr-4 md:pr-12">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const content = item?.querySelector('.faq-content') as HTMLElement;
+      const icon = item?.querySelector('.faq-icon');
+      const iconWrapper = item?.querySelector('.faq-icon-wrapper');
+      const isOpen = content?.style.maxHeight && content.style.maxHeight !== '0px';
+
+      document.querySelectorAll('.faq-item').forEach((other) => {
+        const otherContent = other.querySelector('.faq-content') as HTMLElement;
+        const otherIcon = other.querySelector('.faq-icon');
+        const otherIconWrapper = other.querySelector('.faq-icon-wrapper');
+        if (otherContent) otherContent.style.maxHeight = '0px';
+        otherIcon?.classList.remove('rotate-45');
+        otherIconWrapper?.classList.remove('bg-teal', 'text-cream');
+        otherIconWrapper?.classList.add('bg-teal/10', 'text-teal');
+      });
+
+      if (!isOpen && content) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon?.classList.add('rotate-45');
+        iconWrapper?.classList.remove('bg-teal/10');
+        iconWrapper?.classList.add('bg-teal', 'text-cream');
+      }
+    });
+  });
+</script>

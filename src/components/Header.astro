@@ -1,0 +1,144 @@
+---
+import { t, getLocalizedPath } from '../i18n';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+const otherLang = lang === 'pt' ? 'en' : 'pt';
+
+const navLinks = [
+  { label: i.nav.home, to: getLocalizedPath('/', lang) },
+  { label: i.nav.services, to: getLocalizedPath('/servicos', lang) },
+  { label: i.nav.about, to: getLocalizedPath('/sobre', lang) },
+  { label: i.nav.cases, to: getLocalizedPath('/casos', lang) },
+  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang) },
+];
+
+const currentPath = Astro.url.pathname;
+const currentPathClean = currentPath.replace(/^\/(pt|en)/, '') || '/';
+const switchLangPath = getLocalizedPath(currentPathClean, otherLang);
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 bg-offwhite transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-[72px]">
+    <a href={getLocalizedPath('/', lang)} class="flex items-center">
+      <img src="/logo-wavy-tight.svg" alt="Wavy" class="h-9 md:h-10 w-auto" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <a
+          href={link.to}
+          class:list={[
+            'font-sans text-sm transition-colors duration-200 whitespace-nowrap',
+            currentPath === link.to || currentPathClean === link.to
+              ? 'text-teal-dark font-medium'
+              : 'text-teal-dark/70 hover:text-teal-dark',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={getLocalizedPath('/contacto', lang)}
+        class="inline-flex items-center gap-2 font-sans text-sm font-medium bg-teal text-white px-5 py-2.5 rounded-full hover:bg-teal-dark transition-colors duration-200 whitespace-nowrap animate-pulse-ring"
+      >
+        <i class="ri-calendar-check-line text-base"></i>
+        {i.nav.diagnosis}
+      </a>
+      <a
+        href={switchLangPath}
+        class="font-sans text-sm text-teal-dark/50 hover:text-teal-dark transition-colors whitespace-nowrap ml-2"
+      >
+        <span class:list={[lang === 'pt' ? 'text-teal-dark font-medium' : '']}>PT</span>
+        <span class="mx-1.5 text-teal-dark/20">|</span>
+        <span class:list={[lang === 'en' ? 'text-teal-dark font-medium' : '']}>EN</span>
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="mobile-toggle"
+      class="md:hidden w-10 h-10 flex items-center justify-center text-teal-dark"
+      aria-label="Menu"
+    >
+      <i id="menu-icon" class="ri-menu-3-line text-xl"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-40 bg-offwhite flex flex-col items-center justify-center transition-all duration-300 md:hidden opacity-0 pointer-events-none"
+>
+  <nav class="flex flex-col items-center gap-8">
+    <a href={getLocalizedPath('/', lang)} class="mb-4">
+      <img src="/logo-wavy-tight.svg" alt="Wavy" class="h-12 w-auto" />
+    </a>
+    {navLinks.map((link) => (
+      <a
+        href={link.to}
+        class:list={[
+          'font-serif text-2xl',
+          currentPath === link.to || currentPathClean === link.to
+            ? 'text-teal'
+            : 'text-teal-dark hover:text-teal',
+        ]}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a
+      href={getLocalizedPath('/contacto', lang)}
+      class="font-sans text-lg bg-teal text-white px-6 py-3 rounded-full"
+    >
+      {i.nav.diagnosis}
+    </a>
+    <a
+      href={switchLangPath}
+      class="font-sans text-base text-teal-dark/50 hover:text-teal-dark transition-colors mt-4"
+    >
+      {lang === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+    </a>
+  </nav>
+</div>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const icon = document.getElementById('menu-icon');
+  let open = false;
+
+  toggle?.addEventListener('click', () => {
+    open = !open;
+    if (open) {
+      menu?.classList.remove('opacity-0', 'pointer-events-none');
+      menu?.classList.add('opacity-100', 'pointer-events-auto');
+      icon?.classList.remove('ri-menu-3-line');
+      icon?.classList.add('ri-close-line');
+    } else {
+      menu?.classList.add('opacity-0', 'pointer-events-none');
+      menu?.classList.remove('opacity-100', 'pointer-events-auto');
+      icon?.classList.add('ri-menu-3-line');
+      icon?.classList.remove('ri-close-line');
+    }
+  });
+
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('bg-offwhite/95', 'backdrop-blur-sm');
+    } else {
+      header?.classList.remove('bg-offwhite/95', 'backdrop-blur-sm');
+    }
+  });
+</script>
