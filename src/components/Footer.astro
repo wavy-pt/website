@@ -1,6 +1,7 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
+import { isProd } from '../lib/env';
 
 interface Props {
   lang: Lang;
@@ -9,13 +10,15 @@ interface Props {
 const { lang } = Astro.props;
 const i = t(lang);
 
-const navLinks = [
-  { label: i.nav.home, to: getLocalizedPath('/', lang) },
-  { label: i.nav.services, to: getLocalizedPath('/servicos', lang) },
-  { label: i.nav.about, to: getLocalizedPath('/sobre', lang) },
-  { label: i.nav.cases, to: getLocalizedPath('/casos', lang) },
-  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang) },
+const allNavLinks = [
+  { label: i.nav.home, to: getLocalizedPath('/', lang), wip: false },
+  { label: i.nav.services, to: getLocalizedPath('/servicos', lang), wip: true },
+  { label: i.nav.about, to: getLocalizedPath('/sobre', lang), wip: true },
+  { label: i.nav.cases, to: getLocalizedPath('/casos', lang), wip: true },
+  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang), wip: true },
 ];
+
+const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
 ---
 
 <footer class="bg-teal text-cream">

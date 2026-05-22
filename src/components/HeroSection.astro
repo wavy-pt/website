@@ -1,6 +1,7 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
+import { contactHref } from '../lib/env';
 
 interface Props {
   lang: Lang;
@@ -8,6 +9,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang);
+const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 ---
 
 <section class="relative bg-offwhite pt-16 md:pt-[72px] min-h-screen flex flex-col">
@@ -27,13 +29,13 @@ const i = t(lang);
         </p>
         <div class="flex flex-col sm:flex-row gap-4 items-start">
           <a
-            href={getLocalizedPath('/contacto', lang)}
+            href={ctaHref}
             class="inline-flex items-center justify-center gap-2 font-sans font-medium text-base px-9 py-4 rounded-full bg-teal text-white hover:bg-teal-dark transition-all duration-300 whitespace-nowrap"
           >
             {i.hero.cta2}
           </a>
           <a
-            href={getLocalizedPath('/contacto', lang)}
+            href={ctaHref}
             class="inline-flex items-center justify-center gap-2 font-sans font-medium text-base px-9 py-4 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300 whitespace-nowrap"
           >
             {i.hero.cta1}

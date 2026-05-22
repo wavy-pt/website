@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WipPlaceholder from '../../components/WipPlaceholder.astro';
+import { isProd } from '../../lib/env';
+
+if (isProd) {
+  return Astro.redirect('/en', 308);
+}
+---
+
+<Layout title="Services · Wavy" description="">
+  <WipPlaceholder lang="en" title="Services" />
+</Layout>

@@ -1,6 +1,7 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
+import { isProd, contactHref } from '../lib/env';
 
 interface Props {
   lang: Lang;
@@ -10,13 +11,17 @@ const { lang } = Astro.props;
 const i = t(lang);
 const otherLang = lang === 'pt' ? 'en' : 'pt';
 
-const navLinks = [
-  { label: i.nav.home, to: getLocalizedPath('/', lang) },
-  { label: i.nav.services, to: getLocalizedPath('/servicos', lang) },
-  { label: i.nav.about, to: getLocalizedPath('/sobre', lang) },
-  { label: i.nav.cases, to: getLocalizedPath('/casos', lang) },
-  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang) },
+// Full nav (dev). In production we collapse to just Home — the rest are WIP.
+const allNavLinks = [
+  { label: i.nav.home, to: getLocalizedPath('/', lang), wip: false },
+  { label: i.nav.services, to: getLocalizedPath('/servicos', lang), wip: true },
+  { label: i.nav.about, to: getLocalizedPath('/sobre', lang), wip: true },
+  { label: i.nav.cases, to: getLocalizedPath('/casos', lang), wip: true },
+  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang), wip: true },
 ];
+
+const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
+const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 
 const currentPath = Astro.url.pathname;
 const currentPathClean = currentPath.replace(/^\/(pt|en)/, '') || '/';
@@ -48,7 +53,7 @@ const switchLangPath = getLocalizedPath(currentPathClean, otherLang);
         </a>
       ))}
       <a
-        href={getLocalizedPath('/contacto', lang)}
+        href={ctaHref}
         class="inline-flex items-center gap-2 font-sans text-sm font-medium bg-teal text-white px-5 py-2.5 rounded-full hover:bg-teal-dark transition-colors duration-200 whitespace-nowrap animate-pulse-ring"
       >
         <i class="ri-calendar-check-line text-base"></i>
@@ -98,7 +103,7 @@ const switchLangPath = getLocalizedPath(currentPathClean, otherLang);
       </a>
     ))}
     <a
-      href={getLocalizedPath('/contacto', lang)}
+      href={ctaHref}
       class="font-sans text-lg bg-teal text-white px-6 py-3 rounded-full"
     >
       {i.nav.diagnosis}

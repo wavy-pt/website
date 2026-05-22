@@ -1,6 +1,7 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
+import { contactHref } from '../lib/env';
 
 interface Props {
   lang: Lang;
@@ -8,6 +9,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang);
+const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 ---
 
 <section class="bg-offwhite py-16 md:py-24">
@@ -53,7 +55,7 @@ const i = t(lang);
 
           <div class="mt-auto">
             <a
-              href={getLocalizedPath('/contacto', lang)}
+              href={ctaHref}
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal-dark text-cream font-sans font-medium text-sm hover:bg-teal transition-all duration-300 group"
             >
               {i.finalCta.secondaryCta}
@@ -95,7 +97,7 @@ const i = t(lang);
 
           <div class="mt-auto">
             <a
-              href={getLocalizedPath('/contacto', lang)}
+              href={ctaHref}
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-teal-dark font-sans font-medium text-sm hover:bg-offwhite transition-all duration-300 group"
             >
               <i class="ri-calendar-check-line"></i>

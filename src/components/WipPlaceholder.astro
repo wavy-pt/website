@@ -1,0 +1,35 @@
+---
+import type { Lang } from '../i18n';
+
+interface Props {
+  title: string;
+  lang: Lang;
+}
+
+const { title, lang } = Astro.props;
+const homePath = lang === 'en' ? '/en' : '/';
+const backLabel = lang === 'en' ? 'Back to home' : 'Voltar à página inicial';
+const headline = lang === 'en' ? 'Coming soon' : 'Em desenvolvimento';
+const sub = lang === 'en' ? 'This page will be available soon.' : 'Esta página estará disponível em breve.';
+---
+
+<main class="min-h-screen flex items-center justify-center bg-offwhite px-6 pt-24 pb-16">
+  <div class="text-center max-w-md">
+    <p class="font-sans text-xs uppercase tracking-[0.3em] text-teal mb-4">
+      {title}
+    </p>
+    <h1 class="font-serif text-5xl md:text-6xl font-medium text-teal-dark mb-5 leading-tight">
+      {headline}
+    </h1>
+    <p class="font-sans text-base md:text-lg text-muted mb-10">
+      {sub}
+    </p>
+    <a
+      href={homePath}
+      class="inline-flex items-center gap-2 font-sans text-sm font-medium text-teal hover:text-teal-dark border-b border-teal/30 hover:border-teal-dark pb-1 transition-all group"
+    >
+      <i class="ri-arrow-left-line transition-transform duration-200 group-hover:-translate-x-1"></i>
+      {backLabel}
+    </a>
+  </div>
+</main>
