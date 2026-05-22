@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getLangFromUrl, t } from '../i18n';
+import { contactHref, CONTACT_EMAIL } from '../lib/env';
+
+const lang = getLangFromUrl(Astro.url);
+const i = t(lang);
+const isEn = lang === 'en';
+
+const homePath = isEn ? '/en' : '/';
+const ctaHref = contactHref(isEn ? '/en/contacto' : '/contacto');
+
+const copy = isEn
+  ? {
+      tag: 'Error 404',
+      heading: 'This page got lost in the waves.',
+      sub: 'The page you were looking for is not here. It might have moved, or the link you followed is no longer valid.',
+      ctaPrimary: 'Back to home',
+      ctaSecondary: 'Talk to Mariana',
+    }
+  : {
+      tag: 'Erro 404',
+      heading: 'Esta página perdeu-se nas ondas.',
+      sub: 'A página que procuras não está aqui. Pode ter sido movida, ou o link que seguiste já não é válido.',
+      ctaPrimary: 'Voltar à página inicial',
+      ctaSecondary: 'Falar com a Mariana',
+    };
+---
+
+<Layout
+  title={isEn ? '404 · Wavy' : '404 · Wavy'}
+  description={copy.sub}
+>
+  <main class="min-h-screen flex items-center justify-center bg-offwhite px-6 pt-24 pb-16 relative overflow-hidden">
+    {/* Subtle decorative background "404" */}
+    <span
+      aria-hidden="true"
+      class="absolute inset-0 flex items-center justify-center font-serif text-[280px] md:text-[460px] lg:text-[560px] font-medium text-teal/5 leading-none select-none pointer-events-none"
+    >
+      404
+    </span>
+
+    <div class="relative text-center max-w-lg">
+      <p class="font-sans text-xs uppercase tracking-[0.3em] text-teal mb-5">
+        {copy.tag}
+      </p>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-teal-dark mb-5 leading-[1.1]">
+        {copy.heading}
+      </h1>
+      <p class="font-sans text-base md:text-lg text-muted mb-10 leading-relaxed">
+        {copy.sub}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <a
+          href={homePath}
+          class="inline-flex items-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal text-white hover:bg-teal-dark transition-all duration-300 group"
+        >
+          <i class="ri-arrow-left-line transition-transform duration-200 group-hover:-translate-x-1"></i>
+          {copy.ctaPrimary}
+        </a>
+        <a
+          href={ctaHref}
+          class="inline-flex items-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300"
+        >
+          <i class="ri-mail-line"></i>
+          {copy.ctaSecondary}
+        </a>
+      </div>
+
+      <p class="font-serif italic text-sm text-muted/70 mt-10">
+        {isEn ? 'Or write to' : 'Ou escreve para'}
+        {' '}
+        <a href={`mailto:${CONTACT_EMAIL}`} class="text-teal hover:text-teal-dark transition-colors">
+          {CONTACT_EMAIL}
+        </a>
+      </p>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,150 @@
+---
+/**
+ * Cookie banner + Google Analytics 4 with Consent Mode v2.
+ *
+ * - Only renders in production AND when PUBLIC_GA_ID is set.
+ * - GA4 loads only after the user explicitly accepts.
+ * - Default consent state is "denied" (GDPR-friendly).
+ * - The user's choice is stored in localStorage and respected on future visits.
+ * - The footer can call `window.wavyOpenCookieSettings()` to re-open the banner.
+ */
+import { getLangFromUrl } from '../i18n';
+import { isProd } from '../lib/env';
+
+const gaId = import.meta.env.PUBLIC_GA_ID;
+const enabled = isProd && Boolean(gaId);
+
+const lang = getLangFromUrl(Astro.url);
+const isEn = lang === 'en';
+const privacyHref = isEn ? '/en/privacy' : '/privacidade';
+
+const copy = isEn
+  ? {
+      message:
+        'We use cookies to understand how the site is used and improve it. Only with your consent.',
+      accept: 'Accept',
+      reject: 'Reject',
+      learn: 'Privacy policy',
+    }
+  : {
+      message:
+        'Usamos cookies para perceber como o site é usado e melhorá-lo. Só com o teu consentimento.',
+      accept: 'Aceitar',
+      reject: 'Recusar',
+      learn: 'Política de privacidade',
+    };
+---
+
+{enabled && (
+  <>
+    {/* Pre-load Consent Mode defaults BEFORE GA loads. */}
+    <script is:inline>
+      {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('consent', 'default', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'denied',
+          wait_for_update: 500,
+        });
+        gtag('js', new Date());`}
+    </script>
+
+    <div
+      id="cookie-banner"
+      data-state="hidden"
+      class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:bottom-6 sm:max-w-md z-[70] data-[state=hidden]:hidden"
+    >
+      <div class="bg-teal-dark text-cream rounded-2xl shadow-xl p-5 md:p-6 border border-cream/10">
+        <p class="font-sans text-sm leading-relaxed mb-4">
+          {copy.message}
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            data-cookie-action="accept"
+            class="inline-flex items-center justify-center font-sans text-sm font-medium px-5 py-2.5 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-colors"
+          >
+            {copy.accept}
+          </button>
+          <button
+            type="button"
+            data-cookie-action="reject"
+            class="inline-flex items-center justify-center font-sans text-sm font-medium px-5 py-2.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-colors"
+          >
+            {copy.reject}
+          </button>
+          <a
+            href={privacyHref}
+            class="font-sans text-xs text-cream/70 hover:text-cream underline underline-offset-2 ml-auto"
+          >
+            {copy.learn}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script define:vars={{ gaId }}>
+      const STORAGE_KEY = 'wavy-cookie-consent';
+      const banner = document.getElementById('cookie-banner');
+
+      function loadGa() {
+        if (document.querySelector('script[data-ga="loaded"]')) return;
+        const s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        s.dataset.ga = 'loaded';
+        document.head.appendChild(s);
+        window.gtag('config', gaId, { anonymize_ip: true });
+      }
+
+      function showBanner() {
+        if (banner) banner.dataset.state = 'visible';
+      }
+      function hideBanner() {
+        if (banner) banner.dataset.state = 'hidden';
+      }
+
+      function applyConsent(value) {
+        localStorage.setItem(STORAGE_KEY, value);
+        if (value === 'accepted') {
+          window.gtag('consent', 'update', {
+            analytics_storage: 'granted',
+          });
+          loadGa();
+        } else {
+          window.gtag('consent', 'update', {
+            analytics_storage: 'denied',
+          });
+        }
+        hideBanner();
+      }
+
+      // Initial check
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored === 'accepted') {
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
+        loadGa();
+      } else if (stored === 'rejected') {
+        // Already declined — stay silent
+      } else {
+        showBanner();
+      }
+
+      // Wire up buttons
+      banner?.addEventListener('click', (e) => {
+        const action = e.target.closest('[data-cookie-action]')?.dataset.cookieAction;
+        if (action === 'accept') applyConsent('accepted');
+        else if (action === 'reject') applyConsent('rejected');
+      });
+
+      // Expose a global helper so the footer can re-open the banner
+      window.wavyOpenCookieSettings = () => {
+        localStorage.removeItem(STORAGE_KEY);
+        showBanner();
+      };
+    </script>
+  </>
+)}

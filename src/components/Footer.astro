@@ -92,6 +92,21 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
     <!-- Bottom bar -->
     <div class="mt-16 pt-8 border-t border-cream/20 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="font-sans text-sm text-cream/80">{i.footer.rights}</p>
+      <div class="flex items-center gap-6">
+        <a
+          href={lang === 'en' ? '/en/privacy' : '/privacidade'}
+          class="font-sans text-sm text-cream/80 hover:text-cream transition-colors"
+        >
+          {lang === 'en' ? 'Privacy policy' : 'Política de privacidade'}
+        </a>
+        <button
+          type="button"
+          onclick="window.wavyOpenCookieSettings && window.wavyOpenCookieSettings()"
+          class="font-sans text-sm text-cream/80 hover:text-cream transition-colors cursor-pointer"
+        >
+          {lang === 'en' ? 'Manage cookies' : 'Gerir cookies'}
+        </button>
+      </div>
     </div>
   </div>
 </footer>

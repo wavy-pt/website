@@ -1,0 +1,62 @@
+---
+/**
+ * Schema.org structured data for Wavy.
+ * Emits a JSON-LD <script> tag so Google understands what the business is,
+ * where it operates, and who runs it — essential for local SEO.
+ */
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://wavy.pt';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${site}/#organization`,
+  name: 'Wavy',
+  alternateName: 'Wavy — Direção e Marketing Digital',
+  url: site,
+  logo: `${site}/logo-wavy.svg`,
+  image: `${site}/og-image.jpg`,
+  description:
+    'Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa. Estratégia, websites, redes sociais e SEO local.',
+  founder: {
+    '@type': 'Person',
+    name: 'Mariana Antunes',
+    jobTitle: 'Fundadora e Diretora',
+  },
+  email: 'geral@wavy.pt',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Lisboa',
+    addressCountry: 'PT',
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Mafra' },
+    { '@type': 'AdministrativeArea', name: 'Samora Correia' },
+    { '@type': 'Place', name: 'Zona Oeste' },
+    { '@type': 'Place', name: 'Grande Lisboa' },
+    { '@type': 'Country', name: 'Portugal' },
+  ],
+  knowsAbout: [
+    'Marketing Digital',
+    'Direção Digital',
+    'Estratégia Digital',
+    'Desenvolvimento de Websites',
+    'Gestão de Redes Sociais',
+    'SEO Local',
+    'Google My Business',
+    'Identidade Visual',
+  ],
+  serviceType: [
+    'Diagnóstico Estratégico',
+    'Website e Identidade Estratégica',
+    'Gestão de Redes Sociais e SEO Local',
+  ],
+  sameAs: [
+    'https://instagram.com/wavy.digital.pt',
+    'https://facebook.com/wavy.digital.pt',
+  ],
+  priceRange: '€€',
+  inLanguage: ['pt-PT', 'en'],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

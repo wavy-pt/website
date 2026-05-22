@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
 import { contactHref } from '../lib/env';
+import heroImage from '../assets/wavy-hero.jpg';
 
 interface Props {
   lang: Lang;
@@ -49,11 +51,14 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
       <!-- Image with floating badges -->
       <div class="relative">
         <div class="relative rounded-[32px] overflow-hidden bg-cream aspect-[4/5] max-w-[640px] mx-auto">
-          <img
-            src="https://static.readdy.ai/image/5009dd3650e45e305981c297303673fb/2f44de33f1b530a86cf44c51d4ce6232.png"
-            alt="Wavy workspace"
+          <Image
+            src={heroImage}
+            alt="Mariana ao computador — Wavy"
             class="w-full h-full object-cover object-top"
             loading="eager"
+            widths={[480, 640, 960, 1280]}
+            sizes="(min-width: 1024px) 640px, (min-width: 640px) 50vw, 100vw"
+            quality={85}
           />
         </div>
 

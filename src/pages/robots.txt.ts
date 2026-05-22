@@ -4,7 +4,7 @@ import { isProd } from '../lib/env';
 const productionRobots = `User-agent: *
 Allow: /
 
-Sitemap: https://wavy.pt/sitemap.xml
+Sitemap: https://wavy.pt/sitemap-index.xml
 `;
 
 const developmentRobots = `User-agent: *

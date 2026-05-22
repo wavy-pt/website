@@ -3,6 +3,8 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DevBanner from '../components/DevBanner.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import { getLangFromUrl, t } from '../i18n';
 import type { Lang } from '../i18n';
 import { isDev } from '../lib/env';
@@ -10,11 +12,32 @@ import { isDev } from '../lib/env';
 interface Props {
   title?: string;
   description?: string;
+  /** Optional override for OG image path (must start with /). */
+  ogImage?: string;
 }
 
 const lang = getLangFromUrl(Astro.url) as Lang;
 const i = t(lang);
-const { title = 'Wavy · Direção e Marketing Digital', description = '' } = Astro.props;
+const {
+  title = lang === 'en'
+    ? 'Wavy · Digital Direction & Marketing'
+    : 'Wavy · Direção e Marketing Digital',
+  description = lang === 'en'
+    ? 'Digital direction for established businesses in the Western Zone and Greater Lisbon. Strategy, websites, social media and local SEO with rigour and human sensitivity.'
+    : 'Direção digital para negócios com história, na Zona Oeste e Grande Lisboa. Estratégia, websites, redes sociais e SEO local com rigor e sensibilidade humana.',
+  ogImage = '/og-image.jpg',
+} = Astro.props;
+
+// Canonical / hreflang URLs (absolute when site is configured).
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const path = Astro.url.pathname;
+const pathClean = path.replace(/^\/(pt|en)(?=\/|$)/, '') || '/';
+const canonicalUrl = `${site}${path}`;
+const ptUrl = `${site}${pathClean === '/' ? '/' : pathClean}`;
+const enUrl = `${site}/en${pathClean === '/' ? '' : pathClean}`;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
+const ogLocale = lang === 'en' ? 'en_US' : 'pt_PT';
+const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';
 ---
 
 <!doctype html>
@@ -23,12 +46,52 @@ const { title = 'Wavy · Direção e Marketing Digital', description = '' } = As
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    {isDev && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#2A9090" />
+    <meta name="author" content="Wavy — Mariana Antunes" />
+
+    {/* Robots */}
+    {isDev ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large" />
+    )}
+
+    {/* Canonical + hreflang */}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="pt-PT" href={ptUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={ptUrl} />
+
+    {/* Open Graph */}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wavy" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Wavy — Direção e Marketing Digital" />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    {/* Favicons + fonts + icons */}
     <link rel="icon" type="image/svg+xml" href="/logo-wavy.svg" />
+    <link rel="apple-touch-icon" href="/logo-wavy.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    {/* Structured data (Schema.org) */}
+    <SchemaOrg />
+
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-offwhite font-sans">
@@ -38,5 +101,6 @@ const { title = 'Wavy · Direção e Marketing Digital', description = '' } = As
       <slot />
     </main>
     <Footer lang={lang} />
+    <CookieBanner />
   </body>
 </html>
