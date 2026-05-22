@@ -8,6 +8,7 @@ import CookieBanner from '../components/CookieBanner.astro';
 import { getLangFromUrl, t } from '../i18n';
 import type { Lang } from '../i18n';
 import { isDev } from '../lib/env';
+import { localizedPaths } from '../lib/slugs';
 
 interface Props {
   title?: string;
@@ -30,11 +31,11 @@ const {
 
 // Canonical / hreflang URLs (absolute when site is configured).
 const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
-const path = Astro.url.pathname;
-const pathClean = path.replace(/^\/(pt|en)(?=\/|$)/, '') || '/';
-const canonicalUrl = `${site}${path}`;
-const ptUrl = `${site}${pathClean === '/' ? '/' : pathClean}`;
-const enUrl = `${site}/en${pathClean === '/' ? '' : pathClean}`;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const { pt: ptPath, en: enPath } = localizedPaths(path);
+const canonicalUrl = `${site}${path === '/' ? '/' : path}`;
+const ptUrl = `${site}${ptPath === '/' ? '/' : ptPath}`;
+const enUrl = `${site}${enPath}`;
 const ogImageUrl = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
 const ogLocale = lang === 'en' ? 'en_US' : 'pt_PT';
 const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';

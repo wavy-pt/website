@@ -61,7 +61,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
               {i.finalCta.secondaryCta}
               <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
             </a>
-            <p class="font-serif italic text-xs text-teal-dark/50 mt-4">
+            <p class="font-serif italic text-xs text-teal-dark/75 mt-4">
               {lang === 'en' ? '2 minutes · no commitment' : '2 minutos · sem compromisso'}
             </p>
           </div>
@@ -124,7 +124,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
           {i.finalCta.contactEmail}
         </a>
       </div>
-      <span class="hidden sm:inline text-teal-dark/30">·</span>
+      <span class="hidden sm:inline text-teal-dark/30" aria-hidden="true">·</span>
       <div class="flex items-center gap-3">
         <a
           href="https://instagram.com/wavy.digital.pt"

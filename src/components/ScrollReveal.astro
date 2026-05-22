@@ -1,21 +1,39 @@
-<!-- Scroll reveal animation script — add to layout once -->
+<!--
+  Scroll reveal animation script.
+  - Progressively enhances: without JS, content stays visible (no transform/opacity).
+  - Respects prefers-reduced-motion: users with reduced motion preference see
+    content immediately, without the fade-in.
+-->
 <script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  document.querySelectorAll('.scroll-reveal').forEach((el) => {
-    observer.observe(el);
-  });
+  // Skip the animation entirely for users who prefer reduced motion.
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    document.querySelectorAll('.scroll-reveal').forEach((el) => el.classList.add('revealed'));
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+  }
 </script>
+
+<noscript>
+  <style is:global>
+    /* Without JS, force-reveal everything so the page is fully usable. */
+    .scroll-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
+</noscript>
 
 <style is:global>
   .scroll-reveal {
@@ -26,5 +44,22 @@
   .scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Belt + suspenders: also disable animation via CSS for users with
+     prefers-reduced-motion (even before the JS runs). */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .animate-scroll-hint,
+    .animate-pulse-ring,
+    .animate-float,
+    .animate-float-slow,
+    .animate-pulse {
+      animation: none !important;
+    }
   }
 </style>

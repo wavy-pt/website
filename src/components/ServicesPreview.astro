@@ -129,7 +129,7 @@ const services = [
             <div class="mb-8">
               <div class="flex items-baseline gap-2">
                 {'priceLabel' in data && data.priceLabel && (
-                  <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/40">
+                  <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/70">
                     {data.priceLabel}
                   </span>
                 )}
@@ -137,13 +137,13 @@ const services = [
                   {data.price}
                 </span>
                 {'pricePeriod' in data && data.pricePeriod && (
-                  <span class="font-sans text-base text-teal-dark/40">
+                  <span class="font-sans text-base text-teal-dark/70">
                     {data.pricePeriod}
                   </span>
                 )}
               </div>
               {'priceNote' in data && data.priceNote && (
-                <p class="font-sans text-xs mt-2 text-teal-dark/50 max-w-xs">
+                <p class="font-sans text-xs mt-2 text-teal-dark/75 max-w-xs">
                   {data.priceNote}
                 </p>
               )}

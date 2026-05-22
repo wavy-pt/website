@@ -27,7 +27,7 @@
   },
   "forWho": {
     "label": "reconheces-te?",
-    "title": "Tens um negócio real. A tua presença digital ainda não reflecte isso.",
+    "title": "Tens um negócio real. A tua presença digital ainda não reflete isso.",
     "subtitle": "Trabalhamos com negócios consolidados que faturaram, cresceram, e têm clientes fiéis mas sentem que o digital ainda não acompanha a qualidade do que fazem. Se algo aqui te soa familiar, estás no sítio certo.",
     "footer": "Trabalhamos com diferentes setores, unidos pelo mesmo perfil: negócios locais com substância que procuram uma estratégia digital à altura da sua história.",
     "cards": [
@@ -41,8 +41,8 @@
       {
         "number": "02",
         "pill": "SINTO QUE…",
-        "title": "Estou a fazer muito sem ver resultados",
-        "desc": "Publicas com frequência, tentas seguir todas as tendências, mas o telefone não toca e as vendas não aumentam. Sentes que está a gastar energia sem uma estratégia clara.",
+        "title": "Estou a fazer muito sem ver resultados.",
+        "desc": "Publicas com frequência, tentas seguir todas as tendências, mas o telefone não toca e as vendas não aumentam. Sentes que estás a gastar energia sem uma estratégia clara.",
         "quote": "\"Tanto trabalho, tão pouco impacto.\""
       },
       {
@@ -62,7 +62,7 @@
     "rows": [
       { "dim": "Abordagem", "agency": "Template e escala", "freelance": "Execução pontual", "wavy": "Identidade → Estratégia → Execução" },
       { "dim": "Foco", "agency": "Métricas e volume", "freelance": "Preço baixo", "wavy": "Coerência, alma e sustentabilidade" },
-      { "dim": "Relação", "agency": "Conta entre muitas", "freelance": "Transaccional", "wavy": "Parceria de longo prazo" },
+      { "dim": "Relação", "agency": "Conta entre muitas", "freelance": "Transacional", "wavy": "Parceria de longo prazo" },
       { "dim": "Diferenciador", "agency": "Estrutura e escala", "freelance": "Acessibilidade", "wavy": "Autenticidade e proximidade local" }
     ]
   },
@@ -128,7 +128,7 @@
     "stat2": "+191%",
     "stat2Label": "de aumento em interações reais com os conteúdos publicados num cliente",
     "ctaTitle": "A tua história pode ser a próxima.",
-    "ctaSubtitle": "Começa pelo Raio-X em 5 dias sabes exatamente onde está o teu negócio digital e o que fazer a seguir.",
+    "ctaSubtitle": "Começa pelo Raio-X. Em 5 dias sabes exatamente onde está o teu negócio digital e o que fazer a seguir.",
     "ctaButton": "Fazer o Raio-X"
   },
   "faq": {

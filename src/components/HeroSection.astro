@@ -20,7 +20,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
       <!-- Text -->
       <div>
-        <span class="inline-block font-sans text-xs font-medium uppercase tracking-widest text-teal bg-teal/10 px-4 py-2 rounded-full mb-6">
+        <span class="inline-block font-sans text-xs font-medium uppercase tracking-widest text-teal-dark bg-teal/15 px-4 py-2 rounded-full mb-6">
           {i.hero.tagline}
         </span>
         <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-teal-dark leading-[1.05] mb-6">
@@ -32,7 +32,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
         <div class="flex flex-col sm:flex-row gap-4 items-start">
           <a
             href={ctaHref}
-            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-base px-9 py-4 rounded-full bg-teal text-white hover:bg-teal-dark transition-all duration-300 whitespace-nowrap"
+            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-base px-9 py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap"
           >
             {i.hero.cta2}
           </a>
@@ -43,7 +43,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
             {i.hero.cta1}
           </a>
         </div>
-        <p class="font-sans text-xs text-muted/70 mt-3">
+        <p class="font-sans text-xs text-muted mt-3">
           {i.hero.cta1Micro}
         </p>
       </div>
@@ -66,8 +66,8 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
           <span class="font-sans text-xs font-medium text-teal-dark">{i.hero.badge1}</span>
         </div>
 
-        <div class="absolute top-[35%] -left-2 md:-left-6 bg-teal rounded-full px-4 py-2 animate-float-slow">
-          <span class="font-sans text-xs font-medium text-white">{i.hero.badge2}</span>
+        <div class="absolute top-[35%] -left-2 md:-left-6 bg-teal-dark rounded-full px-4 py-2 animate-float-slow">
+          <span class="font-sans text-xs font-medium text-cream">{i.hero.badge2}</span>
         </div>
 
         <div class="absolute bottom-16 right-0 md:-right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-teal/10 animate-float" style="animation-delay: 2s">
@@ -79,7 +79,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 
     <!-- Scroll indicator -->
     <div class="flex flex-col items-center pt-6 pb-4">
-      <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-muted/50 mb-2">{i.hero.scroll}</p>
+      <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-2">{i.hero.scroll}</p>
       <div class="w-8 h-8 rounded-full border border-teal/30 flex items-center justify-center animate-scroll-hint">
         <i class="ri-arrow-down-line text-teal text-sm"></i>
       </div>

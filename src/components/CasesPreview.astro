@@ -61,9 +61,13 @@ const testimonials = i.cases.testimonials;
           </div>
 
           <!-- Dots -->
-          <div class="flex justify-center gap-2 mt-6 shrink-0">
-            {testimonials.map((_, idx) => (
+          <div class="flex justify-center gap-2 mt-6 shrink-0" role="tablist">
+            {testimonials.map((item, idx) => (
               <button
+                type="button"
+                role="tab"
+                aria-label={lang === 'en' ? `Testimonial from ${item.author}` : `Testemunho de ${item.author}`}
+                aria-selected={idx === 0 ? 'true' : 'false'}
                 class:list={[
                   'testimonial-dot w-2 h-2 rounded-full transition-all duration-300',
                   idx === 0 ? 'bg-cream w-5' : 'bg-cream/40 hover:bg-cream/60',
