@@ -55,30 +55,34 @@ const copy = isEn
     <div
       id="cookie-banner"
       data-state="hidden"
-      class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:bottom-6 sm:max-w-md z-[70] data-[state=hidden]:hidden"
+      class="fixed bottom-4 left-4 right-4 md:bottom-6 md:left-1/2 md:right-auto md:-translate-x-1/2 md:max-w-2xl md:w-[calc(100%-3rem)] z-[70] data-[state=hidden]:hidden"
     >
-      <div class="bg-teal-dark text-cream rounded-2xl shadow-xl p-5 md:p-6 border border-cream/10">
-        <p class="font-sans text-sm leading-relaxed mb-4">
-          {copy.message}
-        </p>
-        <div class="flex flex-wrap items-center gap-3">
-          <button
-            type="button"
-            data-cookie-action="accept"
-            class="inline-flex items-center justify-center font-sans text-sm font-medium px-5 py-2.5 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-colors"
-          >
-            {copy.accept}
-          </button>
-          <button
-            type="button"
-            data-cookie-action="reject"
-            class="inline-flex items-center justify-center font-sans text-sm font-medium px-5 py-2.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-colors"
-          >
-            {copy.reject}
-          </button>
+      <div class="bg-teal-dark text-cream rounded-2xl shadow-2xl p-6 md:p-8 border border-cream/10">
+        <div class="flex flex-col md:flex-row md:items-center md:gap-8">
+          <p class="font-sans text-sm md:text-base leading-relaxed mb-5 md:mb-0 md:flex-1">
+            {copy.message}
+          </p>
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <button
+              type="button"
+              data-cookie-action="accept"
+              class="inline-flex items-center justify-center font-sans text-sm font-medium px-6 py-2.5 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-colors whitespace-nowrap"
+            >
+              {copy.accept}
+            </button>
+            <button
+              type="button"
+              data-cookie-action="reject"
+              class="inline-flex items-center justify-center font-sans text-sm font-medium px-6 py-2.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-colors whitespace-nowrap"
+            >
+              {copy.reject}
+            </button>
+          </div>
+        </div>
+        <div class="mt-4 md:mt-3 md:pt-3 md:border-t md:border-cream/10">
           <a
             href={privacyHref}
-            class="font-sans text-xs text-cream/70 hover:text-cream underline underline-offset-2 ml-auto"
+            class="font-sans text-xs text-cream/70 hover:text-cream underline underline-offset-2"
           >
             {copy.learn}
           </a>
@@ -88,7 +92,12 @@ const copy = isEn
 
     <script define:vars={{ gaId }}>
       const STORAGE_KEY = 'wavy-cookie-consent';
-      const banner = document.getElementById('cookie-banner');
+
+      function safeGtag() {
+        if (typeof window.gtag === 'function') {
+          window.gtag.apply(window, arguments);
+        }
+      }
 
       function loadGa() {
         if (document.querySelector('script[data-ga="loaded"]')) return;
@@ -97,54 +106,72 @@ const copy = isEn
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
         s.dataset.ga = 'loaded';
         document.head.appendChild(s);
-        window.gtag('config', gaId, { anonymize_ip: true });
+        safeGtag('config', gaId, { anonymize_ip: true });
       }
 
-      function showBanner() {
-        if (banner) banner.dataset.state = 'visible';
-      }
-      function hideBanner() {
-        if (banner) banner.dataset.state = 'hidden';
+      function setBannerState(state) {
+        const el = document.getElementById('cookie-banner');
+        if (el) el.dataset.state = state;
       }
 
       function applyConsent(value) {
-        localStorage.setItem(STORAGE_KEY, value);
+        try {
+          localStorage.setItem(STORAGE_KEY, value);
+        } catch (_) {
+          // localStorage pode falhar em modo privado de alguns browsers
+        }
         if (value === 'accepted') {
-          window.gtag('consent', 'update', {
-            analytics_storage: 'granted',
-          });
+          safeGtag('consent', 'update', { analytics_storage: 'granted' });
           loadGa();
         } else {
-          window.gtag('consent', 'update', {
-            analytics_storage: 'denied',
-          });
+          safeGtag('consent', 'update', { analytics_storage: 'denied' });
         }
-        hideBanner();
+        setBannerState('hidden');
       }
 
-      // Initial check
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === 'accepted') {
-        window.gtag('consent', 'update', { analytics_storage: 'granted' });
-        loadGa();
-      } else if (stored === 'rejected') {
-        // Already declined — stay silent
+      function init() {
+        const banner = document.getElementById('cookie-banner');
+        if (!banner) {
+          console.warn('[CookieBanner] #cookie-banner não encontrado');
+          return;
+        }
+
+        // Initial state — mostrar banner se ainda não houve escolha
+        let stored = null;
+        try { stored = localStorage.getItem(STORAGE_KEY); } catch (_) {}
+
+        if (stored === 'accepted') {
+          safeGtag('consent', 'update', { analytics_storage: 'granted' });
+          loadGa();
+        } else if (stored === 'rejected') {
+          // Already declined — banner fica hidden
+        } else {
+          setBannerState('visible');
+        }
+
+        // Wire up buttons via event delegation
+        banner.addEventListener('click', function (e) {
+          const target = e.target instanceof Element ? e.target : null;
+          if (!target) return;
+          const btn = target.closest('[data-cookie-action]');
+          if (!btn) return;
+          const action = btn.getAttribute('data-cookie-action');
+          if (action === 'accept') applyConsent('accepted');
+          else if (action === 'reject') applyConsent('rejected');
+        });
+
+        // Expose a global helper so the footer can re-open the banner
+        window.wavyOpenCookieSettings = function () {
+          try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+          setBannerState('visible');
+        };
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
       } else {
-        showBanner();
+        init();
       }
-
-      // Wire up buttons
-      banner?.addEventListener('click', (e) => {
-        const action = e.target.closest('[data-cookie-action]')?.dataset.cookieAction;
-        if (action === 'accept') applyConsent('accepted');
-        else if (action === 'reject') applyConsent('rejected');
-      });
-
-      // Expose a global helper so the footer can re-open the banner
-      window.wavyOpenCookieSettings = () => {
-        localStorage.removeItem(STORAGE_KEY);
-        showBanner();
-      };
     </script>
   </>
 )}
