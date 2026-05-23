@@ -114,3 +114,38 @@ PUBLIC_ENV=production npm run dev
 # Build local (apenas em modo production por causa do adapter Vercel)
 PUBLIC_ENV=production npm run build
 ```
+
+---
+
+## Headers de segurança HTTP
+
+O ficheiro `vercel.json` define os headers de segurança que o Vercel aplica
+em produção. **Importante:** estes headers **só são aplicados pelo Vercel**;
+correr `npx astro preview` localmente **não** os adiciona.
+
+| Header | Valor (resumido) | O que protege |
+|---|---|---|
+| `Content-Security-Policy` | `default-src 'self'` + GA4 hosts | XSS, injection de scripts |
+| `Strict-Transport-Security` | `max-age=63072000; includeSubDomains; preload` | Força HTTPS (2 anos) |
+| `X-Content-Type-Options` | `nosniff` | MIME-type sniffing |
+| `X-Frame-Options` | `DENY` | Clickjacking |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Privacy do referer |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()…` | Restringe APIs do browser |
+| `Cross-Origin-Opener-Policy` | `same-origin` | Cross-origin isolation |
+
+E também cache-control para assets imutáveis:
+
+- `/_astro/*` → cache 1 ano, immutable
+- `*.woff2`, `*.woff`, `*.ttf` → cache 1 ano, immutable
+- `*.jpg`, `*.webp`, `*.svg`… → cache 30 dias
+
+### Validar em produção
+
+Depois do primeiro deploy, validar em [securityheaders.com](https://securityheaders.com)
+ou [observatory.mozilla.org](https://observatory.mozilla.org). Alvo: **A+**.
+
+### Se adicionares serviços externos no futuro
+
+Qualquer recurso externo novo (ex: Calendly embed, Hotjar, Sentry, Stripe…)
+**vai ser bloqueado pelo CSP**. Adicionar o host correspondente ao
+`script-src` e/ou `connect-src` no `vercel.json`.
