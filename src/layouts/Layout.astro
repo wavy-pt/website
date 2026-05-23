@@ -82,13 +82,12 @@ const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    {/* Favicons + fonts + icons */}
+    {/* Favicons */}
     <link rel="icon" type="image/svg+xml" href="/logo-wavy.svg" />
     <link rel="apple-touch-icon" href="/logo-wavy.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    {/* Fonts são self-hosted via @fontsource em src/styles/global.css.
+        Sem CDN externo: melhor LCP, sem DNS lookups, melhor privacy. */}
 
     {/* Structured data (Schema.org) */}
     <SchemaOrg />

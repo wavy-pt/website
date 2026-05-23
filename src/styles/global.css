@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Self-hosted variable fonts (Playfair Display + DM Sans).
+   Variable fonts: 1 ficheiro WOFF2 cobre todos os pesos (400–900).
+   font-display: swap (definido em fontsource) evita FOIT. */
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/playfair-display/wght-italic.css";
+@import "@fontsource-variable/dm-sans";
+@import "@fontsource-variable/dm-sans/wght-italic.css";
+
+/* Self-hosted Remix Icons (substitui CDN jsdelivr) */
+@import "remixicon/fonts/remixicon.css";
+
 @theme {
   --color-teal: #2A9090;
   --color-teal-dark: #1C3C3C;
@@ -9,8 +20,8 @@
   --color-muted: #666666;
   --color-warm: #f5f1eb;
 
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "DM Sans", Inter, sans-serif;
+  --font-serif: "Playfair Display Variable", "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans Variable", "DM Sans", Inter, sans-serif;
 
   --animate-fade-in: fade-in 0.6s ease forwards;
   --animate-slide-up: slide-up 0.6s ease forwards;
