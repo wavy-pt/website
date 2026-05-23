@@ -23,22 +23,22 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
         <span class="inline-block font-sans text-xs font-medium uppercase tracking-widest text-teal-dark bg-teal/15 px-4 py-2 rounded-full mb-6">
           {i.hero.tagline}
         </span>
-        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-teal-dark leading-[1.05] mb-6">
+        <h1 class="font-serif text-[2.5rem] leading-[1.05] sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-teal-dark mb-5 md:mb-6">
           {i.hero.headline}
         </h1>
-        <p class="font-sans text-base md:text-lg text-muted leading-relaxed mb-8 max-w-lg">
+        <p class="font-sans text-base md:text-lg text-muted leading-relaxed mb-7 md:mb-8 max-w-lg">
           {i.hero.subtitle}
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 items-start">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-start">
           <a
             href={ctaHref}
-            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-base px-9 py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap"
+            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap"
           >
             {i.hero.cta2}
           </a>
           <a
             href={ctaHref}
-            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-base px-9 py-4 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300 whitespace-nowrap"
+            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300 whitespace-nowrap"
           >
             {i.hero.cta1}
           </a>

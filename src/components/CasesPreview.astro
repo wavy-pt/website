@@ -13,14 +13,14 @@ const i = t(lang);
 const testimonials = i.cases.testimonials;
 ---
 
-<section class="bg-offwhite py-10 md:py-12">
+<section class="bg-offwhite py-16 md:py-12">
   <div class="max-w-7xl mx-auto px-6 md:px-10">
     <div class="scroll-reveal">
       <!-- Header -->
       <div class="mb-8 md:mb-10">
         <p class="font-sans text-xs uppercase tracking-widest text-teal mb-3">{i.cases.label}</p>
         <div class="flex flex-col gap-4">
-          <h2 class="font-serif text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15]">
+          <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15]">
             {i.cases.title}
           </h2>
           <p class="font-sans text-base text-muted leading-relaxed max-w-xl">
@@ -32,7 +32,7 @@ const testimonials = i.cases.testimonials;
       <!-- Bento grid -->
       <div class="bento-grid grid grid-cols-1 lg:grid-cols-12 gap-5">
         <!-- Quote card - left, teal -->
-        <div class="bento-card relative lg:col-span-4 bg-teal rounded-[24px] p-6 md:p-8 flex flex-col min-h-[260px]">
+        <div class="bento-card relative lg:col-span-4 bg-teal rounded-[24px] p-6 md:p-8 flex flex-col min-h-[520px] sm:min-h-[440px] lg:min-h-[260px]">
           <div id="testimonial-container" class="relative flex-1">
             {testimonials.map((item, idx) => (
               <div
@@ -43,16 +43,16 @@ const testimonials = i.cases.testimonials;
                 data-index={idx}
               >
                 <div>
-                  <div class="flex gap-1 mb-6">
+                  <div class="flex gap-1 mb-4 md:mb-6">
                     {Array.from({ length: 5 }).map(() => (
                       <i class="ri-star-fill text-cream text-sm"></i>
                     ))}
                   </div>
-                  <blockquote class="font-sans text-lg md:text-xl text-cream leading-relaxed">
+                  <blockquote class="font-sans text-base md:text-lg lg:text-xl text-cream leading-relaxed">
                     &ldquo;{item.quote}&rdquo;
                   </blockquote>
                 </div>
-                <div class="mt-8 pt-6 border-t border-cream/15">
+                <div class="mt-6 md:mt-8 pt-5 md:pt-6 border-t border-cream/15">
                   <p class="font-sans text-sm font-medium text-cream">{item.author}</p>
                   <p class="font-sans text-xs text-cream/50 mt-1">{item.role}</p>
                 </div>
@@ -81,7 +81,7 @@ const testimonials = i.cases.testimonials;
         <!-- Right column -->
         <div class="lg:col-span-8 flex flex-col gap-5">
           <!-- Image card -->
-          <div class="bento-card relative rounded-[24px] overflow-hidden min-h-[120px]">
+          <div class="bento-card relative rounded-[24px] overflow-hidden min-h-[220px] md:min-h-[120px]">
             <Image
               src={bastidoresImage}
               alt="Bastidores Wavy — Mariana ao computador"
@@ -118,7 +118,7 @@ const testimonials = i.cases.testimonials;
         <!-- CTA card - full width -->
         <div class="bento-card relative lg:col-span-12 bg-cream rounded-[24px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <h3 class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-2">
+            <h3 class="font-serif text-xl sm:text-2xl md:text-3xl font-medium text-teal-dark mb-2">
               {i.cases.ctaTitle}
             </h3>
             <p class="font-sans text-sm text-muted">{i.cases.ctaSubtitle}</p>

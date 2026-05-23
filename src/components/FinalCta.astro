@@ -19,7 +19,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
       <p class="font-serif italic text-teal text-base md:text-lg mb-3">
         {i.finalCta.label}
       </p>
-      <h2 class="font-serif text-4xl md:text-5xl font-medium text-teal-dark leading-tight max-w-2xl mx-auto">
+      <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15] md:leading-tight max-w-2xl mx-auto">
         {lang === 'en' ? "Two paths. One conversation." : "Dois caminhos. Uma conversa."}
       </h2>
     </div>
@@ -27,16 +27,16 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
     <!-- Split block -->
     <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-2 rounded-[32px] overflow-hidden shadow-xl">
       <!-- LEFT side — cream (secondary path) -->
-      <div class="bg-cream p-10 md:p-14 flex flex-col relative overflow-hidden min-h-[420px]">
+      <div class="bg-cream p-8 sm:p-10 md:p-14 flex flex-col relative overflow-hidden min-h-[380px] md:min-h-[420px]">
         <!-- Decorative icon -->
-        <div class="absolute top-8 right-8 md:top-10 md:right-10">
-          <div class="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center">
-            <i class="ri-compass-discover-line text-teal text-2xl"></i>
+        <div class="absolute top-6 right-6 md:top-10 md:right-10">
+          <div class="w-11 h-11 md:w-14 md:h-14 rounded-full bg-teal/10 flex items-center justify-center">
+            <i class="ri-compass-discover-line text-teal text-lg md:text-2xl"></i>
           </div>
         </div>
 
         <!-- Decorative shape -->
-        <span class="absolute bottom-6 right-8 font-serif text-[180px] md:text-[200px] font-medium text-teal/15 leading-none select-none pointer-events-none">
+        <span class="absolute bottom-4 right-6 md:bottom-6 md:right-8 font-serif text-[140px] sm:text-[170px] md:text-[200px] font-medium text-teal/15 leading-none select-none pointer-events-none">
           ?
         </span>
 
@@ -44,7 +44,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
           <p class="font-sans text-[11px] uppercase tracking-widest text-teal-dark/60 mb-4">
             {lang === 'en' ? 'Still exploring' : 'Ainda a explorar'}
           </p>
-          <h3 class="font-serif text-3xl md:text-4xl font-medium text-teal-dark mb-5 leading-tight">
+          <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-teal-dark mb-5 leading-tight">
             {lang === 'en' ? 'Find out where you stand.' : 'Descobre onde estás.'}
           </h3>
           <p class="font-sans text-base text-teal-dark/70 leading-relaxed mb-8">
@@ -69,16 +69,16 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
       </div>
 
       <!-- RIGHT side — teal (primary path) -->
-      <div class="bg-teal p-10 md:p-14 flex flex-col relative overflow-hidden min-h-[420px]">
+      <div class="bg-teal p-8 sm:p-10 md:p-14 flex flex-col relative overflow-hidden min-h-[380px] md:min-h-[420px]">
         <!-- Decorative icon -->
-        <div class="absolute top-8 right-8 md:top-10 md:right-10">
-          <div class="w-14 h-14 rounded-full bg-cream/15 flex items-center justify-center">
-            <i class="ri-calendar-check-line text-cream text-2xl"></i>
+        <div class="absolute top-6 right-6 md:top-10 md:right-10">
+          <div class="w-11 h-11 md:w-14 md:h-14 rounded-full bg-cream/15 flex items-center justify-center">
+            <i class="ri-calendar-check-line text-cream text-lg md:text-2xl"></i>
           </div>
         </div>
 
         <!-- Decorative big mark -->
-        <span class="absolute bottom-10 right-10 font-sans text-[140px] md:text-[160px] font-light text-cream/30 leading-none select-none pointer-events-none">
+        <span class="absolute bottom-6 right-6 md:bottom-10 md:right-10 font-sans text-[100px] sm:text-[130px] md:text-[160px] font-light text-cream/30 leading-none select-none pointer-events-none">
           →
         </span>
 
@@ -86,7 +86,7 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
           <p class="font-sans text-[11px] uppercase tracking-widest text-cream/60 mb-4">
             {lang === 'en' ? "Ready to talk" : 'Pronto para conversar'}
           </p>
-          <h3 class="font-serif text-3xl md:text-4xl font-medium text-cream mb-5 leading-tight">
+          <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-cream mb-5 leading-tight">
             {lang === 'en' ? "Let's have a real conversation." : 'Vamos ter uma conversa a sério.'}
           </h3>
           <p class="font-sans text-base text-cream/75 leading-relaxed mb-8">

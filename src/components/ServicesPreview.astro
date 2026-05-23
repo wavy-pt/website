@@ -25,7 +25,7 @@ const services = [
         {i.services.label}
       </p>
       <div class="flex flex-col gap-4">
-        <h2 class="font-serif text-4xl md:text-5xl font-medium text-cream leading-[1.15] max-w-3xl">
+        <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-cream leading-[1.15] max-w-3xl">
           {i.services.title}
         </h2>
         <p class="font-sans text-base text-cream/70 leading-relaxed max-w-2xl">
@@ -90,50 +90,50 @@ const services = [
       </button>
 
       <!-- Cards -->
-      <div id="services-cards" class="relative flex-1 min-h-[640px] md:min-h-[600px]">
+      <div id="services-cards" class="relative flex-1 min-h-[580px] sm:min-h-[640px] md:min-h-[600px]">
       {services.map(({ data, number, icon }, idx) => (
         <div
           data-card={number}
           class:list={[
-            'service-card absolute inset-0 bg-cream rounded-[32px] p-8 md:p-12 overflow-hidden',
+            'service-card absolute inset-0 bg-cream rounded-[24px] md:rounded-[32px] p-6 sm:p-8 md:p-12 overflow-hidden',
             idx === 0 ? 'is-active' : 'position-right',
           ]}
         >
           <!-- Decorative giant number behind content -->
-          <span class="absolute -bottom-2 -right-4 font-serif text-[400px] font-medium text-teal/10 leading-none select-none pointer-events-none">
+          <span class="absolute -bottom-2 -right-4 font-serif text-[180px] sm:text-[260px] md:text-[400px] font-medium text-teal/10 leading-none select-none pointer-events-none">
             {number}
           </span>
 
           <!-- Icon badge -->
-          <div class="absolute top-8 right-8 md:top-12 md:right-12 w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center">
-            <i class={`${icon} text-teal text-2xl`}></i>
+          <div class="absolute top-6 right-6 md:top-12 md:right-12 w-11 h-11 md:w-14 md:h-14 rounded-full bg-teal/10 flex items-center justify-center">
+            <i class={`${icon} text-teal text-lg md:text-2xl`}></i>
           </div>
 
           <!-- Content -->
-          <div class="relative flex flex-col min-h-[440px] max-w-2xl">
-            <span class="inline-flex self-start font-sans text-[11px] uppercase tracking-wider px-3 py-1.5 rounded-full mb-6 bg-teal text-cream">
+          <div class="relative flex flex-col min-h-[400px] md:min-h-[440px] max-w-2xl">
+            <span class="inline-flex self-start font-sans text-[11px] uppercase tracking-wider px-3 py-1.5 rounded-full mb-5 md:mb-6 bg-teal text-cream">
               {data.tag}
             </span>
 
-            <p class="font-serif text-2xl md:text-3xl italic font-medium mb-2 text-teal">
+            <p class="font-serif text-xl sm:text-2xl md:text-3xl italic font-medium mb-2 text-teal">
               {data.scriptName}
             </p>
-            <h3 class="font-serif text-5xl md:text-6xl font-medium mb-5 text-teal-dark leading-tight">
+            <h3 class="font-serif text-[2.25rem] leading-[1.05] sm:text-5xl md:text-6xl font-medium mb-5 text-teal-dark md:leading-tight">
               {data.name}
             </h3>
-            <p class="font-sans text-base md:text-lg leading-relaxed mb-8 text-teal-dark/70 max-w-xl">
+            <p class="font-sans text-base md:text-lg leading-relaxed mb-7 md:mb-8 text-teal-dark/70 max-w-xl">
               {data.desc}
             </p>
 
             <!-- Price -->
-            <div class="mb-8">
-              <div class="flex items-baseline gap-2">
+            <div class="mb-7 md:mb-8">
+              <div class="flex items-baseline gap-2 flex-wrap">
                 {'priceLabel' in data && data.priceLabel && (
                   <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/70">
                     {data.priceLabel}
                   </span>
                 )}
-                <span class="font-serif text-6xl md:text-7xl font-medium text-teal">
+                <span class="font-serif text-5xl sm:text-6xl md:text-7xl font-medium text-teal">
                   {data.price}
                 </span>
                 {'pricePeriod' in data && data.pricePeriod && (
@@ -153,7 +153,7 @@ const services = [
             <div class="mt-auto">
               <a
                 href={getLocalizedPath('/servicos', lang)}
-                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-teal text-cream font-sans font-medium text-sm hover:bg-teal-dark transition-all duration-300 group"
+                class="inline-flex items-center gap-2 px-6 py-3 md:px-7 md:py-3.5 rounded-full bg-teal text-cream font-sans font-medium text-sm hover:bg-teal-dark transition-all duration-300 group"
               >
                 {data.cta}
                 <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
