@@ -65,4 +65,53 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
   }
+
+  /* A11y: focus visible customizado (só para navegação teclado) */
+  :focus {
+    outline: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  /* Em fundos teal-dark, ring contrastante em cream */
+  .bg-teal-dark :focus-visible,
+  .bg-teal :focus-visible {
+    outline-color: var(--color-cream);
+  }
+}
+
+/* A11y: skip-to-content link — visível só ao Tab */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-teal-dark);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--color-cream);
+  outline-offset: 2px;
+}
+
+/* A11y: prefers-reduced-motion global — desativa animações longas */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

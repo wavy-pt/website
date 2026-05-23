@@ -130,19 +130,19 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
           href="https://instagram.com/wavy.digital.pt"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center text-teal hover:bg-teal hover:text-cream transition-all duration-300"
-          aria-label="Instagram"
+          class="w-11 h-11 rounded-full bg-teal/10 flex items-center justify-center text-teal hover:bg-teal hover:text-cream transition-all duration-300"
+          aria-label={lang === 'en' ? 'Wavy on Instagram' : 'Instagram da Wavy'}
         >
-          <i class="ri-instagram-line text-base"></i>
+          <i class="ri-instagram-line text-base" aria-hidden="true"></i>
         </a>
         <a
           href="https://facebook.com/wavy.digital.pt"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-9 h-9 rounded-full bg-teal/10 flex items-center justify-center text-teal hover:bg-teal hover:text-cream transition-all duration-300"
-          aria-label="Facebook"
+          class="w-11 h-11 rounded-full bg-teal/10 flex items-center justify-center text-teal hover:bg-teal hover:text-cream transition-all duration-300"
+          aria-label={lang === 'en' ? 'Wavy on Facebook' : 'Facebook da Wavy'}
         >
-          <i class="ri-facebook-line text-base"></i>
+          <i class="ri-facebook-line text-base" aria-hidden="true"></i>
         </a>
       </div>
     </div>

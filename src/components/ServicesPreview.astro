@@ -50,19 +50,21 @@ const services = [
 
     <!-- Interactive Stepper -->
     <div class="scroll-reveal mb-10 md:mb-12">
-      <div id="services-stepper" class="relative flex items-center justify-between max-w-3xl mx-auto">
+      <div id="services-stepper" class="relative flex items-center justify-between max-w-3xl mx-auto" role="tablist" aria-label={lang === 'en' ? 'Service stages' : 'Etapas do serviço'}>
         <!-- Connector line behind nodes -->
-        <div class="absolute top-7 md:top-8 left-0 right-0 h-px bg-cream/20 mx-14"></div>
+        <div class="absolute top-7 md:top-8 left-0 right-0 h-px bg-cream/20 mx-14" aria-hidden="true"></div>
 
         {services.map(({ number, short, shortEn }, idx) => (
           <button
             type="button"
             data-step={number}
+            role="tab"
+            aria-selected={idx === 0 ? 'true' : 'false'}
             class:list={[
               'step-btn relative z-10 flex flex-col items-center gap-3 group cursor-pointer',
               idx === 0 ? 'is-active' : '',
             ]}
-            aria-label={`Step ${number}`}
+            aria-label={lang === 'en' ? `Stage ${number}: ${shortEn}` : `Etapa ${number}: ${short}`}
           >
             <div class="step-circle w-14 h-14 md:w-16 md:h-16 rounded-full border border-cream/30 bg-teal flex items-center justify-center transition-all duration-300">
               <span class="step-number font-serif text-xl md:text-2xl font-medium text-cream/80 transition-colors duration-300">
@@ -266,7 +268,9 @@ const services = [
 
     steps?.forEach((s) => {
       const el = s as HTMLElement;
-      el.classList.toggle('is-active', el.dataset.step === stepNumber);
+      const isActive = el.dataset.step === stepNumber;
+      el.classList.toggle('is-active', isActive);
+      el.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
 
     cards.forEach((c) => {

@@ -73,10 +73,12 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
     <!-- Mobile hamburger -->
     <button
       id="mobile-toggle"
-      class="lg:hidden w-10 h-10 flex items-center justify-center text-teal-dark"
-      aria-label="Menu"
+      class="lg:hidden w-11 h-11 flex items-center justify-center text-teal-dark"
+      aria-label={lang === 'en' ? 'Open menu' : 'Abrir menu'}
+      aria-expanded="false"
+      aria-controls="mobile-menu"
     >
-      <i id="menu-icon" class="ri-menu-3-line text-xl"></i>
+      <i id="menu-icon" class="ri-menu-3-line text-xl" aria-hidden="true"></i>
     </button>
   </div>
 </header>
@@ -85,16 +87,19 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
 <div
   id="mobile-menu"
   class="fixed inset-0 z-40 bg-offwhite flex flex-col items-center justify-center transition-all duration-300 lg:hidden opacity-0 pointer-events-none"
+  role="dialog"
+  aria-modal="true"
+  aria-label={lang === 'en' ? 'Navigation menu' : 'Menu de navegação'}
 >
-  <nav class="flex flex-col items-center gap-8">
-    <a href={getLocalizedPath('/', lang)} class="mb-4">
+  <nav class="flex flex-col items-center gap-6">
+    <a href={getLocalizedPath('/', lang)} class="mb-2 py-2">
       <img src="/logo-wavy-tight.svg" alt="Wavy" class="h-12 w-auto" />
     </a>
     {navLinks.map((link) => (
       <a
         href={link.to}
         class:list={[
-          'font-serif text-2xl',
+          'font-serif text-2xl py-2 px-4',
           currentPath === link.to || currentPathClean === link.to
             ? 'text-teal'
             : 'text-teal-dark hover:text-teal',
@@ -111,7 +116,7 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
     </a>
     <a
       href={switchLangPath}
-      class="font-sans text-base text-teal-dark/70 hover:text-teal-dark transition-colors mt-4"
+      class="font-sans text-base text-teal-dark/70 hover:text-teal-dark transition-colors mt-2 py-3 px-4"
     >
       {lang === 'pt' ? 'Switch to English' : 'Mudar para Português'}
     </a>
@@ -124,19 +129,45 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
   const icon = document.getElementById('menu-icon');
   let open = false;
 
-  toggle?.addEventListener('click', () => {
-    open = !open;
+  function setMenu(nextOpen: boolean) {
+    open = nextOpen;
     if (open) {
       menu?.classList.remove('opacity-0', 'pointer-events-none');
       menu?.classList.add('opacity-100', 'pointer-events-auto');
       icon?.classList.remove('ri-menu-3-line');
       icon?.classList.add('ri-close-line');
+      toggle?.setAttribute('aria-expanded', 'true');
+      toggle?.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Close menu' : 'Fechar menu');
+      document.body.style.overflow = 'hidden';
+      // Foco no primeiro link do menu para leitores de ecrã
+      const firstLink = menu?.querySelector('a, button') as HTMLElement | null;
+      firstLink?.focus();
     } else {
       menu?.classList.add('opacity-0', 'pointer-events-none');
       menu?.classList.remove('opacity-100', 'pointer-events-auto');
       icon?.classList.add('ri-menu-3-line');
       icon?.classList.remove('ri-close-line');
+      toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Open menu' : 'Abrir menu');
+      document.body.style.overflow = '';
     }
+  }
+
+  toggle?.addEventListener('click', () => setMenu(!open));
+
+  // Esc fecha o menu mobile
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && open) {
+      setMenu(false);
+      toggle?.focus();
+    }
+  });
+
+  // Fechar menu ao clicar em link interno
+  menu?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      if (open) setMenu(false);
+    });
   });
 
   const header = document.getElementById('site-header');

@@ -18,7 +18,7 @@ const testimonials = i.cases.testimonials;
     <div class="scroll-reveal">
       <!-- Header -->
       <div class="mb-8 md:mb-10">
-        <p class="font-sans text-xs uppercase tracking-widest text-teal mb-3">{i.cases.label}</p>
+        <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">{i.cases.label}</p>
         <div class="flex flex-col gap-4">
           <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15]">
             {i.cases.title}
@@ -61,19 +61,24 @@ const testimonials = i.cases.testimonials;
           </div>
 
           <!-- Dots -->
-          <div class="flex justify-center gap-2 mt-6 shrink-0" role="tablist">
+          <div class="flex justify-center gap-1 mt-6 shrink-0" role="tablist" aria-label={lang === 'en' ? 'Testimonials' : 'Testemunhos'}>
             {testimonials.map((item, idx) => (
               <button
                 type="button"
                 role="tab"
                 aria-label={lang === 'en' ? `Testimonial from ${item.author}` : `Testemunho de ${item.author}`}
                 aria-selected={idx === 0 ? 'true' : 'false'}
-                class:list={[
-                  'testimonial-dot w-2 h-2 rounded-full transition-all duration-300',
-                  idx === 0 ? 'bg-cream w-5' : 'bg-cream/40 hover:bg-cream/60',
-                ]}
+                class="testimonial-dot-btn w-11 h-11 flex items-center justify-center group cursor-pointer"
                 data-dot={idx}
-              ></button>
+              >
+                <span
+                  aria-hidden="true"
+                  class:list={[
+                    'testimonial-dot block h-2 rounded-full transition-all duration-300',
+                    idx === 0 ? 'bg-cream w-5' : 'bg-cream/40 group-hover:bg-cream/60 w-2',
+                  ]}
+                ></span>
+              </button>
             ))}
           </div>
         </div>
@@ -125,10 +130,10 @@ const testimonials = i.cases.testimonials;
           </div>
           <a
             href={getLocalizedPath('/casos', lang)}
-            class="inline-flex items-center gap-2 font-sans text-sm font-medium text-teal-dark hover:text-teal transition-colors whitespace-nowrap group"
+            class="inline-flex items-center gap-2 font-sans text-sm font-medium text-teal-dark hover:text-teal transition-colors whitespace-nowrap group py-3 -my-3"
           >
             {i.cases.ctaButton}
-            <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
+            <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -163,6 +168,7 @@ const testimonials = i.cases.testimonials;
 <script>
   let activeIndex = 0;
   const slides = document.querySelectorAll('.testimonial-slide');
+  const dotButtons = document.querySelectorAll('.testimonial-dot-btn');
   const dots = document.querySelectorAll('.testimonial-dot');
   const total = slides.length;
   let paused = false;
@@ -180,17 +186,20 @@ const testimonials = i.cases.testimonials;
     dots.forEach((d, i) => {
       if (i === idx) {
         d.classList.add('bg-cream', 'w-5');
-        d.classList.remove('bg-cream/40');
+        d.classList.remove('bg-cream/40', 'w-2');
       } else {
         d.classList.remove('bg-cream', 'w-5');
-        d.classList.add('bg-cream/40');
+        d.classList.add('bg-cream/40', 'w-2');
       }
+    });
+    dotButtons.forEach((b, i) => {
+      b.setAttribute('aria-selected', i === idx ? 'true' : 'false');
     });
     activeIndex = idx;
   }
 
-  dots.forEach((d, i) => {
-    d.addEventListener('click', () => setActive(i));
+  dotButtons.forEach((b, i) => {
+    b.addEventListener('click', () => setActive(i));
   });
 
   const container = document.getElementById('testimonial-container');
