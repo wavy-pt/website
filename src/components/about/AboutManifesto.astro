@@ -1,0 +1,57 @@
+---
+import { t } from '../../i18n';
+import type { Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang).aboutPage.manifesto;
+---
+
+<section class="bg-cream py-14 md:py-20">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <!-- Left sticky heading -->
+      <div class="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
+        <p class="font-sans text-xs uppercase tracking-[0.2em] text-teal mb-5 flex items-center gap-3">
+          <span class="w-8 h-px bg-teal" aria-hidden="true"></span>
+          {i.tag}
+        </p>
+        <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.1] mb-5">
+          {i.headline}
+          <br />
+          <em class="text-teal font-serif italic font-medium">{i.headlineHighlight}</em>
+        </h2>
+        <svg width="60" height="12" viewBox="0 0 60 12" fill="none" class="mb-5 text-teal" aria-hidden="true">
+          <path d="M0 6C10 2 20 10 30 6C40 2 50 10 60 6" stroke="currentColor" stroke-width="1.5" fill="none" />
+        </svg>
+        <p class="font-sans text-sm text-muted leading-relaxed max-w-sm">
+          {i.subtitle}
+        </p>
+      </div>
+
+      <!-- Right list -->
+      <div class="lg:col-span-7">
+        <div class="flex flex-col">
+          {i.items.map((item) => (
+            <div class="grid grid-cols-12 gap-4 py-5 border-b border-teal-dark/10 first:pt-0">
+              <div class="col-span-2 md:col-span-1">
+                <span class="font-serif text-lg italic text-teal">{item.number}</span>
+              </div>
+              <div class="col-span-10 md:col-span-11">
+                <h3 class="font-serif text-lg font-medium text-teal-dark mb-2">
+                  {item.title}
+                </h3>
+                <p class="font-sans text-sm text-muted leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

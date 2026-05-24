@@ -199,6 +199,71 @@
       "emailAddress": "geral@wavy.pt"
     }
   },
+  "aboutPage": {
+    "hero": {
+      "tag": "Sobre",
+      "headline": "Estratégia digital,",
+      "headlineHighlight": "com sensibilidade humana.",
+      "subtitle": "A Wavy nasceu da convicção de que pequenos negócios construídos com propósito merecem comunicação ao mesmo nível — sem se trair, sem se exaurir, sem virar conteúdo.",
+      "marquee": [
+        { "type": "image", "imageKey": "hero", "cardColor": "cream" },
+        { "type": "stat", "number": "+15", "label": "Marcas acompanhadas", "cardColor": "teal" },
+        { "type": "text", "title": "Mafra, Portugal", "body": "Fundada em casa, numa sala de estar.", "cardColor": "cream" },
+        { "type": "stat", "number": "8", "label": "Anos em agências", "cardColor": "teal" },
+        { "type": "text", "title": "Só 3 clientes no início", "body": "Todos do mesmo bairro. A confiança começou ali.", "cardColor": "teal-dark" },
+        { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },
+        { "type": "stat", "number": "100%", "label": "Honestidade", "cardColor": "teal" },
+        { "type": "text", "title": "Sem templates", "body": "Cada estratégia nasce da identidade do cliente.", "cardColor": "cream" },
+        { "type": "text", "title": "Mariana Antunes", "body": "Fundadora, estrategista e única equipa da Wavy.", "cardColor": "cream" },
+        { "type": "stat", "number": "0", "label": "Trends seguidas às cegas", "cardColor": "teal-dark" }
+      ]
+    },
+    "mariana": {
+      "tag": "Quem está por trás",
+      "headline": "Sou a",
+      "headlineHighlight": "Mariana.",
+      "paragraphs": [
+        "Trabalhei oito anos em agências antes de perceber que o que me interessava — pequenos negócios reais, com cara, com história, com tempo — não era exactamente o tipo de cliente que pagava as estruturas onde estava.",
+        "Saí. Comecei a Wavy em casa, em Mafra, com três clientes do bairro. Hoje trabalho com gente em todo o país, mas o método é o mesmo: tempo. Atenção. Honestidade. E uma única promessa — só te aceitamos como cliente se acreditarmos que podemos fazer diferença real."
+      ],
+      "signature": "~ Mariana",
+      "alt": "Mariana Antunes, fundadora da Wavy"
+    },
+    "manifesto": {
+      "tag": "Filosofia",
+      "headline": "Cinco coisas em que",
+      "headlineHighlight": "acreditamos.",
+      "subtitle": "Não é manifesto. É uma checklist privada que aplico antes de aceitar cada cliente novo.",
+      "items": [
+        { "number": "i.", "title": "Autenticidade", "desc": "A identidade do cliente é o ponto de partida, nunca um template. O processo começa por perceber quem és antes de propor qualquer coisa." },
+        { "number": "ii.", "title": "Calma e intenção", "desc": "Num mercado digital barulhento, a Wavy aparece com serenidade. Cada decisão é tomada com intenção clara — nunca por impulso, nunca por tendência." },
+        { "number": "iii.", "title": "Transparência", "desc": "Tens direito a saber sempre o porquê de cada decisão. Sem estratégias opacas, sem resultados inflacionados. Comunicamos com clareza — incluindo quando algo não está a funcionar." },
+        { "number": "iv.", "title": "Estratégia primeiro", "desc": "Criar conteúdo sem saber para quem, porquê e com que objectivo é desperdiçar recursos. Nenhum post existe sem propósito definido." },
+        { "number": "v.", "title": "Sustentabilidade", "desc": "Crescimento que não consegues manter não é crescimento — é pressão. Construímos ritmos que consegues gerir, com ou sem apoio." }
+      ]
+    },
+    "differenceTable": {
+      "label": "O que somos · O que não somos",
+      "headline": "Não somos agência.",
+      "headlineHighlight": "Não somos freelancer.",
+      "subtitle": "Ocupamos um espaço específico — o ponto de encontro entre estratégia digital rigorosa e sensibilidade humana.",
+      "headers": ["Dimensão", "Agências", "Freelancers", "Wavy"],
+      "rows": [
+        { "dim": "Abordagem", "agency": "Template e escala", "freelance": "Execução pontual", "wavy": "Identidade → estratégia → execução" },
+        { "dim": "Foco", "agency": "Métricas e volume", "freelance": "Preço baixo", "wavy": "Coerência e sustentabilidade" },
+        { "dim": "Relação", "agency": "Conta entre muitas", "freelance": "Transacional", "wavy": "Parceria longa, ritmo humano" },
+        { "dim": "Diferenciador", "agency": "Estrutura", "freelance": "Acessibilidade", "wavy": "Autenticidade e proximidade" }
+      ]
+    },
+    "cta": {
+      "headline": "A próxima conversa pode ser",
+      "headlineHighlight": "a tua.",
+      "subtitle": "Quatro minutos a responder a quatro perguntas. Recebes um diagnóstico personalizado e — se fizer sentido — agendamos 15 minutos. Sem propostas forçadas.",
+      "ctaLabel": "Começar agora",
+      "ctaText": "Marca o teu diagnóstico gratuito",
+      "button": "Fazer o diagnóstico"
+    }
+  },
   "cases": {
     "label": "resultados reais",
     "title": "O que mudou. Para quem importa.",

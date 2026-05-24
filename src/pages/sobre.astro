@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import WipPlaceholder from '../components/WipPlaceholder.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import AboutHero from '../components/about/AboutHero.astro';
+import AboutMariana from '../components/about/AboutMariana.astro';
+import AboutManifesto from '../components/about/AboutManifesto.astro';
+import AboutDifferenceTable from '../components/about/AboutDifferenceTable.astro';
+import AboutCtaBlock from '../components/about/AboutCtaBlock.astro';
 import { isProd } from '../lib/env';
 
 if (isProd) {
@@ -8,6 +13,14 @@ if (isProd) {
 }
 ---
 
-<Layout title="Sobre · Wavy" description="">
-  <WipPlaceholder lang="pt" title="Sobre" />
+<Layout
+  title="Sobre · Wavy"
+  description="Estratégia digital com sensibilidade humana. Conhece a Mariana, a história e a filosofia por trás da Wavy."
+>
+  <AboutHero lang="pt" />
+  <AboutMariana lang="pt" />
+  <AboutManifesto lang="pt" />
+  <AboutDifferenceTable lang="pt" />
+  <AboutCtaBlock lang="pt" />
+  <ScrollReveal />
 </Layout>
