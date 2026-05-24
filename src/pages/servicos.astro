@@ -1,13 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import WipPlaceholder from '../components/WipPlaceholder.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import ServicesHero from '../components/services/ServicesHero.astro';
+import ServicesCards from '../components/services/ServicesCards.astro';
+import ServicesAddons from '../components/services/ServicesAddons.astro';
+import ServicesProcess from '../components/services/ServicesProcess.astro';
+import ServicesCtaBlock from '../components/services/ServicesCtaBlock.astro';
 import { isProd } from '../lib/env';
 
+// Em produção, página ainda não está pronta — redirect para homepage.
+// Em development, mostra o desenvolvimento em curso.
 if (isProd) {
   return Astro.redirect('/', 308);
 }
 ---
 
-<Layout title="Serviços · Wavy" description="">
-  <WipPlaceholder lang="pt" title="Serviços" />
+<Layout
+  title="Serviços · Wavy"
+  description="Dois caminhos para construir a tua presença digital. Fundação e gestão mensal de redes sociais, com a Wavy."
+>
+  <ServicesHero lang="pt" />
+  <ServicesCards lang="pt" />
+  <ServicesAddons lang="pt" />
+  <ServicesProcess lang="pt" />
+  <ServicesCtaBlock lang="pt" />
+  <ScrollReveal />
 </Layout>

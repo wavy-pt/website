@@ -102,6 +102,103 @@
     },
     "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo e o valor é deduzido no projeto seguinte."
   },
+  "servicesPage": {
+    "hero": {
+      "tag": "Serviços",
+      "headline": "Dois caminhos para construir a tua presença digital.",
+      "subtitle": "Cada serviço foi pensado para um momento diferente da tua jornada. Começamos onde fazes sentido — não onde dá mais facturação."
+    },
+    "start": {
+      "tag": "PROJETO ÚNICO",
+      "scriptName": "Start",
+      "name": "Fundação",
+      "tagline": "Para quem está a começar ou a reconstruir",
+      "desc": "O ponto de partida para uma presença digital sólida e coerente. Antes de qualquer execução, construímos juntas a estratégia e a identidade que vão guiar tudo o resto.",
+      "price": "150€",
+      "priceLabel": "DESDE",
+      "cta": "Saber mais",
+      "deliverables": [
+        "Auditoria digital completa",
+        "Estratégia de conteúdo e posicionamento",
+        "Identidade visual base (logo, paleta, tipografia)",
+        "Setup de redes sociais e/ou website",
+        "Guia de comunicação e tom de voz",
+        "Entrega com formação e acompanhamento inicial"
+      ]
+    },
+    "flow": {
+      "tag": "MAIS ESCOLHIDO",
+      "scriptName": "Flow",
+      "name": "Gestão mensal",
+      "desc": "Para quem quer estar presente sem ter de pensar nisso todos os dias.",
+      "cta": "Conhecer o Flow",
+      "presence": {
+        "label": "Presença",
+        "tagline": "Para quem quer estar presente sem ter de pensar nisso todos os dias",
+        "price": "250€",
+        "priceLabel": "DESDE",
+        "pricePeriod": "/mês",
+        "deliverables": [
+          "Calendário mensal com 8 posts (estáticos, carrosséis e reels)",
+          "Design e edição incluído",
+          "Legendas estratégicas e otimização de SEO",
+          "Agendamento e monitorização",
+          "Relatório mensal simplificado"
+        ]
+      },
+      "growth": {
+        "label": "Crescimento",
+        "tagline": "Para quem já não quer só estar presente — quer crescer com intenção",
+        "price": "380€",
+        "priceLabel": "DESDE",
+        "pricePeriod": "/mês",
+        "deliverables": [
+          "Calendário mensal com 12 posts (estáticos, carrosséis e reels)",
+          "Design e edição incluídos",
+          "Legendas estratégicas e otimização de SEO",
+          "Agendamento e monitorização",
+          "Relatório mensal estratégico",
+          "Orientação para stories",
+          "1 sessão de captação de conteúdo bimestral (2-3h presenciais, 30 fotos + clips de vídeo editados)"
+        ]
+      }
+    },
+    "addons": {
+      "label": "complementares",
+      "title": "Add-ons disponíveis",
+      "subtitle": "Serviços adicionais que podes combinar com qualquer plano, quando fizerem sentido para o teu negócio.",
+      "items": [
+        { "name": "Captação de conteúdo", "desc": "Fotografia e vídeo profissional para redes sociais", "price": "A partir de 180€" },
+        { "name": "Auditoria Digital Express", "desc": "Análise rápida da presença atual com 5 a 7 recomendações.", "price": "100€" },
+        { "name": "Gestão de anúncios pagos", "desc": "Gestão e monitorização de anúncios: Meta Ads e Google Ads", "price": "A partir de 200€/mês + investimento" },
+        { "name": "Google My Business", "desc": "Configuração completa + otimização para SEO local", "price": "A partir de 170€" },
+        { "name": "Sessão de consultoria pontual", "desc": "60 minutos de estratégia e alinhamento", "price": "90€" }
+      ]
+    },
+    "process": {
+      "label": "processo",
+      "title": "Como trabalhamos juntas",
+      "subtitle": "Um processo simples, transparente e sem surpresas. Cada etapa é pensada para que te sintas acompanhada e segura.",
+      "steps": [
+        { "number": "01", "title": "Conversa", "desc": "Uma chamada de 15 minutos para nos conhecermos e perceber se faz sentido trabalharmos juntas." },
+        { "number": "02", "title": "Diagnóstico", "desc": "Análise detalhada do teu negócio, presença digital atual e objetivos." },
+        { "number": "03", "title": "Proposta", "desc": "Uma proposta à medida, clara e transparente, sem surpresas." },
+        { "number": "04", "title": "Início", "desc": "Começamos a trabalhar juntas, com acompanhamento próximo em cada etapa." }
+      ]
+    },
+    "cta": {
+      "explorerTitle": "Ainda a explorar?",
+      "explorerSubtitle": "Faz o diagnóstico e descobre onde estás.",
+      "explorerDuration": "3 minutos",
+      "explorerCta": "Saber onde estou",
+      "ctaCardTitle": "Já decidiste?",
+      "ctaCardDesc": "Marca uma conversa de 30 minutos.",
+      "ctaCardButton": "Marcar uma conversa",
+      "socialLabel": "Segue a Wavy",
+      "emailLabel": "Olá, vamos conversar",
+      "emailAddress": "geral@wavy.pt"
+    }
+  },
   "cases": {
     "label": "resultados reais",
     "title": "O que mudou. Para quem importa.",

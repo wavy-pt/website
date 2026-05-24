@@ -102,6 +102,103 @@
     },
     "planLine": "Do not know where to start? The X-Ray is always the first step and the value is deducted from the next project."
   },
+  "servicesPage": {
+    "hero": {
+      "tag": "Services",
+      "headline": "Two paths to build your digital presence.",
+      "subtitle": "Each service was designed for a different moment in your journey. We start where it makes sense — not where it generates the most revenue."
+    },
+    "start": {
+      "tag": "ONE-OFF PROJECT",
+      "scriptName": "Start",
+      "name": "Foundation",
+      "tagline": "For those starting out or rebuilding",
+      "desc": "The starting point for a solid and coherent digital presence. Before any execution, we build together the strategy and identity that will guide everything else.",
+      "price": "150€",
+      "priceLabel": "FROM",
+      "cta": "Learn more",
+      "deliverables": [
+        "Complete digital audit",
+        "Content strategy and positioning",
+        "Base visual identity (logo, palette, typography)",
+        "Social media and/or website setup",
+        "Communication guide and tone of voice",
+        "Delivery with training and initial support"
+      ]
+    },
+    "flow": {
+      "tag": "MOST CHOSEN",
+      "scriptName": "Flow",
+      "name": "Monthly Management",
+      "desc": "For those who want to be present without thinking about it every day.",
+      "cta": "Discover the Flow",
+      "presence": {
+        "label": "Presence",
+        "tagline": "For those who want to be present without thinking about it every day",
+        "price": "250€",
+        "priceLabel": "FROM",
+        "pricePeriod": "/month",
+        "deliverables": [
+          "Monthly calendar with 8 posts (static, carousels and reels)",
+          "Design and editing included",
+          "Strategic captions and SEO optimization",
+          "Scheduling and monitoring",
+          "Simplified monthly report"
+        ]
+      },
+      "growth": {
+        "label": "Growth",
+        "tagline": "For those who no longer just want to be present — they want to grow with intention",
+        "price": "380€",
+        "priceLabel": "FROM",
+        "pricePeriod": "/month",
+        "deliverables": [
+          "Monthly calendar with 12 posts (static, carousels and reels)",
+          "Design and editing included",
+          "Strategic captions and SEO optimization",
+          "Scheduling and monitoring",
+          "Strategic monthly report",
+          "Guidance for stories",
+          "1 bi-monthly content capture session (2-3h in person, 30 photos + edited video clips)"
+        ]
+      }
+    },
+    "addons": {
+      "label": "add-ons",
+      "title": "Available add-ons",
+      "subtitle": "Additional services you can combine with any plan, whenever they make sense for your business.",
+      "items": [
+        { "name": "Content capture", "desc": "Professional photography and video for social media", "price": "From 180€" },
+        { "name": "Express Digital Audit", "desc": "Quick analysis of current presence with 5 to 7 recommendations.", "price": "100€" },
+        { "name": "Paid ads management", "desc": "Management and monitoring of ads: Meta Ads and Google Ads", "price": "From 200€/month + investment" },
+        { "name": "Google My Business", "desc": "Complete setup + local SEO optimization", "price": "From 170€" },
+        { "name": "One-time consulting session", "desc": "60 minutes of strategy and alignment", "price": "90€" }
+      ]
+    },
+    "process": {
+      "label": "process",
+      "title": "How we work together",
+      "subtitle": "A simple, transparent process with no surprises. Every step is designed so you feel supported and safe.",
+      "steps": [
+        { "number": "01", "title": "Conversation", "desc": "A 15-minute call to get to know each other and see if working together makes sense." },
+        { "number": "02", "title": "Diagnosis", "desc": "Detailed analysis of your business, current digital presence and goals." },
+        { "number": "03", "title": "Proposal", "desc": "A tailored, clear and transparent proposal, with no surprises." },
+        { "number": "04", "title": "Start", "desc": "We start working together, with close support at every step." }
+      ]
+    },
+    "cta": {
+      "explorerTitle": "Still exploring?",
+      "explorerSubtitle": "Take the diagnosis and discover where you stand.",
+      "explorerDuration": "3 minutes",
+      "explorerCta": "Know where I stand",
+      "ctaCardTitle": "Made your decision?",
+      "ctaCardDesc": "Book a 30-minute conversation.",
+      "ctaCardButton": "Book a call",
+      "socialLabel": "Follow Wavy",
+      "emailLabel": "Hello, let's talk",
+      "emailAddress": "geral@wavy.pt"
+    }
+  },
   "cases": {
     "label": "real results",
     "title": "What changed. For those it matters to.",
