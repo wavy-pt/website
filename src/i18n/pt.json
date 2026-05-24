@@ -328,6 +328,66 @@
       "button": "Saber onde estou"
     }
   },
+  "contactPage": {
+    "page": {
+      "label": "contacto",
+      "title": "Vamos conversar?",
+      "subtitle": "Antes de qualquer proposta, há sempre uma conversa. Escolhe o caminho que faz mais sentido para ti agora — não há resposta errada."
+    },
+    "options": {
+      "label": "três caminhos",
+      "card1": {
+        "icon": "ri-file-list-line",
+        "context": "se ainda estás a explorar",
+        "title": "Faz o auto-diagnóstico",
+        "desc": "5 perguntas simples. No fim, descobres em que ponto está o teu negócio digital e qual o próximo passo que faz sentido.",
+        "cta": "Fazer o diagnóstico",
+        "time": "3 minutos"
+      },
+      "card2": {
+        "icon": "ri-calendar-check-line",
+        "context": "se já sabes o que queres",
+        "title": "Marca uma conversa",
+        "desc": "15 minutos em vídeo ou telefone. Vamos perceber onde estás, para onde queres ir, e se faz sentido avançarmos juntas.",
+        "cta": "Escolher horário",
+        "time": "15 minutos"
+      },
+      "card3": {
+        "icon": "ri-mail-send-line",
+        "context": "preferes escrever",
+        "title": "Manda-me uma mensagem",
+        "desc": "Conta-nos o teu negócio e o que procuras. Respondemos em até 24h úteis com total atenção.",
+        "cta": "Escrever mensagem",
+        "time": "Resposta em 24h"
+      }
+    },
+    "form": {
+      "title": "Manda-me uma mensagem",
+      "name": "Nome",
+      "namePlaceholder": "O teu nome",
+      "email": "Email",
+      "emailPlaceholder": "tu@exemplo.com",
+      "business": "Negócio / Projeto",
+      "businessPlaceholder": "Nome do teu negócio (opcional)",
+      "message": "Mensagem",
+      "messagePlaceholder": "Conta-nos um pouco sobre o teu negócio e o que procuras...",
+      "submit": "Enviar mensagem",
+      "privacy": "Os teus dados são tratados com respeito. Nunca partilhados."
+    },
+    "talk": {
+      "title": "Outras formas de falar connosco",
+      "emailLabel": "Email",
+      "email": "geral@wavy.pt",
+      "instagramLabel": "Instagram",
+      "instagram": "@wavy.digital.pt"
+    },
+    "findUs": {
+      "locationLabel": "Localização",
+      "location": "Mafra e Samora Correia, Portugal",
+      "hoursLabel": "Horário",
+      "hours": "Disponíveis de segunda a sexta, das 9h às 18h."
+    }
+  },
   "cases": {
     "label": "resultados reais",
     "title": "O que mudou. Para quem importa.",

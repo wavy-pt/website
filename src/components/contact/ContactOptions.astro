@@ -1,0 +1,210 @@
+---
+import { t } from '../../i18n';
+import type { Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang).contactPage;
+const f = i.form;
+const emailAddress = i.talk.email;
+
+// Helper para placeholders dos cards
+const cardStyles = [
+  { bg: 'bg-teal-dark', titleColor: 'text-cream', descColor: 'text-cream/85', contextColor: 'text-teal-light', timeColor: 'text-cream/60', iconColor: 'text-teal-light', ctaBg: 'bg-cream text-teal-dark hover:bg-offwhite' },
+  { bg: 'bg-teal', titleColor: 'text-cream', descColor: 'text-cream/85', contextColor: 'text-cream', timeColor: 'text-cream/70', iconColor: 'text-cream', ctaBg: 'bg-cream text-teal hover:bg-offwhite' },
+  { bg: 'bg-cream', titleColor: 'text-teal-dark', descColor: 'text-muted', contextColor: 'text-teal', timeColor: 'text-muted', iconColor: 'text-teal', ctaBg: 'bg-teal text-cream hover:bg-teal-dark' },
+];
+
+const cards = [
+  { ...i.options.card1, action: 'self-diagnosis' },
+  { ...i.options.card2, action: 'book-call' },
+  { ...i.options.card3, action: 'form' },
+];
+---
+
+<section class="bg-offwhite pb-10 md:pb-16">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="scroll-reveal">
+      <p class="font-serif italic text-teal text-sm mb-6 text-center">
+        {i.options.label}
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {cards.map((card, idx) => {
+          const s = cardStyles[idx];
+          return (
+            <div class:list={[
+              'rounded-[28px] p-7 md:p-8 flex flex-col min-h-[320px] transition-transform duration-300 hover:-translate-y-1',
+              s.bg
+            ]}>
+              <div class="flex items-center justify-between mb-6">
+                <i class:list={[card.icon, 'text-2xl', s.iconColor]} aria-hidden="true"></i>
+                <span class:list={['font-sans text-xs', s.timeColor]}>{card.time}</span>
+              </div>
+
+              <p class:list={['font-serif italic text-sm mb-1', s.contextColor]}>{card.context}</p>
+              <h3 class:list={['font-serif text-xl md:text-2xl font-medium mb-3', s.titleColor]}>{card.title}</h3>
+              <p class:list={['font-sans text-sm leading-relaxed mb-8 flex-grow', s.descColor]}>{card.desc}</p>
+
+              <button
+                type="button"
+                data-contact-action={card.action}
+                class:list={[
+                  'inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-6 py-3.5 rounded-full transition-all duration-300 whitespace-nowrap w-full',
+                  s.ctaBg
+                ]}
+              >
+                {card.cta}
+                <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+              </button>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+
+  <!-- Expanded form section (shown when card3 clicked) -->
+  <div
+    id="contact-form-section"
+    class="max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-out"
+    data-form-open="false"
+  >
+    <div class="max-w-2xl mx-auto px-6 md:px-10 mt-12">
+      <div class="bg-cream rounded-[28px] p-8 md:p-10">
+        <h2 class="font-serif text-2xl font-medium text-teal-dark mb-8">
+          {f.title}
+        </h2>
+
+        <form id="wavy-contact-form" class="flex flex-col gap-5" novalidate>
+          <div>
+            <label for="contact-name" class="block font-sans text-xs uppercase tracking-wider text-muted mb-2">
+              {f.name}
+            </label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              required
+              class="w-full bg-offwhite border border-teal-dark/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors"
+              placeholder={f.namePlaceholder}
+            />
+          </div>
+
+          <div>
+            <label for="contact-email" class="block font-sans text-xs uppercase tracking-wider text-muted mb-2">
+              {f.email}
+            </label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              required
+              class="w-full bg-offwhite border border-teal-dark/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors"
+              placeholder={f.emailPlaceholder}
+            />
+          </div>
+
+          <div>
+            <label for="contact-business" class="block font-sans text-xs uppercase tracking-wider text-muted mb-2">
+              {f.business}
+            </label>
+            <input
+              id="contact-business"
+              name="business"
+              type="text"
+              class="w-full bg-offwhite border border-teal-dark/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors"
+              placeholder={f.businessPlaceholder}
+            />
+          </div>
+
+          <div>
+            <label for="contact-message" class="block font-sans text-xs uppercase tracking-wider text-muted mb-2">
+              {f.message}
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              required
+              class="w-full bg-offwhite border border-teal-dark/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors resize-y"
+              placeholder={f.messagePlaceholder}
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal text-cream hover:bg-teal-dark transition-all duration-300 self-start mt-2"
+          >
+            {f.submit}
+            <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          </button>
+
+          <p class="font-sans text-xs text-muted mt-2">{f.privacy}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ emailAddress }}>
+  (function () {
+    // Card 3 → expand form section
+    const formSection = document.getElementById('contact-form-section');
+    const cardButtons = document.querySelectorAll('[data-contact-action]');
+
+    function openForm() {
+      if (!formSection) return;
+      formSection.setAttribute('data-form-open', 'true');
+      formSection.style.maxHeight = '2000px';
+      formSection.style.opacity = '1';
+      setTimeout(function () {
+        formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+
+    cardButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const action = btn.getAttribute('data-contact-action');
+        if (action === 'form') {
+          openForm();
+        } else if (action === 'self-diagnosis') {
+          // Placeholder — quando o questionário estiver pronto, aponta para ele
+          openForm();
+        } else if (action === 'book-call') {
+          // Placeholder — quando houver Calendly, aponta para lá
+          window.location.href = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent('Marcar conversa de 15 minutos');
+        }
+      });
+    });
+
+    // Form submit → abre cliente de email com body pré-preenchido (sem backend)
+    const form = document.getElementById('wavy-contact-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = (form.elements.namedItem('name') || {}).value || '';
+        const email = (form.elements.namedItem('email') || {}).value || '';
+        const business = (form.elements.namedItem('business') || {}).value || '';
+        const message = (form.elements.namedItem('message') || {}).value || '';
+
+        if (!name.trim() || !email.trim() || !message.trim()) return;
+
+        const subject = 'Mensagem de ' + name + (business ? ' (' + business + ')' : '');
+        const body =
+          'Nome: ' + name + '\n' +
+          'Email: ' + email + '\n' +
+          (business ? 'Negócio: ' + business + '\n' : '') +
+          '\n' + message;
+
+        window.location.href =
+          'mailto:' + emailAddress +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+      });
+    }
+  })();
+</script>

@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import WipPlaceholder from '../components/WipPlaceholder.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import ContactHero from '../components/contact/ContactHero.astro';
+import ContactOptions from '../components/contact/ContactOptions.astro';
+import ContactTalk from '../components/contact/ContactTalk.astro';
+import ContactFindUs from '../components/contact/ContactFindUs.astro';
 import { isProd } from '../lib/env';
 
 if (isProd) {
@@ -8,6 +12,13 @@ if (isProd) {
 }
 ---
 
-<Layout title="Contacto · Wavy" description="">
-  <WipPlaceholder lang="pt" title="Contacto" />
+<Layout
+  title="Contacto · Wavy"
+  description="Vamos conversar? Três caminhos para começar — auto-diagnóstico, agendar conversa ou enviar mensagem."
+>
+  <ContactHero lang="pt" />
+  <ContactOptions lang="pt" />
+  <ContactTalk lang="pt" />
+  <ContactFindUs lang="pt" />
+  <ScrollReveal />
 </Layout>

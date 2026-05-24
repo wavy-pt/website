@@ -329,6 +329,66 @@
       "button": "Find out where I am"
     }
   },
+  "contactPage": {
+    "page": {
+      "label": "contact",
+      "title": "Let's talk?",
+      "subtitle": "Before any proposal, there is always a conversation. Choose the path that makes the most sense for you right now — there is no wrong answer."
+    },
+    "options": {
+      "label": "three paths",
+      "card1": {
+        "icon": "ri-file-list-line",
+        "context": "if you are still exploring",
+        "title": "Take the self-diagnosis",
+        "desc": "5 simple questions. At the end, you discover where your digital business stands and which next step makes the most sense.",
+        "cta": "Take the diagnosis",
+        "time": "3 minutes"
+      },
+      "card2": {
+        "icon": "ri-calendar-check-line",
+        "context": "if you already know what you want",
+        "title": "Book a conversation",
+        "desc": "15 minutes by video or phone. We will understand where you are, where you want to go, and if it makes sense to move forward together.",
+        "cta": "Choose a time",
+        "time": "15 minutes"
+      },
+      "card3": {
+        "icon": "ri-mail-send-line",
+        "context": "if you prefer to write",
+        "title": "Send us a message",
+        "desc": "Tell us about your business and what you are looking for. We reply within 24 business hours with full attention.",
+        "cta": "Write a message",
+        "time": "Reply in 24h"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "business": "Business / Project",
+      "businessPlaceholder": "Your business name (optional)",
+      "message": "Message",
+      "messagePlaceholder": "Tell us a bit about your business and what you are looking for...",
+      "submit": "Send message",
+      "privacy": "Your data is treated with respect. Never shared."
+    },
+    "talk": {
+      "title": "Other ways to reach us",
+      "emailLabel": "Email",
+      "email": "geral@wavy.pt",
+      "instagramLabel": "Instagram",
+      "instagram": "@wavy.digital.pt"
+    },
+    "findUs": {
+      "locationLabel": "Location",
+      "location": "Mafra & Samora Correia, Portugal",
+      "hoursLabel": "Hours",
+      "hours": "Available Monday to Friday, 9am to 6pm."
+    }
+  },
   "cases": {
     "label": "real results",
     "title": "What changed. For those it matters to.",
