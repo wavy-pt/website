@@ -1,6 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import WipPlaceholder from '../../components/WipPlaceholder.astro';
+import ScrollReveal from '../../components/ScrollReveal.astro';
+import CasesHero from '../../components/cases/CasesHero.astro';
+import CaseStudy from '../../components/cases/CaseStudy.astro';
+import CasesCta from '../../components/cases/CasesCta.astro';
 import { isProd } from '../../lib/env';
 
 if (isProd) {
@@ -8,6 +11,14 @@ if (isProd) {
 }
 ---
 
-<Layout title="Cases · Wavy" description="">
-  <WipPlaceholder lang="en" title="Cases" />
+<Layout
+  title="Cases · Wavy"
+  description="Three real transformation stories. Case studies of businesses that trusted Wavy."
+>
+  <CasesHero lang="en" />
+  <CaseStudy lang="en" index={0} />
+  <CaseStudy lang="en" index={1} />
+  <CaseStudy lang="en" index={2} />
+  <CasesCta lang="en" />
+  <ScrollReveal />
 </Layout>

@@ -264,6 +264,71 @@
       "button": "Take the diagnosis"
     }
   },
+  "casesPage": {
+    "page": {
+      "label": "CASES & RESULTS",
+      "titleLine1": "The stories of",
+      "titleLine2": "businesses that trusted",
+      "titleLine3": "Wavy"
+,
+      "subtitle": "Three real transformation stories. Each client is a case study — because authenticity is not an argument, it is evidence."
+    },
+    "items": [
+      {
+        "metadata": "INTEGRATIVE THERAPY · MAFRA · 6 MONTHS",
+        "imageKey": "bastidores",
+        "imageCaption": "sofia-marques · 4:3 · prints",
+        "headlineBefore": "From an",
+        "headlineHighlight": "impersonal",
+        "headlineAfter": "profile to a fully booked agenda three months ahead.",
+        "description": "Sofia had deep work and loyal clients — but her Instagram looked like any other therapist. We repositioned the communication around what she actually does: presence and time. The profile stopped trying to please everyone.",
+        "stats": [
+          { "value": "+312%", "label": "engagement in 90 days" },
+          { "value": "3 months", "label": "fully booked" },
+          { "value": "×4", "label": "DM messages per week" }
+        ],
+        "quote": "I finally feel my Instagram represents me. Mariana understood my work before I could even explain it myself.",
+        "quoteAuthor": "SOFIA MARQUES"
+      },
+      {
+        "metadata": "CONSCIOUS RESTAURANT · SAMORA CORREIA · 9 MONTHS",
+        "imageKey": "bastidores",
+        "imageCaption": "casa-do-monte · 4:3 · prints",
+        "headlineBefore": "The story of the place started selling the place.",
+        "headlineHighlight": "Without Booking.com.",
+        "headlineAfter": "",
+        "description": "They depended 78% on booking platforms and were losing margin. We rebuilt the presence around the story of the house — three generations of family, the vegetable garden, the daily bread. Direct bookings soared.",
+        "stats": [
+          { "value": "+40%", "label": "direct bookings" },
+          { "value": "−26%", "label": "booking dependence" },
+          { "value": "€3.2k", "label": "monthly commission savings" }
+        ],
+        "quote": "For the first time, guests arrive already won over. They book without haggling — because they already like us before arriving.",
+        "quoteAuthor": "CASA DO MONTE"
+      },
+      {
+        "metadata": "LIFE COACH · LISBON · 4 MONTHS · WAVY START + BOOST",
+        "imageKey": "bastidores",
+        "imageCaption": "atelier-luz · 4:3 · prints",
+        "headlineBefore": "From ghost",
+        "headlineHighlight": "followers",
+        "headlineAfter": "to calendar bookings.",
+        "description": "Ana had thousands of followers but few conversions. Her message was diluted — it seemed she was talking to everyone and no one. We reformulated the positioning, bio and content funnel. Scheduled consultations became the new normal.",
+        "stats": [
+          { "value": "×4", "label": "organic Google traffic" },
+          { "value": "+220%", "label": "Instagram orders" },
+          { "value": "8 wks.", "label": "current waitlist" }
+        ],
+        "quote": "Selling now before the piece is even ready. People book through Instagram. I never thought this was possible.",
+        "quoteAuthor": "ATELIER LUZ"
+      }
+    ],
+    "cta": {
+      "title": "The next story could be yours.",
+      "subtitle": "Answer just 4 questions to find out where you are and how we can help. If it makes sense, we will schedule a conversation.",
+      "button": "Find out where I am"
+    }
+  },
   "cases": {
     "label": "real results",
     "title": "What changed. For those it matters to.",
