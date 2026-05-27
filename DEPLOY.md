@@ -15,7 +15,7 @@ Este projeto está preparado para correr em **dois ambientes** no Vercel:
 
 1. Entrar na conta Vercel **da Wavy** (separada da ADDS).
 2. Clicar em **Add New… → Project**.
-3. Importar o repositório `Wavy-Astro` (depois de o ligares ao GitHub/GitLab).
+3. Importar o repositório `Wavy` (depois de o ligares ao GitHub/GitLab).
 4. Framework Preset: **Astro** (deteta automaticamente).
 5. Build command: `npm run build` (default).
 6. Output directory: `dist` (default).
