@@ -79,6 +79,20 @@ const cards = i.cards || [];
   </div>
 </section>
 
+<noscript>
+  <style is:global>
+    /* Sem JavaScript: mostra o leque já aberto (estático, sem animação),
+       à semelhança do fallback do ScrollReveal. Sem isto, os cards
+       ficariam em opacity:0 e o herói aparecia vazio. */
+    .cases-fan-card { opacity: 1 !important; animation: none !important; }
+    .cases-fan-card:nth-child(1) { transform: translateX(-220px) rotate(-10deg) !important; }
+    .cases-fan-card:nth-child(2) { transform: translateX(-110px) rotate(-5deg) !important; }
+    .cases-fan-card:nth-child(3) { transform: translateX(0) rotate(0deg) !important; }
+    .cases-fan-card:nth-child(4) { transform: translateX(110px) rotate(5deg) !important; }
+    .cases-fan-card:nth-child(5) { transform: translateX(220px) rotate(10deg) !important; }
+  </style>
+</noscript>
+
 <style>
   /* Estado inicial: escondido por baixo, inclinado para a esquerda */
   .cases-fan-card {

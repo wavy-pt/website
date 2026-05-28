@@ -548,7 +548,9 @@
       "successTitle": "Mensagem enviada!",
       "success": "Obrigada! Vou ler com atenção e respondo em até 24h úteis.",
       "sendAnother": "Enviar outra mensagem",
-      "error": "Algo correu mal. Tenta novamente ou escreve para geral@wavy.pt."
+      "error": "Algo correu mal. Tenta novamente ou escreve para geral@wavy.pt.",
+      "errorRequired": "Preenche os campos obrigatórios para enviar.",
+      "errorEmail": "O email não parece válido. Podes confirmar?"
     },
     "connect": {
       "ctaContext": "se já sabes o que queres",

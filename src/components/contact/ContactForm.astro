@@ -195,6 +195,8 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
   define:vars={{
     txtSending: f.sending,
     txtError: f.error,
+    txtRequired: f.errorRequired,
+    txtEmail: f.errorEmail,
   }}
 >
   (function () {
@@ -207,6 +209,9 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
     const resetBtn = document.querySelector('[data-form-reset]');
     const statusEl = form.querySelector('[data-form-status]');
     const submitBtn = form.querySelector('button[type="submit"]');
+    const nameEl = form.querySelector('#contact-name');
+    const emailEl = form.querySelector('#contact-email');
+    const messageEl = form.querySelector('#contact-message');
 
     function setStatus(msg, color) {
       if (!statusEl) return;
@@ -248,7 +253,20 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
       const name = (data.get('name') || '').toString().trim();
       const mail = (data.get('email') || '').toString().trim();
       const message = (data.get('message') || '').toString().trim();
-      if (!name || !mail || !message) return;
+
+      // Validação no cliente com feedback (campos obrigatórios + formato do email).
+      if (!name || !mail || !message) {
+        setStatus(txtRequired, '#b3261e');
+        const firstEmpty = !name ? nameEl : !mail ? emailEl : messageEl;
+        if (firstEmpty) firstEmpty.focus();
+        return;
+      }
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
+      if (!emailOk) {
+        setStatus(txtEmail, '#b3261e');
+        if (emailEl) emailEl.focus();
+        return;
+      }
 
       setStatus(txtSending, '#666666');
       if (submitBtn) submitBtn.disabled = true;
