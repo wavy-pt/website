@@ -1,31 +1,192 @@
 ---
+import { Image } from 'astro:assets';
 import { t } from '../../i18n';
 import type { Lang } from '../../i18n';
+import bastidoresImage from '../../assets/wavy-bastidores.jpg';
+import heroImage from '../../assets/wavy-hero.jpg';
+import ctaImage from '../../assets/CTA.jpg';
+import servicosImage from '../../assets/wavy-servicos.png';
+import marianaImage from '../../assets/IMG_7230.jpg';
 
 interface Props {
   lang: Lang;
 }
 
 const { lang } = Astro.props;
-const i = t(lang).casesPage.page;
+const cp = t(lang).casesPage;
+const i = cp.page;
+const numCases = cp.items.length;
+
+const imageMap: Record<string, typeof bastidoresImage> = {
+  bastidores: bastidoresImage,
+  hero: heroImage,
+  cta: ctaImage,
+  servicos: servicosImage,
+  mariana: marianaImage,
+};
+const cards = i.cards || [];
 ---
 
-<section class="pt-[72px] bg-offwhite">
-  <div class="max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-20">
-    <div class="scroll-reveal">
-      <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-5">
-        {i.label}
-      </p>
-      <h1 class="font-serif text-[2.25rem] sm:text-4xl md:text-5xl lg:text-[4.5rem] font-medium text-teal-dark leading-[1.05] mb-5">
-        {i.titleLine1}
-        <br />
-        {i.titleLine2}
-        <br />
-        {i.titleLine3}
-      </h1>
-      <p class="font-sans text-base text-muted leading-relaxed max-w-xl">
-        {i.subtitle}
-      </p>
+<section class="relative bg-offwhite pt-16 md:pt-[72px] min-h-screen flex flex-col overflow-hidden">
+  <!-- Texto -->
+  <div class="scroll-reveal max-w-3xl mx-auto w-full px-6 md:px-10 pt-10 md:pt-14 text-center">
+    <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-5">
+      {i.label}
+    </p>
+    <h1 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.1] mb-5">
+      {i.titleLine1} {i.titleLine2} {i.titleLine3}
+    </h1>
+    <p class="font-sans text-base text-muted leading-relaxed max-w-xl mx-auto">
+      {i.subtitle}
+    </p>
+  </div>
+
+  <!-- Leque de cards -->
+  <div class="flex-1 flex items-center justify-center px-6 py-10 md:py-16">
+    <div
+      class="cases-fan relative scale-[0.44] sm:scale-[0.7] md:scale-95 lg:scale-100"
+      style="width: 290px; height: 380px;"
+      data-fan
+    >
+      {cards.map((card, idx) => {
+        const cimg = imageMap[card.imageKey || 'bastidores'];
+        const caseIndex = Math.min(idx, numCases - 1);
+        return (
+          <a
+            href={`#caso-${caseIndex}`}
+            data-case-link
+            aria-label={card.title}
+            class="cases-fan-card block absolute inset-0 rounded-2xl overflow-hidden bg-teal-dark"
+          >
+            <Image
+              src={cimg}
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              widths={[320, 580]}
+              sizes="320px"
+              quality={78}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-teal-dark/90 via-teal-dark/20 to-transparent" aria-hidden="true"></div>
+            <div class="absolute bottom-0 inset-x-0 p-6">
+              <p class="font-sans text-[10px] uppercase tracking-[0.15em] text-cream/70 mb-1">{card.category}</p>
+              <p class="font-serif text-xl font-medium text-cream leading-tight">{card.title}</p>
+            </div>
+          </a>
+        );
+      })}
     </div>
   </div>
 </section>
+
+<style>
+  /* Estado inicial: escondido por baixo, inclinado para a esquerda */
+  .cases-fan-card {
+    opacity: 0;
+    transform: translateY(150px) translateX(0) rotate(-8deg);
+    box-shadow: 0 18px 45px -15px rgba(28, 60, 60, 0.45);
+    will-change: transform, opacity;
+  }
+  /* posição final de cada card (usada na animação e no estado estático) */
+  .cases-fan-card:nth-child(1) { z-index: 5; --tx: -220px; --rot: -10deg; }
+  .cases-fan-card:nth-child(2) { z-index: 4; --tx: -110px; --rot: -5deg; }
+  .cases-fan-card:nth-child(3) { z-index: 3; --tx: 0px; --rot: 0deg; }
+  .cases-fan-card:nth-child(4) { z-index: 2; --tx: 110px; --rot: 5deg; }
+  .cases-fan-card:nth-child(5) { z-index: 1; --tx: 220px; --rot: 10deg; }
+
+  /* Um só movimento contínuo:
+     sobe inclinado à esquerda -> chega ao centro -> inclina à direita -> abre o leque */
+  @keyframes fan-deal {
+    0%   { transform: translateY(150px) translateX(0) rotate(-8deg); opacity: 0; }
+    20%  { opacity: 1; }
+    42%  { transform: translateY(0) translateX(0) rotate(-8deg); opacity: 1; }
+    56%  { transform: translateY(0) translateX(0) rotate(7deg); }
+    100% { transform: translateY(0) translateX(var(--tx)) rotate(var(--rot)); opacity: 1; }
+  }
+
+  .cases-fan.is-open .cases-fan-card {
+    animation: fan-deal 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  /* Depois de abrir: estado estático + transições para o hover */
+  .cases-fan.deal-done .cases-fan-card {
+    animation: none;
+    opacity: 1;
+    transition:
+      transform 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+      box-shadow 0.3s ease;
+  }
+  .cases-fan.deal-done .cases-fan-card:nth-child(1) { transform: translateX(-220px) rotate(-10deg); }
+  .cases-fan.deal-done .cases-fan-card:nth-child(2) { transform: translateX(-110px) rotate(-5deg); }
+  .cases-fan.deal-done .cases-fan-card:nth-child(3) { transform: translateX(0) rotate(0deg); }
+  .cases-fan.deal-done .cases-fan-card:nth-child(4) { transform: translateX(110px) rotate(5deg); }
+  .cases-fan.deal-done .cases-fan-card:nth-child(5) { transform: translateX(220px) rotate(10deg); }
+
+  /* Hover: vem para a frente, sobe e endireita */
+  .cases-fan.deal-done .cases-fan-card:hover,
+  .cases-fan.deal-done .cases-fan-card:focus-visible {
+    transform: translateY(-15px) rotate(0deg);
+    z-index: 10;
+    box-shadow: 0 32px 64px -16px rgba(28, 60, 60, 0.5);
+  }
+
+  /* Sem animação para quem prefere movimento reduzido: mostra logo o leque */
+  @media (prefers-reduced-motion: reduce) {
+    .cases-fan-card { opacity: 1; animation: none !important; transition: none; }
+    .cases-fan-card:nth-child(1) { transform: translateX(-220px) rotate(-10deg); }
+    .cases-fan-card:nth-child(2) { transform: translateX(-110px) rotate(-5deg); }
+    .cases-fan-card:nth-child(3) { transform: translateX(0) rotate(0deg); }
+    .cases-fan-card:nth-child(4) { transform: translateX(110px) rotate(5deg); }
+    .cases-fan-card:nth-child(5) { transform: translateX(220px) rotate(10deg); }
+  }
+</style>
+
+<script>
+  function initCasesFan() {
+    const fans = document.querySelectorAll('[data-fan]');
+
+    if (fans.length) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const fan = entry.target;
+              requestAnimationFrame(() => {
+                fan.classList.add('is-open');
+                window.setTimeout(() => fan.classList.add('deal-done'), 1600);
+              });
+              io.unobserve(fan);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+
+      fans.forEach((f) => {
+        if (f.getAttribute('data-fan-bound') === 'true') return;
+        f.setAttribute('data-fan-bound', 'true');
+        io.observe(f);
+      });
+    }
+
+    // Clique no card -> scroll suave até à secção do caso
+    document.querySelectorAll('[data-case-link]').forEach((link) => {
+      if (link.getAttribute('data-link-bound') === 'true') return;
+      link.setAttribute('data-link-bound', 'true');
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.charAt(0) === '#') {
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initCasesFan);
+  document.addEventListener('DOMContentLoaded', initCasesFan);
+  initCasesFan();
+</script>

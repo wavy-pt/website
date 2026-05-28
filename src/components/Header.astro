@@ -1,14 +1,29 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
-import { isProd, contactHref } from '../lib/env';
+import { isProd, schedulingHref, schedulingIsExternal } from '../lib/env';
 import { switchLangPath as resolveSwitchPath } from '../lib/slugs';
 
 interface Props {
   lang: Lang;
+  /**
+   * Estado inicial do header sobre uma hero com imagem:
+   *   - `false` (default) → opaco, texto teal-dark (comportamento normal).
+   *   - `true`           → fundo transparente, texto cream (sobre imagem ESCURA).
+   *                        Ao scroll, ganha bg-offwhite e texto volta a teal-dark.
+   *   - `'light'`        → fundo transparente, texto fica teal-dark (sobre imagem CLARA).
+   *                        Ao scroll, ganha bg-offwhite (texto mantém-se).
+   */
+  transparent?: boolean | 'light';
 }
 
-const { lang } = Astro.props;
+const { lang, transparent = false } = Astro.props;
+
+// Helpers internos:
+//   bgIsTransparent  → o fundo é transparente no topo (true e 'light').
+//   usesLightText    → o texto/logo invertem para cream (só no modo `true`).
+const bgIsTransparent = transparent !== false;
+const usesLightText = transparent === true;
 const i = t(lang);
 const otherLang = lang === 'pt' ? 'en' : 'pt';
 
@@ -22,7 +37,7 @@ const allNavLinks = [
 ];
 
 const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
-const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
+const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
 
 const currentPath = Astro.url.pathname;
 const currentPathClean = currentPath.replace(/^\/(pt|en)/, '') || '/';
@@ -31,30 +46,55 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
 
 <header
   id="site-header"
-  class="fixed top-0 left-0 right-0 z-50 bg-offwhite transition-all duration-300"
+  data-transparent={bgIsTransparent ? 'true' : 'false'}
+  data-state="top"
+  class:list={[
+    'group/header fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+    bgIsTransparent ? 'bg-transparent' : 'bg-offwhite',
+  ]}
 >
   <div class="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-[72px]">
     <a href={getLocalizedPath('/', lang)} class="flex items-center shrink-0">
-      <img src="/logo-wavy-tight.svg" alt="Wavy" width="95" height="40" class="h-9 md:h-10 w-auto" />
+      <img
+        src="/logo-wavy-tight.svg"
+        alt="Wavy"
+        width="95"
+        height="40"
+        class:list={[
+          'h-9 md:h-10 w-auto transition-[filter] duration-300',
+          // Quando navbar é transparente E está no topo → logo branco
+          // Quando scrolled → volta à cor original (sem filtro)
+          usesLightText && 'brightness-0 invert group-data-[state=scrolled]/header:brightness-100 group-data-[state=scrolled]/header:invert-0',
+        ]}
+      />
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-8">
-      {navLinks.map((link) => (
-        <a
-          href={link.to}
-          class:list={[
-            'font-sans text-sm transition-colors duration-200 whitespace-nowrap',
-            currentPath === link.to || currentPathClean === link.to
-              ? 'text-teal-dark font-medium'
-              : 'text-teal-dark/70 hover:text-teal-dark',
-          ]}
-        >
-          {link.label}
-        </a>
-      ))}
+      {navLinks.map((link) => {
+        const isActive = currentPath === link.to || currentPathClean === link.to;
+        return (
+          <a
+            href={link.to}
+            class:list={[
+              'font-sans text-sm transition-colors duration-200 whitespace-nowrap',
+              // Não transparent: comportamento original (sempre teal-dark)
+              !usesLightText && (isActive ? 'text-teal-dark font-medium' : 'text-teal-dark/70 hover:text-teal-dark'),
+              // Transparent: cor depende do state do header (top → cream, scrolled → teal-dark)
+              usesLightText && (isActive ? 'font-medium' : ''),
+              usesLightText && (isActive
+                ? 'text-cream group-data-[state=scrolled]/header:text-teal-dark'
+                : 'text-cream/85 hover:text-cream group-data-[state=scrolled]/header:text-teal-dark/70 group-data-[state=scrolled]/header:hover:text-teal-dark'),
+            ]}
+          >
+            {link.label}
+          </a>
+        );
+      })}
       <a
         href={ctaHref}
+        target={schedulingIsExternal ? '_blank' : undefined}
+        rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
         class="inline-flex items-center gap-2 font-sans text-sm font-medium bg-teal-dark text-cream px-5 py-2.5 rounded-full hover:bg-teal transition-colors duration-200 whitespace-nowrap animate-pulse-ring"
       >
         <i class="ri-calendar-check-line text-base"></i>
@@ -62,18 +102,36 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
       </a>
       <a
         href={switchLangPath}
-        class="font-sans text-sm text-teal-dark/70 hover:text-teal-dark transition-colors whitespace-nowrap ml-2"
+        class:list={[
+          'font-sans text-sm transition-colors whitespace-nowrap ml-2',
+          !usesLightText && 'text-teal-dark/70 hover:text-teal-dark',
+          usesLightText && 'text-cream/85 hover:text-cream group-data-[state=scrolled]/header:text-teal-dark/70 group-data-[state=scrolled]/header:hover:text-teal-dark',
+        ]}
       >
-        <span class:list={[lang === 'pt' ? 'text-teal-dark font-medium' : '']}>PT</span>
-        <span class="mx-1.5 text-teal-dark/30" aria-hidden="true">|</span>
-        <span class:list={[lang === 'en' ? 'text-teal-dark font-medium' : '']}>EN</span>
+        <span class:list={[
+          !usesLightText && lang === 'pt' && 'text-teal-dark font-medium',
+          usesLightText && lang === 'pt' && 'font-medium text-cream group-data-[state=scrolled]/header:text-teal-dark',
+        ]}>PT</span>
+        <span class:list={[
+          'mx-1.5',
+          !usesLightText && 'text-teal-dark/30',
+          usesLightText && 'text-cream/40 group-data-[state=scrolled]/header:text-teal-dark/30',
+        ]} aria-hidden="true">|</span>
+        <span class:list={[
+          !usesLightText && lang === 'en' && 'text-teal-dark font-medium',
+          usesLightText && lang === 'en' && 'font-medium text-cream group-data-[state=scrolled]/header:text-teal-dark',
+        ]}>EN</span>
       </a>
     </nav>
 
     <!-- Mobile hamburger -->
     <button
       id="mobile-toggle"
-      class="lg:hidden w-11 h-11 flex items-center justify-center text-teal-dark"
+      class:list={[
+        'lg:hidden w-11 h-11 flex items-center justify-center transition-colors',
+        !usesLightText && 'text-teal-dark',
+        usesLightText && 'text-cream group-data-[state=scrolled]/header:text-teal-dark',
+      ]}
       aria-label={lang === 'en' ? 'Open menu' : 'Abrir menu'}
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -110,6 +168,8 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
     ))}
     <a
       href={ctaHref}
+      target={schedulingIsExternal ? '_blank' : undefined}
+      rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
       class="font-sans text-lg bg-teal-dark text-cream px-6 py-3 rounded-full"
     >
       {i.nav.diagnosis}
@@ -171,11 +231,35 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
   });
 
   const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header?.classList.add('bg-offwhite/95', 'backdrop-blur-sm');
+  const isTransparent = header?.getAttribute('data-transparent') === 'true';
+
+  function updateHeaderOnScroll() {
+    if (!header) return;
+    const scrolled = window.scrollY > 20;
+
+    // data-state controla cores dos links via group-data-[state=...]
+    header.dataset.state = scrolled ? 'scrolled' : 'top';
+
+    if (isTransparent) {
+      // Modo transparent: no topo é totalmente transparente; ao scroll, ganha fundo opaco
+      if (scrolled) {
+        header.classList.remove('bg-transparent');
+        header.classList.add('bg-offwhite/95', 'backdrop-blur-sm', 'shadow-sm');
+      } else {
+        header.classList.add('bg-transparent');
+        header.classList.remove('bg-offwhite/95', 'backdrop-blur-sm', 'shadow-sm');
+      }
     } else {
-      header?.classList.remove('bg-offwhite/95', 'backdrop-blur-sm');
+      // Modo default: já tem bg-offwhite; adiciona blur/shadow ao scroll
+      if (scrolled) {
+        header.classList.add('bg-offwhite/95', 'backdrop-blur-sm');
+      } else {
+        header.classList.remove('bg-offwhite/95', 'backdrop-blur-sm');
+      }
     }
-  });
+  }
+
+  // Initial state + on scroll
+  updateHeaderOnScroll();
+  window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
 </script>

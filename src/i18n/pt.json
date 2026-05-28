@@ -105,63 +105,86 @@
   "servicesPage": {
     "hero": {
       "tag": "Serviços",
-      "headline": "Dois caminhos para construir a tua presença digital.",
-      "subtitle": "Cada serviço foi pensado para um momento diferente da tua jornada. Começamos onde fazes sentido — não onde dá mais facturação."
+      "headline": "Três fases para construir a tua presença digital.",
+      "subtitle": "Uma jornada clara, do diagnóstico à gestão contínua. Começamos sempre pelo Raio-X — porque sem perceber onde estás, qualquer caminho é o errado."
     },
-    "start": {
-      "tag": "PROJETO ÚNICO",
-      "scriptName": "Start",
-      "name": "Fundação",
-      "tagline": "Para quem está a começar ou a reconstruir",
-      "desc": "O ponto de partida para uma presença digital sólida e coerente. Antes de qualquer execução, construímos juntas a estratégia e a identidade que vão guiar tudo o resto.",
-      "price": "150€",
-      "priceLabel": "DESDE",
-      "cta": "Saber mais",
-      "deliverables": [
-        "Auditoria digital completa",
-        "Estratégia de conteúdo e posicionamento",
-        "Identidade visual base (logo, paleta, tipografia)",
-        "Setup de redes sociais e/ou website",
-        "Guia de comunicação e tom de voz",
-        "Entrega com formação e acompanhamento inicial"
-      ]
-    },
-    "flow": {
-      "tag": "MAIS ESCOLHIDO",
-      "scriptName": "Flow",
-      "name": "Gestão mensal",
-      "desc": "Para quem quer estar presente sem ter de pensar nisso todos os dias.",
-      "cta": "Conhecer o Flow",
-      "presence": {
-        "label": "Presença",
-        "tagline": "Para quem quer estar presente sem ter de pensar nisso todos os dias",
-        "price": "250€",
-        "priceLabel": "DESDE",
-        "pricePeriod": "/mês",
-        "deliverables": [
-          "Calendário mensal com 8 posts (estáticos, carrosséis e reels)",
-          "Design e edição incluído",
-          "Legendas estratégicas e otimização de SEO",
-          "Agendamento e monitorização",
-          "Relatório mensal simplificado"
-        ]
-      },
-      "growth": {
-        "label": "Crescimento",
-        "tagline": "Para quem já não quer só estar presente — quer crescer com intenção",
-        "price": "380€",
-        "priceLabel": "DESDE",
-        "pricePeriod": "/mês",
-        "deliverables": [
-          "Calendário mensal com 12 posts (estáticos, carrosséis e reels)",
-          "Design e edição incluídos",
-          "Legendas estratégicas e otimização de SEO",
-          "Agendamento e monitorização",
-          "Relatório mensal estratégico",
-          "Orientação para stories",
-          "1 sessão de captação de conteúdo bimestral (2-3h presenciais, 30 fotos + clips de vídeo editados)"
-        ]
-      }
+    "journey": {
+      "label": "A tua jornada",
+      "title": "Três fases. Um caminho.",
+      "subtitle": "A única etapa que é obrigatória é o Raio-X — depois podemos passar para a Obra ou diretamente para a Direção.",
+      "services": [
+        {
+          "number": "01",
+          "tag": "PONTO DE PARTIDA",
+          "tagHighlight": true,
+          "scriptName": "Diagnóstico Estratégico",
+          "name": "O Raio-X",
+          "tagline": "Para perceberes onde estás antes de avançar",
+          "desc": "Antes de qualquer proposta, analisamos o que está invisível. Em 5 dias úteis recebes um mapa completo da tua presença digital, os 5 problemas prioritários e um plano de ação concreto para o teu negócio. Conversamos 30 minutos, para te explicar tudo.",
+          "deliverables": [
+            "Auditoria completa da presença digital",
+            "Identificação dos 5 problemas prioritários",
+            "Plano de ação concreto e detalhado",
+            "Conversa de 30 minutos para explicar tudo",
+            "Entrega em 5 dias úteis",
+            "Valor deduzível no projeto seguinte"
+          ],
+          "price": "350€",
+          "priceLabel": "DESDE",
+          "pricePeriod": "",
+          "priceNote": "Valor 100% deduzido se avançares para a Obra.",
+          "cta": "Saber mais sobre o Raio-X",
+          "icon": "ri-search-eye-line"
+        },
+        {
+          "number": "02",
+          "tag": "O PASSO SEGUINTE",
+          "tagHighlight": false,
+          "scriptName": "Website e Identidade Estratégica",
+          "name": "A Obra",
+          "tagline": "Para construires as fundações certas",
+          "desc": "Construímos as fundações digitais que o teu negócio exige. Website, loja online, identidade visual e estratégia, tudo planeado e executado pela mesma equipa, do início ao fim.",
+          "deliverables": [
+            "Website institucional ou loja online",
+            "Identidade visual (logo, paleta, tipografia)",
+            "Estratégia de conteúdo e posicionamento",
+            "Setup completo de redes sociais",
+            "Guia de comunicação e tom de voz",
+            "Formação e acompanhamento inicial"
+          ],
+          "price": "1.500€",
+          "priceLabel": "A PARTIR DE",
+          "pricePeriod": "",
+          "priceNote": "Cada projeto é orçamentado individualmente após o Raio-X.",
+          "cta": "Ver o que inclui a Obra",
+          "icon": "ri-layout-4-line"
+        },
+        {
+          "number": "03",
+          "tag": "GESTÃO CONTÍNUA",
+          "tagHighlight": false,
+          "scriptName": "Gestão de Redes Sociais e SEO Local",
+          "name": "A Direção",
+          "tagline": "Para crescer sem perder o controlo",
+          "desc": "Para marcas com história que querem crescer sem perder o controlo. Tratamos da gestão de redes sociais, otimização do Google e mapas (SEO local), estratégia de conteúdo e relatórios mensais claros.",
+          "deliverables": [
+            "Calendário mensal de conteúdo",
+            "Design e edição incluídos",
+            "Otimização do Google My Business",
+            "SEO local (Zona Oeste e Grande Lisboa)",
+            "Relatórios mensais claros",
+            "Acompanhamento e estratégia contínua"
+          ],
+          "price": "750€",
+          "priceLabel": "DESDE",
+          "pricePeriod": "/mês",
+          "priceNote": "",
+          "cta": "Conhecer o plano",
+          "icon": "ri-calendar-event-line"
+        }
+      ],
+      "obligatoryBadge": "Obrigatório",
+      "connector": "depois"
     },
     "addons": {
       "label": "complementares",
@@ -197,6 +220,75 @@
       "socialLabel": "Segue a Wavy",
       "emailLabel": "Olá, vamos conversar",
       "emailAddress": "geral@wavy.pt"
+    },
+    "quiz": {
+      "progressTemplate": "Pergunta {current} de {total}",
+      "questions": [
+        {
+          "question": "O teu negócio tem website?",
+          "options": [
+            { "label": "Não tem", "score": 0 },
+            { "label": "Tem, mas está desatualizado ou não converte", "score": 1 },
+            { "label": "Tem e funciona bem", "score": 2 }
+          ]
+        },
+        {
+          "question": "Como está a tua presença nas redes sociais?",
+          "options": [
+            { "label": "Quase inexistente", "score": 0 },
+            { "label": "Publico quando me lembro", "score": 1 },
+            { "label": "Ativa, mas sem estratégia clara", "score": 2 },
+            { "label": "Consistente e com estratégia", "score": 3 }
+          ]
+        },
+        {
+          "question": "Tens uma identidade visual coerente (logo, cores, tom de voz)?",
+          "options": [
+            { "label": "Não, é tudo improvisado", "score": 0 },
+            { "label": "Algumas peças, mas pouco consistente", "score": 1 },
+            { "label": "Sim, bem definida", "score": 2 }
+          ]
+        },
+        {
+          "question": "Sabes de onde vêm os teus clientes?",
+          "options": [
+            { "label": "Não faço ideia", "score": 0 },
+            { "label": "Tenho uma noção vaga", "score": 1 },
+            { "label": "Sei e acompanho os números", "score": 2 }
+          ]
+        },
+        {
+          "question": "Quem trata do marketing do teu negócio hoje?",
+          "options": [
+            { "label": "Ninguém, está parado", "score": 0 },
+            { "label": "Eu, mas sem tempo nem método", "score": 1 },
+            { "label": "Eu ou a equipa, com alguma consistência", "score": 2 }
+          ]
+        }
+      ],
+      "resultLabel": "O teu diagnóstico",
+      "results": [
+        {
+          "tier": "low",
+          "level": "A construir",
+          "headline": "Há muito potencial por desbloquear.",
+          "recommendation": "O teu negócio está a dar os primeiros passos no digital — e isso é boa notícia, porque há muito a ganhar. Começa pelo Raio-X para mapear as prioridades; a partir daí, a Obra dá-te as fundações certas."
+        },
+        {
+          "tier": "mid",
+          "level": "A afinar",
+          "headline": "Tens uma base, mas há peças soltas.",
+          "recommendation": "Já tens caminho andado, mas faltam peças para tudo encaixar. O Raio-X mostra exatamente o que afinar antes de investires mais — sem desperdício."
+        },
+        {
+          "tier": "high",
+          "level": "A crescer",
+          "headline": "Tens uma base sólida.",
+          "recommendation": "Estás bem encaminhado. O foco agora é consistência e crescimento — o Raio-X confirma os detalhes e a Direção mantém tudo a remar para o mesmo lado."
+        }
+      ],
+      "ctaButton": "Falar sobre o meu Raio-X",
+      "restartButton": "Recomeçar o teste"
     }
   },
   "aboutPage": {
@@ -223,8 +315,12 @@
       "headline": "Sou a",
       "headlineHighlight": "Mariana.",
       "paragraphs": [
-        "Trabalhei oito anos em agências antes de perceber que o que me interessava — pequenos negócios reais, com cara, com história, com tempo — não era exactamente o tipo de cliente que pagava as estruturas onde estava.",
-        "Saí. Comecei a Wavy em casa, em Mafra, com três clientes do bairro. Hoje trabalho com gente em todo o país, mas o método é o mesmo: tempo. Atenção. Honestidade. E uma única promessa — só te aceitamos como cliente se acreditarmos que podemos fazer diferença real."
+        "Não vim do marketing. Vim das pessoas.",
+        "Durante muito tempo, achei que o meu caminho era disperso de mais para fazer sentido. Estudei línguas, segui turismo, trabalhei em eventos, geri uma categoria de retalho, tirei um mestrado em Gestão. De fora, podia parecer que andava à procura. Hoje sei que estava, sem dar por isso, a juntar as peças certas: aprendi a comunicar, a lidar com pessoas, a fazer marcas acontecer, e a perceber um negócio por dentro.",
+        "O design e o digital foram sempre a minha paixão paralela, aquilo a que voltava sempre, que estudava por gosto, que praticava em cada projeto que me passava pelas mãos. Até perceber que não tinha de ser paralelo. Que podia ser o centro.",
+        "No fundo, sempre fui mais criativa do que analítica. Os números aprendi-os e respeito-os. Mas é nas ideias e nas histórias que me sinto em casa.",
+        "A Wavy nasceu quando percebi que não andei perdida, andei a preparar-me. E que tinha algo raro para oferecer: a cabeça de quem percebe de negócio e o coração de quem cria.",
+        "É com as duas coisas que trabalho. Quando me confias a tua marca, vivo-a como se fosse minha. Entrego-lhe o melhor que tenho, e cuido da tua história como cuidaria da minha."
       ],
       "signature": "~ Mariana",
       "alt": "Mariana Antunes, fundadora da Wavy"
@@ -242,26 +338,27 @@
         { "number": "v.", "title": "Sustentabilidade", "desc": "Crescimento que não consegues manter não é crescimento — é pressão. Construímos ritmos que consegues gerir, com ou sem apoio." }
       ]
     },
-    "differenceTable": {
-      "label": "O que somos · O que não somos",
-      "headline": "Não somos agência.",
-      "headlineHighlight": "Não somos freelancer.",
-      "subtitle": "Ocupamos um espaço específico — o ponto de encontro entre estratégia digital rigorosa e sensibilidade humana.",
-      "headers": ["Dimensão", "Agências", "Freelancers", "Wavy"],
-      "rows": [
-        { "dim": "Abordagem", "agency": "Template e escala", "freelance": "Execução pontual", "wavy": "Identidade → estratégia → execução" },
-        { "dim": "Foco", "agency": "Métricas e volume", "freelance": "Preço baixo", "wavy": "Coerência e sustentabilidade" },
-        { "dim": "Relação", "agency": "Conta entre muitas", "freelance": "Transacional", "wavy": "Parceria longa, ritmo humano" },
-        { "dim": "Diferenciador", "agency": "Estrutura", "freelance": "Acessibilidade", "wavy": "Autenticidade e proximidade" }
+    "whyWavy": {
+      "headline": "Porquê",
+      "headlineHighlight": "Wavy?",
+      "paragraphs": [
+        "No digital, há quem se sinta a afogar. Informação a mais, plataformas a mais, tendências que mudam todas as semanas. Para muitos donos de negócio, o digital parece um oceano sem fim — e eles estão no meio, sem saber para onde nadar.",
+        "Mas as ondas têm uma verdade que muita gente esquece: não são caos. Têm ritmo. Têm direção. E quem aprende a lê-las, não se afoga — navega.",
+        "Escolhemos este nome porque acreditamos que o digital funciona como o mar. O problema nunca foi a onda. O problema é não ter quem te ensine a lê-la. A Wavy existe para isso: para ser a direção quando o oceano digital parece grande demais.",
+        "E o nome é uma promessa: não prometemos que o mar vai ficar calmo. Prometemos que o teu negócio vai encontrar o seu ritmo no digital, sem perder a essência que o tornou real."
       ]
     },
     "cta": {
       "headline": "A próxima conversa pode ser",
       "headlineHighlight": "a tua.",
       "subtitle": "Quatro minutos a responder a quatro perguntas. Recebes um diagnóstico personalizado e — se fizer sentido — agendamos 15 minutos. Sem propostas forçadas.",
-      "ctaLabel": "Começar agora",
-      "ctaText": "Marca o teu diagnóstico gratuito",
-      "button": "Fazer o diagnóstico"
+      "button": "Agendar conversa",
+      "socialLabel": "Redes sociais",
+      "socialText": "Acompanha o dia a dia da Wavy.",
+      "emailLabel": "Email",
+      "emailText": "Escreve-nos quando quiseres.",
+      "email": "geral@wavy.pt",
+      "imageAlt": "Cliente da Wavy a trabalhar no portátil"
     }
   },
   "casesPage": {
@@ -270,7 +367,21 @@
       "titleLine1": "As histórias dos",
       "titleLine2": "negócios que confiaram",
       "titleLine3": "na Wavy",
-      "subtitle": "Três histórias reais de transformação. Cada cliente é um caso de estudo — porque autenticidade não é argumento, é evidência."
+      "subtitle": "Três histórias reais de transformação. Cada cliente é um caso de estudo — porque autenticidade não é argumento, é evidência.",
+      "cards": [
+        { "imageKey": "bastidores", "title": "Sofia Marques", "category": "Terapia integrativa" },
+        { "imageKey": "hero", "title": "Casa do Monte", "category": "Restauração" },
+        { "imageKey": "cta", "title": "Atelier Luz", "category": "Coaching" },
+        { "imageKey": "servicos", "title": "Marca em crescimento", "category": "Retalho local" },
+        { "imageKey": "mariana", "title": "Projeto em curso", "category": "Serviços" }
+      ]
+    },
+    "ui": {
+      "seeMore": "Ver caso completo",
+      "close": "Fechar",
+      "servicesLabel": "O que fizemos",
+      "resultsLabel": "Resultados",
+      "galleryLabel": "Galeria"
     },
     "items": [
       {
@@ -287,7 +398,27 @@
           { "value": "×4", "label": "mensagens DM por semana" }
         ],
         "quote": "Finalmente sinto que o meu Instagram me representa. A Mariana percebeu o meu trabalho antes de eu próprio o conseguir explicar.",
-        "quoteAuthor": "SOFIA MARQUES"
+        "quoteAuthor": "SOFIA MARQUES",
+        "detail": {
+          "intro": "A Sofia é terapeuta integrativa há mais de uma década. O trabalho dela é profundo, mas a presença digital não traduzia nada disso. Em seis meses, mudámos a forma como o mundo a encontra.",
+          "sections": [
+            { "title": "O desafio", "body": "O Instagram parecia o de qualquer terapeuta: frases motivacionais, fundos neutros, zero diferenciação. Atraía curiosos, não clientes." },
+            { "title": "A abordagem", "body": "Reconstruímos o posicionamento à volta de duas ideias — presença e tempo — e desenhámos uma linha de conteúdo que mostra o método dela, não slogans." },
+            { "title": "O resultado", "body": "Em três meses, a agenda encheu e surgiu lista de espera. O perfil passou a falar diretamente com quem procura acompanhamento sério." }
+          ],
+          "stats": [
+            { "value": "+312%", "label": "engagement em 90 dias" },
+            { "value": "3 meses", "label": "agenda esgotada" },
+            { "value": "×4", "label": "mensagens DM por semana" },
+            { "value": "+58%", "label": "novos clientes diretos" }
+          ],
+          "services": ["Reposicionamento", "Estratégia de conteúdo", "Gestão de Instagram"],
+          "gallery": [
+            { "imageKey": "bastidores", "caption": "Nova linha de feed" },
+            { "imageKey": "hero", "caption": "Sessão de conteúdo" },
+            { "imageKey": "cta", "caption": "Bastidores da estratégia" }
+          ]
+        }
       },
       {
         "metadata": "RESTAURANTE CONSCIENTE · SAMORA CORREIA · 9 MESES",
@@ -303,7 +434,27 @@
           { "value": "€3.2k", "label": "poupança mensal em comissões" }
         ],
         "quote": "Pela primeira vez, quem chega já vem pré-conquistado. Reservam sem regatear preço — porque já gostam de nós antes de chegar.",
-        "quoteAuthor": "CASA DO MONTE"
+        "quoteAuthor": "CASA DO MONTE",
+        "detail": {
+          "intro": "A Casa do Monte é um restaurante consciente em Samora Correia, com três gerações de história. Dependiam das plataformas de reserva e perdiam margem. Em nove meses, viraram o jogo.",
+          "sections": [
+            { "title": "O desafio", "body": "78% das reservas vinham de plataformas como o Booking.com. Cada mesa custava comissão e a casa não controlava a relação com quem a visitava." },
+            { "title": "A abordagem", "body": "Pusemos a história a vender o lugar — as três gerações, a horta, o pão feito de manhã — e criámos um caminho direto para a reserva." },
+            { "title": "O resultado", "body": "As reservas diretas dispararam e a dependência das plataformas caiu. Quem chega já vem pré-conquistado." }
+          ],
+          "stats": [
+            { "value": "+40%", "label": "reservas diretas" },
+            { "value": "−26%", "label": "dependência booking" },
+            { "value": "€3.2k", "label": "poupança mensal em comissões" },
+            { "value": "9 meses", "label": "de acompanhamento" }
+          ],
+          "services": ["Narrativa de marca", "Conteúdo local", "Funil de reservas"],
+          "gallery": [
+            { "imageKey": "hero", "caption": "A casa e a horta" },
+            { "imageKey": "bastidores", "caption": "Pão diário" },
+            { "imageKey": "cta", "caption": "Mesa posta" }
+          ]
+        }
       },
       {
         "metadata": "COACH DE VIDA · LISBOA · 4 MESES · WAVY START + BOOST",
@@ -319,7 +470,27 @@
           { "value": "8 sem.", "label": "lista espera atual" }
         ],
         "quote": "Vendo agora antes de a peça estar pronta. As pessoas reservam pelo Instagram. Nunca pensei que isto fosse possível.",
-        "quoteAuthor": "ATELIER LUZ"
+        "quoteAuthor": "ATELIER LUZ",
+        "detail": {
+          "intro": "A Ana é coach de vida em Lisboa. Tinha milhares de seguidores, mas poucos convertiam — a mensagem estava diluída. Em quatro meses, transformámos audiência em agenda.",
+          "sections": [
+            { "title": "O desafio", "body": "A Ana falava com toda a gente e, por isso, com ninguém. O conteúdo gerava gostos, não consultas, e o funil não levava a lado nenhum." },
+            { "title": "A abordagem", "body": "Afinámos o posicionamento para um público claro, reescrevemos a bio e desenhámos um funil de conteúdo que leva da descoberta à marcação." },
+            { "title": "O resultado", "body": "As consultas agendadas tornaram-se a nova normalidade e o tráfego orgânico multiplicou-se. Hoje há lista de espera de várias semanas." }
+          ],
+          "stats": [
+            { "value": "×4", "label": "tráfego orgânico Google" },
+            { "value": "+220%", "label": "pedidos via Instagram" },
+            { "value": "8 sem.", "label": "lista de espera atual" },
+            { "value": "4 meses", "label": "Wavy Start + Boost" }
+          ],
+          "services": ["Posicionamento", "Copy de bio e funil", "Estratégia de conteúdo"],
+          "gallery": [
+            { "imageKey": "cta", "caption": "Nova bio e funil" },
+            { "imageKey": "hero", "caption": "Conteúdo de marca" },
+            { "imageKey": "bastidores", "caption": "Planeamento" }
+          ]
+        }
       }
     ],
     "cta": {
@@ -372,20 +543,23 @@
       "message": "Mensagem",
       "messagePlaceholder": "Conta-nos um pouco sobre o teu negócio e o que procuras...",
       "submit": "Enviar mensagem",
-      "privacy": "Os teus dados são tratados com respeito. Nunca partilhados."
+      "privacy": "Os teus dados são tratados com respeito. Nunca partilhados.",
+      "sending": "A enviar…",
+      "successTitle": "Mensagem enviada!",
+      "success": "Obrigada! Vou ler com atenção e respondo em até 24h úteis.",
+      "sendAnother": "Enviar outra mensagem",
+      "error": "Algo correu mal. Tenta novamente ou escreve para geral@wavy.pt."
     },
-    "talk": {
-      "title": "Outras formas de falar connosco",
-      "emailLabel": "Email",
-      "email": "geral@wavy.pt",
-      "instagramLabel": "Instagram",
-      "instagram": "@wavy.digital.pt"
-    },
-    "findUs": {
-      "locationLabel": "Localização",
-      "location": "Mafra e Samora Correia, Portugal",
-      "hoursLabel": "Horário",
-      "hours": "Disponíveis de segunda a sexta, das 9h às 18h."
+    "connect": {
+      "ctaContext": "se já sabes o que queres",
+      "ctaTitle": "Marca uma conversa",
+      "ctaDesc": "15 minutos, em vídeo ou telefone, para percebermos onde estás e como te posso ajudar. Sem compromisso.",
+      "ctaButton": "Escolher horário",
+      "socialTitle": "Segue a Wavy",
+      "socialDesc": "O dia a dia, bastidores e ideias no Instagram e Facebook.",
+      "emailTitle": "Escreve diretamente",
+      "emailDesc": "Resposta em até 24h úteis.",
+      "email": "geral@wavy.pt"
     }
   },
   "cases": {

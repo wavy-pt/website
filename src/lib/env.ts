@@ -48,3 +48,17 @@ export const CONTACT_EMAIL = 'geral@wavy.pt';
 export function contactHref(localizedContactPath: string): string {
   return isProd ? `mailto:${CONTACT_EMAIL}` : localizedContactPath;
 }
+
+/** Link público do Calendly. Vazio = os CTAs de agendar caem no contacto/email. */
+export const CALENDLY_URL = 'https://calendly.com/mariana-antunes-wavy/30min';
+
+/**
+ * Destino dos CTAs de "marcar/agendar conversa".
+ * Calendly quando definido; caso contrário, a página de contacto (dev) ou mailto (prod).
+ */
+export function schedulingHref(localizedContactPath: string): string {
+  return CALENDLY_URL || contactHref(localizedContactPath);
+}
+
+/** True quando os links de agendamento vão para o Calendly (externo → abre em nova aba). */
+export const schedulingIsExternal = Boolean(CALENDLY_URL);

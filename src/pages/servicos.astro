@@ -1,10 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ScrollReveal from '../components/ScrollReveal.astro';
-import ServicesHero from '../components/services/ServicesHero.astro';
-import ServicesCards from '../components/services/ServicesCards.astro';
-import ServicesAddons from '../components/services/ServicesAddons.astro';
-import ServicesProcess from '../components/services/ServicesProcess.astro';
+import ServicesHero from '../components/services/ServicesHeroAlt.astro';
+import ServicesJourney from '../components/services/ServicesJourneyAlt.astro';
 import ServicesCtaBlock from '../components/services/ServicesCtaBlock.astro';
 import { isProd } from '../lib/env';
 
@@ -18,11 +16,10 @@ if (isProd) {
 <Layout
   title="Serviços · Wavy"
   description="Dois caminhos para construir a tua presença digital. Fundação e gestão mensal de redes sociais, com a Wavy."
+  headerTransparent="light"
 >
   <ServicesHero lang="pt" />
-  <ServicesCards lang="pt" />
-  <ServicesAddons lang="pt" />
-  <ServicesProcess lang="pt" />
+  <ServicesJourney lang="pt" />
   <ServicesCtaBlock lang="pt" />
   <ScrollReveal />
 </Layout>

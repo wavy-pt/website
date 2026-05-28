@@ -1,0 +1,272 @@
+---
+/**
+ * VERSÃO ALTERNATIVA da Jornada (substituir ServicesJourney.astro).
+ *
+ * Estética: timeline editorial vertical, estilo "diário", coerente com o
+ * ServicesHeroAlt (mesma palette light, decorações subtis, cards brancos).
+ *
+ * Como reverter: em /pages/servicos.astro e /pages/en/servicos.astro,
+ * trocar `ServicesJourneyAlt` por `ServicesJourney` no import + usage.
+ */
+import { t, getLocalizedPath } from '../../i18n';
+import type { Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const j = t(lang).servicesPage.journey;
+const contactHref = getLocalizedPath('/contacto', lang);
+---
+
+<section id="journey" class="bg-offwhite pt-20 md:pt-28 pb-10 md:pb-0 relative overflow-hidden scroll-mt-24">
+  <!-- Decorações subtis (mesma família do hero) -->
+  <div class="absolute top-1/4 -right-40 w-[32rem] h-[32rem] rounded-full bg-teal/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-1/3 -left-40 w-[28rem] h-[28rem] rounded-full bg-teal-dark/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-5xl mx-auto px-6 md:px-10">
+    <!-- Section header (curto, faz ligação ao hero que já introduziu) -->
+    <div class="scroll-reveal text-center mb-14 md:mb-20 max-w-2xl mx-auto">
+      <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">
+        {j.label}
+      </p>
+      <h2 class="font-serif text-[1.875rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-tight mb-4">
+        {j.title}
+      </h2>
+      <p class="font-sans text-base md:text-lg text-teal-dark/70 leading-relaxed">
+        {j.subtitle}
+      </p>
+    </div>
+
+    <!-- Timeline vertical -->
+    <div class="relative">
+      <!--
+        Timeline dinâmica:
+          - Track ténue (sempre presente, full height)
+          - Fill teal cuja altura cresce com o scroll (controlado pela CSS var --p)
+          - Largura de ambos cresce de 1px → 3px à medida que a jornada avança
+        Os number circles ficam por cima (z-10) e tapam a linha onde estão.
+      -->
+      <div
+        class="journey-timeline absolute left-6 md:left-10 top-6 bottom-0 pointer-events-none"
+        aria-hidden="true"
+      >
+        <div class="journey-track absolute inset-y-0 left-0 bg-[#13979d]/15 rounded-full"></div>
+        <div class="journey-fill absolute top-0 left-0 bg-[#13979d] rounded-full"></div>
+      </div>
+
+      <!-- Items -->
+      <div class="flex flex-col gap-10 md:gap-14">
+        {j.services.map((s) => (
+          <div
+            class="journey-item scroll-reveal group/journey relative pl-16 md:pl-28"
+            data-active="false"
+          >
+            {/* Number circle no eixo da timeline — destaca-se quando o card está em foco */}
+            <div class="absolute left-0 top-6 w-12 h-12 md:w-20 md:h-20 rounded-full bg-white shadow-md flex items-center justify-center z-10 border-2 border-teal-dark/15 transition-all duration-500 ease-out group-data-[active=true]/journey:border-teal group-data-[active=true]/journey:shadow-[0_0_0_6px_rgba(63,142,142,0.10)]">
+              <span class="font-serif text-base md:text-2xl font-medium text-teal-dark">
+                {s.number}
+              </span>
+            </div>
+
+            {/* Content card — ganha border teal + shadow maior + opacidade total quando em foco */}
+            <div class="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 border border-teal-dark/10 shadow-[0_4px_28px_-12px_rgba(28,60,60,0.10)] opacity-70 transition-all duration-500 ease-out group-data-[active=true]/journey:opacity-100 group-data-[active=true]/journey:border-teal/40 group-data-[active=true]/journey:shadow-[0_18px_50px_-12px_rgba(28,60,60,0.18)]">
+              {/* Tag (pill — "Ponto de partida obrigatório" no Raio-X é o destaque suficiente) */}
+              <div class="flex flex-wrap items-center gap-2 mb-5">
+                <span class:list={[
+                  'inline-flex font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1.5 rounded-full',
+                  s.tagHighlight
+                    ? 'text-teal-dark bg-teal/15 border border-teal/30'
+                    : 'text-muted bg-teal-dark/5 border border-teal-dark/10',
+                ]}>
+                  {s.tag}
+                </span>
+              </div>
+
+                {/* Script name (italic teal) */}
+                <p class="font-serif text-lg sm:text-xl italic font-medium text-teal mb-1">
+                  {s.scriptName}
+                </p>
+
+                {/* Name (large) */}
+                <h3 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-teal-dark mb-2 leading-tight">
+                  {s.name}
+                </h3>
+
+                {/* Tagline */}
+                <p class="font-sans text-sm uppercase tracking-wider text-muted mb-5">
+                  {s.tagline}
+                </p>
+
+                {/* Description */}
+                <p class="font-sans text-base md:text-lg text-teal-dark/80 leading-relaxed mb-7 max-w-2xl">
+                  {s.desc}
+                </p>
+
+                {/* Deliverables em 2 colunas (mais compacto) */}
+                <div class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                  {s.deliverables.map((item) => (
+                    <div class="flex items-start gap-3">
+                      <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                        <i class="ri-check-line text-teal font-bold"></i>
+                      </div>
+                      <span class="font-sans text-sm leading-relaxed text-teal-dark">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Price + CTA */}
+                <div class="border-t border-teal-dark/10 pt-5 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+                  <div>
+                    <div class="flex items-baseline gap-2 flex-wrap">
+                      <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/60">
+                        {s.priceLabel}
+                      </span>
+                      <span class="font-serif text-4xl sm:text-5xl font-medium text-teal-dark leading-none">
+                        {s.price}
+                      </span>
+                      {s.pricePeriod && (
+                        <span class="font-sans text-base text-teal-dark/60">
+                          {s.pricePeriod}
+                        </span>
+                      )}
+                    </div>
+                    {s.priceNote && (
+                      <p class="font-sans text-xs mt-2 text-muted max-w-md">
+                        {s.priceNote}
+                      </p>
+                    )}
+                  </div>
+                  <a
+                    href={contactHref}
+                    class="inline-flex items-center justify-center gap-2 font-sans text-sm font-medium px-6 py-3 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap shrink-0 group"
+                  >
+                    {s.cta}
+                    <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          )
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /**
+   * Timeline dinâmica da Jornada — controlada pela CSS var `--p` (0 → 1)
+   * que o script abaixo actualiza no scroll. Track + fill escalam de
+   * largura (1px → 3px) e o fill cresce em altura proporcional ao scroll.
+   */
+  .journey-timeline {
+    --p: 0;
+  }
+  .journey-timeline .journey-track,
+  .journey-timeline .journey-fill {
+    width: calc(1px + var(--p) * 2px);
+    transition: width 250ms ease-out;
+  }
+  .journey-timeline .journey-fill {
+    height: calc(var(--p) * 100%);
+    /* Transição curta na altura para suavizar pequenos saltos do rAF;
+       o scroll já é frame-by-frame, portanto basta amaciar 1 frame. */
+    transition: width 250ms ease-out, height 80ms linear;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .journey-timeline .journey-track,
+    .journey-timeline .journey-fill {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  /**
+   * Comportamento dinâmico da secção da Jornada:
+   *   1. Foco do card — cada `.journey-item` cuja parte central está
+   *      na zona middle ~30% do viewport recebe `data-active="true"`
+   *      (Tailwind faz o resto via group-data-[active=true]/journey:*).
+   *   2. Timeline progressiva — a CSS var `--p` da `.journey-timeline`
+   *      vai de 0 a 1 conforme a secção atravessa o ponto de gatilho
+   *      no viewport. Ao fazer scroll para trás, --p diminui.
+   */
+  function initJourneyFocus() {
+    const section = document.getElementById('journey');
+    const items = document.querySelectorAll<HTMLElement>('.journey-item');
+    if (!section || items.length === 0) return;
+
+    // Evita inicializar duas vezes (e.g. em view transitions do Astro)
+    if (items[0].dataset.focusInitialized === 'true') return;
+    items.forEach((el) => {
+      el.dataset.focusInitialized = 'true';
+    });
+
+    // --- 1. Foco dos cards via IntersectionObserver ---
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          (entry.target as HTMLElement).dataset.active = entry.isIntersecting
+            ? 'true'
+            : 'false';
+        });
+      },
+      {
+        rootMargin: '-35% 0px -35% 0px',
+        threshold: 0,
+      }
+    );
+    items.forEach((item) => observer.observe(item));
+
+    // --- 2. Timeline progressiva via scroll ---
+    const timeline = section.querySelector<HTMLElement>('.journey-timeline');
+    if (timeline) {
+      let ticking = false;
+
+      const updateProgress = () => {
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight;
+        // Ponto de gatilho a 60% da viewport (linha imaginária na metade-baixa)
+        const trigger = vh * 0.6;
+
+        let p: number;
+        if (rect.top > trigger) {
+          p = 0; // ainda não chegou
+        } else if (rect.bottom < trigger) {
+          p = 1; // já passou
+        } else {
+          p = (trigger - rect.top) / (rect.bottom - rect.top);
+        }
+        p = Math.max(0, Math.min(1, p));
+
+        timeline.style.setProperty('--p', String(p));
+        ticking = false;
+      };
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (!ticking) {
+            requestAnimationFrame(updateProgress);
+            ticking = true;
+          }
+        },
+        { passive: true }
+      );
+      window.addEventListener('resize', updateProgress, { passive: true });
+      updateProgress();
+    }
+  }
+
+  document.addEventListener('astro:page-load', initJourneyFocus);
+  if (document.readyState !== 'loading') {
+    initJourneyFocus();
+  } else {
+    document.addEventListener('DOMContentLoaded', initJourneyFocus);
+  }
+</script>

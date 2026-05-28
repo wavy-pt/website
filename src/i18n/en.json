@@ -105,63 +105,86 @@
   "servicesPage": {
     "hero": {
       "tag": "Services",
-      "headline": "Two paths to build your digital presence.",
-      "subtitle": "Each service was designed for a different moment in your journey. We start where it makes sense — not where it generates the most revenue."
+      "headline": "Three stages to build your digital presence.",
+      "subtitle": "A clear journey, from diagnosis to ongoing management. We always start with the X-Ray — because without knowing where you stand, any path is the wrong one."
     },
-    "start": {
-      "tag": "ONE-OFF PROJECT",
-      "scriptName": "Start",
-      "name": "Foundation",
-      "tagline": "For those starting out or rebuilding",
-      "desc": "The starting point for a solid and coherent digital presence. Before any execution, we build together the strategy and identity that will guide everything else.",
-      "price": "150€",
-      "priceLabel": "FROM",
-      "cta": "Learn more",
-      "deliverables": [
-        "Complete digital audit",
-        "Content strategy and positioning",
-        "Base visual identity (logo, palette, typography)",
-        "Social media and/or website setup",
-        "Communication guide and tone of voice",
-        "Delivery with training and initial support"
-      ]
-    },
-    "flow": {
-      "tag": "MOST CHOSEN",
-      "scriptName": "Flow",
-      "name": "Monthly Management",
-      "desc": "For those who want to be present without thinking about it every day.",
-      "cta": "Discover the Flow",
-      "presence": {
-        "label": "Presence",
-        "tagline": "For those who want to be present without thinking about it every day",
-        "price": "250€",
-        "priceLabel": "FROM",
-        "pricePeriod": "/month",
-        "deliverables": [
-          "Monthly calendar with 8 posts (static, carousels and reels)",
-          "Design and editing included",
-          "Strategic captions and SEO optimization",
-          "Scheduling and monitoring",
-          "Simplified monthly report"
-        ]
-      },
-      "growth": {
-        "label": "Growth",
-        "tagline": "For those who no longer just want to be present — they want to grow with intention",
-        "price": "380€",
-        "priceLabel": "FROM",
-        "pricePeriod": "/month",
-        "deliverables": [
-          "Monthly calendar with 12 posts (static, carousels and reels)",
-          "Design and editing included",
-          "Strategic captions and SEO optimization",
-          "Scheduling and monitoring",
-          "Strategic monthly report",
-          "Guidance for stories",
-          "1 bi-monthly content capture session (2-3h in person, 30 photos + edited video clips)"
-        ]
-      }
+    "journey": {
+      "label": "Your journey",
+      "title": "Three stages. One path.",
+      "subtitle": "The only mandatory step is The X-Ray — from there, you can move on to The Build or straight to Direction.",
+      "services": [
+        {
+          "number": "01",
+          "tag": "STARTING POINT",
+          "tagHighlight": true,
+          "scriptName": "Strategic Diagnosis",
+          "name": "The X-Ray",
+          "tagline": "To understand where you stand before moving forward",
+          "desc": "Before any proposal, we analyse what is invisible. In 5 working days you receive a complete map of your digital presence, the 5 priority problems and a concrete action plan for your business. We talk for 30 minutes to explain everything.",
+          "deliverables": [
+            "Complete digital presence audit",
+            "Identification of the 5 priority problems",
+            "Concrete and detailed action plan",
+            "30-minute conversation to explain everything",
+            "Delivery in 5 working days",
+            "Value deductible in the next project"
+          ],
+          "price": "350€",
+          "priceLabel": "FROM",
+          "pricePeriod": "",
+          "priceNote": "Value 100% deducted if you move forward with the Build.",
+          "cta": "Learn more about the X-Ray",
+          "icon": "ri-search-eye-line"
+        },
+        {
+          "number": "02",
+          "tag": "THE NEXT STEP",
+          "tagHighlight": false,
+          "scriptName": "Website and Strategic Identity",
+          "name": "The Build",
+          "tagline": "To set the right foundations",
+          "desc": "We build the digital foundations your business deserves. Website, online store, visual identity and strategy, all planned and executed by the same team, from start to finish.",
+          "deliverables": [
+            "Institutional website or online store",
+            "Visual identity (logo, palette, typography)",
+            "Content strategy and positioning",
+            "Complete social media setup",
+            "Communication guide and tone of voice",
+            "Training and initial support"
+          ],
+          "price": "1,500€",
+          "priceLabel": "FROM",
+          "pricePeriod": "",
+          "priceNote": "Each project is quoted individually after the X-Ray.",
+          "cta": "See what the Build includes",
+          "icon": "ri-layout-4-line"
+        },
+        {
+          "number": "03",
+          "tag": "ONGOING MANAGEMENT",
+          "tagHighlight": false,
+          "scriptName": "Social Media and Local SEO",
+          "name": "The Direction",
+          "tagline": "To grow without losing control",
+          "desc": "For brands with history that want to grow without losing control. We handle social media management, Google and Maps optimisation (local SEO), content strategy and clear monthly reports.",
+          "deliverables": [
+            "Monthly content calendar",
+            "Design and editing included",
+            "Google My Business optimisation",
+            "Local SEO (Western Zone and Greater Lisbon)",
+            "Clear monthly reports",
+            "Continuous support and strategy"
+          ],
+          "price": "750€",
+          "priceLabel": "FROM",
+          "pricePeriod": "/month",
+          "priceNote": "",
+          "cta": "Discover the plan",
+          "icon": "ri-calendar-event-line"
+        }
+      ],
+      "obligatoryBadge": "Mandatory",
+      "connector": "then"
     },
     "addons": {
       "label": "add-ons",
@@ -197,6 +220,75 @@
       "socialLabel": "Follow Wavy",
       "emailLabel": "Hello, let's talk",
       "emailAddress": "geral@wavy.pt"
+    },
+    "quiz": {
+      "progressTemplate": "Question {current} of {total}",
+      "questions": [
+        {
+          "question": "Does your business have a website?",
+          "options": [
+            { "label": "No website", "score": 0 },
+            { "label": "Yes, but outdated or not converting", "score": 1 },
+            { "label": "Yes, and it works well", "score": 2 }
+          ]
+        },
+        {
+          "question": "How is your social media presence?",
+          "options": [
+            { "label": "Almost non-existent", "score": 0 },
+            { "label": "I post when I remember", "score": 1 },
+            { "label": "Active, but no clear strategy", "score": 2 },
+            { "label": "Consistent and strategic", "score": 3 }
+          ]
+        },
+        {
+          "question": "Do you have a coherent visual identity (logo, colours, tone)?",
+          "options": [
+            { "label": "No, it's all improvised", "score": 0 },
+            { "label": "A few pieces, but inconsistent", "score": 1 },
+            { "label": "Yes, well defined", "score": 2 }
+          ]
+        },
+        {
+          "question": "Do you know where your clients come from?",
+          "options": [
+            { "label": "No idea", "score": 0 },
+            { "label": "A vague sense", "score": 1 },
+            { "label": "I know and track the numbers", "score": 2 }
+          ]
+        },
+        {
+          "question": "Who handles your marketing today?",
+          "options": [
+            { "label": "Nobody, it's on pause", "score": 0 },
+            { "label": "Me, but without time or method", "score": 1 },
+            { "label": "Me or the team, with some consistency", "score": 2 }
+          ]
+        }
+      ],
+      "resultLabel": "Your diagnosis",
+      "results": [
+        {
+          "tier": "low",
+          "level": "Building",
+          "headline": "There's a lot of potential to unlock.",
+          "recommendation": "Your business is taking its first digital steps — and that's good news, because there's a lot to gain. Start with the X-Ray to map the priorities; from there, the Build gives you the right foundations."
+        },
+        {
+          "tier": "mid",
+          "level": "Refining",
+          "headline": "You have a base, but loose ends remain.",
+          "recommendation": "You've come a long way, but some pieces don't fit yet. The X-Ray shows exactly what to refine before investing more — no waste."
+        },
+        {
+          "tier": "high",
+          "level": "Growing",
+          "headline": "You have a solid base.",
+          "recommendation": "You're well on track. The focus now is consistency and growth — the X-Ray confirms the details and Direction keeps everything rowing the same way."
+        }
+      ],
+      "ctaButton": "Talk about my X-Ray",
+      "restartButton": "Restart the test"
     }
   },
   "aboutPage": {
@@ -223,8 +315,12 @@
       "headline": "I'm",
       "headlineHighlight": "Mariana.",
       "paragraphs": [
-        "I worked eight years in agencies before realising what interested me — small real businesses, with character, with stories, with time — was not exactly the type of client that paid for the structures I was in.",
-        "I left. I started Wavy at home, in Mafra, with three neighbourhood clients. Today I work with people across the country, but the method is the same: time. Attention. Honesty. And one promise — we only take you on as a client if we believe we can make a real difference."
+        "I didn't come from marketing. I came from people.",
+        "For a long time, I thought my path was too scattered to make sense. I studied languages, went into tourism, worked in events, managed a retail category, took a Master's in Management. From the outside, it might have looked like I was searching. Today I know that, without realising it, I was gathering the right pieces: I learned to communicate, to work with people, to make brands happen, and to understand a business from the inside.",
+        "Design and digital were always my parallel passion — the thing I kept coming back to, that I studied for the love of it, that I practised in every project that passed through my hands. Until I realised it didn't have to be parallel. That it could be the centre.",
+        "Deep down, I've always been more creative than analytical. I learned the numbers and I respect them. But it's in ideas and stories that I feel at home.",
+        "Wavy was born when I realised I hadn't been lost — I'd been preparing. And that I had something rare to offer: the head of someone who understands business and the heart of someone who creates.",
+        "I work with both. When you trust me with your brand, I live it as if it were my own. I give it the best I have, and I care for your story as I would for mine."
       ],
       "signature": "~ Mariana",
       "alt": "Mariana Antunes, founder of Wavy"
@@ -242,26 +338,27 @@
         { "number": "v.", "title": "Sustainability", "desc": "Growth you cannot maintain is not growth — it is pressure. We build rhythms you can manage, with or without support." }
       ]
     },
-    "differenceTable": {
-      "label": "What we are · What we are not",
-      "headline": "We're not an agency.",
-      "headlineHighlight": "We're not a freelancer.",
-      "subtitle": "We occupy a specific space — the meeting point between rigorous digital strategy and human sensitivity.",
-      "headers": ["Dimension", "Agencies", "Freelancers", "Wavy"],
-      "rows": [
-        { "dim": "Approach", "agency": "Templates and scale", "freelance": "One-off execution", "wavy": "Identity → strategy → execution" },
-        { "dim": "Focus", "agency": "Metrics and volume", "freelance": "Low price", "wavy": "Coherence and sustainability" },
-        { "dim": "Relationship", "agency": "One account among many", "freelance": "Transactional", "wavy": "Long partnership, human pace" },
-        { "dim": "Differentiator", "agency": "Structure", "freelance": "Accessibility", "wavy": "Authenticity and proximity" }
+    "whyWavy": {
+      "headline": "Why",
+      "headlineHighlight": "Wavy?",
+      "paragraphs": [
+        "In the digital world, some people feel like they're drowning. Too much information, too many platforms, trends that change every week. For many business owners, digital feels like an endless ocean — and they're stuck in the middle, not knowing which way to swim.",
+        "But waves hold a truth many people forget: they aren't chaos. They have rhythm. They have direction. And whoever learns to read them doesn't drown — they navigate.",
+        "We chose this name because we believe digital works like the sea. The problem was never the wave. The problem is not having someone to teach you how to read it. Wavy exists for exactly that: to be the direction when the digital ocean feels too big.",
+        "And the name is a promise: we don't promise the sea will turn calm. We promise your business will find its rhythm in digital, without losing the essence that made it real."
       ]
     },
     "cta": {
       "headline": "The next conversation could be",
       "headlineHighlight": "yours.",
       "subtitle": "Four minutes answering four questions. You get a personalised diagnosis and — if it makes sense — we schedule 15 minutes. No forced proposals.",
-      "ctaLabel": "Start now",
-      "ctaText": "Book your free diagnosis",
-      "button": "Take the diagnosis"
+      "button": "Schedule a conversation",
+      "socialLabel": "Social media",
+      "socialText": "Follow Wavy's day-to-day.",
+      "emailLabel": "Email",
+      "emailText": "Write to us anytime.",
+      "email": "geral@wavy.pt",
+      "imageAlt": "A Wavy client working on a laptop"
     }
   },
   "casesPage": {
@@ -271,7 +368,21 @@
       "titleLine2": "businesses that trusted",
       "titleLine3": "Wavy"
 ,
-      "subtitle": "Three real transformation stories. Each client is a case study — because authenticity is not an argument, it is evidence."
+      "subtitle": "Three real transformation stories. Each client is a case study — because authenticity is not an argument, it is evidence.",
+      "cards": [
+        { "imageKey": "bastidores", "title": "Sofia Marques", "category": "Integrative therapy" },
+        { "imageKey": "hero", "title": "Casa do Monte", "category": "Restaurant" },
+        { "imageKey": "cta", "title": "Atelier Luz", "category": "Coaching" },
+        { "imageKey": "servicos", "title": "Growing brand", "category": "Local retail" },
+        { "imageKey": "mariana", "title": "Project in progress", "category": "Services" }
+      ]
+    },
+    "ui": {
+      "seeMore": "View full case",
+      "close": "Close",
+      "servicesLabel": "What we did",
+      "resultsLabel": "Results",
+      "galleryLabel": "Gallery"
     },
     "items": [
       {
@@ -288,7 +399,27 @@
           { "value": "×4", "label": "DM messages per week" }
         ],
         "quote": "I finally feel my Instagram represents me. Mariana understood my work before I could even explain it myself.",
-        "quoteAuthor": "SOFIA MARQUES"
+        "quoteAuthor": "SOFIA MARQUES",
+        "detail": {
+          "intro": "Sofia has been an integrative therapist for over a decade. Her work runs deep, but her digital presence didn't reflect any of it. In six months, we changed how the world finds her.",
+          "sections": [
+            { "title": "The challenge", "body": "Her Instagram looked like any other therapist's: motivational quotes, neutral backgrounds, zero differentiation. It attracted browsers, not clients." },
+            { "title": "The approach", "body": "We rebuilt the positioning around two ideas — presence and time — and designed a content line that shows her method, not slogans." },
+            { "title": "The result", "body": "Within three months, the agenda filled up and a waitlist appeared. The profile started speaking directly to people seeking serious support." }
+          ],
+          "stats": [
+            { "value": "+312%", "label": "engagement in 90 days" },
+            { "value": "3 months", "label": "fully booked" },
+            { "value": "×4", "label": "DM messages per week" },
+            { "value": "+58%", "label": "new direct clients" }
+          ],
+          "services": ["Repositioning", "Content strategy", "Instagram management"],
+          "gallery": [
+            { "imageKey": "bastidores", "caption": "New feed line" },
+            { "imageKey": "hero", "caption": "Content session" },
+            { "imageKey": "cta", "caption": "Behind the strategy" }
+          ]
+        }
       },
       {
         "metadata": "CONSCIOUS RESTAURANT · SAMORA CORREIA · 9 MONTHS",
@@ -304,7 +435,27 @@
           { "value": "€3.2k", "label": "monthly commission savings" }
         ],
         "quote": "For the first time, guests arrive already won over. They book without haggling — because they already like us before arriving.",
-        "quoteAuthor": "CASA DO MONTE"
+        "quoteAuthor": "CASA DO MONTE",
+        "detail": {
+          "intro": "Casa do Monte is a conscious restaurant in Samora Correia, with three generations of history. They depended on booking platforms and lost margin. In nine months, they turned it around.",
+          "sections": [
+            { "title": "The challenge", "body": "78% of bookings came from platforms like Booking.com. Every table cost a commission and the house didn't own the relationship with its guests." },
+            { "title": "The approach", "body": "We let the story sell the place — the three generations, the garden, the bread baked each morning — and built a direct path to booking." },
+            { "title": "The result", "body": "Direct bookings soared and platform dependence dropped. Guests now arrive already won over." }
+          ],
+          "stats": [
+            { "value": "+40%", "label": "direct bookings" },
+            { "value": "−26%", "label": "booking dependence" },
+            { "value": "€3.2k", "label": "monthly commission savings" },
+            { "value": "9 months", "label": "of partnership" }
+          ],
+          "services": ["Brand narrative", "Local content", "Booking funnel"],
+          "gallery": [
+            { "imageKey": "hero", "caption": "The house and garden" },
+            { "imageKey": "bastidores", "caption": "Daily bread" },
+            { "imageKey": "cta", "caption": "Table set" }
+          ]
+        }
       },
       {
         "metadata": "LIFE COACH · LISBON · 4 MONTHS · WAVY START + BOOST",
@@ -320,7 +471,27 @@
           { "value": "8 wks.", "label": "current waitlist" }
         ],
         "quote": "Selling now before the piece is even ready. People book through Instagram. I never thought this was possible.",
-        "quoteAuthor": "ATELIER LUZ"
+        "quoteAuthor": "ATELIER LUZ",
+        "detail": {
+          "intro": "Ana is a life coach in Lisbon. She had thousands of followers but few converted — her message was diluted. In four months, we turned audience into bookings.",
+          "sections": [
+            { "title": "The challenge", "body": "Ana spoke to everyone and therefore to no one. Content generated likes, not consultations, and the funnel led nowhere." },
+            { "title": "The approach", "body": "We sharpened the positioning for a clear audience, rewrote the bio and designed a content funnel that leads from discovery to booking." },
+            { "title": "The result", "body": "Scheduled consultations became the new normal and organic traffic multiplied. Today there's a waitlist of several weeks." }
+          ],
+          "stats": [
+            { "value": "×4", "label": "organic Google traffic" },
+            { "value": "+220%", "label": "Instagram requests" },
+            { "value": "8 wks.", "label": "current waitlist" },
+            { "value": "4 months", "label": "Wavy Start + Boost" }
+          ],
+          "services": ["Positioning", "Bio & funnel copy", "Content strategy"],
+          "gallery": [
+            { "imageKey": "cta", "caption": "New bio and funnel" },
+            { "imageKey": "hero", "caption": "Brand content" },
+            { "imageKey": "bastidores", "caption": "Planning" }
+          ]
+        }
       }
     ],
     "cta": {
@@ -373,20 +544,23 @@
       "message": "Message",
       "messagePlaceholder": "Tell us a bit about your business and what you are looking for...",
       "submit": "Send message",
-      "privacy": "Your data is treated with respect. Never shared."
+      "privacy": "Your data is treated with respect. Never shared.",
+      "sending": "Sending…",
+      "successTitle": "Message sent!",
+      "success": "Thank you! I'll read it carefully and reply within 24 working hours.",
+      "sendAnother": "Send another message",
+      "error": "Something went wrong. Please try again or email geral@wavy.pt."
     },
-    "talk": {
-      "title": "Other ways to reach us",
-      "emailLabel": "Email",
-      "email": "geral@wavy.pt",
-      "instagramLabel": "Instagram",
-      "instagram": "@wavy.digital.pt"
-    },
-    "findUs": {
-      "locationLabel": "Location",
-      "location": "Mafra & Samora Correia, Portugal",
-      "hoursLabel": "Hours",
-      "hours": "Available Monday to Friday, 9am to 6pm."
+    "connect": {
+      "ctaContext": "if you already know what you want",
+      "ctaTitle": "Book a conversation",
+      "ctaDesc": "15 minutes, by video or phone, to understand where you are and how I can help. No commitment.",
+      "ctaButton": "Pick a time",
+      "socialTitle": "Follow Wavy",
+      "socialDesc": "The day-to-day, behind the scenes and ideas on Instagram and Facebook.",
+      "emailTitle": "Write directly",
+      "emailDesc": "Reply within 24 working hours.",
+      "email": "geral@wavy.pt"
     }
   },
   "cases": {

@@ -1,0 +1,354 @@
+---
+/**
+ * Hero da página /servicos — fundo limpo (bg-offwhite) + deck de 3 cards
+ * com imagem no topo de cada card.
+ *
+ * Estrutura:
+ *  - Background: bg-offwhite simples, sem imagem full-bleed.
+ *  - Conteúdo: texto à esquerda + deck dinâmico de 3 cards (Raio-X / Obra /
+ *    Direção) à direita. Cada card mostra imagem no topo (~55%) + número
+ *    + scriptName + nome no fundo. Auto-rotaciona de 4 em 4 segundos;
+ *    pausa em hover/focus e traz o card escolhido para a frente.
+ *
+ * As 3 imagens em `serviceImages` são placeholders dos assets existentes;
+ * a Mariana pode substituir por fotos específicas de cada serviço.
+ *
+ * Como reverter para o hero original com imagem full-bleed + overlay teal:
+ * em /pages/servicos.astro e /pages/en/servicos.astro, trocar
+ * `ServicesHeroAlt` por `ServicesHero` no import + usage.
+ */
+import { Image } from 'astro:assets';
+import { t, getLocalizedPath } from '../../i18n';
+import type { Lang } from '../../i18n';
+import { contactHref } from '../../lib/env';
+// Uma imagem por fase — ficheiros nomeados diretamente pela Mariana:
+//   Raio-X   → Raio X.jpg
+//   Obra     → wavy-bastidores.jpg (a Mariana a construir / bastidores da obra)
+//   Direção  → A direção.jpg
+import imgRaioX from '../../assets/Raio X.jpg';
+import imgObra from '../../assets/wavy-bastidores.jpg';
+import imgDirecao from '../../assets/A direção.jpg';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+const sp = i.servicesPage;
+const j = sp.journey;
+const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
+
+// Imagens dos cards — ordem alinhada com j.services (Raio-X, Obra, Direção).
+const serviceImages = [imgRaioX, imgObra, imgDirecao];
+---
+
+<section class="relative bg-offwhite pt-16 md:pt-[72px] min-h-screen flex flex-col">
+  <div class="max-w-7xl mx-auto w-full px-6 md:px-10 pt-6 md:pt-8 pb-2 md:pb-4 flex-1 flex flex-col">
+    <div class="flex-1 flex items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+        <!-- Text -->
+        <div>
+          <span class="inline-block font-sans text-xs font-medium uppercase tracking-widest text-teal-dark bg-teal/15 px-4 py-2 rounded-full mb-6">
+            {sp.hero.tag}
+          </span>
+          <h1 class="font-serif text-[2.5rem] leading-[1.05] sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-teal-dark mb-5 md:mb-6">
+            Três fases.
+            <span class="block font-serif italic text-teal">Um caminho.</span>
+          </h1>
+          <p class="font-sans text-base md:text-lg text-muted leading-relaxed mb-7 md:mb-8 max-w-lg">
+            {sp.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-start">
+            <a
+              href={ctaHref}
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap"
+            >
+              {i.nav.diagnosis}
+            </a>
+            <a
+              href="#journey"
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300 whitespace-nowrap"
+            >
+              {lang === 'en' ? 'See the journey' : 'Ver a jornada'}
+            </a>
+          </div>
+          <p class="font-sans text-xs text-muted mt-3">
+            {lang === 'en' ? '3 phases · clear pricing · X-Ray always first' : '3 fases · preços claros · Raio-X sempre primeiro'}
+          </p>
+        </div>
+
+        <!-- Deck dinâmico (a foto está como fundo do hero, full-bleed) -->
+        <div class="relative">
+          <div
+            id="services-deck"
+            class="services-deck relative aspect-[4/5] max-w-[480px] mx-auto"
+            data-active="0"
+          >
+            {j.services.map((service, idx) => (
+              <div
+                data-card={idx}
+                role="button"
+                tabindex="0"
+                aria-label={`${service.number} — ${service.name}`}
+                class:list={[
+                  'services-deck-card absolute inset-0 rounded-[28px] bg-white flex flex-col overflow-hidden cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2',
+                  'shadow-[0_24px_60px_-16px_rgba(28,60,60,0.40)]',
+                  'border border-teal-dark/10',
+                ]}
+              >
+                {/* Imagem ocupa quase todo o card (flex-1) */}
+                <div class="relative flex-1 overflow-hidden bg-cream">
+                  <Image
+                    src={serviceImages[idx]}
+                    alt=""
+                    class="w-full h-full object-cover"
+                    widths={[320, 480, 640]}
+                    sizes="(min-width: 1024px) 420px, 60vw"
+                    quality={80}
+                  />
+                </div>
+
+                {/* Tira branca no fundo: número grande à esquerda + scriptName/nome à direita (centrado verticalmente) */}
+                <div class="basis-[20%] flex-shrink-0 flex items-center gap-3 p-5 sm:p-6 md:p-7">
+                  <span class="font-serif text-3xl sm:text-4xl md:text-5xl italic font-medium text-teal leading-none">
+                    {service.number}
+                  </span>
+                  <div class="flex-1 min-w-0">
+                    <p class="font-serif text-xs sm:text-sm italic font-medium text-teal mb-0.5">
+                      {service.scriptName}
+                    </p>
+                    <h3 class="font-serif text-lg sm:text-xl md:text-2xl font-medium text-teal-dark leading-tight">
+                      {service.name}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination dots (indicam posição na rotação) */}
+          <div class="flex items-center justify-center gap-2 mt-6">
+            {j.services.map((_, idx) => (
+              <button
+                type="button"
+                data-deck-dot={idx}
+                aria-label={`Ver fase ${idx + 1}`}
+                class:list={[
+                  'services-deck-dot h-2 rounded-full transition-all duration-300',
+                  idx === 0
+                    ? 'bg-teal w-6'
+                    : 'bg-teal-dark/20 w-2 hover:bg-teal-dark/40',
+                ]}
+              ></button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator (mesmo da homepage) -->
+    <div class="flex flex-col items-center pt-6 pb-4">
+      <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-2">{i.hero.scroll}</p>
+      <div class="w-8 h-8 rounded-full border border-teal/30 flex items-center justify-center animate-scroll-hint">
+        <i class="ri-arrow-down-line text-teal text-sm" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Deck de cards de serviço — animação suave entre posições */
+  .services-deck-card {
+    transition:
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center center;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
+
+  /* Active = 0 → card 0 à frente, 1 atrás-direita, 2 mais atrás-direita */
+  .services-deck[data-active="0"] [data-card="0"] {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    z-index: 30;
+    opacity: 1;
+  }
+  .services-deck[data-active="0"] [data-card="1"] {
+    transform: translate(6%, -4%) rotate(5deg) scale(0.92);
+    z-index: 20;
+    opacity: 0.78;
+  }
+  .services-deck[data-active="0"] [data-card="2"] {
+    transform: translate(12%, -8%) rotate(10deg) scale(0.84);
+    z-index: 10;
+    opacity: 0.55;
+  }
+
+  /* Active = 1 → card 1 à frente */
+  .services-deck[data-active="1"] [data-card="1"] {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    z-index: 30;
+    opacity: 1;
+  }
+  .services-deck[data-active="1"] [data-card="2"] {
+    transform: translate(6%, -4%) rotate(5deg) scale(0.92);
+    z-index: 20;
+    opacity: 0.78;
+  }
+  .services-deck[data-active="1"] [data-card="0"] {
+    transform: translate(12%, -8%) rotate(10deg) scale(0.84);
+    z-index: 10;
+    opacity: 0.55;
+  }
+
+  /* Active = 2 → card 2 à frente */
+  .services-deck[data-active="2"] [data-card="2"] {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    z-index: 30;
+    opacity: 1;
+  }
+  .services-deck[data-active="2"] [data-card="0"] {
+    transform: translate(6%, -4%) rotate(5deg) scale(0.92);
+    z-index: 20;
+    opacity: 0.78;
+  }
+  .services-deck[data-active="2"] [data-card="1"] {
+    transform: translate(12%, -8%) rotate(10deg) scale(0.84);
+    z-index: 10;
+    opacity: 0.55;
+  }
+
+  /* Respeita preferência de utilizadores com sensibilidade a movimento */
+  @media (prefers-reduced-motion: reduce) {
+    .services-deck-card {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  /**
+   * Deck de 3 cards no hero de /servicos.
+   * — Rota automaticamente de 4 em 4s (configurable via ROTATE_MS).
+   * — Pausa em hover/focus e traz o card focado para a frente.
+   * — Click em card ou dot define o ativo (com 5s de pausa antes de retomar).
+   * — Para de animar quando o deck sai do viewport (poupa CPU).
+   * — Respeita prefers-reduced-motion.
+   */
+  function initServicesDeck() {
+    const deck = document.getElementById('services-deck');
+    if (!deck || deck.dataset.initialized === 'true') return;
+    deck.dataset.initialized = 'true';
+
+    const cards = Array.from(deck.querySelectorAll<HTMLElement>('[data-card]'));
+    const dots = Array.from(document.querySelectorAll<HTMLElement>('[data-deck-dot]'));
+    const total = cards.length;
+    if (total === 0) return;
+
+    const ROTATE_MS = 4000;
+    const HOVER_GRACE_MS = 5000;
+
+    let active = 0;
+    let intervalId: number | null = null;
+    let isPaused = false;
+    let isVisible = true;
+
+    const setActive = (i: number) => {
+      active = ((i % total) + total) % total;
+      deck.setAttribute('data-active', String(active));
+      dots.forEach((dot, idx) => {
+        const isActive = idx === active;
+        dot.classList.toggle('bg-teal', isActive);
+        dot.classList.toggle('w-6', isActive);
+        dot.classList.toggle('bg-teal-dark/20', !isActive);
+        dot.classList.toggle('w-2', !isActive);
+        dot.classList.toggle('hover:bg-teal-dark/40', !isActive);
+      });
+    };
+
+    const startRotation = () => {
+      if (intervalId !== null) return;
+      intervalId = window.setInterval(() => {
+        if (!isPaused && isVisible) {
+          setActive(active + 1);
+        }
+      }, ROTATE_MS);
+    };
+
+    const stopRotation = () => {
+      if (intervalId !== null) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+
+    // Hover/focus num card → traz para a frente e pausa
+    cards.forEach((card, idx) => {
+      const focusCard = () => {
+        isPaused = true;
+        setActive(idx);
+      };
+      card.addEventListener('mouseenter', focusCard);
+      card.addEventListener('focusin', focusCard);
+      card.addEventListener('click', () => {
+        isPaused = true;
+        setActive(idx);
+        window.setTimeout(() => {
+          isPaused = false;
+        }, HOVER_GRACE_MS);
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setActive(idx);
+        }
+      });
+    });
+
+    // Rato sai do deck → retoma rotação automática
+    deck.addEventListener('mouseleave', () => {
+      isPaused = false;
+    });
+
+    // Dots de paginação → click salta para a fase escolhida
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        setActive(idx);
+        isPaused = true;
+        window.setTimeout(() => {
+          isPaused = false;
+        }, HOVER_GRACE_MS);
+      });
+    });
+
+    // Pausa quando o deck não está visível
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+        });
+      },
+      { threshold: 0.1 }
+    );
+    io.observe(deck);
+
+    // Respeita prefers-reduced-motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!prefersReduced.matches) {
+      startRotation();
+    }
+    prefersReduced.addEventListener('change', (e) => {
+      if (e.matches) stopRotation();
+      else startRotation();
+    });
+  }
+
+  // Initial load + Astro view transitions
+  document.addEventListener('astro:page-load', initServicesDeck);
+  if (document.readyState !== 'loading') {
+    initServicesDeck();
+  } else {
+    document.addEventListener('DOMContentLoaded', initServicesDeck);
+  }
+</script>

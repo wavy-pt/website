@@ -2,9 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ScrollReveal from '../components/ScrollReveal.astro';
 import ContactHero from '../components/contact/ContactHero.astro';
-import ContactOptions from '../components/contact/ContactOptions.astro';
-import ContactTalk from '../components/contact/ContactTalk.astro';
-import ContactFindUs from '../components/contact/ContactFindUs.astro';
+import ContactForm from '../components/contact/ContactForm.astro';
 import { isProd } from '../lib/env';
 
 if (isProd) {
@@ -14,11 +12,9 @@ if (isProd) {
 
 <Layout
   title="Contacto · Wavy"
-  description="Vamos conversar? Três caminhos para começar — auto-diagnóstico, agendar conversa ou enviar mensagem."
+  description="Vamos conversar? Preenche o formulário, marca uma conversa ou fala connosco pelas redes sociais e por email."
 >
   <ContactHero lang="pt" />
-  <ContactOptions lang="pt" />
-  <ContactTalk lang="pt" />
-  <ContactFindUs lang="pt" />
+  <ContactForm lang="pt" />
   <ScrollReveal />
 </Layout>

@@ -1,4 +1,17 @@
 ---
+/**
+ * "Como trabalhamos juntas" — layout hub-and-spoke.
+ *
+ *   - Conversa (idx 0) é o card CENTRAL de onde tudo arranca.
+ *   - Diagnóstico (1), Proposta (2) e Início (3) orbitam à volta,
+ *     ligados ao centro por linhas tracejadas subtis (só em desktop).
+ *   - Mobile colapsa para stack vertical, mantendo a ordem cronológica
+ *     (Conversa em primeiro, depois os outros 3).
+ *
+ * A linguagem visual (numerais italic teal, cards brancos rounded, border
+ * subtil + central destacado com border-teal/45) é a mesma do deck do hero
+ * e da jornada — coerente com o resto do site.
+ */
 import { t } from '../../i18n';
 import type { Lang } from '../../i18n';
 
@@ -8,52 +21,127 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang).servicesPage.process;
+
+const central = i.steps[0];
+const outer = [i.steps[1], i.steps[2], i.steps[3]];
 ---
 
 <section class="bg-cream py-14 md:py-20">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
-    <div class="scroll-reveal">
-      <!-- Header -->
-      <div class="mb-10 md:mb-14">
-        <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">
-          {i.label}
-        </p>
-        <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15] mb-4">
-          {i.title}
-        </h2>
-        <p class="font-sans text-base text-teal-dark/70 leading-relaxed max-w-xl">
-          {i.subtitle}
-        </p>
-      </div>
+    <!-- Header -->
+    <div class="scroll-reveal mb-12 md:mb-16 max-w-2xl">
+      <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">
+        {i.label}
+      </p>
+      <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15] mb-4">
+        {i.title}
+      </h2>
+      <p class="font-sans text-base text-teal-dark/70 leading-relaxed">
+        {i.subtitle}
+      </p>
+    </div>
 
-      <!-- Steps -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 relative">
-        {i.steps.map((step, idx) => (
-          <div class="relative flex flex-col">
-            <!-- Connector line (desktop only, between cards) -->
-            {idx < i.steps.length - 1 && (
-              <div class="hidden md:block absolute top-5 left-[calc(50%+28px)] w-[calc(100%-56px)] h-px bg-teal-dark/15" aria-hidden="true"></div>
-            )}
+    <!-- Hub-and-spoke -->
+    <div class="scroll-reveal relative max-w-5xl mx-auto lg:aspect-[8/5]">
+      <!-- Linhas tracejadas a ligar o centro a cada outer (só em desktop) -->
+      <svg
+        class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none"
+        viewBox="0 0 800 500"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <!-- Centro → Diagnóstico (topo) -->
+        <line
+          x1="400" y1="250" x2="400" y2="55"
+          stroke="rgb(63 142 142 / 0.35)"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-dasharray="6 4"
+        />
+        <!-- Centro → Proposta (bottom-right) -->
+        <line
+          x1="400" y1="250" x2="700" y2="445"
+          stroke="rgb(63 142 142 / 0.35)"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-dasharray="6 4"
+        />
+        <!-- Centro → Início (bottom-left) -->
+        <line
+          x1="400" y1="250" x2="100" y2="445"
+          stroke="rgb(63 142 142 / 0.35)"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-dasharray="6 4"
+        />
+      </svg>
 
-            <!-- Number circle + connector mobile -->
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center flex-shrink-0">
-                <span class="font-serif text-base font-bold text-cream">
-                  {step.number}
-                </span>
-              </div>
-              <div class="h-px bg-teal-dark/15 flex-1 md:hidden" aria-hidden="true"></div>
-            </div>
-
-            <!-- Content -->
-            <h3 class="font-serif text-xl font-medium text-teal-dark mb-2">
-              {step.title}
+      <!--
+        Cards: em mobile ficam num stack vertical (flex flex-col) com a
+        ordem da DOM (Conversa primeiro). Em desktop o wrapper colapsa
+        com `lg:contents`, e cada card posiciona-se absoluto dentro do
+        container com aspect-[8/5].
+      -->
+      <div class="flex flex-col gap-4 lg:contents">
+        <!-- 1. Conversa (CENTRAL — primeiro no mobile, centro no desktop) -->
+        <div class="bg-white rounded-[20px] p-6 lg:p-7 border-2 border-teal/45 shadow-[0_14px_40px_-12px_rgba(28,60,60,0.20)] lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-[300px] lg:z-20">
+          <div class="flex items-baseline gap-3">
+            <span class="font-serif text-[3.5rem] italic font-medium text-teal leading-none">
+              {central.number}
+            </span>
+            <h3 class="font-serif text-2xl md:text-[1.75rem] font-medium text-teal-dark">
+              {central.title}
             </h3>
-            <p class="font-sans text-sm text-teal-dark/60 leading-relaxed">
-              {step.desc}
-            </p>
           </div>
-        ))}
+          <p class="font-sans text-sm md:text-base text-teal-dark/70 mt-3 leading-relaxed">
+            {central.desc}
+          </p>
+        </div>
+
+        <!-- 2. Diagnóstico (TOPO no desktop) -->
+        <div class="bg-white rounded-[20px] p-5 lg:p-6 border border-teal-dark/10 shadow-[0_4px_18px_-8px_rgba(28,60,60,0.10)] lg:absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-[240px] lg:z-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-serif text-[2.5rem] italic font-medium text-teal leading-none">
+              {outer[0].number}
+            </span>
+            <h3 class="font-serif text-xl font-medium text-teal-dark">
+              {outer[0].title}
+            </h3>
+          </div>
+          <p class="font-sans text-sm text-teal-dark/70 mt-2 leading-relaxed">
+            {outer[0].desc}
+          </p>
+        </div>
+
+        <!-- 3. Proposta (BOTTOM-RIGHT no desktop) -->
+        <div class="bg-white rounded-[20px] p-5 lg:p-6 border border-teal-dark/10 shadow-[0_4px_18px_-8px_rgba(28,60,60,0.10)] lg:absolute lg:bottom-0 lg:right-0 lg:w-[240px] lg:z-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-serif text-[2.5rem] italic font-medium text-teal leading-none">
+              {outer[1].number}
+            </span>
+            <h3 class="font-serif text-xl font-medium text-teal-dark">
+              {outer[1].title}
+            </h3>
+          </div>
+          <p class="font-sans text-sm text-teal-dark/70 mt-2 leading-relaxed">
+            {outer[1].desc}
+          </p>
+        </div>
+
+        <!-- 4. Início (BOTTOM-LEFT no desktop) -->
+        <div class="bg-white rounded-[20px] p-5 lg:p-6 border border-teal-dark/10 shadow-[0_4px_18px_-8px_rgba(28,60,60,0.10)] lg:absolute lg:bottom-0 lg:left-0 lg:w-[240px] lg:z-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-serif text-[2.5rem] italic font-medium text-teal leading-none">
+              {outer[2].number}
+            </span>
+            <h3 class="font-serif text-xl font-medium text-teal-dark">
+              {outer[2].title}
+            </h3>
+          </div>
+          <p class="font-sans text-sm text-teal-dark/70 mt-2 leading-relaxed">
+            {outer[2].desc}
+          </p>
+        </div>
       </div>
     </div>
   </div>

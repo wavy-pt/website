@@ -19,6 +19,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.6",
     "remixicon": "^4.9.1",
+    "resend": "^6.12.4",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

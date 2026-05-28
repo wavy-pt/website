@@ -1,7 +1,7 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
-import { contactHref } from '../lib/env';
+import { contactHref, schedulingHref, schedulingIsExternal } from '../lib/env';
 
 interface Props {
   lang: Lang;
@@ -10,6 +10,7 @@ interface Props {
 const { lang } = Astro.props;
 const i = t(lang);
 const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
+const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 ---
 
 <section class="bg-offwhite py-16 md:py-24">
@@ -97,7 +98,9 @@ const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 
           <div class="mt-auto">
             <a
-              href={ctaHref}
+              href={schedulingUrl}
+              target={schedulingIsExternal ? '_blank' : undefined}
+              rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-teal-dark font-sans font-medium text-sm hover:bg-offwhite transition-all duration-300 group"
             >
               <i class="ri-calendar-check-line"></i>

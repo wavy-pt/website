@@ -127,29 +127,7 @@ const services = [
               {data.desc}
             </p>
 
-            <!-- Price -->
-            <div class="mb-7 md:mb-8">
-              <div class="flex items-baseline gap-2 flex-wrap">
-                {'priceLabel' in data && data.priceLabel && (
-                  <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/70">
-                    {data.priceLabel}
-                  </span>
-                )}
-                <span class="font-serif text-5xl sm:text-6xl md:text-7xl font-medium text-teal">
-                  {data.price}
-                </span>
-                {'pricePeriod' in data && data.pricePeriod && (
-                  <span class="font-sans text-base text-teal-dark/70">
-                    {data.pricePeriod}
-                  </span>
-                )}
-              </div>
-              {'priceNote' in data && data.priceNote && (
-                <p class="font-sans text-xs mt-2 text-teal-dark/75 max-w-xs">
-                  {data.priceNote}
-                </p>
-              )}
-            </div>
+            <!-- Price block removido por decisão de design (preços agora só visíveis em /servicos) -->
 
             <!-- CTA button -->
             <div class="mt-auto">

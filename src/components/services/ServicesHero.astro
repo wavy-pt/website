@@ -2,21 +2,22 @@
 import { Image } from 'astro:assets';
 import { t } from '../../i18n';
 import type { Lang } from '../../i18n';
-import heroImage from '../../assets/wavy-bastidores.jpg';
+import heroImage from '../../assets/wavy-servicos.png';
 
 interface Props {
   lang: Lang;
 }
 
 const { lang } = Astro.props;
-const i = t(lang).servicesPage;
+const i = t(lang);
+const sp = i.servicesPage;
 ---
 
-<section class="relative min-h-[70vh] md:min-h-[80vh] flex items-end pb-16 md:pb-24 overflow-hidden">
-  <!-- Background image -->
+<section class="relative min-h-[88vh] md:min-h-screen flex items-center pt-28 md:pt-32 pb-36 md:pb-44 overflow-hidden">
+  <!-- Background image (workspace criativo, mesma do Readdy original) -->
   <Image
     src={heroImage}
-    alt="Workspace criativo — Wavy"
+    alt="Workspace criativo — laptop e headphones na mesa"
     class="absolute inset-0 w-full h-full object-cover object-top"
     loading="eager"
     fetchpriority="high"
@@ -25,24 +26,34 @@ const i = t(lang).servicesPage;
     quality={85}
   />
 
-  <!-- Soft gradient overlay — fades to cream at bottom for smooth transition -->
-  <div class="absolute inset-0 bg-gradient-to-b from-teal-dark/50 via-teal-dark/40 to-cream" aria-hidden="true"></div>
+  <!-- Top overlay: escuro para legibilidade do texto da nav + headline -->
+  <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-teal-dark/55 via-teal-dark/25 to-transparent" aria-hidden="true"></div>
 
-  <!-- Additional soft top overlay for text readability -->
-  <div class="absolute inset-0 bg-gradient-to-t from-transparent via-teal-dark/20 to-teal-dark/40" aria-hidden="true"></div>
+  <!-- Bottom overlay: feathering longo da imagem para cream (transição suave para a secção de serviços) -->
+  <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent via-cream/30 via-50% to-cream" aria-hidden="true"></div>
 
-  <!-- Content -->
+  <!-- Content (centrado verticalmente) -->
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full">
     <div class="scroll-reveal max-w-3xl">
-      <p class="font-sans text-xs uppercase tracking-widest text-teal-light mb-4">
-        {i.hero.tag}
-      </p>
+      <span class="inline-flex font-sans text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-cream bg-cream/15 backdrop-blur-sm border border-cream/25 px-4 py-2 rounded-full mb-5">
+        {sp.hero.tag}
+      </span>
       <h1 class="font-serif text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-medium text-white mb-6 leading-[1.1] drop-shadow-sm">
-        {i.hero.headline}
+        {sp.hero.headline}
       </h1>
       <p class="font-sans text-base md:text-lg text-white/85 leading-relaxed max-w-xl">
-        {i.hero.subtitle}
+        {sp.hero.subtitle}
       </p>
+    </div>
+  </div>
+
+  <!-- Scroll indicator (fundo do hero, centrado, em zona já cream pelo gradient) -->
+  <div class="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none">
+    <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal-dark mb-1">
+      {i.hero.scroll}
+    </p>
+    <div class="w-9 h-9 rounded-full border border-teal-dark/40 flex items-center justify-center animate-scroll-hint bg-cream/60 backdrop-blur-sm">
+      <i class="ri-arrow-down-line text-teal-dark text-sm" aria-hidden="true"></i>
     </div>
   </div>
 </section>

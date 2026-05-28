@@ -1,0 +1,275 @@
+---
+import { t } from '../../i18n';
+import type { Lang } from '../../i18n';
+import { CALENDLY_URL } from '../../lib/env';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = t(lang).contactPage;
+const f = c.form;
+const cn = c.connect;
+
+// O formulário é enviado via Resend (rota /api/contact).
+// O CTA "Marca uma conversa" usa o link do Calendly (CALENDLY_URL em src/lib/env.ts).
+
+const email = cn.email;
+const igUrl = 'https://instagram.com/wavy.digital.pt';
+const fbUrl = 'https://facebook.com/wavy.digital.pt';
+
+const ctaExternal = Boolean(CALENDLY_URL);
+const ctaHref = CALENDLY_URL
+  || `mailto:${email}?subject=${encodeURIComponent('Marcar conversa de 15 minutos')}`;
+
+const inputClass =
+  'w-full bg-offwhite border border-teal-dark/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors';
+const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted mb-2';
+---
+
+<section class="bg-offwhite pb-20 md:pb-28">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
+      <!-- Formulário -->
+      <div class="lg:col-span-7">
+        <div class="bg-cream rounded-[28px] p-7 sm:p-9 md:p-10">
+          <div data-form-view>
+          <h2 class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-7">
+            {f.title}
+          </h2>
+
+          <form id="wavy-contact-form" class="flex flex-col gap-5" novalidate>
+            <div>
+              <label for="contact-name" class={labelClass}>{f.name}</label>
+              <input id="contact-name" name="name" type="text" required class={inputClass} placeholder={f.namePlaceholder} />
+            </div>
+
+            <div>
+              <label for="contact-email" class={labelClass}>{f.email}</label>
+              <input id="contact-email" name="email" type="email" required class={inputClass} placeholder={f.emailPlaceholder} />
+            </div>
+
+            <div>
+              <label for="contact-business" class={labelClass}>{f.business}</label>
+              <input id="contact-business" name="business" type="text" class={inputClass} placeholder={f.businessPlaceholder} />
+            </div>
+
+            <div>
+              <label for="contact-message" class={labelClass}>{f.message}</label>
+              <textarea id="contact-message" name="message" rows="5" required class={`${inputClass} resize-y`} placeholder={f.messagePlaceholder}></textarea>
+            </div>
+
+            <!-- anti-spam (honeypot Web3Forms) -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" aria-hidden="true" />
+
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal text-cream hover:bg-teal-dark transition-all duration-300 self-start mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {f.submit}
+              <i class="ri-arrow-right-line" aria-hidden="true"></i>
+            </button>
+
+            <p data-form-status class="font-sans text-sm hidden" role="status" aria-live="polite"></p>
+            <p class="font-sans text-xs text-muted">{f.privacy}</p>
+          </form>
+          </div>
+
+          <!-- Estado de sucesso (após envio) -->
+          <div data-form-success class="hidden flex-col items-center text-center py-8 md:py-14">
+            <div class="success-badge relative w-20 h-20 rounded-full bg-teal flex items-center justify-center mb-6">
+              <span class="success-ring absolute inset-0 rounded-full bg-teal/40" aria-hidden="true"></span>
+              <i class="ri-check-line text-cream text-4xl relative" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-2">{f.successTitle}</h3>
+            <p class="font-sans text-sm md:text-base text-muted leading-relaxed max-w-sm mb-7">{f.success}</p>
+            <button
+              type="button"
+              data-form-reset
+              class="inline-flex items-center gap-2 font-sans font-medium text-sm text-teal hover:text-teal-dark transition-colors"
+            >
+              <i class="ri-arrow-left-line" aria-hidden="true"></i>
+              {f.sendAnother}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado direito: CTA + redes + email -->
+      <div class="lg:col-span-5 flex flex-col gap-5">
+        <!-- CTA: marcar conversa -->
+        <div class="bg-teal rounded-[28px] p-7 md:p-8">
+          <p class="font-serif italic text-cream/80 text-sm mb-2">{cn.ctaContext}</p>
+          <h3 class="font-serif text-xl md:text-2xl font-medium text-cream mb-3">{cn.ctaTitle}</h3>
+          <p class="font-sans text-sm text-cream/80 leading-relaxed mb-6">{cn.ctaDesc}</p>
+          <a
+            href={ctaHref}
+            target={ctaExternal ? '_blank' : undefined}
+            rel={ctaExternal ? 'noopener noreferrer' : undefined}
+            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-all duration-300"
+          >
+            <i class="ri-calendar-check-line" aria-hidden="true"></i>
+            {cn.ctaButton}
+          </a>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="bg-cream rounded-[28px] p-7 md:p-8">
+          <h3 class="font-serif text-xl font-medium text-teal-dark mb-1">{cn.socialTitle}</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-5">{cn.socialDesc}</p>
+          <div class="flex gap-3">
+            <a
+              href={igUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da Wavy"
+              class="w-11 h-11 rounded-full bg-teal/10 hover:bg-teal/20 flex items-center justify-center text-teal transition-colors"
+            >
+              <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
+            </a>
+            <a
+              href={fbUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook da Wavy"
+              class="w-11 h-11 rounded-full bg-teal/10 hover:bg-teal/20 flex items-center justify-center text-teal transition-colors"
+            >
+              <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-cream rounded-[28px] p-7 md:p-8">
+          <h3 class="font-serif text-xl font-medium text-teal-dark mb-1">{cn.emailTitle}</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-4">{cn.emailDesc}</p>
+          <a
+            href={`mailto:${email}`}
+            class="inline-flex items-center gap-2 font-sans font-medium text-sm text-teal hover:text-teal-dark transition-colors"
+          >
+            <i class="ri-mail-line text-base" aria-hidden="true"></i>
+            {email}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animação do estado de sucesso (só corre quando o card fica visível) */
+  @keyframes wavy-success-pop {
+    0% { transform: scale(0.4); opacity: 0; }
+    60% { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes wavy-success-ring {
+    0% { transform: scale(0.85); opacity: 0.5; }
+    100% { transform: scale(1.75); opacity: 0; }
+  }
+  @keyframes wavy-success-check {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  [data-form-success]:not(.hidden) .success-badge {
+    animation: wavy-success-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  [data-form-success]:not(.hidden) .success-ring {
+    animation: wavy-success-ring 0.9s ease-out 0.15s both;
+  }
+  [data-form-success]:not(.hidden) .success-badge i {
+    animation: wavy-success-check 0.4s ease 0.3s both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-form-success] .success-badge,
+    [data-form-success] .success-ring,
+    [data-form-success] .success-badge i {
+      animation: none;
+    }
+  }
+</style>
+
+<script
+  is:inline
+  define:vars={{
+    txtSending: f.sending,
+    txtError: f.error,
+  }}
+>
+  (function () {
+    const form = document.getElementById('wavy-contact-form');
+    if (!form || form.dataset.bound === 'true') return;
+    form.dataset.bound = 'true';
+
+    const formView = document.querySelector('[data-form-view]');
+    const successView = document.querySelector('[data-form-success]');
+    const resetBtn = document.querySelector('[data-form-reset]');
+    const statusEl = form.querySelector('[data-form-status]');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    function setStatus(msg, color) {
+      if (!statusEl) return;
+      statusEl.textContent = msg;
+      statusEl.style.color = color;
+      statusEl.classList.remove('hidden');
+    }
+    function clearStatus() {
+      if (!statusEl) return;
+      statusEl.textContent = '';
+      statusEl.classList.add('hidden');
+    }
+    function showSuccess() {
+      if (formView) formView.classList.add('hidden');
+      if (successView) {
+        successView.classList.remove('hidden');
+        successView.classList.add('flex');
+      }
+    }
+    function showForm() {
+      if (successView) {
+        successView.classList.add('hidden');
+        successView.classList.remove('flex');
+      }
+      if (formView) formView.classList.remove('hidden');
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        form.reset();
+        clearStatus();
+        showForm();
+      });
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get('name') || '').toString().trim();
+      const mail = (data.get('email') || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
+      if (!name || !mail || !message) return;
+
+      setStatus(txtSending, '#666666');
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch('/api/contact', { method: 'POST', body: data });
+        const result = await res.json().catch(function () {
+          return {};
+        });
+        if (res.ok && result && result.success) {
+          clearStatus();
+          form.reset();
+          showSuccess();
+        } else {
+          setStatus(txtError, '#b3261e');
+        }
+      } catch (err) {
+        setStatus(txtError, '#b3261e');
+      }
+
+      if (submitBtn) submitBtn.disabled = false;
+    });
+  })();
+</script>

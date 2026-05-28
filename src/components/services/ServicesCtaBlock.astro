@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
 import bastidoresImage from '../../assets/wavy-bastidores.jpg';
+import ServicesQuiz from './ServicesQuiz.astro';
 
 interface Props {
   lang: Lang;
@@ -13,120 +14,317 @@ const i = t(lang).servicesPage.cta;
 const contactHref = getLocalizedPath('/contacto', lang);
 ---
 
-<section class="bg-offwhite py-14 md:py-20">
-  <div class="max-w-7xl mx-auto px-6 md:px-10">
-    <div class="scroll-reveal">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
-        <!-- Left — Big explorer card with image -->
-        <div class="relative rounded-[28px] overflow-hidden min-h-[380px] lg:min-h-0">
+<section class="bg-offwhite pt-10 md:pt-0 pb-14 md:pb-20">
+  <!-- Quiz alinhado com os cards da jornada: mesma largura (max-w-5xl) e mesmo
+       nível (offset pl-16 md:pl-28, como os items da jornada) -->
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+    <div class="scroll-reveal pl-16 md:pl-28">
+      <div class="quiz-frame relative md:pt-12 md:pb-4 md:px-4">
+        <svg
+          class="quiz-frame-svg hidden md:block absolute inset-0 w-full h-full overflow-visible pointer-events-none"
+          aria-hidden="true"
+          data-quiz-frame-svg
+        >
+          <path data-quiz-tail fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path data-quiz-top fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path data-quiz-bottom fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <ServicesQuiz lang={lang} />
+      </div>
+    </div>
+  </div>
+
+  <!-- CTAs por baixo: "Já decidiste?" + redes + email (largura normal) -->
+  <div class="max-w-7xl mx-auto px-6 md:px-10 mt-10 md:mt-14">
+    <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
+        <!-- Main CTA card (teal) -->
+        <div class="relative rounded-[28px] overflow-hidden min-h-[220px] bg-teal">
           <Image
             src={bastidoresImage}
-            alt="Workspace criativo — Wavy"
-            class="absolute inset-0 w-full h-full object-cover object-top"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover object-top opacity-50"
             loading="lazy"
-            widths={[640, 960, 1280]}
+            widths={[480, 640, 960]}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            quality={85}
+            quality={75}
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-teal-dark/95 via-teal-dark/80 to-teal-dark/40" aria-hidden="true"></div>
-          <div class="relative z-10 p-8 md:p-10 flex flex-col justify-end h-full min-h-[380px]">
-            <h2 class="font-serif text-[2.25rem] sm:text-4xl md:text-5xl lg:text-6xl font-medium text-cream leading-[1.1] mb-4">
-              {i.explorerTitle}
-            </h2>
-            <p class="font-sans text-base text-cream/85 leading-relaxed max-w-md mb-2">
-              {i.explorerSubtitle}
-            </p>
-            <p class="font-sans text-sm text-teal-light mb-6">
-              {i.explorerDuration}
+          <div class="absolute inset-0 bg-gradient-to-r from-teal/95 via-teal/85 to-teal/70" aria-hidden="true"></div>
+          <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center h-full">
+            <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-cream leading-[1.1] mb-3">
+              {i.ctaCardTitle}
+            </h3>
+            <p class="font-sans text-base text-cream/85 mb-6">
+              {i.ctaCardDesc}
             </p>
             <a
               href={contactHref}
               class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-all duration-300 whitespace-nowrap w-full sm:w-auto self-start"
             >
-              {i.explorerCta}
-              <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+              {i.ctaCardButton}
+              <i class="ri-calendar-check-line" aria-hidden="true"></i>
             </a>
           </div>
         </div>
 
-        <!-- Right — CTA actions -->
-        <div class="flex flex-col gap-5">
-          <!-- Main CTA card (teal) -->
-          <div class="relative rounded-[28px] overflow-hidden flex-1 min-h-[200px] bg-teal">
-            <Image
-              src={bastidoresImage}
-              alt=""
-              class="absolute inset-0 w-full h-full object-cover object-top opacity-50"
-              loading="lazy"
-              widths={[480, 640, 960]}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              quality={75}
-            />
-            <div class="absolute inset-0 bg-gradient-to-r from-teal/95 via-teal/85 to-teal/70" aria-hidden="true"></div>
-            <div class="relative z-10 p-6 md:p-8 flex flex-col justify-center h-full">
-              <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-cream leading-[1.1] mb-3">
-                {i.ctaCardTitle}
-              </h3>
-              <p class="font-sans text-base text-cream/85 mb-6">
-                {i.ctaCardDesc}
-              </p>
+        <!-- Social + email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <!-- Social card -->
+          <div class="bg-cream rounded-[28px] p-5 md:p-6 flex flex-col justify-center">
+            <p class="font-sans text-sm font-medium text-teal-dark mb-4">
+              {i.socialLabel}
+            </p>
+            <div class="flex items-center gap-3">
               <a
-                href={contactHref}
-                class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-all duration-300 whitespace-nowrap w-full sm:w-auto self-start"
+                href="https://instagram.com/wavy.digital.pt"
+                target="_blank"
+                rel="nofollow noreferrer"
+                aria-label={lang === 'en' ? 'Wavy on Instagram' : 'Instagram da Wavy'}
+                class="w-11 h-11 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-cream transition-all duration-200"
               >
-                {i.ctaCardButton}
-                <i class="ri-calendar-check-line" aria-hidden="true"></i>
+                <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://facebook.com/wavy.digital.pt"
+                target="_blank"
+                rel="nofollow noreferrer"
+                aria-label={lang === 'en' ? 'Wavy on Facebook' : 'Facebook da Wavy'}
+                class="w-11 h-11 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-cream transition-all duration-200"
+              >
+                <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
               </a>
             </div>
           </div>
 
-          <!-- Secondary action row -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <!-- Social card -->
-            <div class="bg-cream rounded-[28px] p-5 md:p-6 flex flex-col justify-center">
-              <p class="font-sans text-sm font-medium text-teal-dark mb-4">
-                {i.socialLabel}
-              </p>
-              <div class="flex items-center gap-3">
-                <a
-                  href="https://instagram.com/wavy.digital.pt"
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  aria-label={lang === 'en' ? 'Wavy on Instagram' : 'Instagram da Wavy'}
-                  class="w-11 h-11 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-cream transition-all duration-200"
-                >
-                  <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="https://facebook.com/wavy.digital.pt"
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  aria-label={lang === 'en' ? 'Wavy on Facebook' : 'Facebook da Wavy'}
-                  class="w-11 h-11 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-cream transition-all duration-200"
-                >
-                  <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
-                </a>
-              </div>
+          <!-- Email card -->
+          <a
+            href={`mailto:${i.emailAddress}`}
+            class="bg-cream rounded-[28px] p-5 md:p-6 flex items-center gap-4 hover:bg-warm transition-all duration-300 group"
+          >
+            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-teal/10 flex-shrink-0">
+              <i class="ri-mail-send-line text-teal text-xl" aria-hidden="true"></i>
             </div>
-
-            <!-- Email card -->
-            <a
-              href={`mailto:${i.emailAddress}`}
-              class="bg-cream rounded-[28px] p-5 md:p-6 flex items-center gap-4 hover:bg-warm transition-all duration-300 group"
-            >
-              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-teal/10 flex-shrink-0">
-                <i class="ri-mail-send-line text-teal text-xl" aria-hidden="true"></i>
-              </div>
-              <div>
-                <p class="font-sans text-sm font-medium text-teal-dark group-hover:text-teal transition-colors">
-                  {i.emailLabel}
-                </p>
-                <p class="font-sans text-xs text-muted mt-0.5">{i.emailAddress}</p>
-              </div>
-            </a>
-          </div>
+            <div>
+              <p class="font-sans text-sm font-medium text-teal-dark group-hover:text-teal transition-colors">
+                {i.emailLabel}
+              </p>
+              <p class="font-sans text-xs text-muted mt-0.5">{i.emailAddress}</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </div>
 </section>
+
+<style>
+  /* Cor de todos os traços da moldura (verde do logo Wavy) */
+  .quiz-frame [data-quiz-frame-svg] path {
+    stroke: #13979d;
+  }
+</style>
+
+<script>
+  /**
+   * Moldura que se desenha à volta do card do quiz conforme o scroll.
+   * Continua a linguagem da timeline da jornada: cauda vertical à esquerda
+   * (a "chegar" de cima) + contorno arredondado completo do card.
+   * O traço cresce em espessura (1px → 3px) e desenha-se via stroke-dashoffset.
+   * Re-mede com ResizeObserver porque o card muda de altura (intro/quiz/resultado).
+   */
+  function initQuizFrame() {
+    const wrap = document.querySelector<HTMLElement>('.quiz-frame');
+    if (!wrap || wrap.dataset.frameInit === 'true') return;
+    const svg = wrap.querySelector<SVGSVGElement>('[data-quiz-frame-svg]');
+    const tailPath = wrap.querySelector<SVGPathElement>('[data-quiz-tail]');
+    const topPath = wrap.querySelector<SVGPathElement>('[data-quiz-top]');
+    const bottomPath = wrap.querySelector<SVGPathElement>('[data-quiz-bottom]');
+    const card = wrap.querySelector<HTMLElement>('#services-quiz');
+    if (!svg || !tailPath || !topPath || !bottomPath || !card) return;
+    wrap.dataset.frameInit = 'true';
+
+    // Constantes alinhadas com o padding do wrapper (md:pt-12 / md:px-4 / md:pb-4)
+    const PAD_TOP = 48;
+    const PAD_SIDE = 16;
+    const PAD_BOTTOM = 16;
+    const GAP = 8; // distância da linha à borda do card
+    const ENTRY_TOP = -6; // cauda sobe um pouco para sobrepor o fim da linha da jornada
+    const RADIUS = 32 + GAP; // raio do card (rounded-[32px]) + gap
+    const TAIL_PORTION = 0.3; // fração inicial do scroll dedicada à cauda
+
+    // Linha da jornada: .journey-timeline guarda o --p; .journey-track é a
+    // linha visível (largura real) usada para medir o CENTRO exato no ecrã.
+    const journeyLine = document.querySelector<HTMLElement>('.journey-timeline');
+    const journeyTrack = document.querySelector<HTMLElement>('.journey-track');
+
+    let tailLen = 0;
+    let topLen = 0;
+    let bottomLen = 0;
+    let progress = 0;
+
+    const build = () => {
+      const w = wrap.clientWidth;
+      const cardH = card.offsetHeight;
+      const totalH = PAD_TOP + cardH + PAD_BOTTOM;
+
+      const left = PAD_SIDE - GAP;
+      const right = w - (PAD_SIDE - GAP);
+      const top = PAD_TOP - GAP;
+      const bottom = totalH - (PAD_BOTTOM - GAP);
+      const r = RADIUS;
+      const midY = (top + bottom) / 2; // meia-altura do card
+
+      // x da cauda = centro da linha visível da jornada (à esquerda do card)
+      let entryX = 120;
+      const refEl = journeyTrack || journeyLine;
+      if (refEl) {
+        const jr = refEl.getBoundingClientRect();
+        const sr = svg.getBoundingClientRect();
+        entryX = jr.left + jr.width / 2 - sr.left;
+      }
+      entryX = Math.min(left - 4, entryX); // garante que fica à esquerda da moldura
+
+      svg.setAttribute('viewBox', `0 0 ${w} ${totalH}`);
+      svg.setAttribute('width', String(w));
+      svg.setAttribute('height', String(totalH));
+
+      // Cauda: desce na vertical (x da timeline) até meio do card e só depois
+      // se aproxima (horizontal) do lado esquerdo da moldura.
+      tailPath.setAttribute(
+        'd',
+        [`M ${entryX} ${ENTRY_TOP}`, `L ${entryX} ${midY}`, `L ${left} ${midY}`].join(' ')
+      );
+
+      // Ramo superior: do meio-esquerda, sobe e contorna o topo até ao meio-direita.
+      topPath.setAttribute(
+        'd',
+        [
+          `M ${left} ${midY}`,
+          `L ${left} ${top + r}`,
+          `A ${r} ${r} 0 0 1 ${left + r} ${top}`,
+          `L ${right - r} ${top}`,
+          `A ${r} ${r} 0 0 1 ${right} ${top + r}`,
+          `L ${right} ${midY}`,
+        ].join(' ')
+      );
+
+      // Ramo inferior: do meio-esquerda, desce e contorna a base até ao meio-direita.
+      bottomPath.setAttribute(
+        'd',
+        [
+          `M ${left} ${midY}`,
+          `L ${left} ${bottom - r}`,
+          `A ${r} ${r} 0 0 0 ${left + r} ${bottom}`,
+          `L ${right - r} ${bottom}`,
+          `A ${r} ${r} 0 0 0 ${right} ${bottom - r}`,
+          `L ${right} ${midY}`,
+        ].join(' ')
+      );
+
+      tailLen = tailPath.getTotalLength();
+      topLen = topPath.getTotalLength();
+      bottomLen = bottomPath.getTotalLength();
+      tailPath.style.strokeDasharray = String(tailLen);
+      topPath.style.strokeDasharray = String(topLen);
+      bottomPath.style.strokeDasharray = String(bottomLen);
+      apply();
+    };
+
+    const apply = () => {
+      // Fase 1 (0 → TAIL_PORTION): desenha a cauda.
+      // Fase 2 (TAIL_PORTION → 1): desenha os dois ramos em simultâneo, do
+      // meio-esquerda do card até ao centro do lado direito.
+      const tp = Math.min(1, progress / TAIL_PORTION);
+      const bp = Math.max(0, (progress - TAIL_PORTION) / (1 - TAIL_PORTION));
+      tailPath.style.strokeDashoffset = String(tailLen * (1 - tp));
+      topPath.style.strokeDashoffset = String(topLen * (1 - bp));
+      bottomPath.style.strokeDashoffset = String(bottomLen * (1 - bp));
+
+      // Espessura idêntica à linha da jornada (1px + --p*2px)
+      let jp = 1;
+      if (journeyLine) {
+        const raw = journeyLine.style.getPropertyValue('--p');
+        if (raw !== '') jp = parseFloat(raw);
+      }
+      const sw = String(1 + jp * 2);
+      tailPath.style.strokeWidth = sw;
+      topPath.style.strokeWidth = sw;
+      bottomPath.style.strokeWidth = sw;
+    };
+
+    const onScroll = () => {
+      const rect = card.getBoundingClientRect();
+      const vh = window.innerHeight;
+
+      // A moldura só arranca DEPOIS de a linha da jornada estar completa
+      // (--p === 1). Assim lê-se como uma só linha: a jornada chega ao fundo
+      // e só então a moldura continua a desenhar-se — sem sobreposição.
+      let journeyDone: boolean;
+      const jpRaw = journeyLine ? journeyLine.style.getPropertyValue('--p') : '';
+      if (jpRaw !== '') {
+        journeyDone = parseFloat(jpRaw) >= 0.999;
+      } else {
+        journeyDone = rect.top <= vh * 0.6; // fallback se a jornada não definiu --p
+      }
+      if (!journeyDone) {
+        progress = 0;
+        apply();
+        return;
+      }
+
+      const startY = vh * 0.65; // arranca ~quando a jornada termina (topo do card)
+      const endY = vh * 0.15; // completa perto do topo da viewport
+      progress = Math.max(0, Math.min(1, (startY - rect.top) / (startY - endY)));
+      apply();
+    };
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReduced.matches) {
+      progress = 1;
+      build();
+      return;
+    }
+
+    build();
+    onScroll();
+
+    let ticking = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Reconstrói a cada frame de scroll → o alinhamento da cauda com a
+            // linha da jornada auto-corrige-se mesmo que a medição inicial falhe.
+            build();
+            onScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+    window.addEventListener(
+      'resize',
+      () => {
+        build();
+        onScroll();
+      },
+      { passive: true }
+    );
+    // Recalcular quando tudo assenta (fonts/imagens) para evitar medição obsoleta.
+    window.addEventListener('load', () => {
+      build();
+      onScroll();
+    });
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(() => build()).observe(card);
+    }
+  }
+
+  document.addEventListener('astro:page-load', initQuizFrame);
+  if (document.readyState !== 'loading') {
+    initQuizFrame();
+  } else {
+    document.addEventListener('DOMContentLoaded', initQuizFrame);
+  }
+</script>
