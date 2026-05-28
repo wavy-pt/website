@@ -367,7 +367,7 @@
       "titleLine1": "As histórias dos",
       "titleLine2": "negócios que confiaram",
       "titleLine3": "na Wavy",
-      "subtitle": "Três histórias reais de transformação. Cada cliente é um caso de estudo — porque autenticidade não é argumento, é evidência.",
+      "subtitle": "Histórias reais de transformação. Cada cliente é um caso de estudo — porque autenticidade não é argumento, é evidência.",
       "cards": [
         { "imageKey": "bastidores", "title": "Sofia Marques", "category": "Terapia integrativa" },
         { "imageKey": "hero", "title": "Casa do Monte", "category": "Restauração" },
@@ -489,6 +489,78 @@
             { "imageKey": "cta", "caption": "Nova bio e funil" },
             { "imageKey": "hero", "caption": "Conteúdo de marca" },
             { "imageKey": "bastidores", "caption": "Planeamento" }
+          ]
+        }
+      },
+      {
+        "metadata": "RETALHO LOCAL · TORRES VEDRAS · 7 MESES",
+        "imageKey": "cta",
+        "imageCaption": "marca-em-crescimento · 4:3 · prints",
+        "headlineBefore": "De uma loja conhecida no bairro",
+        "headlineHighlight": "a uma marca",
+        "headlineAfter": "procurada em toda a região.",
+        "description": "Uma loja local com produto excelente, mas invisível fora da sua rua. Construímos uma identidade coerente e uma presença que acompanha o crescimento — da montra física ao online, sem perder a alma do negócio.",
+        "stats": [
+          { "value": "+180%", "label": "alcance local em 6 meses" },
+          { "value": "×3", "label": "visitas à loja vindas do online" },
+          { "value": "+45%", "label": "vendas atribuídas ao digital" }
+        ],
+        "quote": "Deixámos de ser só a loja do costume. Agora as pessoas chegam já a saber o que querem — viram-nos primeiro online.",
+        "quoteAuthor": "MARCA EM CRESCIMENTO",
+        "detail": {
+          "intro": "Um negócio de retalho local com clientes fiéis no bairro, mas pouca expressão fora dele. Em sete meses, demos-lhe uma presença digital à altura do produto.",
+          "sections": [
+            { "title": "O desafio", "body": "Produto forte e reputação no bairro, mas invisível para quem não passava à porta. A marca não existia de forma consistente online." },
+            { "title": "A abordagem", "body": "Criámos uma identidade coerente e uma linha de conteúdo que liga a loja física ao digital, com foco na comunidade local." },
+            { "title": "O resultado", "body": "O alcance local cresceu, novas pessoas começaram a aparecer na loja por causa do online e as vendas acompanharam." }
+          ],
+          "stats": [
+            { "value": "+180%", "label": "alcance local em 6 meses" },
+            { "value": "×3", "label": "visitas vindas do online" },
+            { "value": "+45%", "label": "vendas atribuídas ao digital" },
+            { "value": "7 meses", "label": "de acompanhamento" }
+          ],
+          "services": ["Identidade visual", "Estratégia de conteúdo", "SEO local"],
+          "gallery": [
+            { "imageKey": "cta", "caption": "Nova identidade" },
+            { "imageKey": "bastidores", "caption": "Conteúdo de loja" },
+            { "imageKey": "hero", "caption": "Presença local" }
+          ]
+        }
+      },
+      {
+        "metadata": "SERVIÇOS · GRANDE LISBOA · EM CURSO",
+        "imageKey": "hero",
+        "imageCaption": "projeto-em-curso · 4:3 · prints",
+        "headlineBefore": "Um negócio de serviços a ganhar",
+        "headlineHighlight": "presença e procura",
+        "headlineAfter": "mês após mês.",
+        "description": "Um prestador de serviços com excelente trabalho, mas dependente do passa-palavra. Estamos a construir, passo a passo, uma presença digital que gera procura de forma previsível. Projeto em curso — os primeiros sinais já aparecem.",
+        "stats": [
+          { "value": "+90%", "label": "alcance nos primeiros 3 meses" },
+          { "value": "×2", "label": "pedidos de orçamento" },
+          { "value": "Em curso", "label": "acompanhamento mensal" }
+        ],
+        "quote": "Pela primeira vez tenho um plano e não ando a publicar à sorte. Já se nota a diferença nos contactos que chegam.",
+        "quoteAuthor": "PROJETO EM CURSO",
+        "detail": {
+          "intro": "Um negócio de serviços na Grande Lisboa, com reputação construída no passa-palavra. Estamos a dar-lhe uma presença digital consistente — este é um projeto em curso.",
+          "sections": [
+            { "title": "O desafio", "body": "Trabalho de qualidade, mas procura imprevisível e totalmente dependente de recomendações. Sem presença digital estruturada." },
+            { "title": "A abordagem", "body": "Definimos posicionamento e um plano de conteúdo sustentável, para transformar a reputação offline em procura online." },
+            { "title": "O resultado", "body": "Projeto a decorrer: os primeiros meses já mostram mais alcance e mais pedidos de orçamento. Continuamos a construir." }
+          ],
+          "stats": [
+            { "value": "+90%", "label": "alcance em 3 meses" },
+            { "value": "×2", "label": "pedidos de orçamento" },
+            { "value": "Em curso", "label": "acompanhamento mensal" },
+            { "value": "—", "label": "caso a atualizar em breve" }
+          ],
+          "services": ["Posicionamento", "Plano de conteúdo", "Gestão de redes sociais"],
+          "gallery": [
+            { "imageKey": "hero", "caption": "Conteúdo em produção" },
+            { "imageKey": "cta", "caption": "Plano editorial" },
+            { "imageKey": "bastidores", "caption": "Bastidores" }
           ]
         }
       }

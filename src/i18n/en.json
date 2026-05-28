@@ -368,7 +368,7 @@
       "titleLine2": "businesses that trusted",
       "titleLine3": "Wavy"
 ,
-      "subtitle": "Three real transformation stories. Each client is a case study — because authenticity is not an argument, it is evidence.",
+      "subtitle": "Real transformation stories. Each client is a case study — because authenticity is not an argument, it is evidence.",
       "cards": [
         { "imageKey": "bastidores", "title": "Sofia Marques", "category": "Integrative therapy" },
         { "imageKey": "hero", "title": "Casa do Monte", "category": "Restaurant" },
@@ -490,6 +490,78 @@
             { "imageKey": "cta", "caption": "New bio and funnel" },
             { "imageKey": "hero", "caption": "Brand content" },
             { "imageKey": "bastidores", "caption": "Planning" }
+          ]
+        }
+      },
+      {
+        "metadata": "LOCAL RETAIL · TORRES VEDRAS · 7 MONTHS",
+        "imageKey": "cta",
+        "imageCaption": "marca-em-crescimento · 4:3 · prints",
+        "headlineBefore": "From a shop known on its street",
+        "headlineHighlight": "to a brand",
+        "headlineAfter": "sought after across the region.",
+        "description": "A local shop with an excellent product, but invisible beyond its own street. We built a coherent identity and a presence that keeps up with growth — from the physical window to online, without losing the soul of the business.",
+        "stats": [
+          { "value": "+180%", "label": "local reach in 6 months" },
+          { "value": "×3", "label": "store visits coming from online" },
+          { "value": "+45%", "label": "sales attributed to digital" }
+        ],
+        "quote": "We stopped being just the usual shop. Now people arrive already knowing what they want — they found us online first.",
+        "quoteAuthor": "GROWING BRAND",
+        "detail": {
+          "intro": "A local retail business with loyal neighbourhood customers, but little reach beyond it. In seven months, we gave it a digital presence worthy of the product.",
+          "sections": [
+            { "title": "The challenge", "body": "Strong product and a solid reputation on its street, but invisible to anyone not passing by. The brand didn't exist consistently online." },
+            { "title": "The approach", "body": "We created a coherent identity and a content line connecting the physical shop to digital, focused on the local community." },
+            { "title": "The result", "body": "Local reach grew, new people started showing up at the shop because of the online presence, and sales followed." }
+          ],
+          "stats": [
+            { "value": "+180%", "label": "local reach in 6 months" },
+            { "value": "×3", "label": "visits coming from online" },
+            { "value": "+45%", "label": "sales attributed to digital" },
+            { "value": "7 months", "label": "of support" }
+          ],
+          "services": ["Visual identity", "Content strategy", "Local SEO"],
+          "gallery": [
+            { "imageKey": "cta", "caption": "New identity" },
+            { "imageKey": "bastidores", "caption": "Shop content" },
+            { "imageKey": "hero", "caption": "Local presence" }
+          ]
+        }
+      },
+      {
+        "metadata": "SERVICES · GREATER LISBON · ONGOING",
+        "imageKey": "hero",
+        "imageCaption": "projeto-em-curso · 4:3 · prints",
+        "headlineBefore": "A services business gaining",
+        "headlineHighlight": "presence and demand",
+        "headlineAfter": "month after month.",
+        "description": "A service provider with excellent work, but dependent on word of mouth. We're building, step by step, a digital presence that generates demand predictably. Project in progress — the first signs are already showing.",
+        "stats": [
+          { "value": "+90%", "label": "reach in the first 3 months" },
+          { "value": "×2", "label": "quote requests" },
+          { "value": "Ongoing", "label": "monthly support" }
+        ],
+        "quote": "For the first time I have a plan and I'm not just posting at random. You can already see the difference in the enquiries coming in.",
+        "quoteAuthor": "PROJECT IN PROGRESS",
+        "detail": {
+          "intro": "A services business in Greater Lisbon, with a reputation built on word of mouth. We're giving it a consistent digital presence — this is a project in progress.",
+          "sections": [
+            { "title": "The challenge", "body": "Quality work, but unpredictable demand entirely dependent on referrals. No structured digital presence." },
+            { "title": "The approach", "body": "We defined positioning and a sustainable content plan, to turn the offline reputation into online demand." },
+            { "title": "The result", "body": "Project underway: the first months already show more reach and more quote requests. We keep building." }
+          ],
+          "stats": [
+            { "value": "+90%", "label": "reach in 3 months" },
+            { "value": "×2", "label": "quote requests" },
+            { "value": "Ongoing", "label": "monthly support" },
+            { "value": "—", "label": "case to be updated soon" }
+          ],
+          "services": ["Positioning", "Content plan", "Social media management"],
+          "gallery": [
+            { "imageKey": "hero", "caption": "Content in production" },
+            { "imageKey": "cta", "caption": "Editorial plan" },
+            { "imageKey": "bastidores", "caption": "Behind the scenes" }
           ]
         }
       }
