@@ -14,12 +14,12 @@
     "contactTitle": "Contacto"
   },
   "hero": {
-    "tagline": "ZONA OESTE & GRANDE LISBOA",
-    "headline": "Direção e marketing digital para negócios com história.",
-    "subtitle": "Não decoramos a montra enquanto o teto está a cair. Ajudamos a navegar no mundo digital, com clareza, estratégia e resultados reais, sem perder a identidade que construiu até hoje.",
-    "cta1": "Saber onde estou agora",
-    "cta1Micro": "30 minutos · sem compromisso · resultado imediato",
-    "cta2": "Marcar uma conversa",
+    "tagline": "ZONA OESTE & GRANDE LISBOA · PARA NEGÓCIOS CONSOLIDADOS",
+    "headline": "Direção e Transformação Digital para negócios com história.",
+    "subtitle": "Não decoramos a montra enquanto o teto está a cair. Reconstruímos as fundações digitais do teu negócio — estratégia, identidade e execução sob uma única direção.",
+    "cta1": "Descobrir onde estou",
+    "cta1Micro": "5 perguntas · 2 minutos · resposta personalizada no fim",
+    "cta2": "Conversar 30 minutos",
     "scroll": "CONTINUA",
     "badge1": "Desenvolvimento de Websites",
     "badge2": "Gestão de Redes Sociais",
@@ -28,28 +28,28 @@
   "forWho": {
     "label": "reconheces-te?",
     "title": "Tens um negócio real. A tua presença digital ainda não reflete isso.",
-    "subtitle": "Trabalhamos com negócios consolidados que faturaram, cresceram, e têm clientes fiéis mas sentem que o digital ainda não acompanha a qualidade do que fazem. Se algo aqui te soa familiar, estás no sítio certo.",
-    "footer": "Trabalhamos com diferentes setores, unidos pelo mesmo perfil: negócios locais com substância que procuram uma estratégia digital à altura da sua história.",
+    "subtitle": "Trabalhamos com negócios consolidados — que já faturam, cresceram e têm clientes fiéis — mas onde o digital ainda não está à altura da qualidade que se entrega a portas adentro. Se algo aqui te soa familiar, estás no sítio certo.",
+    "footer": "O que une os nossos clientes não é o setor. É o perfil: negócios com substância que procuram um digital à altura da história que já construíram.",
     "cards": [
       {
         "number": "01",
         "pill": "SINTO QUE…",
         "title": "A minha presença digital não me representa.",
-        "desc": "Sentes que o teu espaço físico, produto e atendimento são de excelência, mas quem chega ao site ou redes sociais encontra uma imagem amadora, desatualizada ou fria.",
+        "desc": "O teu espaço, o teu produto e o teu atendimento são de excelência. Mas quem chega ao site ou às redes encontra uma imagem amadora, desatualizada ou fria. Não bate certo com o que vives a portas adentro.",
         "quote": "\"Parece de outra pessoa.\""
       },
       {
         "number": "02",
         "pill": "SINTO QUE…",
         "title": "Estou a fazer muito sem ver resultados.",
-        "desc": "Publicas com frequência, tentas seguir todas as tendências, mas o telefone não toca e as vendas não aumentam. Sentes que estás a gastar energia sem uma estratégia clara.",
+        "desc": "Publicas com frequência, segues tendências, testas formatos. Mas o telefone não toca, as vendas não sobem e a sensação é de estar a gastar energia sem direção clara.",
         "quote": "\"Tanto trabalho, tão pouco impacto.\""
       },
       {
         "number": "03",
         "pill": "JÁ TENTEI…",
         "title": "Já investi no digital e só tive desilusões.",
-        "desc": "Já pagaste a alguém para gerir o Instagram, fizeste um site há uns anos, talvez até tenhas testado anúncios. Os resultados nunca chegaram. Hoje sentes resistência em voltar a investir e é legítimo. Mas sabes que parar também não é opção.",
+        "desc": "Já pagaste a alguém para gerir o Instagram. Fizeste um site há uns anos. Talvez até tenhas experimentado anúncios. Resultados? Quase nenhuns. Hoje sentes resistência em voltar a investir — é legítimo. Mas também sabes que parar não é opção.",
         "quote": "\"Não quero gastar mais sem perceber o porquê.\""
       }
     ]
@@ -68,39 +68,43 @@
   },
   "services": {
     "label": "O QUE FAZEMOS",
-    "title": "Um sistema digital completo, construído à medida do teu negócio.",
-    "subtitle": "Primeiro avaliamos. Depois reconstruímos. Por fim, dirigimos. Entras na fase que faz mais sentido para a tua realidade atual, mas o caminho natural é sempre: diagnóstico → obra → direção.",
+    "title": "Um método em três fases. Para reconstruir o teu digital com lógica.",
+    "subtitle": "Primeiro avaliamos. Depois reconstruímos. Por fim, dirigimos. Podes entrar na fase que faz sentido para a tua realidade — mas o caminho natural é sempre: diagnóstico → fundação → direção.",
     "scope": ["Estratégia", "Website", "Google My Business", "Redes sociais"],
     "start": {
       "tag": "POR ONDE COMEÇAR",
       "scriptName": "Diagnóstico Estratégico",
       "name": "O Raio-X",
-      "desc": "Antes de qualquer proposta, analisamos o que está invisível. Em 5 dias úteis recebes um mapa completo da tua presença digital, os 5 problemas prioritários e um plano de ação concreto para o teu negócio. Conversamos 30 minutos, para te explicar tudo.",
+      "desc": "Antes de qualquer proposta, analisamos o que está invisível. Recebes um mapa completo da tua presença digital, os 5 problemas prioritários e um plano de ação concreto para o teu negócio. Discutimos tudo numa conversa de 30 minutos.",
       "price": "350€",
       "priceLabel": "DESDE",
-      "cta": "Saber mais"
+      "pricePeriod": "",
+      "priceNote": "+ IVA · 100% deduzido no projeto seguinte",
+      "cta": "Saber mais sobre o Raio-X"
     },
     "boost": {
-      "tag": "O PASSO SEGUINTE",
-      "scriptName": "Website e Identidade Estratégica",
+      "tag": "A FUNDAÇÃO",
+      "scriptName": "Website, Identidade e Estratégia",
       "name": "A Obra",
-      "desc": "Construímos as fundações digitais que o teu negócio exige. Website, loja online, identidade visual e estratégia, tudo planeado e executado pela mesma equipa, do início ao fim.",
+      "desc": "Construímos as fundações digitais que o teu negócio merece. Website ou loja online, identidade visual, estratégia de comunicação e setup completo — tudo planeado e executado pela mesma equipa, do início ao fim.",
       "price": "1.500€",
       "priceLabel": "A PARTIR DE",
-      "priceNote": "Cada projeto é orçamentado após o Raio-X.",
-      "cta": "Ver o que inclui"
+      "pricePeriod": "",
+      "priceNote": "+ IVA · orçamento após o Raio-X",
+      "cta": "Ver o que inclui A Obra"
     },
     "flow": {
-      "tag": "DAQUI PARA A FRENTE",
+      "tag": "A CONTINUIDADE",
       "scriptName": "Gestão de Redes Sociais e SEO Local",
       "name": "A Direção",
-      "desc": "Para marcas com história que querem crescer sem perder o controlo. Tratamos da gestão de redes sociais, otimização do Google e mapas (SEO local), estratégia de conteúdo e relatórios mensais claros.",
+      "desc": "Direção digital contínua para marcas com história que querem crescer sem perder o controlo. Estratégia mensal, conteúdo, gestão de canais, SEO local (Google e Maps) e relatórios claros. Na versão plena, funcionamos como a tua CMO externa.",
       "price": "750€",
       "priceLabel": "DESDE",
       "pricePeriod": "/mês",
+      "priceNote": "+ IVA · mínimo 3 meses",
       "cta": "Conhecer o plano"
     },
-    "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo e o valor é deduzido no projeto seguinte."
+    "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo. E o valor entra no projeto seguinte se decidires avançar."
   },
   "servicesPage": {
     "hero": {
@@ -639,60 +643,64 @@
   "cases": {
     "label": "resultados reais",
     "title": "O que mudou. Para quem importa.",
-    "subtitle": "Cada cliente Wavy é um caso de estudo. Não publicamos resultados genéricos, documentamos transformações reais, com contexto, números e testemunho da pessoa que viveu o processo.",
+    "subtitle": "Cada cliente Wavy é um caso de estudo. Não publicamos resultados genéricos — documentamos transformações reais, com contexto, números e a voz de quem viveu o processo.",
     "testimonials": [
       {
-        "quote": "Encontrei na Mariana a peça que faltava para mim para a minha página para o meu projeto pessoal desenvolver. A Mariana é incansável, vai aos detalhes, partilha a opinião dela ajusta o que for necessário de bom grado os detalhes fazem a diferença e a Mariana faz me toda a diferença obrigada por teres um projeto que ajudas a tornar possível.",
+        "quote": "Encontrei na Mariana a peça que me faltava para desenvolver a minha página e o meu projeto pessoal. É incansável, vai aos detalhes e partilha sempre a opinião dela com transparência. Os detalhes fazem a diferença — e a Mariana faz toda a diferença para mim.",
         "author": "Vera Barata",
         "role": "Decoradora Floral"
       },
       {
-        "quote": "Entreguei a presença digital da minha empresa à Wavy, redes sociais, website e comunicação, e só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
+        "quote": "Entreguei a presença digital da minha empresa à Wavy — redes sociais e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
         "author": "João Marques",
-        "role": "Fundador Empresa Tecnológica"
+        "role": "Fundador, Empresa Tecnológica"
       },
       {
-        "quote": "O plano de trabalho que a Mariana criou foi incrível. Desde o primeiro momento, demonstrou uma capacidade impressionante de compreender o meu negócio. Conseguiu traduzir ideias que eu ainda não tinha estruturado, trazendo clareza, estratégia e direção ao projeto. Senti-me verdadeiramente acompanhada em cada passo.",
+        "quote": "O plano de trabalho que a Mariana criou foi incrível. Desde o primeiro momento, demonstrou uma capacidade impressionante de compreender o meu negócio. Conseguiu traduzir ideias que eu ainda não tinha estruturado — trazendo clareza, estratégia e direção ao projeto. Senti-me verdadeiramente acompanhada em cada passo.",
         "author": "Ana Lopes",
         "role": "Marca de Produtos Biológicos"
       }
     ],
-    "stat1": "> 175 mil",
-    "stat1Label": "visualizações orgânicas geradas na marca",
-    "stat2": "+191%",
-    "stat2Label": "de aumento em interações reais com os conteúdos publicados num cliente",
-    "ctaTitle": "A tua história pode ser a próxima.",
-    "ctaSubtitle": "Começa pelo Raio-X. Em 5 dias sabes exatamente onde está o teu negócio digital e o que fazer a seguir.",
+    "stat1": "8",
+    "stat1Label": "marcas acompanhadas ao longo da carreira",
+    "stat2": "100%",
+    "stat2Label": "dos clientes começam pelo Raio-X",
+    "ctaTitle": "A próxima história pode ser a tua.",
+    "ctaSubtitle": "Começa pelo Raio-X. No fim, sabes exatamente onde está o teu negócio digital — e o que fazer a seguir.",
     "ctaButton": "Fazer o Raio-X"
   },
   "faq": {
     "label": "perguntas frequentes",
-    "title": "Ainda tens dúvidas?",
+    "title": "Respostas honestas às perguntas que mais ouvimos.",
     "items": [
       {
-        "q": "Trabalham fora da Zona Oeste ou Grande Lisboa?",
-        "a": "Sim, a Wavy trabalha com negócios de todo o país através de reuniões e acompanhamento digital. No entanto, o nosso foco de proximidade física e visitas presenciais está concentrado na Zona Oeste e na Grande Lisboa. Independentemente da tua localização, se o teu negócio tem substância e queres estruturar a tua presença online, temos um sistema preparado para te guiar à distância com total clareza."
-      },
-      {
         "q": "O que é o Raio-X e porque tenho de começar por aí?",
-        "a": "O Raio-X é o diagnóstico estratégico inicial para avaliar a saúde digital do teu negócio. Não avançamos para a criação de websites ou gestão de redes sociais sem antes analisar o que está invisível. Em 5 dias úteis, descobrimos as falhas na tua presença online e entregamos um plano com as 5 prioridades que deves corrigir. O melhor de tudo? Se decidires fazer a \"Obra\" connosco, o valor do Raio-X é 100% deduzido no teu projeto."
+        "a": "O Raio-X é o diagnóstico estratégico inicial da Wavy. Analisamos toda a tua presença digital — website, redes sociais, SEO, comunicação e posicionamento — e entregamos um mapa claro do que está a funcionar, do que está partido e dos 5 problemas prioritários a corrigir no teu negócio. Começamos sempre aqui porque construir antes de diagnosticar é construir no escuro. Se decidires avançar para a Obra ou para a Direção, o valor do Raio-X é 100% deduzido no projeto seguinte."
       },
       {
-        "q": "Quais são os prazos de entrega dos vossos serviços?",
-        "a": "O diagnóstico (Raio-X) é entregue em 5 dias úteis, enquanto os projetos de criação de websites demoram, em média, entre 4 a 6 semanas. A duração exata de um projeto de transformação depende da complexidade do teu modelo de negócio (se exige uma loja online, integrações específicas ou produção de identidade visual). Definimos um cronograma claro logo no início para que saibas exatamente quando a tua fundação digital fica pronta."
+        "q": "Quanto custa trabalhar com a Wavy?",
+        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte. A Obra (website, identidade visual e estratégia) parte de 1.500€ + IVA, com orçamento personalizado após o diagnóstico. A Direção (gestão contínua e SEO local) tem investimento mensal a partir de 750€ + IVA, com compromisso mínimo de 3 meses. Não negociamos preço para baixo — ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: preços fixos comunicados publicamente, transparência em cada decisão."
+      },
+      {
+        "q": "Trabalham fora da Zona Oeste ou Grande Lisboa?",
+        "a": "Sim. Acompanhamos negócios em todo o país através de reuniões e gestão à distância. O nosso foco de visitas presenciais está concentrado na Zona Oeste e Grande Lisboa — onde fica a sede da Wavy, em Mafra — mas o sistema de trabalho está pensado para te guiar com a mesma clareza, mesmo a quilómetros. Estás fora destas zonas? Faz o teste rápido ou marca uma conversa de 30 minutos e percebemos juntos se faz sentido avançar."
+      },
+      {
+        "q": "Quanto tempo demora a ver resultados com marketing digital?",
+        "a": "A resposta honesta: depende do ponto de partida e do canal. Em SEO local e gestão de redes sociais, os primeiros sinais surgem normalmente entre 60 a 90 dias — não como 'resultados explosivos', mas como tração consistente. Conversões reais (vendas, contactos, agenda preenchida) começam tipicamente entre o 4º e o 6º mês. Quem promete resultados em 30 dias está a vender uma campanha pontual, não direção digital. Marketing digital sustentável demora — e é exatamente por isso que trabalhamos com compromissos mínimos de 3 a 6 meses."
+      },
+      {
+        "q": "Qual é a diferença entre direção digital e gestão de redes sociais?",
+        "a": "A gestão de redes sociais é uma tarefa: alguém publica posts no Instagram, responde a mensagens, cria stories. Direção digital é uma função estratégica: define para quem comunicas, porquê, em que canais, com que objetivo de negócio, e como medes o sucesso. Na prática: quem gere redes sem estratégia executa. Quem dirige o teu digital decide. A Wavy não vende posts — vende direção. As redes sociais são uma ferramenta dentro da estratégia, nunca o ponto de partida."
       },
       {
         "q": "Os vossos serviços têm fidelização obrigatória?",
-        "a": "Não aplicamos fidelizações longas, mas trabalhamos com períodos mínimos de permanência para garantir resultados reais: 3 meses no plano base e 6 meses no plano avançado. O marketing digital e o SEO Local exigem tempo de maturação para que os algoritmos e o público reajam. Este período garante que a tua estratégia sai do papel e começa a faturar. Após este ciclo inicial de tração, és livre de renovar mês a mês, sem amarras, mantendo-te connosco apenas pelo valor que entregamos ao teu negócio."
-      },
-      {
-        "q": "Como funciona o processo de comunicação e relatórios?",
-        "a": "O processo é feito sem termos técnicos, com reuniões mensais de alinhamento e relatórios onde as métricas fazem sentido para o teu negócio (vendas, contactos e crescimento real). Não te enviamos documentos automáticos e confusos. Tens acesso direto à equipa que executa a tua estratégia e todas as decisões são explicadas de forma simples, honesta e terra-a-terra."
+        "a": "Não trabalhamos com fidelizações de longo prazo no sentido tradicional. Aplicamos compromissos mínimos para garantir que os resultados têm tempo de maturação: 3 meses no plano base e 6 meses nos planos mais avançados. Após esse ciclo inicial, és livre de continuar mês a mês ou cancelar com 30 dias de aviso prévio. Mantemo-nos por valor entregue, não por contrato."
       }
     ]
   },
   "finalCta": {
-    "label": "uma palavra final",
+    "label": "Agora que já nos conheces",
     "greeting": "Olá. Sou a Mariana, fundadora da Wavy.",
     "paragraph1": "Se chegaste até aqui, é porque algo no que escrevi te tocou. Talvez reconheças o teu negócio nestes desafios. Talvez já tenhas pensado várias vezes em mudar e ainda não tenhas encontrado o parceiro certo.",
     "paragraph2": "Seja qual for o caminho, gostava de te conhecer. Sem pressão, sem proposta forçada, sem teor comercial. Só uma conversa honesta sobre o teu negócio.",

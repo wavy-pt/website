@@ -11,6 +11,8 @@ const { lang } = Astro.props;
 const i = t(lang);
 const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
+// Teste rápido → /servicos (onde vive o quiz) provisoriamente.
+const diagnosisUrl = getLocalizedPath('/servicos', lang);
 ---
 
 <section class="bg-offwhite py-16 md:py-24">
@@ -21,8 +23,15 @@ const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
         {i.finalCta.label}
       </p>
       <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15] md:leading-tight max-w-2xl mx-auto">
-        {lang === 'en' ? "Two paths. One conversation." : "Dois caminhos. Uma conversa."}
+        {lang === 'en'
+          ? 'Shall we find out if Wavy is the right partner for you?'
+          : 'Vamos descobrir se a Wavy é o parceiro certo para ti?'}
       </h2>
+      <p class="font-sans text-base text-muted leading-relaxed max-w-xl mx-auto mt-4">
+        {lang === 'en'
+          ? "Choose the path that feels right. There's no wrong answer — just different roads to the same destination."
+          : 'Escolhe o caminho mais confortável. Não há resposta errada — só direções diferentes para o mesmo destino.'}
+      </p>
     </div>
 
     <!-- Split block -->
@@ -46,24 +55,24 @@ const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
             {lang === 'en' ? 'Still exploring' : 'Ainda a explorar'}
           </p>
           <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-teal-dark mb-5 leading-tight">
-            {lang === 'en' ? 'Find out where you stand.' : 'Descobre onde estás.'}
+            {lang === 'en' ? 'Take the 2-minute test.' : 'Faz o teste em 2 minutos.'}
           </h3>
           <p class="font-sans text-base text-teal-dark/70 leading-relaxed mb-8">
             {lang === 'en'
-              ? "5 quick questions. In less than 2 minutes you'll know if your digital presence needs a real intervention or just small adjustments."
-              : 'Em menos de 2 minutos, com 5 perguntas, sabes se a tua presença digital precisa de uma intervenção real ou apenas de pequenos ajustes.'}
+              ? "Five questions, one personalised answer. In 2 minutes you'll know whether your digital presence needs real intervention or just small adjustments."
+              : 'Cinco perguntas, uma resposta personalizada. Em 2 minutos ficas a saber se a tua presença digital precisa de uma intervenção real ou apenas de pequenos ajustes.'}
           </p>
 
           <div class="mt-auto">
             <a
-              href={ctaHref}
+              href={diagnosisUrl}
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal-dark text-cream font-sans font-medium text-sm hover:bg-teal transition-all duration-300 group"
             >
               {i.finalCta.secondaryCta}
               <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
             </a>
             <p class="font-serif italic text-xs text-teal-dark/75 mt-4">
-              {lang === 'en' ? '2 minutes · no commitment' : '2 minutos · sem compromisso'}
+              {lang === 'en' ? '2 minutes · no strings attached · answer at the end' : '2 minutos · sem compromisso · resposta no fim'}
             </p>
           </div>
         </div>
@@ -88,12 +97,12 @@ const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
             {lang === 'en' ? "Ready to talk" : 'Pronto para conversar'}
           </p>
           <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-cream mb-5 leading-tight">
-            {lang === 'en' ? "Let's have a real conversation." : 'Vamos ter uma conversa a sério.'}
+            {lang === 'en' ? 'Book a 30-minute call.' : 'Marca uma conversa de 30 minutos.'}
           </h3>
           <p class="font-sans text-base text-cream/75 leading-relaxed mb-8">
             {lang === 'en'
-              ? "15 minutes by video or phone. No proposal, no pressure. We listen to where you are and validate together if Wavy is the right partner for your business."
-              : '15 minutos por vídeo ou telefone. Sem proposta, sem pressão. Ouvimos onde estás e validamos juntos se a Wavy é o parceiro certo para o teu negócio.'}
+              ? "Video or phone. No proposals, no pressure. We listen to where you are, decide together if it makes sense to move forward, and — if it does — walk you through the next steps."
+              : 'Em vídeo ou por telefone. Sem propostas, sem pressão. Ouvimos onde estás, validamos juntos se faz sentido avançar e — se for caso disso — explicamos os próximos passos.'}
           </p>
 
           <div class="mt-auto">
@@ -104,11 +113,11 @@ const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-teal-dark font-sans font-medium text-sm hover:bg-offwhite transition-all duration-300 group"
             >
               <i class="ri-calendar-check-line"></i>
-              {lang === 'en' ? 'Book conversation (15 min)' : 'Agendar conversa (15 min)'}
+              {lang === 'en' ? 'Book a call (30 min)' : 'Marcar conversa (30 min)'}
               <i class="ri-arrow-right-up-line transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
             </a>
             <p class="font-serif italic text-xs text-cream/50 mt-4">
-              {lang === 'en' ? '15 minutes · no commitment' : '15 minutos · sem compromisso'}
+              {lang === 'en' ? '30 minutes · no strings attached · you pick the time' : '30 minutos · sem compromisso · escolhes o horário'}
             </p>
           </div>
         </div>
@@ -149,5 +158,12 @@ const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
         </a>
       </div>
     </div>
+
+    <!-- Manifesto final -->
+    <p class="scroll-reveal mt-12 md:mt-16 text-center font-serif text-lg md:text-2xl italic text-teal-dark/80 max-w-2xl mx-auto">
+      {lang === 'en'
+        ? "We don't redecorate the storefront. We rebuild the foundations."
+        : 'Não decoramos a montra. Reconstruímos as fundações.'}
+    </p>
   </div>
 </section>
