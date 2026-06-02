@@ -530,9 +530,9 @@
       "titleLine3": "One way of thinking.",
       "subtitle": "Each case illustrates a different moment in a business's digital journey — from renewing an established brand, to building a brand from scratch, to strategic clarification of a brand under construction.",
       "cards": [
-        { "imageKey": "bastidores", "title": "Vera Barata", "category": "Floral design" },
-        { "imageKey": "hero", "title": "ADDS", "category": "Technology consultancy" },
-        { "imageKey": "cta", "title": "Ana Lopes", "category": "Organic products" }
+        { "imageKey": "vera-fan", "title": "Vera Barata", "category": "Floral design" },
+        { "imageKey": "adds-logo", "title": "ADDS", "category": "Technology consultancy" },
+        { "imageKey": "ana-camomila", "title": "Ana Lopes", "category": "Organic products" }
       ]
     },
     "ui": {
@@ -545,7 +545,7 @@
     "items": [
       {
         "metadata": "FLORAL DESIGN · MAFRA · SEP 2025 – MAY 2026 · 9 MONTHS",
-        "imageKey": "bastidores",
+        "imageKey": "vera-main",
         "imageCaption": "vera-barata · atelier&flores",
         "headlineBefore": "More visibility. More weddings.",
         "headlineHighlight": "Without losing the essence.",
@@ -573,15 +573,14 @@
           ],
           "services": ["Logo rebranding", "Instagram editorial direction", "Google Business Profile"],
           "gallery": [
-            { "imageKey": "bastidores", "caption": "New identity" },
-            { "imageKey": "hero", "caption": "Feed direction" },
-            { "imageKey": "cta", "caption": "Behind the scenes" }
+            { "imageKey": "vera-feed-antes", "caption": "Feed — before" },
+            { "imageKey": "vera-feed-depois", "caption": "Feed — after" }
           ]
         }
       },
       {
         "metadata": "TECHNOLOGY CONSULTANCY · REMOTE · 2026 · ONGOING",
-        "imageKey": "hero",
+        "imageKey": "adds-logo",
         "imageCaption": "adds · technology consultancy",
         "headlineBefore": "A complete brand,",
         "headlineHighlight": "built from day one.",
@@ -610,15 +609,15 @@
           ],
           "services": ["Identity from scratch", "Brand book", "Content strategy", "Instagram + LinkedIn"],
           "gallery": [
-            { "imageKey": "hero", "caption": "Visual identity" },
-            { "imageKey": "cta", "caption": "Brand book" },
-            { "imageKey": "bastidores", "caption": "Content in production" }
+            { "imageKey": "adds-monogram", "caption": "Brand symbol" },
+            { "imageKey": "adds-post-1", "caption": "Content · Instagram" },
+            { "imageKey": "adds-post-2", "caption": "Content · Instagram" }
           ]
         }
       },
       {
         "metadata": "ORGANIC PRODUCTS · SANTARÉM DISTRICT · EARLY 2025 · COMPLETED",
-        "imageKey": "cta",
+        "imageKey": "ana-camomila",
         "imageCaption": "ana-lopes · family organic brand",
         "headlineBefore": "From farm to brand,",
         "headlineHighlight": "built on strategy.",
@@ -647,9 +646,8 @@
           ],
           "services": ["Strategic X-Ray", "Positioning", "Verbal identity", "Brand book"],
           "gallery": [
-            { "imageKey": "cta", "caption": "Positioning" },
-            { "imageKey": "bastidores", "caption": "Brand pillars" },
-            { "imageKey": "hero", "caption": "Work plan" }
+            { "imageKey": "ana-granola", "caption": "Visual direction" },
+            { "imageKey": "ana-azeitonas", "caption": "Visual direction" }
           ]
         }
       }

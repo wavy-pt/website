@@ -530,9 +530,9 @@
       "titleLine3": "Uma forma de pensar.",
       "subtitle": "Cada caso ilustra um momento diferente da jornada digital de um negócio — da renovação de uma marca consolidada, à criação de uma marca de raiz, à clarificação estratégica de uma marca em construção.",
       "cards": [
-        { "imageKey": "bastidores", "title": "Vera Barata", "category": "Decoração floral" },
-        { "imageKey": "hero", "title": "ADDS", "category": "Consultoria tecnológica" },
-        { "imageKey": "cta", "title": "Ana Lopes", "category": "Produtos biológicos" }
+        { "imageKey": "vera-fan", "title": "Vera Barata", "category": "Decoração floral" },
+        { "imageKey": "adds-logo", "title": "ADDS", "category": "Consultoria tecnológica" },
+        { "imageKey": "ana-camomila", "title": "Ana Lopes", "category": "Produtos biológicos" }
       ]
     },
     "ui": {
@@ -545,7 +545,7 @@
     "items": [
       {
         "metadata": "DECORAÇÃO FLORAL · MAFRA · SET 2025 – MAI 2026 · 9 MESES",
-        "imageKey": "bastidores",
+        "imageKey": "vera-main",
         "imageCaption": "vera-barata · atelier&flores",
         "headlineBefore": "Mais visibilidade. Mais casamentos.",
         "headlineHighlight": "Sem perder a essência.",
@@ -573,15 +573,14 @@
           ],
           "services": ["Rebranding de logótipo", "Direção editorial de Instagram", "Google Business Profile"],
           "gallery": [
-            { "imageKey": "bastidores", "caption": "Nova identidade" },
-            { "imageKey": "hero", "caption": "Direção de feed" },
-            { "imageKey": "cta", "caption": "Bastidores" }
+            { "imageKey": "vera-feed-antes", "caption": "Feed — antes" },
+            { "imageKey": "vera-feed-depois", "caption": "Feed — depois" }
           ]
         }
       },
       {
         "metadata": "CONSULTORIA TECNOLÓGICA · REMOTO · 2026 · EM CURSO",
-        "imageKey": "hero",
+        "imageKey": "adds-logo",
         "imageCaption": "adds · consultoria tecnológica",
         "headlineBefore": "Uma marca completa,",
         "headlineHighlight": "construída desde o primeiro dia.",
@@ -610,15 +609,15 @@
           ],
           "services": ["Identidade de raiz", "Manual de marca", "Estratégia de conteúdo", "Instagram + LinkedIn"],
           "gallery": [
-            { "imageKey": "hero", "caption": "Identidade visual" },
-            { "imageKey": "cta", "caption": "Manual de marca" },
-            { "imageKey": "bastidores", "caption": "Conteúdo em produção" }
+            { "imageKey": "adds-monogram", "caption": "Símbolo da marca" },
+            { "imageKey": "adds-post-1", "caption": "Conteúdo · Instagram" },
+            { "imageKey": "adds-post-2", "caption": "Conteúdo · Instagram" }
           ]
         }
       },
       {
         "metadata": "PRODUTOS BIOLÓGICOS · DISTRITO DE SANTARÉM · INÍCIO 2025 · CONCLUÍDO",
-        "imageKey": "cta",
+        "imageKey": "ana-camomila",
         "imageCaption": "ana-lopes · marca biológica familiar",
         "headlineBefore": "Da quinta à marca,",
         "headlineHighlight": "com fundação estratégica.",
@@ -647,9 +646,8 @@
           ],
           "services": ["Raio-X estratégico", "Posicionamento", "Identidade verbal", "Manual de marca"],
           "gallery": [
-            { "imageKey": "cta", "caption": "Posicionamento" },
-            { "imageKey": "bastidores", "caption": "Pilares de marca" },
-            { "imageKey": "hero", "caption": "Plano de trabalho" }
+            { "imageKey": "ana-granola", "caption": "Direção visual" },
+            { "imageKey": "ana-azeitonas", "caption": "Direção visual" }
           ]
         }
       }
