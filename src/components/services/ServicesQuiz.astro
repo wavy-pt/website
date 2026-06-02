@@ -250,7 +250,7 @@ const maxScore = q.questions.reduce(
       quiz.dataset.state = state;
     };
 
-    const showQuestion = (idx: number) => {
+    const showQuestion = (idx: number, focusOpts?: FocusOptions) => {
       questions.forEach((el, i) => {
         el.hidden = i !== idx;
       });
@@ -263,14 +263,14 @@ const maxScore = q.questions.reduce(
         progressBar.style.width = `${((idx + 1) / total) * 100}%`;
       }
       // Foco no enunciado para leitores de ecrã
-      (questions[idx].querySelector('h3') as HTMLElement | null)?.focus();
+      (questions[idx].querySelector('h3') as HTMLElement | null)?.focus(focusOpts);
     };
 
-    const startQuiz = () => {
+    const startQuiz = (focusOpts?: FocusOptions) => {
       current = 0;
       score = 0;
       setState('quiz');
-      showQuestion(0);
+      showQuestion(0, focusOpts);
     };
 
     const showResult = () => {
@@ -294,7 +294,7 @@ const maxScore = q.questions.reduce(
       }
     };
 
-    startBtn?.addEventListener('click', startQuiz);
+    startBtn?.addEventListener('click', () => startQuiz());
 
     questions.forEach((el) => {
       el.querySelectorAll<HTMLButtonElement>('[data-score]').forEach((btn) => {
@@ -302,7 +302,17 @@ const maxScore = q.questions.reduce(
       });
     });
 
-    restartBtns.forEach((b) => b.addEventListener('click', startQuiz));
+    restartBtns.forEach((b) => b.addEventListener('click', () => startQuiz()));
+
+    // Auto-abrir o quiz (já na 1ª pergunta) quando se chega via #teste —
+    // vindo dos botões "teste rápido" espalhados pelo site.
+    if (window.location.hash === '#teste') {
+      startQuiz({ preventScroll: true });
+      // Garante que o quiz fica visível (cobre também as view transitions do Astro).
+      requestAnimationFrame(() => {
+        document.getElementById('teste')?.scrollIntoView({ block: 'start' });
+      });
+    }
   }
 
   document.addEventListener('astro:page-load', initServicesQuiz);
