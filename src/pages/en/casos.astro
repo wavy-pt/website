@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ScrollReveal from '../../components/ScrollReveal.astro';
 import CasesHero from '../../components/cases/CasesHero.astro';
+import CasesTransparency from '../../components/cases/CasesTransparency.astro';
 import CaseStudy from '../../components/cases/CaseStudy.astro';
 import CasesCta from '../../components/cases/CasesCta.astro';
 import { isProd } from '../../lib/env';
@@ -12,15 +13,14 @@ if (isProd) {
 ---
 
 <Layout
-  title="Cases · Digital Transformation Stories · Wavy"
-  description="Digital transformation stories: businesses that trusted Wavy to grow online with strategy and consistency."
+  title="Cases · Real Digital Transformations | Wavy"
+  description="Three real digital direction projects: brand renewal (Vera Barata), identity from scratch (ADDS), and strategic foundation (family food brand)."
 >
   <CasesHero lang="en" />
+  <CasesTransparency lang="en" />
   <CaseStudy lang="en" index={0} />
   <CaseStudy lang="en" index={1} />
   <CaseStudy lang="en" index={2} />
-  <CaseStudy lang="en" index={3} />
-  <CaseStudy lang="en" index={4} />
   <CasesCta lang="en" />
   <ScrollReveal />
 </Layout>

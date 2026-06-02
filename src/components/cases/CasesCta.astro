@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
+import { schedulingHref, schedulingIsExternal } from '../../lib/env';
 import bastidoresImage from '../../assets/wavy-bastidores.jpg';
 
 interface Props {
@@ -10,7 +11,8 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang).casesPage.cta;
-const contactHref = getLocalizedPath('/contacto', lang);
+// "Marcar o meu Raio-X" → Calendly (marcação direta).
+const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
 ---
 
 <section class="bg-offwhite py-14 md:py-20">
@@ -42,15 +44,23 @@ const contactHref = getLocalizedPath('/contacto', lang);
           </p>
           <div>
             <a
-              href={contactHref}
+              href={ctaHref}
+              target={schedulingIsExternal ? '_blank' : undefined}
+              rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
               class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 md:px-8 md:py-4 rounded-full bg-cream text-teal hover:bg-offwhite transition-all duration-300 whitespace-nowrap"
             >
+              <i class="ri-calendar-check-line" aria-hidden="true"></i>
               {i.button}
-              <i class="ri-arrow-right-line" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
     </div>
+
+    {i.manifesto && (
+      <p class="scroll-reveal text-center font-serif text-lg md:text-2xl italic text-teal-dark/80 max-w-2xl mx-auto mt-12 md:mt-16">
+        {i.manifesto}
+      </p>
+    )}
   </div>
 </section>

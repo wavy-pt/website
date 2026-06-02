@@ -524,17 +524,15 @@
   },
   "casesPage": {
     "page": {
-      "label": "CASOS & RESULTADOS",
-      "titleLine1": "As histórias dos",
-      "titleLine2": "negócios que confiaram",
-      "titleLine3": "na Wavy",
-      "subtitle": "Histórias reais de transformação. Cada cliente é um caso de estudo — porque autenticidade não é argumento, é evidência.",
+      "label": "Casos",
+      "titleLine1": "Três projetos.",
+      "titleLine2": "Três contextos.",
+      "titleLine3": "Uma forma de pensar.",
+      "subtitle": "Cada caso ilustra um momento diferente da jornada digital de um negócio — da renovação de uma marca consolidada, à criação de uma marca de raiz, à clarificação estratégica de uma marca em construção.",
       "cards": [
-        { "imageKey": "bastidores", "title": "Sofia Marques", "category": "Terapia integrativa" },
-        { "imageKey": "hero", "title": "Casa do Monte", "category": "Restauração" },
-        { "imageKey": "cta", "title": "Atelier Luz", "category": "Coaching" },
-        { "imageKey": "servicos", "title": "Marca em crescimento", "category": "Retalho local" },
-        { "imageKey": "mariana", "title": "Projeto em curso", "category": "Serviços" }
+        { "imageKey": "bastidores", "title": "Vera Barata", "category": "Decoração floral" },
+        { "imageKey": "hero", "title": "ADDS", "category": "Consultoria tecnológica" },
+        { "imageKey": "cta", "title": "Ana Lopes", "category": "Marca alimentar" }
       ]
     },
     "ui": {
@@ -546,190 +544,125 @@
     },
     "items": [
       {
-        "metadata": "TERAPIA INTEGRATIVA · MAFRA · 6 MESES",
+        "metadata": "DECORAÇÃO FLORAL · MAFRA · SET 2025 – MAI 2026 · 9 MESES",
         "imageKey": "bastidores",
-        "imageCaption": "sofia-marques · 4:3 · prints",
-        "headlineBefore": "De um perfil",
-        "headlineHighlight": "impessoal",
-        "headlineAfter": "a uma agenda esgotada três meses à frente.",
-        "description": "Sofia tinha um trabalho profundo e clientes fiéis — mas o Instagram parecia o de qualquer terapeuta. Reposicionámos a comunicação à volta do que ela realmente faz: presença e tempo. O perfil parou de tentar agradar a todos.",
-        "stats": [
-          { "value": "+312%", "label": "engagement em 90 dias" },
-          { "value": "3 meses", "label": "agenda esgotada" },
-          { "value": "×4", "label": "mensagens DM por semana" }
-        ],
-        "quote": "Finalmente sinto que o meu Instagram me representa. A Mariana percebeu o meu trabalho antes de eu próprio o conseguir explicar.",
-        "quoteAuthor": "SOFIA MARQUES",
-        "detail": {
-          "intro": "A Sofia é terapeuta integrativa há mais de uma década. O trabalho dela é profundo, mas a presença digital não traduzia nada disso. Em seis meses, mudámos a forma como o mundo a encontra.",
-          "sections": [
-            { "title": "O desafio", "body": "O Instagram parecia o de qualquer terapeuta: frases motivacionais, fundos neutros, zero diferenciação. Atraía curiosos, não clientes." },
-            { "title": "A abordagem", "body": "Reconstruímos o posicionamento à volta de duas ideias — presença e tempo — e desenhámos uma linha de conteúdo que mostra o método dela, não slogans." },
-            { "title": "O resultado", "body": "Em três meses, a agenda encheu e surgiu lista de espera. O perfil passou a falar diretamente com quem procura acompanhamento sério." }
-          ],
-          "stats": [
-            { "value": "+312%", "label": "engagement em 90 dias" },
-            { "value": "3 meses", "label": "agenda esgotada" },
-            { "value": "×4", "label": "mensagens DM por semana" },
-            { "value": "+58%", "label": "novos clientes diretos" }
-          ],
-          "services": ["Reposicionamento", "Estratégia de conteúdo", "Gestão de Instagram"],
-          "gallery": [
-            { "imageKey": "bastidores", "caption": "Nova linha de feed" },
-            { "imageKey": "hero", "caption": "Sessão de conteúdo" },
-            { "imageKey": "cta", "caption": "Bastidores da estratégia" }
-          ]
-        }
-      },
-      {
-        "metadata": "RESTAURANTE CONSCIENTE · SAMORA CORREIA · 9 MESES",
-        "imageKey": "bastidores",
-        "imageCaption": "casa-do-monte · 4:3 · prints",
-        "headlineBefore": "A história do lugar passou a vender o lugar.",
-        "headlineHighlight": "Sem Booking.com.",
+        "imageCaption": "vera-barata · atelier&flores",
+        "headlineBefore": "Mais visibilidade. Mais casamentos.",
+        "headlineHighlight": "Sem perder a essência.",
         "headlineAfter": "",
-        "description": "Dependiam 78% de plataformas de reserva e perdiam margem. Reconstruímos a presença em torno da história da casa — três gerações da família, a horta, o pão diário. As reservas diretas dispararam.",
+        "description": "A Vera já tinha um trabalho excecional e clientes que confiavam nela. O que lhe faltava era tempo — e o tempo é precisamente o que toda a gente subestima. Gerir um perfil, manter a coerência visual, estar atenta à presença no Google: tudo isso ficava sempre para \"depois\".",
         "stats": [
-          { "value": "+40%", "label": "reservas diretas" },
-          { "value": "−26%", "label": "dependência booking" },
-          { "value": "€3.2k", "label": "poupança mensal em comissões" }
+          { "value": "+321 mil", "label": "visualizações (IG + FB · 9 meses)" },
+          { "value": "+548", "label": "novos seguidores no Instagram" },
+          { "value": "+4.900", "label": "interações com conteúdos" }
         ],
-        "quote": "Pela primeira vez, quem chega já vem pré-conquistado. Reservam sem regatear preço — porque já gostam de nós antes de chegar.",
-        "quoteAuthor": "CASA DO MONTE",
+        "quote": "Encontrei na Mariana a peça que me faltava para desenvolver a minha página e o meu projeto pessoal. É incansável, vai aos detalhes e partilha sempre a opinião dela com transparência. Os detalhes fazem a diferença — e a Mariana faz toda a diferença para mim.",
+        "quoteAuthor": "VERA BARATA · ATELIER&FLORES",
         "detail": {
-          "intro": "A Casa do Monte é um restaurante consciente em Samora Correia, com três gerações de história. Dependiam das plataformas de reserva e perdiam margem. Em nove meses, viraram o jogo.",
+          "intro": "A Vera é decoradora floral em Mafra. O trabalho já era excecional e os clientes confiavam nela — faltava-lhe tempo para o digital acompanhar o ritmo do negócio.",
           "sections": [
-            { "title": "O desafio", "body": "78% das reservas vinham de plataformas como o Booking.com. Cada mesa custava comissão e a casa não controlava a relação com quem a visitava." },
-            { "title": "A abordagem", "body": "Pusemos a história a vender o lugar — as três gerações, a horta, o pão feito de manhã — e criámos um caminho direto para a reserva." },
-            { "title": "O resultado", "body": "As reservas diretas dispararam e a dependência das plataformas caiu. Quem chega já vem pré-conquistado." }
+            { "title": "O desafio", "body": "O logótipo merecia uma renovação alinhada com a sensibilidade da marca, o perfil de Instagram pedia direção editorial e respiração, e não havia ainda presença local no Google para quem procurasse decoração floral na zona." },
+            { "title": "O que fizemos", "body": "Rebranding do logótipo, alinhado com a estética da Vera; reformulação do perfil de Instagram (bio e destaques otimizados); direção editorial para um feed coerente; e criação e otimização do Google Business Profile." },
+            { "title": "Em construção", "body": "A presença no Google Business Profile está nos primeiros meses. A autoridade local — pesquisas tipo \"decoração floral [zona]\" — começa a construir-se a partir de agora." }
           ],
           "stats": [
-            { "value": "+40%", "label": "reservas diretas" },
-            { "value": "−26%", "label": "dependência booking" },
-            { "value": "€3.2k", "label": "poupança mensal em comissões" },
-            { "value": "9 meses", "label": "de acompanhamento" }
+            { "value": "+321 mil", "label": "visualizações (IG 96% + FB)" },
+            { "value": "+548", "label": "novos seguidores Instagram" },
+            { "value": "+4.900", "label": "interações com conteúdos" },
+            { "value": "Mais", "label": "casamentos (agenda a crescer)" }
           ],
-          "services": ["Narrativa de marca", "Conteúdo local", "Funil de reservas"],
+          "services": ["Rebranding de logótipo", "Direção editorial de Instagram", "Google Business Profile"],
           "gallery": [
-            { "imageKey": "hero", "caption": "A casa e a horta" },
-            { "imageKey": "bastidores", "caption": "Pão diário" },
-            { "imageKey": "cta", "caption": "Mesa posta" }
+            { "imageKey": "bastidores", "caption": "Nova identidade" },
+            { "imageKey": "hero", "caption": "Direção de feed" },
+            { "imageKey": "cta", "caption": "Bastidores" }
           ]
         }
       },
       {
-        "metadata": "COACH DE VIDA · LISBOA · 4 MESES · WAVY START + BOOST",
-        "imageKey": "bastidores",
-        "imageCaption": "atelier-luz · 4:3 · prints",
-        "headlineBefore": "De seguidores",
-        "headlineHighlight": "fantasma",
-        "headlineAfter": "a consultas no calendário.",
-        "description": "A Ana tinha milhares de seguidores mas poucos convertiam. A mensagem estava diluída — parecia que falava com toda a gente e não com ninguém. Reformulámos o posicionamento, a bio e o funil de conteúdo. As consultas agendadas passaram a ser a nova normalidade.",
-        "stats": [
-          { "value": "×4", "label": "tráfego orgânico Google" },
-          { "value": "+220%", "label": "pedidos Instagram" },
-          { "value": "8 sem.", "label": "lista espera atual" }
-        ],
-        "quote": "Vendo agora antes de a peça estar pronta. As pessoas reservam pelo Instagram. Nunca pensei que isto fosse possível.",
-        "quoteAuthor": "ATELIER LUZ",
-        "detail": {
-          "intro": "A Ana é coach de vida em Lisboa. Tinha milhares de seguidores, mas poucos convertiam — a mensagem estava diluída. Em quatro meses, transformámos audiência em agenda.",
-          "sections": [
-            { "title": "O desafio", "body": "A Ana falava com toda a gente e, por isso, com ninguém. O conteúdo gerava gostos, não consultas, e o funil não levava a lado nenhum." },
-            { "title": "A abordagem", "body": "Afinámos o posicionamento para um público claro, reescrevemos a bio e desenhámos um funil de conteúdo que leva da descoberta à marcação." },
-            { "title": "O resultado", "body": "As consultas agendadas tornaram-se a nova normalidade e o tráfego orgânico multiplicou-se. Hoje há lista de espera de várias semanas." }
-          ],
-          "stats": [
-            { "value": "×4", "label": "tráfego orgânico Google" },
-            { "value": "+220%", "label": "pedidos via Instagram" },
-            { "value": "8 sem.", "label": "lista de espera atual" },
-            { "value": "4 meses", "label": "Wavy Start + Boost" }
-          ],
-          "services": ["Posicionamento", "Copy de bio e funil", "Estratégia de conteúdo"],
-          "gallery": [
-            { "imageKey": "cta", "caption": "Nova bio e funil" },
-            { "imageKey": "hero", "caption": "Conteúdo de marca" },
-            { "imageKey": "bastidores", "caption": "Planeamento" }
-          ]
-        }
-      },
-      {
-        "metadata": "RETALHO LOCAL · TORRES VEDRAS · 7 MESES",
-        "imageKey": "cta",
-        "imageCaption": "marca-em-crescimento · 4:3 · prints",
-        "headlineBefore": "De uma loja conhecida no bairro",
-        "headlineHighlight": "a uma marca",
-        "headlineAfter": "procurada em toda a região.",
-        "description": "Uma loja local com produto excelente, mas invisível fora da sua rua. Construímos uma identidade coerente e uma presença que acompanha o crescimento — da montra física ao online, sem perder a alma do negócio.",
-        "stats": [
-          { "value": "+180%", "label": "alcance local em 6 meses" },
-          { "value": "×3", "label": "visitas à loja vindas do online" },
-          { "value": "+45%", "label": "vendas atribuídas ao digital" }
-        ],
-        "quote": "Deixámos de ser só a loja do costume. Agora as pessoas chegam já a saber o que querem — viram-nos primeiro online.",
-        "quoteAuthor": "MARCA EM CRESCIMENTO",
-        "detail": {
-          "intro": "Um negócio de retalho local com clientes fiéis no bairro, mas pouca expressão fora dele. Em sete meses, demos-lhe uma presença digital à altura do produto.",
-          "sections": [
-            { "title": "O desafio", "body": "Produto forte e reputação no bairro, mas invisível para quem não passava à porta. A marca não existia de forma consistente online." },
-            { "title": "A abordagem", "body": "Criámos uma identidade coerente e uma linha de conteúdo que liga a loja física ao digital, com foco na comunidade local." },
-            { "title": "O resultado", "body": "O alcance local cresceu, novas pessoas começaram a aparecer na loja por causa do online e as vendas acompanharam." }
-          ],
-          "stats": [
-            { "value": "+180%", "label": "alcance local em 6 meses" },
-            { "value": "×3", "label": "visitas vindas do online" },
-            { "value": "+45%", "label": "vendas atribuídas ao digital" },
-            { "value": "7 meses", "label": "de acompanhamento" }
-          ],
-          "services": ["Identidade visual", "Estratégia de conteúdo", "SEO local"],
-          "gallery": [
-            { "imageKey": "cta", "caption": "Nova identidade" },
-            { "imageKey": "bastidores", "caption": "Conteúdo de loja" },
-            { "imageKey": "hero", "caption": "Presença local" }
-          ]
-        }
-      },
-      {
-        "metadata": "SERVIÇOS · GRANDE LISBOA · EM CURSO",
+        "metadata": "CONSULTORIA TECNOLÓGICA · REMOTO · 2026 · EM CURSO",
         "imageKey": "hero",
-        "imageCaption": "projeto-em-curso · 4:3 · prints",
-        "headlineBefore": "Um negócio de serviços a ganhar",
-        "headlineHighlight": "presença e procura",
-        "headlineAfter": "mês após mês.",
-        "description": "Um prestador de serviços com excelente trabalho, mas dependente do passa-palavra. Estamos a construir, passo a passo, uma presença digital que gera procura de forma previsível. Projeto em curso — os primeiros sinais já aparecem.",
+        "imageCaption": "adds · consultoria tecnológica",
+        "headlineBefore": "Uma marca completa,",
+        "headlineHighlight": "construída desde o primeiro dia.",
+        "headlineAfter": "",
+        "description": "A ADDS é uma consultora tecnológica recém-criada. O conhecimento, a competência e o roadmap estavam definidos. Faltava-lhe tudo o que torna uma empresa visível no mercado: identidade visual, voz, canais. A escolha foi clara — construir a marca a sério, desde o primeiro dia.",
         "stats": [
-          { "value": "+90%", "label": "alcance nos primeiros 3 meses" },
-          { "value": "×2", "label": "pedidos de orçamento" },
-          { "value": "Em curso", "label": "acompanhamento mensal" }
+          { "value": "100%", "label": "identidade de raiz construída" },
+          { "value": "2 canais", "label": "Instagram + LinkedIn ativos" },
+          { "value": "Em curso", "label": "produção mensal de conteúdos" }
         ],
-        "quote": "Pela primeira vez tenho um plano e não ando a publicar à sorte. Já se nota a diferença nos contactos que chegam.",
-        "quoteAuthor": "PROJETO EM CURSO",
+        "quote": "Entreguei a presença digital da minha empresa à Wavy — redes sociais e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
+        "quoteAuthor": "JOÃO MARQUES · FUNDADOR, ADDS",
         "detail": {
-          "intro": "Um negócio de serviços na Grande Lisboa, com reputação construída no passa-palavra. Estamos a dar-lhe uma presença digital consistente — este é um projeto em curso.",
+          "intro": "A ADDS é uma consultora tecnológica recém-criada. Tinha o conhecimento e o roadmap; faltava-lhe a marca. A escolha estratégica foi construí-la a sério, desde o primeiro dia.",
           "sections": [
-            { "title": "O desafio", "body": "Trabalho de qualidade, mas procura imprevisível e totalmente dependente de recomendações. Sem presença digital estruturada." },
-            { "title": "A abordagem", "body": "Definimos posicionamento e um plano de conteúdo sustentável, para transformar a reputação offline em procura online." },
-            { "title": "O resultado", "body": "Projeto a decorrer: os primeiros meses já mostram mais alcance e mais pedidos de orçamento. Continuamos a construir." }
+            { "title": "O desafio", "body": "Lançar uma consultora tecnológica sem identidade, sem manual de marca e sem presença digital. Numa área onde a confiança é tudo, a ADDS precisava de chegar com uma marca que já transmitisse seriedade." },
+            { "title": "O que fizemos", "body": "Pesquisa de marca, posicionamento e identidade verbal; logótipo e identidade visual de raiz; manual de marca (paleta, tipografia, aplicações); setup e otimização de Instagram e LinkedIn; estratégia de conteúdo e tom de voz; e produção mensal de conteúdos (em curso)." },
+            { "title": "O que ficou construído", "body": "Hoje a ADDS tem uma marca completa pronta a operar: logótipo, identidade visual, manual de aplicações, voz definida e canais ativos. Tudo planeado para escalar com a empresa." },
+            { "title": "Em curso", "body": "A presença digital ativa-se agora — Instagram e LinkedIn em produção contínua. A leitura de resultados ganhará sentido nos próximos 6 meses." }
           ],
           "stats": [
-            { "value": "+90%", "label": "alcance em 3 meses" },
-            { "value": "×2", "label": "pedidos de orçamento" },
-            { "value": "Em curso", "label": "acompanhamento mensal" },
-            { "value": "—", "label": "caso a atualizar em breve" }
+            { "value": "Marca", "label": "completa e pronta a operar" },
+            { "value": "2 canais", "label": "Instagram + LinkedIn" },
+            { "value": "Manual", "label": "de marca e aplicações" },
+            { "value": "Em curso", "label": "produção mensal" }
           ],
-          "services": ["Posicionamento", "Plano de conteúdo", "Gestão de redes sociais"],
+          "services": ["Identidade de raiz", "Manual de marca", "Estratégia de conteúdo", "Instagram + LinkedIn"],
           "gallery": [
-            { "imageKey": "hero", "caption": "Conteúdo em produção" },
-            { "imageKey": "cta", "caption": "Plano editorial" },
-            { "imageKey": "bastidores", "caption": "Bastidores" }
+            { "imageKey": "hero", "caption": "Identidade visual" },
+            { "imageKey": "cta", "caption": "Manual de marca" },
+            { "imageKey": "bastidores", "caption": "Conteúdo em produção" }
+          ]
+        }
+      },
+      {
+        "metadata": "PRODUTOS ALIMENTARES · DISTRITO DE SANTARÉM · INÍCIO 2025 · CONCLUÍDO",
+        "imageKey": "cta",
+        "imageCaption": "ana-lopes · marca alimentar familiar",
+        "headlineBefore": "Da quinta à marca,",
+        "headlineHighlight": "com fundação estratégica.",
+        "headlineAfter": "",
+        "description": "A família da Ana tem uma quinta com excedente de vários produtos — mel, azeite, fruta. A Ana viu nesse excedente uma oportunidade: transformá-lo numa marca alimentar com identidade própria. Tinha o nome, um pequeno logótipo e o primeiro produto a sair — o mel. Faltava-lhe a fundação estratégica para sustentar tudo o que viria a seguir.",
+        "stats": [
+          { "value": "Raio-X", "label": "diagnóstico + análise competitiva" },
+          { "value": "1 marca", "label": "posicionamento e voz definidos" },
+          { "value": "Concluído", "label": "pronta para novos produtos" }
+        ],
+        "quote": "O plano de trabalho que a Mariana criou foi incrível. Desde o primeiro momento, demonstrou uma capacidade impressionante de compreender o meu negócio. Conseguiu traduzir ideias que eu ainda não tinha estruturado — trazendo clareza, estratégia e direção ao projeto. Senti-me verdadeiramente acompanhada em cada passo.",
+        "quoteAuthor": "ANA LOPES · MARCA DE PRODUTOS ALIMENTARES",
+        "detail": {
+          "intro": "A família da Ana tem uma quinta com excedente — mel, azeite, fruta. A Ana quis transformá-lo numa marca alimentar com identidade própria. Faltava-lhe a fundação estratégica.",
+          "sections": [
+            { "title": "O desafio", "body": "O mercado está saturado de promessas vagas (\"natural\", \"sustentável\", \"feito com amor\") e nenhuma comunicação anónima distingue uma marca com história real de outra inventada. A Ana precisava de uma marca que provasse — não que prometesse." },
+            { "title": "O que fizemos", "body": "Raio-X estratégico (auditoria, análise competitiva e oportunidades); definição de posicionamento e propósito; identidade verbal — pilares de mensagem e tom de voz; manual estratégico de marca; e plano de trabalho com próximos passos concretos." },
+            { "title": "O que ficou construído", "body": "A Ana saiu com uma bússola: posicionamento definido, voz consolidada, prioridades claras e próximos passos mapeados. A marca passou a ter linguagem para falar da quinta, da família e da origem sem cair em clichés." },
+            { "title": "O resultado", "body": "Não se mede em percentagens — mede-se em clareza estratégica. A marca passou a ter direção, pilares e voz prontos para sustentar qualquer próximo passo, incluindo a entrada de novos produtos." }
+          ],
+          "stats": [
+            { "value": "Raio-X", "label": "estratégico completo" },
+            { "value": "Posição", "label": "e propósito definidos" },
+            { "value": "Voz", "label": "e pilares de mensagem" },
+            { "value": "Concluído", "label": "pronta a escalar" }
+          ],
+          "services": ["Raio-X estratégico", "Posicionamento", "Identidade verbal", "Manual de marca"],
+          "gallery": [
+            { "imageKey": "cta", "caption": "Posicionamento" },
+            { "imageKey": "bastidores", "caption": "Pilares de marca" },
+            { "imageKey": "hero", "caption": "Plano de trabalho" }
           ]
         }
       }
     ],
     "cta": {
-      "title": "A próxima história pode ser a tua.",
-      "subtitle": "Responde apenas a 4 perguntas para descobrires onde estás e como te podemos ajudar. Se fizer sentido, agendamos uma conversa.",
-      "button": "Saber onde estou"
+      "title": "A próxima pode ser a tua.",
+      "subtitle": "Cada um destes casos começou pela mesma pergunta — \"onde estás?\". O teu também pode começar daí.",
+      "button": "Marcar o meu Raio-X",
+      "manifesto": "Cada projeto começa pela pergunta certa. E acaba sempre noutra: para onde vais agora?"
+    },
+    "transparency": {
+      "label": "Nota de transparência",
+      "body": "Os casos que se seguem foram realizados pela fundadora da Wavy, aplicando a mesma metodologia que hoje define a marca. Alguns precederam a constituição formal da Wavy — mas a mão, o método e o cuidado são os mesmos."
     }
   },
   "contactPage": {
