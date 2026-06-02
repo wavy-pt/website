@@ -54,6 +54,51 @@
       }
     ]
   },
+  "personas": {
+    "label": "PARA QUEM TRABALHAMOS",
+    "title": "Não trabalhamos com toda a gente. E é por isso que o trabalho corre bem.",
+    "subtitle": "Trabalhamos com quem já construiu um negócio a sério, está farto de marketing digital amador e quer uma parceira para dirigir a transformação digital com método — não com sorte.",
+    "cards": [
+      {
+        "tag": "TRANSIÇÃO DE GERAÇÃO",
+        "title": "Herdei um negócio com história. Quero levá-lo para a próxima década.",
+        "desc": "Negócios familiares ou consolidados com 15+ anos. Faturação saudável, clientes fiéis, mas o digital ainda é analógico. A transformação não é luxo — é a única forma de garantir continuidade."
+      },
+      {
+        "tag": "SERVIÇO PREMIUM",
+        "title": "Entrego excelência todos os dias. Quero que o digital comunique isso.",
+        "desc": "Clínicas, ateliers, consultórios e profissionais liberais com serviço de alto valor. A presença digital atual é amadora — manda a mensagem errada a quem paga preços premium."
+      },
+      {
+        "tag": "COMÉRCIO EM CRESCIMENTO",
+        "title": "Cresci, abri lojas, contratei equipa. O digital ficou para trás.",
+        "desc": "Comércio local com 1 a 3 lojas, restauração com identidade, hotelaria boutique. Cresceu pelo boca-a-boca e pela qualidade. Agora precisa de digital para escalar sem perder o ADN."
+      },
+      {
+        "tag": "PRÓXIMA GERAÇÃO",
+        "title": "Vejo o potencial do nosso negócio. Quero ser eu a modernizá-lo.",
+        "desc": "Filhas e filhos que entraram (ou vão entrar) no negócio da família. Veem o que o digital pode fazer, mas precisam de uma parceira que respeite a história enquanto constrói o futuro."
+      }
+    ],
+    "forTitle": "É para ti se…",
+    "forItems": [
+      "O teu negócio tem pelo menos 3 anos e clientes fiéis.",
+      "Já tentaste resolver o digital antes e ficaste desiludido.",
+      "Procuras um parceiro estratégico, não só execução.",
+      "Investes no que vale a pena — e queres entender o porquê.",
+      "Valorizas a verdade, mesmo quando é desconfortável."
+    ],
+    "againstTitle": "Não é para ti se…",
+    "againstItems": [
+      "Procuras a opção mais barata do mercado.",
+      "Acreditas que o digital se resolve numa única campanha.",
+      "Queres quem garanta seguidores ou likes em 30 dias.",
+      "Não vais ter 1 hora por mês para alinhamento.",
+      "Preferes não saber o porquê das decisões — só queres alguém que \"trate disso\"."
+    ],
+    "ctaText": "Ainda na dúvida se és cliente Wavy? Faz o teste rápido. Em 2 minutos descobres.",
+    "ctaButton": "Fazer o teste rápido"
+  },
   "difference": {
     "label": "o que nos torna diferentes",
     "title": "Não somos uma agência. Não somos um freelancer.",
@@ -676,10 +721,6 @@
       {
         "q": "O que é o Raio-X e porque tenho de começar por aí?",
         "a": "O Raio-X é o diagnóstico estratégico inicial da Wavy. Analisamos toda a tua presença digital — website, redes sociais, SEO, comunicação e posicionamento — e entregamos um mapa claro do que está a funcionar, do que está partido e dos 5 problemas prioritários a corrigir no teu negócio. Começamos sempre aqui porque construir antes de diagnosticar é construir no escuro. Se decidires avançar para a Obra ou para a Direção, o valor do Raio-X é 100% deduzido no projeto seguinte."
-      },
-      {
-        "q": "Quanto custa trabalhar com a Wavy?",
-        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte. A Obra (website, identidade visual e estratégia) parte de 1.500€ + IVA, com orçamento personalizado após o diagnóstico. A Direção (gestão contínua e SEO local) tem investimento mensal a partir de 750€ + IVA, com compromisso mínimo de 3 meses. Não negociamos preço para baixo — ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: preços fixos comunicados publicamente, transparência em cada decisão."
       },
       {
         "q": "Trabalham fora da Zona Oeste ou Grande Lisboa?",

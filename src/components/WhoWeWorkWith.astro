@@ -1,0 +1,88 @@
+---
+import { t, getLocalizedPath } from '../i18n';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const p = t(lang).personas;
+// CTA "teste rápido" → /servicos (onde vive o quiz) provisoriamente.
+const diagnosisUrl = getLocalizedPath('/servicos', lang);
+
+const personaIcons = ['ri-history-line', 'ri-vip-crown-line', 'ri-store-2-line', 'ri-seedling-line'];
+---
+
+<section class="bg-white py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <!-- Header -->
+    <div class="scroll-reveal mb-10 md:mb-14 max-w-3xl">
+      <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">{p.label}</p>
+      <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15] mb-4">
+        {p.title}
+      </h2>
+      <p class="font-sans text-base text-muted leading-relaxed max-w-2xl">{p.subtitle}</p>
+    </div>
+
+    <!-- Persona cards (2x2) -->
+    <div class="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-5 mb-12 md:mb-16">
+      {p.cards.map((card, idx) => (
+        <div class="bg-cream rounded-[24px] p-6 md:p-8 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-teal/10 text-teal flex items-center justify-center shrink-0">
+              <i class={`${personaIcons[idx]} text-lg`} aria-hidden="true"></i>
+            </div>
+            <span class="font-sans text-[11px] uppercase tracking-[0.15em] text-teal-dark/60">{card.tag}</span>
+          </div>
+          <p class="font-serif text-lg md:text-xl italic font-medium text-teal-dark leading-snug mb-3">
+            &ldquo;{card.title}&rdquo;
+          </p>
+          <p class="font-sans text-sm text-muted leading-relaxed">{card.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Filter: for / against -->
+    <div class="scroll-reveal grid grid-cols-1 md:grid-cols-2 gap-5 rounded-[28px] overflow-hidden">
+      <!-- É para ti se -->
+      <div class="bg-teal p-7 md:p-9">
+        <h3 class="font-serif text-xl md:text-2xl font-medium text-cream mb-5">{p.forTitle}</h3>
+        <ul class="flex flex-col gap-3">
+          {p.forItems.map((item) => (
+            <li class="flex items-start gap-3">
+              <i class="ri-check-line text-cream text-lg mt-0.5 shrink-0" aria-hidden="true"></i>
+              <span class="font-sans text-sm md:text-base text-cream/90 leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <!-- Não é para ti se -->
+      <div class="bg-cream p-7 md:p-9">
+        <h3 class="font-serif text-xl md:text-2xl font-medium text-teal-dark mb-5">{p.againstTitle}</h3>
+        <ul class="flex flex-col gap-3">
+          {p.againstItems.map((item) => (
+            <li class="flex items-start gap-3">
+              <i class="ri-close-line text-teal-dark/40 text-lg mt-0.5 shrink-0" aria-hidden="true"></i>
+              <span class="font-sans text-sm md:text-base text-teal-dark/70 leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="scroll-reveal mt-10 md:mt-12 text-center">
+      <p class="font-serif text-base md:text-lg text-teal-dark mb-5 max-w-xl mx-auto leading-relaxed">
+        {p.ctaText}
+      </p>
+      <a
+        href={diagnosisUrl}
+        class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300"
+      >
+        {p.ctaButton}
+        <i class="ri-arrow-right-line" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>

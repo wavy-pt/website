@@ -54,6 +54,51 @@
       }
     ]
   },
+  "personas": {
+    "label": "WHO WE WORK WITH",
+    "title": "We don't work with everyone. That's why the work goes well.",
+    "subtitle": "We work with owners who've built something real, are done with amateur marketing, and want a partner to direct their digital transformation with method — not luck.",
+    "cards": [
+      {
+        "tag": "GENERATIONAL HANDOVER",
+        "title": "I inherited a business with history. I want to take it into the next decade.",
+        "desc": "Family or established businesses 15+ years old. Healthy revenue, loyal customers, but digital is still analogue. Transformation isn't a luxury — it's the only way to ensure continuity."
+      },
+      {
+        "tag": "PREMIUM SERVICE",
+        "title": "I deliver excellence every day. I want my digital to show it.",
+        "desc": "Clinics, ateliers, private practices and premium service providers. The current digital presence is amateur — sending the wrong message to clients paying premium prices."
+      },
+      {
+        "tag": "GROWING RETAIL",
+        "title": "I've grown, opened stores, hired a team. Digital was left behind.",
+        "desc": "Local retail with 1-3 stores, restaurants with identity, boutique hospitality. Grew through word of mouth and quality. Now needs digital to scale without losing its DNA."
+      },
+      {
+        "tag": "NEXT GENERATION",
+        "title": "I see what our business could become. I want to be the one to modernise it.",
+        "desc": "Sons and daughters stepping into the family business. They see what digital can do — and need a partner who respects the legacy while building the future."
+      }
+    ],
+    "forTitle": "Wavy is for you if…",
+    "forItems": [
+      "Your business is at least 3 years old, with loyal customers.",
+      "You've tried to fix digital before and walked away disappointed.",
+      "You want a strategic partner, not just execution.",
+      "You invest in what's worth it — and want to know why.",
+      "You value the truth, even when it's uncomfortable."
+    ],
+    "againstTitle": "It's not for you if…",
+    "againstItems": [
+      "You're after the cheapest option on the market.",
+      "You believe digital can be solved with a single campaign.",
+      "You want someone who promises followers or likes in 30 days.",
+      "You can't spare one hour a month to align.",
+      "You'd rather not know the why behind decisions — you just want someone to \"handle it\"."
+    ],
+    "ctaText": "Still not sure if Wavy is right for you? Take the quick test. Two minutes is all it takes.",
+    "ctaButton": "Take the quick test"
+  },
   "difference": {
     "label": "what makes us different",
     "title": "We're not an agency. We're not a freelancer.",
@@ -677,10 +722,6 @@
       {
         "q": "What is the X-Ray and why do I have to start there?",
         "a": "The X-ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence — website, social media, SEO, communication, and positioning — and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-ray fee is fully credited to your next project."
-      },
-      {
-        "q": "How much does it cost to work with Wavy?",
-        "a": "It depends on the service. The X-ray (strategic diagnosis) starts at €350 + VAT and is credited to your next project. The Build (website, visual identity and strategy) starts at €1,500 + VAT, with a custom quote after the diagnosis. The Direction (ongoing management and local SEO) starts at €750/month + VAT, with a 3-month minimum commitment. We don't negotiate prices down — we adjust the scope to your reality. Wavy principle: fixed prices communicated publicly, transparency in every decision."
       },
       {
         "q": "Do you work outside the Western Zone or Greater Lisbon?",
