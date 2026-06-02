@@ -454,20 +454,20 @@
   "aboutPage": {
     "hero": {
       "tag": "About",
-      "headline": "Digital strategy,",
-      "headlineHighlight": "with human sensitivity.",
-      "subtitle": "Wavy was born from the conviction that small businesses built with purpose deserve communication at the same level — without betraying themselves, without burning out, without turning into content.",
+      "headline": "The story behind",
+      "headlineHighlight": "the story.",
+      "subtitle": "Wavy was born from the conviction that businesses built with purpose deserve communication of the same calibre — without betraying themselves, without burning out, without turning into content.",
       "marquee": [
-        { "type": "image", "imageKey": "hero", "cardColor": "cream" },
-        { "type": "stat", "number": "+15", "label": "Brands supported", "cardColor": "teal" },
+        { "type": "stat", "number": "3", "label": "Non-negotiable values", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Founded at home, in a living room.", "cardColor": "cream" },
-        { "type": "stat", "number": "8", "label": "Years in agencies", "cardColor": "teal" },
-        { "type": "text", "title": "Only 3 clients at first", "body": "All from the same neighbourhood. Trust started there.", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "5+", "label": "Priority sectors", "cardColor": "teal-dark" },
+        { "type": "image", "imageKey": "hero", "cardColor": "cream" },
+        { "type": "stat", "number": "100%", "label": "Start with the X-Ray", "cardColor": "teal" },
+        { "type": "stat", "number": "1", "label": "Single point of contact", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "0", "label": "Templates followed blindly", "cardColor": "teal" },
+        { "type": "text", "title": "Mariana Antunes", "body": "Founder and the only team at Wavy.", "cardColor": "cream" },
         { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },
-        { "type": "stat", "number": "100%", "label": "Honesty", "cardColor": "teal" },
-        { "type": "text", "title": "No templates", "body": "Every strategy is born from the client's identity.", "cardColor": "cream" },
-        { "type": "text", "title": "Mariana Antunes", "body": "Founder, strategist and the only team at Wavy.", "cardColor": "cream" },
-        { "type": "stat", "number": "0", "label": "Trends followed blindly", "cardColor": "teal-dark" }
+        { "type": "stat", "number": "30 days", "label": "Warranty on every Build", "cardColor": "teal" }
       ]
     },
     "mariana": {
@@ -489,13 +489,13 @@
       "tag": "Philosophy",
       "headline": "Five things we",
       "headlineHighlight": "believe in.",
-      "subtitle": "It's not a manifesto. It's a private checklist I apply before accepting each new client.",
+      "subtitle": "It's not a manifesto. It's a private checklist we run before taking on any new client.",
       "items": [
-        { "number": "i.", "title": "Authenticity", "desc": "The client's identity is the starting point, never a template. The process begins by understanding who you are before proposing anything." },
-        { "number": "ii.", "title": "Calm and intention", "desc": "In a noisy digital market, Wavy appears with serenity. Every decision is made with clear intention — never by impulse, never by trend." },
-        { "number": "iii.", "title": "Transparency", "desc": "You have the right to always know the why behind every decision. No opaque strategies, no inflated results. We communicate with clarity — including when something is not working." },
-        { "number": "iv.", "title": "Strategy first", "desc": "Creating content without knowing for whom, why, and with what objective is wasting resources. No post exists without a defined purpose." },
-        { "number": "v.", "title": "Sustainability", "desc": "Growth you cannot maintain is not growth — it is pressure. We build rhythms you can manage, with or without support." }
+        { "number": "i.", "title": "Strategy before Execution", "desc": "Strategy always precedes execution. Creating content without knowing who for, why, and to what end is wasting resources. At Wavy, no digital decision exists without a defined purpose." },
+        { "number": "ii.", "title": "Radical Transparency", "desc": "You have the right to know the reason behind every decision. No opaque strategies, no inflated results. We communicate clearly — including when something isn't working." },
+        { "number": "iii.", "title": "Authenticity", "desc": "Your identity is the starting point, never a template. The process always begins with understanding who you are before suggesting anything." },
+        { "number": "iv.", "title": "Sustainability", "desc": "Growth you can't sustain isn't growth — it's pressure. We build rhythms you can manage long-term, with or without continued external support." },
+        { "number": "v.", "title": "Warm Authority", "desc": "Wavy's voice is warm and professional — like a trusted partner you talk business with seriously. Never cold. Never distant. But always competent." }
       ]
     },
     "whyWavy": {
@@ -509,9 +509,10 @@
       ]
     },
     "cta": {
-      "headline": "The next conversation could be",
-      "headlineHighlight": "yours.",
-      "subtitle": "Four minutes answering four questions. You get a personalised diagnosis and — if it makes sense — we schedule 15 minutes. No forced proposals.",
+      "headline": "Now that you know us,",
+      "headlineHighlight": "shall we get to know you?",
+      "subtitle": "No pressure, no forced proposal. Just an honest conversation about your business — and the starting point that makes the most sense for you.",
+      "manifesto": "The next wave is yours. The direction is ours.",
       "button": "Schedule a conversation",
       "socialLabel": "Social media",
       "socialText": "Follow Wavy's day-to-day.",

@@ -454,20 +454,20 @@
   "aboutPage": {
     "hero": {
       "tag": "Sobre",
-      "headline": "Estratégia digital,",
-      "headlineHighlight": "com sensibilidade humana.",
-      "subtitle": "A Wavy nasceu da convicção de que pequenos negócios construídos com propósito merecem comunicação ao mesmo nível — sem se trair, sem se exaurir, sem virar conteúdo.",
+      "headline": "A história que está por trás",
+      "headlineHighlight": "da história.",
+      "subtitle": "A Wavy nasceu da convicção de que negócios construídos com propósito merecem comunicação ao mesmo nível — sem se trair, sem se exaurir, sem virar conteúdo.",
       "marquee": [
-        { "type": "image", "imageKey": "hero", "cardColor": "cream" },
-        { "type": "stat", "number": "+15", "label": "Marcas acompanhadas", "cardColor": "teal" },
+        { "type": "stat", "number": "3", "label": "Valores não-negociáveis", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Fundada em casa, numa sala de estar.", "cardColor": "cream" },
-        { "type": "stat", "number": "8", "label": "Anos em agências", "cardColor": "teal" },
-        { "type": "text", "title": "Só 3 clientes no início", "body": "Todos do mesmo bairro. A confiança começou ali.", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "5+", "label": "Setores prioritários", "cardColor": "teal-dark" },
+        { "type": "image", "imageKey": "hero", "cardColor": "cream" },
+        { "type": "stat", "number": "100%", "label": "Começam pelo Raio-X", "cardColor": "teal" },
+        { "type": "stat", "number": "1", "label": "Interlocutora única", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "0", "label": "Templates às cegas", "cardColor": "teal" },
+        { "type": "text", "title": "Mariana Antunes", "body": "Fundadora e única equipa da Wavy.", "cardColor": "cream" },
         { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },
-        { "type": "stat", "number": "100%", "label": "Honestidade", "cardColor": "teal" },
-        { "type": "text", "title": "Sem templates", "body": "Cada estratégia nasce da identidade do cliente.", "cardColor": "cream" },
-        { "type": "text", "title": "Mariana Antunes", "body": "Fundadora, estrategista e única equipa da Wavy.", "cardColor": "cream" },
-        { "type": "stat", "number": "0", "label": "Trends seguidas às cegas", "cardColor": "teal-dark" }
+        { "type": "stat", "number": "30 dias", "label": "Garantia em cada Obra", "cardColor": "teal" }
       ]
     },
     "mariana": {
@@ -489,13 +489,13 @@
       "tag": "Filosofia",
       "headline": "Cinco coisas em que",
       "headlineHighlight": "acreditamos.",
-      "subtitle": "Não é manifesto. É uma checklist privada que aplico antes de aceitar cada cliente novo.",
+      "subtitle": "Não é manifesto. É uma checklist privada que aplicamos antes de aceitar cada cliente novo.",
       "items": [
-        { "number": "i.", "title": "Autenticidade", "desc": "A identidade do cliente é o ponto de partida, nunca um template. O processo começa por perceber quem és antes de propor qualquer coisa." },
-        { "number": "ii.", "title": "Calma e intenção", "desc": "Num mercado digital barulhento, a Wavy aparece com serenidade. Cada decisão é tomada com intenção clara — nunca por impulso, nunca por tendência." },
-        { "number": "iii.", "title": "Transparência", "desc": "Tens direito a saber sempre o porquê de cada decisão. Sem estratégias opacas, sem resultados inflacionados. Comunicamos com clareza — incluindo quando algo não está a funcionar." },
-        { "number": "iv.", "title": "Estratégia primeiro", "desc": "Criar conteúdo sem saber para quem, porquê e com que objectivo é desperdiçar recursos. Nenhum post existe sem propósito definido." },
-        { "number": "v.", "title": "Sustentabilidade", "desc": "Crescimento que não consegues manter não é crescimento — é pressão. Construímos ritmos que consegues gerir, com ou sem apoio." }
+        { "number": "i.", "title": "Estratégia antes de Execução", "desc": "A estratégia precede sempre a execução. Criar conteúdo sem saber para quem, porquê e com que objetivo é desperdiçar recursos. Na Wavy, nenhuma decisão digital existe sem propósito definido." },
+        { "number": "ii.", "title": "Transparência Radical", "desc": "Tens direito a saber sempre o porquê de cada decisão. Sem estratégias opacas, sem resultados inflacionados. Comunicamos com clareza — incluindo quando algo não está a funcionar." },
+        { "number": "iii.", "title": "Autenticidade", "desc": "A identidade do cliente é o ponto de partida, nunca um template. O processo começa sempre por perceber quem és antes de propor qualquer coisa." },
+        { "number": "iv.", "title": "Sustentabilidade", "desc": "Crescimento que não consegues manter não é crescimento — é pressão. Construímos ritmos que consegues gerir a longo prazo, com ou sem apoio externo continuado." },
+        { "number": "v.", "title": "Proximidade com Autoridade", "desc": "A voz da Wavy é calorosa e profissional — como uma parceira de confiança com quem se fala de negócios a sério. Nunca fria. Nunca distante. Mas sempre competente." }
       ]
     },
     "whyWavy": {
@@ -509,9 +509,10 @@
       ]
     },
     "cta": {
-      "headline": "A próxima conversa pode ser",
-      "headlineHighlight": "a tua.",
-      "subtitle": "Quatro minutos a responder a quatro perguntas. Recebes um diagnóstico personalizado e — se fizer sentido — agendamos 15 minutos. Sem propostas forçadas.",
+      "headline": "Agora que sabes quem somos,",
+      "headlineHighlight": "vamos saber quem és?",
+      "subtitle": "Sem pressão, sem proposta forçada. Só uma conversa honesta sobre o teu negócio — e o ponto de partida que fizer mais sentido para ti.",
+      "manifesto": "A próxima onda é tua. A direção é nossa.",
       "button": "Agendar conversa",
       "socialLabel": "Redes sociais",
       "socialText": "Acompanha o dia a dia da Wavy.",
