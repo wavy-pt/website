@@ -2,13 +2,22 @@
 import { t } from '../i18n';
 import type { Lang } from '../i18n';
 
-interface Props {
-  lang: Lang;
+interface FaqData {
+  label: string;
+  title: string;
+  items: { q: string; a: string }[];
 }
 
-const { lang } = Astro.props;
+interface Props {
+  lang: Lang;
+  /** Dados de FAQ opcionais (por omissão usa o bloco `faq` da homepage). */
+  faq?: FaqData;
+}
+
+const { lang, faq } = Astro.props;
 const i = t(lang);
-const faqs = i.faq.items;
+const data: FaqData = faq ?? i.faq;
+const faqs = data.items;
 ---
 
 <section class="bg-offwhite py-20 md:py-28">
@@ -19,10 +28,10 @@ const faqs = i.faq.items;
         <div class="lg:col-span-5">
           <div class="lg:sticky lg:top-28">
             <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-4">
-              {i.faq.label}
+              {data.label}
             </p>
             <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-medium text-teal-dark leading-[1.05] mb-5 md:mb-6">
-              {i.faq.title}
+              {data.title}
             </h2>
             <p class="font-serif italic text-base md:text-lg text-muted leading-relaxed max-w-sm">
               {lang === 'en'

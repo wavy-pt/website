@@ -2,8 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import ScrollReveal from '../../components/ScrollReveal.astro';
 import ServicesHero from '../../components/services/ServicesHeroAlt.astro';
+import ServicesMethod from '../../components/services/ServicesMethod.astro';
 import ServicesJourney from '../../components/services/ServicesJourneyAlt.astro';
 import ServicesCtaBlock from '../../components/services/ServicesCtaBlock.astro';
+import ServicesManifesto from '../../components/services/ServicesManifesto.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import { t } from '../../i18n';
 import { isProd } from '../../lib/env';
 
 // Em produção, página ainda não está pronta — redirect para homepage EN.
@@ -13,12 +17,15 @@ if (isProd) {
 ---
 
 <Layout
-  title="Digital Marketing & Direction Services · Wavy"
-  description="Two paths for your digital presence: the foundation — website and identity — and monthly social media management with local SEO."
+  title="Services · X-ray, Build, Direction | Wavy Digital Agency"
+  description="Three services, one method. X-ray from €350, Build from €1,500, Direction from €750/month. Public pricing, no long-term lock-ins. For established SMEs."
   headerTransparent="light"
 >
   <ServicesHero lang="en" />
+  <ServicesMethod lang="en" />
   <ServicesJourney lang="en" />
   <ServicesCtaBlock lang="en" />
+  <FaqSection lang="en" faq={t('en').servicesPage.faq} />
+  <ServicesManifesto lang="en" />
   <ScrollReveal />
 </Layout>

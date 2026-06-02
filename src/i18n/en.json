@@ -153,9 +153,63 @@
   },
   "servicesPage": {
     "hero": {
-      "tag": "Services",
-      "headline": "Three stages to build your digital presence.",
-      "subtitle": "A clear journey, from diagnosis to ongoing management. We always start with the X-Ray — because without knowing where you stand, any path is the wrong one."
+      "tag": "Wavy Services",
+      "headline": "Three services. One method. One direction.",
+      "subtitle": "From strategic diagnosis to ongoing direction. Each phase solves a specific problem — and sets up the one after. We always start with the X-ray, because building before diagnosing is building blind."
+    },
+    "method": {
+      "label": "The Wavy Method",
+      "title": "Why we always start with the X-ray.",
+      "subtitle": "Over years of working with brands, we've learned an expensive lesson: there's no sustainable digital project without a diagnosis before execution. Whoever builds in the dark, ends up rebuilding in the light.",
+      "principles": [
+        {
+          "number": "01",
+          "title": "Without a diagnosis, every decision is a guess.",
+          "desc": "Before knowing what your website needs, you need to know who visits it, why, and at what stage of the journey. Without this, choosing between \"Shopify or WooCommerce\" is a technical decision dressed up as a strategic one."
+        },
+        {
+          "number": "02",
+          "title": "The order of the phases matters more than the features.",
+          "desc": "Most businesses start with Direction (social media management) without having a Foundation (website and identity) — and then feel like they're doing a lot without seeing it pay off, without quite knowing why. The Wavy method reverses that: first we rebuild the foundations, then we activate the communication."
+        },
+        {
+          "number": "03",
+          "title": "The X-ray always has a cost — only when you pay it changes.",
+          "desc": "You either pay €350 up front and gain clarity, or you pay thousands in wrong decisions over the years and regret it. The X-ray isn't an extra expense — it's the expense that prevents worse ones."
+        }
+      ],
+      "closing": "That's why the X-ray is always the first step — even for those who arrive convinced of what they already want.",
+      "ctaButton": "Get the X-ray"
+    },
+    "faq": {
+      "label": "Frequently asked",
+      "title": "Technical details, in plain language.",
+      "items": [
+        {
+          "q": "Can I skip straight to The Build without the X-ray?",
+          "a": "No. The X-ray is the only mandatory step of the Wavy method. We work this way because we've seen too many projects fail from being built without diagnosis. Without understanding what's broken and in what order to fix it, any Build or Direction is construction in the dark. The good news: if you decide to move forward to The Build or The Direction, the X-ray fee (from €350 + VAT) is fully credited to your next project."
+        },
+        {
+          "q": "How long does it take to build a website?",
+          "a": "On average, between 4 and 6 weeks, starting from the approval of the post-X-ray briefing. The exact duration depends on project complexity: a simple institutional website wraps faster; an online store with specific integrations takes longer. We always set a clear timeline at the start of The Build, with biweekly milestones to ensure ongoing alignment."
+        },
+        {
+          "q": "Who owns the website after delivery?",
+          "a": "The website is 100% yours. We don't charge royalties, retain ownership, or charge for \"activating\" features later. You receive complete access to all platforms, accounts and files — including source code, design and visual identity. Our model is simple: we deliver a product that you control. If you ever decide to leave, you leave with everything in your hands."
+        },
+        {
+          "q": "Can I see content before it's published?",
+          "a": "Yes, always. Every piece of content (post, article, story) is sent for approval before publication. You have full visibility into the monthly editorial calendar and can request adjustments in time. We work with clear approval tools (no confusing email threads) and always respect the tone and boundaries we agreed at the start."
+        },
+        {
+          "q": "What's included in the monthly reports?",
+          "a": "Reports designed for business owners, not marketing departments: real business indicators (qualified leads, website conversions, calls from your Google Business Profile, presence in local searches — and, for e-commerce, sales data too), analysis of what worked during the month, concrete recommendations for the next one, local SEO ranking and a quarterly comparison. No auto-generated PDFs: every report is interpreted and contextualised by us, in plain language."
+        },
+        {
+          "q": "What if I need to pause or cancel The Direction?",
+          "a": "After the initial minimum commitment (3 months on the entry plan, 6 months on advanced plans), the service renews monthly. You can cancel with 30 days' notice, no penalties. For specific situations — extended holidays, seasonal lulls, operational changes — we discuss with you case by case to find the best solution. No lock-ins, no gym-like exit hurdles."
+        }
+      ]
     },
     "journey": {
       "label": "Your journey",

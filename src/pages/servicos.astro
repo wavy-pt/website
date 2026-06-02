@@ -2,8 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import ScrollReveal from '../components/ScrollReveal.astro';
 import ServicesHero from '../components/services/ServicesHeroAlt.astro';
+import ServicesMethod from '../components/services/ServicesMethod.astro';
 import ServicesJourney from '../components/services/ServicesJourneyAlt.astro';
 import ServicesCtaBlock from '../components/services/ServicesCtaBlock.astro';
+import ServicesManifesto from '../components/services/ServicesManifesto.astro';
+import FaqSection from '../components/FaqSection.astro';
+import { t } from '../i18n';
 import { isProd } from '../lib/env';
 
 // Em produção, página ainda não está pronta — redirect para homepage.
@@ -14,12 +18,15 @@ if (isProd) {
 ---
 
 <Layout
-  title="Serviços de Marketing e Direção Digital · Wavy"
-  description="Dois caminhos para a tua presença digital: a fundação — website e identidade — e a gestão mensal de redes sociais e SEO local."
+  title="Serviços · Raio-X, Obra, Direção | Wavy Marketing Digital"
+  description="Três serviços, um método. Raio-X desde 350€, Obra desde 1.500€, Direção desde 750€/mês. Preços públicos, sem fidelizações longas. Para PMEs consolidadas."
   headerTransparent="light"
 >
   <ServicesHero lang="pt" />
+  <ServicesMethod lang="pt" />
   <ServicesJourney lang="pt" />
   <ServicesCtaBlock lang="pt" />
+  <FaqSection lang="pt" faq={t('pt').servicesPage.faq} />
+  <ServicesManifesto lang="pt" />
   <ScrollReveal />
 </Layout>

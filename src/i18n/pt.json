@@ -153,9 +153,63 @@
   },
   "servicesPage": {
     "hero": {
-      "tag": "Serviços",
-      "headline": "Três fases para construir a tua presença digital.",
-      "subtitle": "Uma jornada clara, do diagnóstico à gestão contínua. Começamos sempre pelo Raio-X — porque sem perceber onde estás, qualquer caminho é o errado."
+      "tag": "Serviços Wavy",
+      "headline": "Três serviços. Um método. Uma direção.",
+      "subtitle": "Do diagnóstico estratégico à direção contínua. Cada fase resolve um problema específico — e prepara o terreno para a seguinte. Começamos sempre pelo Raio-X, porque construir antes de diagnosticar é construir no escuro."
+    },
+    "method": {
+      "label": "O Método Wavy",
+      "title": "Porque começamos sempre pelo Raio-X.",
+      "subtitle": "Em anos a trabalhar com marcas, aprendemos uma lição cara: não há projeto digital sustentável sem diagnóstico antes da execução. Quem constrói no escuro, reconstrói no claro.",
+      "principles": [
+        {
+          "number": "01",
+          "title": "Sem diagnóstico, qualquer decisão é palpite.",
+          "desc": "Antes de saber o que o teu website precisa, é preciso saber quem o visita, porquê e em que ponto da jornada. Sem isto, escolher entre \"Shopify ou WooCommerce\" é uma decisão técnica disfarçada de decisão estratégica."
+        },
+        {
+          "number": "02",
+          "title": "A ordem das fases pesa mais do que as funcionalidades.",
+          "desc": "A maioria dos negócios começa pela Direção (gestão de redes sociais) sem ter fundação (website e identidade) — e depois sente que está a fazer muito sem ver retorno, sem perceber porquê. O método Wavy inverte isto: primeiro reconstruímos as fundações, depois ativamos a comunicação."
+        },
+        {
+          "number": "03",
+          "title": "O Raio-X custa sempre — só varia quando o pagas.",
+          "desc": "Ou pagas 350€ ao início e tens clareza, ou pagas vários milhares em decisões erradas durante anos e arrependes-te. O Raio-X não é uma despesa extra — é a despesa que evita despesas piores."
+        }
+      ],
+      "closing": "É por isto que o Raio-X é sempre o primeiro passo — mesmo para quem chega convencido do que já quer.",
+      "ctaButton": "Fazer o Raio-X"
+    },
+    "faq": {
+      "label": "Perguntas frequentes",
+      "title": "Detalhes técnicos, em linguagem simples.",
+      "items": [
+        {
+          "q": "Posso passar direto à Obra sem fazer Raio-X?",
+          "a": "Não. O Raio-X é a única etapa obrigatória do método Wavy. Trabalhamos assim porque vimos demasiados projetos a falhar por se construir sem diagnóstico. Sem perceber o que está partido e em que ordem corrigir, qualquer Obra ou Direção é construção no escuro. A boa notícia: se decidires avançar para a Obra ou para a Direção, o valor do Raio-X (desde 350€ + IVA) é 100% deduzido no projeto seguinte."
+        },
+        {
+          "q": "Quanto tempo demora a construção de um website?",
+          "a": "Em média, entre 4 a 6 semanas, a contar da aprovação do briefing pós-Raio-X. A duração exata depende da complexidade do projeto: um website institucional simples fecha mais rápido; uma loja online com integrações específicas leva mais tempo. Definimos sempre um cronograma claro no início da Obra, com marcos quinzenais para garantir alinhamento contínuo."
+        },
+        {
+          "q": "De quem é o website depois da entrega?",
+          "a": "O website é 100% teu. Não cobramos royalties, não retemos propriedade nem cobramos por \"ativação\" de funcionalidades depois. Recebes acesso completo a todas as plataformas, contas e ficheiros — incluindo código-fonte, design e identidade visual. O nosso modelo é simples: entregamos um produto que tu controlas. Se um dia decidires sair, sais com tudo nas tuas mãos."
+        },
+        {
+          "q": "Posso ver os conteúdos antes de serem publicados?",
+          "a": "Sim, sempre. Cada conteúdo (post, artigo, story) é apresentado para aprovação antes da publicação. Tens visibilidade total sobre o calendário editorial mensal e podes solicitar ajustes em tempo útil. Trabalhamos com ferramentas de aprovação claras (não emails confusos) e respeitamos sempre o tom e os limites que definimos no início."
+        },
+        {
+          "q": "O que está incluído nos relatórios mensais?",
+          "a": "Relatórios pensados para donos de negócio, não para departamentos de marketing: indicadores de negócio reais (contactos qualificados, conversões no website, chamadas a partir do Google, presença em pesquisas locais — e, para lojas online, também dados de vendas), análise do que funcionou no mês, recomendações concretas para o seguinte, ranking de SEO local e comparativo trimestral. Sem PDFs gerados automaticamente: cada relatório é interpretado e contextualizado por nós, em linguagem simples."
+        },
+        {
+          "q": "E se eu precisar de pausar ou cancelar a Direção?",
+          "a": "Após o compromisso mínimo inicial (3 meses no plano base, 6 meses nos planos avançados), o serviço renova mensalmente. Podes cancelar com 30 dias de aviso prévio, sem penalizações. Para situações específicas — férias prolongadas, baixa sazonal, alteração de operação — falamos contigo caso a caso para encontrar a melhor solução. Sem amarras, sem ginásios de fim de contrato."
+        }
+      ]
     },
     "journey": {
       "label": "A tua jornada",

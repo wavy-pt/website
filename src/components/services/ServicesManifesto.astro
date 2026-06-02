@@ -1,0 +1,19 @@
+---
+import type { Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<section class="bg-offwhite pb-16 md:pb-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <p class="scroll-reveal text-center font-serif text-lg md:text-2xl italic text-teal-dark/80 max-w-2xl mx-auto">
+      {lang === 'en'
+        ? 'Diagnosis before execution. Foundation before direction. Always.'
+        : 'Diagnóstico antes da execução. Fundação antes da direção. Sempre.'}
+    </p>
+  </div>
+</section>

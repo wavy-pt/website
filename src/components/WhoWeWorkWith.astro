@@ -9,7 +9,7 @@ interface Props {
 const { lang } = Astro.props;
 const p = t(lang).personas;
 // CTA "teste rápido" → /servicos (onde vive o quiz) provisoriamente.
-const diagnosisUrl = getLocalizedPath('/servicos', lang);
+const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;
 
 const personaIcons = ['ri-history-line', 'ri-vip-crown-line', 'ri-store-2-line', 'ri-seedling-line'];
 ---
