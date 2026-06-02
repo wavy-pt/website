@@ -8,7 +8,7 @@
     "diagnosis": "Book a chat"
   },
   "footer": {
-    "tagline": "Digital Direction & Marketing — Western Zone & Greater Lisbon.",
+    "tagline": "Digital Direction & Marketing — West & Greater Lisbon.",
     "rights": "© 2026 Wavy. All rights reserved.",
     "navTitle": "Navigation",
     "contactTitle": "Contact"
@@ -115,7 +115,7 @@
     "label": "WHAT WE DO",
     "title": "A three-phase method. To rebuild your digital with logic.",
     "subtitle": "First we assess. Then we rebuild. Then we direct. You can enter at the phase that fits your reality — but the natural path is always: diagnosis → foundation → direction.",
-    "scope": ["Strategy", "Website", "Google My Business", "Social Media"],
+    "scope": ["Strategy", "Website", "Google Business Profile", "Social Media"],
     "start": {
       "tag": "WHERE TO START",
       "scriptName": "Strategic Diagnosis",
@@ -155,11 +155,11 @@
     "hero": {
       "tag": "Wavy Services",
       "headline": "Three services. One method. One direction.",
-      "subtitle": "From strategic diagnosis to ongoing direction. Each phase solves a specific problem — and sets up the one after. We always start with the X-ray, because building before diagnosing is building blind."
+      "subtitle": "From strategic diagnosis to ongoing direction. Each phase solves a specific problem — and sets up the one after. We always start with the X-Ray, because building before diagnosing is building blind."
     },
     "method": {
       "label": "The Wavy Method",
-      "title": "Why we always start with the X-ray.",
+      "title": "Why we always start with the X-Ray.",
       "subtitle": "Over years of working with brands, we've learned an expensive lesson: there's no sustainable digital project without a diagnosis before execution. Whoever builds in the dark, ends up rebuilding in the light.",
       "principles": [
         {
@@ -174,24 +174,24 @@
         },
         {
           "number": "03",
-          "title": "The X-ray always has a cost — only when you pay it changes.",
-          "desc": "You either pay €350 up front and gain clarity, or you pay thousands in wrong decisions over the years and regret it. The X-ray isn't an extra expense — it's the expense that prevents worse ones."
+          "title": "The X-Ray always has a cost — only when you pay it changes.",
+          "desc": "You either pay €350 up front and gain clarity, or you pay thousands in wrong decisions over the years and regret it. The X-Ray isn't an extra expense — it's the expense that prevents worse ones."
         }
       ],
-      "closing": "That's why the X-ray is always the first step — even for those who arrive convinced of what they already want.",
-      "ctaButton": "Get the X-ray"
+      "closing": "That's why the X-Ray is always the first step — even for those who arrive convinced of what they already want.",
+      "ctaButton": "Get the X-Ray"
     },
     "faq": {
       "label": "Frequently asked",
       "title": "Technical details, in plain language.",
       "items": [
         {
-          "q": "Can I skip straight to The Build without the X-ray?",
-          "a": "No. The X-ray is the only mandatory step of the Wavy method. We work this way because we've seen too many projects fail from being built without diagnosis. Without understanding what's broken and in what order to fix it, any Build or Direction is construction in the dark. The good news: if you decide to move forward to The Build or The Direction, the X-ray fee (from €350 + VAT) is fully credited to your next project."
+          "q": "Can I skip straight to The Build without the X-Ray?",
+          "a": "No. The X-Ray is the only mandatory step of the Wavy method. We work this way because we've seen too many projects fail from being built without diagnosis. Without understanding what's broken and in what order to fix it, any Build or Direction is construction in the dark. The good news: if you decide to move forward to The Build or The Direction, the X-Ray fee (from €350 + VAT) is fully credited to your next project."
         },
         {
           "q": "How long does it take to build a website?",
-          "a": "On average, between 4 and 6 weeks, starting from the approval of the post-X-ray briefing. The exact duration depends on project complexity: a simple institutional website wraps faster; an online store with specific integrations takes longer. We always set a clear timeline at the start of The Build, with biweekly milestones to ensure ongoing alignment."
+          "a": "On average, between 4 and 6 weeks, starting from the approval of the post-X-Ray briefing. The exact duration depends on project complexity: a simple institutional website wraps faster; an online store with specific integrations takes longer. We always set a clear timeline at the start of The Build, with biweekly milestones to ensure ongoing alignment."
         },
         {
           "q": "Who owns the website after delivery?",
@@ -243,7 +243,7 @@
           "typesLabel": "",
           "types": [],
           "forWhoLabel": "Who it's for",
-          "forWhoIntro": "The X-ray is for any established business that wants clarity before deciding the next digital step — whether or not you already know what you want to do next.",
+          "forWhoIntro": "The X-Ray is for any established business that wants clarity before deciding the next digital step — whether or not you already know what you want to do next.",
           "forWhoCases": [
             "Businesses that feel digital isn't delivering what it could.",
             "Owners who've invested in social media or websites without seeing clear results.",
@@ -276,7 +276,7 @@
           ],
           "stepsLabel": "How it works",
           "steps": [
-            { "title": "Post-X-ray briefing", "desc": "We define the exact scope of The Build, priorities and timeline." },
+            { "title": "Post-X-Ray briefing", "desc": "We define the exact scope of The Build, priorities and timeline." },
             { "title": "Strategy + Identity", "desc": "Positioning, visual identity and website architecture in parallel." },
             { "title": "Development + Content", "desc": "We build the website or store, create initial content and prepare the channels." },
             { "title": "Launch + Training", "desc": "We launch, train your team, and stay available for 30 days for technical adjustments." }
@@ -288,7 +288,7 @@
             { "tag": "For businesses in transition", "name": "Full Rebranding + Website", "desc": "New or refined visual identity with an aligned website. For generational transition, expansion or repositioning." }
           ],
           "forWhoLabel": "Who it's for",
-          "forWhoIntro": "The Build is for businesses that already have clarity about the problem and are ready for reconstruction. It typically follows the X-ray, when the diagnosis shows the foundations need to be rebuilt.",
+          "forWhoIntro": "The Build is for businesses that already have clarity about the problem and are ready for reconstruction. It typically follows the X-Ray, when the diagnosis shows the foundations need to be rebuilt.",
           "forWhoCases": [
             "Businesses without a website, or with an outdated one that doesn't convert.",
             "Brands with amateur or inconsistent visual identity across channels.",
@@ -354,7 +354,7 @@
         { "name": "Content capture", "desc": "Professional photography and video for social media", "price": "From 180€" },
         { "name": "Express Digital Audit", "desc": "Quick analysis of current presence with 5 to 7 recommendations.", "price": "100€" },
         { "name": "Paid ads management", "desc": "Management and monitoring of ads: Meta Ads and Google Ads", "price": "From 200€/month + investment" },
-        { "name": "Google My Business", "desc": "Complete setup + local SEO optimization", "price": "From 170€" },
+        { "name": "Google Business Profile", "desc": "Complete setup + local SEO optimisation", "price": "From 170€" },
         { "name": "One-time consulting session", "desc": "60 minutes of strategy and alignment", "price": "90€" }
       ]
     },
@@ -532,7 +532,7 @@
       "cards": [
         { "imageKey": "bastidores", "title": "Vera Barata", "category": "Floral design" },
         { "imageKey": "hero", "title": "ADDS", "category": "Technology consultancy" },
-        { "imageKey": "cta", "title": "Ana Lopes", "category": "Food brand" }
+        { "imageKey": "cta", "title": "Ana Lopes", "category": "Organic products" }
       ]
     },
     "ui": {
@@ -617,35 +617,35 @@
         }
       },
       {
-        "metadata": "FOOD PRODUCTS · SANTARÉM DISTRICT · EARLY 2025 · COMPLETED",
+        "metadata": "ORGANIC PRODUCTS · SANTARÉM DISTRICT · EARLY 2025 · COMPLETED",
         "imageKey": "cta",
-        "imageCaption": "ana-lopes · family food brand",
+        "imageCaption": "ana-lopes · family organic brand",
         "headlineBefore": "From farm to brand,",
         "headlineHighlight": "built on strategy.",
         "headlineAfter": "",
-        "description": "Ana's family runs a farm with surplus from several products — honey, olive oil, fruit. Ana saw an opportunity in that surplus: turning it into a food brand with its own identity. She had the name, a small logo and the first product out — the honey. What was missing was the strategic foundation to support everything that would come next.",
+        "description": "Ana's family runs a farm with surplus from several products — honey, olive oil, fruit. Ana saw an opportunity in that surplus: turning it into a brand of organic products with its own identity. She had the name, a small logo and the first product out — the honey. What was missing was the strategic foundation to support everything that would come next.",
         "stats": [
-          { "value": "X-ray", "label": "diagnosis + competitive analysis" },
+          { "value": "X-Ray", "label": "diagnosis + competitive analysis" },
           { "value": "1 brand", "label": "positioning and voice defined" },
           { "value": "Completed", "label": "ready for new products" }
         ],
         "quote": "The work plan Mariana built was incredible. From the first moment, she showed an impressive ability to understand my business. She translated ideas I hadn't even structured yet — bringing clarity, strategy and direction to the project. I felt truly supported every step of the way.",
-        "quoteAuthor": "ANA LOPES · FAMILY FOOD PRODUCTS BRAND",
+        "quoteAuthor": "ANA LOPES · FAMILY ORGANIC PRODUCTS BRAND",
         "detail": {
-          "intro": "Ana's family runs a farm with surplus — honey, olive oil, fruit. Ana wanted to turn it into a food brand with its own identity. What was missing was the strategic foundation.",
+          "intro": "Ana's family runs a farm with surplus — honey, olive oil, fruit. Ana wanted to turn it into a brand of organic products with its own identity. What was missing was the strategic foundation.",
           "sections": [
             { "title": "The challenge", "body": "The market is saturated with vague promises (\"natural\", \"sustainable\", \"made with love\") and no anonymous communication distinguishes a brand with a real story from an invented one. Ana needed a brand that proves — not one that promises." },
-            { "title": "What we did", "body": "Strategic X-ray (audit, competitive analysis and opportunities); positioning and purpose definition; verbal identity — message pillars and tone of voice; strategic brand book; and a roadmap with concrete next steps." },
+            { "title": "What we did", "body": "Strategic X-Ray (audit, competitive analysis and opportunities); positioning and purpose definition; verbal identity — message pillars and tone of voice; strategic brand book; and a roadmap with concrete next steps." },
             { "title": "What was built", "body": "Ana left with a compass: defined positioning, consolidated voice, clear priorities and next steps mapped out. The brand now has the language to talk about the farm, the family and the origin without falling into clichés." },
             { "title": "The result", "body": "It isn't measured in percentages — it's measured in strategic clarity. The brand now has direction, pillars and a voice ready to support any next step, including bringing new products to market." }
           ],
           "stats": [
-            { "value": "X-ray", "label": "full strategic diagnosis" },
+            { "value": "X-Ray", "label": "full strategic diagnosis" },
             { "value": "Position", "label": "and purpose defined" },
             { "value": "Voice", "label": "and message pillars" },
             { "value": "Completed", "label": "ready to scale" }
           ],
-          "services": ["Strategic X-ray", "Positioning", "Verbal identity", "Brand book"],
+          "services": ["Strategic X-Ray", "Positioning", "Verbal identity", "Brand book"],
           "gallery": [
             { "imageKey": "cta", "caption": "Positioning" },
             { "imageKey": "bastidores", "caption": "Brand pillars" },
@@ -693,7 +693,7 @@
         "icon": "ri-mail-send-line",
         "context": "if you prefer to write",
         "title": "Send us a message",
-        "desc": "Tell us about your business and what you are looking for. We reply within 24 business hours with full attention.",
+        "desc": "Tell us about your business and what you are looking for. We reply within 24 working hours with full attention.",
         "cta": "Write a message",
         "time": "Reply in 24h"
       }
@@ -773,15 +773,15 @@
     "items": [
       {
         "q": "What is the X-Ray and why do I have to start there?",
-        "a": "The X-ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence — website, social media, SEO, communication, and positioning — and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-ray fee is fully credited to your next project."
+        "a": "The X-Ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence — website, social media, SEO, communication, and positioning — and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-Ray fee is fully credited to your next project."
       },
       {
-        "q": "Do you work outside the Western Zone or Greater Lisbon?",
+        "q": "Do you work outside the West or Greater Lisbon?",
         "a": "Yes. We work with businesses across Portugal through online meetings and remote management. Our focus for in-person visits is concentrated in West and Greater Lisbon — where Wavy is based, in Mafra — but our process is designed to guide you with the same clarity, even from a distance. Outside these regions? Take the quick test or book a 30-minute call and we'll figure out together if there's a fit."
       },
       {
         "q": "How long does it take to see results with digital marketing?",
-        "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days — not as 'explosive results' but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time — which is exactly why we work with 3-to-6-month minimum commitments."
+        "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days — not as \"explosive results\" but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time — which is exactly why we work with 3-to-6-month minimum commitments."
       },
       {
         "q": "What's the difference between digital direction and social media management?",

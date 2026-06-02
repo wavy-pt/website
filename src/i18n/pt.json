@@ -72,7 +72,7 @@
       {
         "tag": "COMÉRCIO EM CRESCIMENTO",
         "title": "Cresci, abri lojas, contratei equipa. O digital ficou para trás.",
-        "desc": "Comércio local com 1 a 3 lojas, restauração com identidade, hotelaria boutique. Cresceu pelo boca-a-boca e pela qualidade. Agora precisa de digital para escalar sem perder o ADN."
+        "desc": "Comércio local com 1 a 3 lojas, restauração com identidade, hotelaria boutique. Cresceu pelo boca a boca e pela qualidade. Agora precisa de digital para escalar sem perder o ADN."
       },
       {
         "tag": "PRÓXIMA GERAÇÃO",
@@ -115,7 +115,7 @@
     "label": "O QUE FAZEMOS",
     "title": "Um método em três fases. Para reconstruir o teu digital com lógica.",
     "subtitle": "Primeiro avaliamos. Depois reconstruímos. Por fim, dirigimos. Podes entrar na fase que faz sentido para a tua realidade — mas o caminho natural é sempre: diagnóstico → fundação → direção.",
-    "scope": ["Estratégia", "Website", "Google My Business", "Redes sociais"],
+    "scope": ["Estratégia", "Website", "Google Business Profile", "Redes sociais"],
     "start": {
       "tag": "POR ONDE COMEÇAR",
       "scriptName": "Diagnóstico Estratégico",
@@ -354,7 +354,7 @@
         { "name": "Captação de conteúdo", "desc": "Fotografia e vídeo profissional para redes sociais", "price": "A partir de 180€" },
         { "name": "Auditoria Digital Express", "desc": "Análise rápida da presença atual com 5 a 7 recomendações.", "price": "100€" },
         { "name": "Gestão de anúncios pagos", "desc": "Gestão e monitorização de anúncios: Meta Ads e Google Ads", "price": "A partir de 200€/mês + investimento" },
-        { "name": "Google My Business", "desc": "Configuração completa + otimização para SEO local", "price": "A partir de 170€" },
+        { "name": "Google Business Profile", "desc": "Configuração completa + otimização para SEO local", "price": "A partir de 170€" },
         { "name": "Sessão de consultoria pontual", "desc": "60 minutos de estratégia e alinhamento", "price": "90€" }
       ]
     },
@@ -458,7 +458,7 @@
       "headlineHighlight": "da história.",
       "subtitle": "A Wavy nasceu da convicção de que negócios construídos com propósito merecem comunicação ao mesmo nível — sem se trair, sem se exaurir, sem virar conteúdo.",
       "marquee": [
-        { "type": "stat", "number": "3", "label": "Valores não-negociáveis", "cardColor": "teal" },
+        { "type": "stat", "number": "3", "label": "Valores não negociáveis", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Fundada em casa, numa sala de estar.", "cardColor": "cream" },
         { "type": "stat", "number": "5+", "label": "Setores prioritários", "cardColor": "teal-dark" },
         { "type": "image", "imageKey": "hero", "cardColor": "cream" },
@@ -476,7 +476,7 @@
       "headlineHighlight": "Mariana.",
       "paragraphs": [
         "Não vim do marketing. Vim das pessoas.",
-        "Durante muito tempo, achei que o meu caminho era disperso de mais para fazer sentido. Estudei línguas, segui turismo, trabalhei em eventos, geri uma categoria de retalho, tirei um mestrado em Gestão. De fora, podia parecer que andava à procura. Hoje sei que estava, sem dar por isso, a juntar as peças certas: aprendi a comunicar, a lidar com pessoas, a fazer marcas acontecer, e a perceber um negócio por dentro.",
+        "Durante muito tempo, achei que o meu caminho era disperso demais para fazer sentido. Estudei línguas, segui turismo, trabalhei em eventos, geri uma categoria de retalho, tirei um mestrado em Gestão. De fora, podia parecer que andava à procura. Hoje sei que estava, sem dar por isso, a juntar as peças certas: aprendi a comunicar, a lidar com pessoas, a fazer marcas acontecer, e a perceber um negócio por dentro.",
         "O design e o digital foram sempre a minha paixão paralela, aquilo a que voltava sempre, que estudava por gosto, que praticava em cada projeto que me passava pelas mãos. Até perceber que não tinha de ser paralelo. Que podia ser o centro.",
         "No fundo, sempre fui mais criativa do que analítica. Os números aprendi-os e respeito-os. Mas é nas ideias e nas histórias que me sinto em casa.",
         "A Wavy nasceu quando percebi que não andei perdida, andei a preparar-me. E que tinha algo raro para oferecer: a cabeça de quem percebe de negócio e o coração de quem cria.",
@@ -532,7 +532,7 @@
       "cards": [
         { "imageKey": "bastidores", "title": "Vera Barata", "category": "Decoração floral" },
         { "imageKey": "hero", "title": "ADDS", "category": "Consultoria tecnológica" },
-        { "imageKey": "cta", "title": "Ana Lopes", "category": "Marca alimentar" }
+        { "imageKey": "cta", "title": "Ana Lopes", "category": "Produtos biológicos" }
       ]
     },
     "ui": {
@@ -617,22 +617,22 @@
         }
       },
       {
-        "metadata": "PRODUTOS ALIMENTARES · DISTRITO DE SANTARÉM · INÍCIO 2025 · CONCLUÍDO",
+        "metadata": "PRODUTOS BIOLÓGICOS · DISTRITO DE SANTARÉM · INÍCIO 2025 · CONCLUÍDO",
         "imageKey": "cta",
-        "imageCaption": "ana-lopes · marca alimentar familiar",
+        "imageCaption": "ana-lopes · marca biológica familiar",
         "headlineBefore": "Da quinta à marca,",
         "headlineHighlight": "com fundação estratégica.",
         "headlineAfter": "",
-        "description": "A família da Ana tem uma quinta com excedente de vários produtos — mel, azeite, fruta. A Ana viu nesse excedente uma oportunidade: transformá-lo numa marca alimentar com identidade própria. Tinha o nome, um pequeno logótipo e o primeiro produto a sair — o mel. Faltava-lhe a fundação estratégica para sustentar tudo o que viria a seguir.",
+        "description": "A família da Ana tem uma quinta com excedente de vários produtos — mel, azeite, fruta. A Ana viu nesse excedente uma oportunidade: transformá-lo numa marca de produtos biológicos com identidade própria. Tinha o nome, um pequeno logótipo e o primeiro produto a sair — o mel. Faltava-lhe a fundação estratégica para sustentar tudo o que viria a seguir.",
         "stats": [
           { "value": "Raio-X", "label": "diagnóstico + análise competitiva" },
           { "value": "1 marca", "label": "posicionamento e voz definidos" },
           { "value": "Concluído", "label": "pronta para novos produtos" }
         ],
         "quote": "O plano de trabalho que a Mariana criou foi incrível. Desde o primeiro momento, demonstrou uma capacidade impressionante de compreender o meu negócio. Conseguiu traduzir ideias que eu ainda não tinha estruturado — trazendo clareza, estratégia e direção ao projeto. Senti-me verdadeiramente acompanhada em cada passo.",
-        "quoteAuthor": "ANA LOPES · MARCA DE PRODUTOS ALIMENTARES",
+        "quoteAuthor": "ANA LOPES · MARCA DE PRODUTOS BIOLÓGICOS",
         "detail": {
-          "intro": "A família da Ana tem uma quinta com excedente — mel, azeite, fruta. A Ana quis transformá-lo numa marca alimentar com identidade própria. Faltava-lhe a fundação estratégica.",
+          "intro": "A família da Ana tem uma quinta com excedente — mel, azeite, fruta. A Ana quis transformá-lo numa marca de produtos biológicos com identidade própria. Faltava-lhe a fundação estratégica.",
           "sections": [
             { "title": "O desafio", "body": "O mercado está saturado de promessas vagas (\"natural\", \"sustentável\", \"feito com amor\") e nenhuma comunicação anónima distingue uma marca com história real de outra inventada. A Ana precisava de uma marca que provasse — não que prometesse." },
             { "title": "O que fizemos", "body": "Raio-X estratégico (auditoria, análise competitiva e oportunidades); definição de posicionamento e propósito; identidade verbal — pilares de mensagem e tom de voz; manual estratégico de marca; e plano de trabalho com próximos passos concretos." },
@@ -676,7 +676,7 @@
       "card1": {
         "icon": "ri-file-list-line",
         "context": "se ainda estás a explorar",
-        "title": "Faz o auto-diagnóstico",
+        "title": "Faz o autodiagnóstico",
         "desc": "5 perguntas simples. No fim, descobres em que ponto está o teu negócio digital e qual o próximo passo que faz sentido.",
         "cta": "Fazer o diagnóstico",
         "time": "3 minutos"
@@ -781,7 +781,7 @@
       },
       {
         "q": "Quanto tempo demora a ver resultados com marketing digital?",
-        "a": "A resposta honesta: depende do ponto de partida e do canal. Em SEO local e gestão de redes sociais, os primeiros sinais surgem normalmente entre 60 a 90 dias — não como 'resultados explosivos', mas como tração consistente. Conversões reais (vendas, contactos, agenda preenchida) começam tipicamente entre o 4º e o 6º mês. Quem promete resultados em 30 dias está a vender uma campanha pontual, não direção digital. Marketing digital sustentável demora — e é exatamente por isso que trabalhamos com compromissos mínimos de 3 a 6 meses."
+        "a": "A resposta honesta: depende do ponto de partida e do canal. Em SEO local e gestão de redes sociais, os primeiros sinais surgem normalmente entre 60 a 90 dias — não como \"resultados explosivos\", mas como tração consistente. Conversões reais (vendas, contactos, agenda preenchida) começam tipicamente entre o 4º e o 6º mês. Quem promete resultados em 30 dias está a vender uma campanha pontual, não direção digital. Marketing digital sustentável demora — e é exatamente por isso que trabalhamos com compromissos mínimos de 3 a 6 meses."
       },
       {
         "q": "Qual é a diferença entre direção digital e gestão de redes sociais?",
