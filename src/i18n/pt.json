@@ -669,7 +669,7 @@
     "page": {
       "label": "contacto",
       "title": "Vamos conversar?",
-      "subtitle": "Antes de qualquer proposta, há sempre uma conversa. Escolhe o caminho que faz mais sentido para ti agora — não há resposta errada."
+      "subtitle": "Antes de qualquer proposta, há sempre uma conversa. Escolhe o caminho mais confortável — não há resposta errada."
     },
     "options": {
       "label": "três caminhos",
@@ -699,17 +699,17 @@
       }
     },
     "form": {
-      "title": "Manda-me uma mensagem",
+      "title": "Manda-nos uma mensagem",
       "name": "Nome",
       "namePlaceholder": "O teu nome",
       "email": "Email",
-      "emailPlaceholder": "tu@exemplo.com",
-      "business": "Negócio / Projeto",
-      "businessPlaceholder": "Nome do teu negócio (opcional)",
+      "emailPlaceholder": "email@negocio.pt",
+      "business": "Negócio ou projeto",
+      "businessPlaceholder": "Nome do negócio + setor",
       "message": "Mensagem",
-      "messagePlaceholder": "Conta-nos um pouco sobre o teu negócio e o que procuras...",
+      "messagePlaceholder": "Conta-nos onde estás e o que procuras",
       "submit": "Enviar mensagem",
-      "privacy": "Os teus dados são tratados com respeito. Nunca partilhados.",
+      "privacy": "Os teus dados são tratados com respeito. Nunca partilhados. Não vais entrar em listas de email automáticas.",
       "sending": "A enviar…",
       "successTitle": "Mensagem enviada!",
       "success": "Obrigada! Vou ler com atenção e respondo em até 24h úteis.",
@@ -720,14 +720,22 @@
     },
     "connect": {
       "ctaContext": "se já sabes o que queres",
-      "ctaTitle": "Marca uma conversa",
-      "ctaDesc": "15 minutos, em vídeo ou telefone, para percebermos onde estás e como te posso ajudar. Sem compromisso.",
+      "ctaTitle": "Marca uma conversa de 30 minutos",
+      "ctaDesc": "Em vídeo ou por telefone — escolhes tu. Ouvimos onde estás, validamos juntos se faz sentido avançar e — se for caso disso — explicamos os próximos passos. Sem propostas, sem pressão.",
       "ctaButton": "Escolher horário",
       "socialTitle": "Segue a Wavy",
-      "socialDesc": "O dia a dia, bastidores e ideias no Instagram e Facebook.",
-      "emailTitle": "Escreve diretamente",
-      "emailDesc": "Resposta em até 24h úteis.",
+      "socialDesc": "O dia a dia, bastidores e ideias — partilhamos no Instagram e Facebook.",
+      "emailTitle": "Envia-nos um email",
+      "emailDesc": "Para quem prefere o formato livre, sem campos. Escreve o que quiseres — respondemos em até 24h úteis.",
       "email": "geral@wavy.pt"
+    },
+    "whereWeAre": {
+      "label": "Onde estamos",
+      "blocks": [
+        { "icon": "ri-map-pin-line", "title": "Localização", "body": "Sediada em Mafra, Zona Oeste de Lisboa." },
+        { "icon": "ri-global-line", "title": "Cobertura", "body": "Trabalhamos com negócios em todo o país — presenciais na Zona Oeste e Grande Lisboa, à distância no resto de Portugal." },
+        { "icon": "ri-time-line", "title": "Resposta", "body": "Resposta em até 24 horas úteis. De segunda a sexta, das 9h às 18h." }
+      ]
     }
   },
   "cases": {

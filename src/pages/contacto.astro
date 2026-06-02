@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import ScrollReveal from '../components/ScrollReveal.astro';
 import ContactHero from '../components/contact/ContactHero.astro';
 import ContactForm from '../components/contact/ContactForm.astro';
+import ContactWhereWeAre from '../components/contact/ContactWhereWeAre.astro';
 import { isProd } from '../lib/env';
 
 if (isProd) {
@@ -11,10 +12,11 @@ if (isProd) {
 ---
 
 <Layout
-  title="Contacto · Marca uma Conversa com a Wavy"
-  description="Vamos conversar? Preenche o formulário, marca uma conversa ou fala connosco pelas redes sociais e por email."
+  title="Contacto · Marca uma Conversa de 30 min | Wavy"
+  description="Três formas de começar: formulário, conversa de 30 minutos ou email. Sediados em Mafra. Trabalhamos com negócios em toda a Portugal. Resposta em 24h."
 >
   <ContactHero lang="pt" />
   <ContactForm lang="pt" />
+  <ContactWhereWeAre lang="pt" />
   <ScrollReveal />
 </Layout>

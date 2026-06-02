@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ScrollReveal from '../../components/ScrollReveal.astro';
 import ContactHero from '../../components/contact/ContactHero.astro';
 import ContactForm from '../../components/contact/ContactForm.astro';
+import ContactWhereWeAre from '../../components/contact/ContactWhereWeAre.astro';
 import { isProd } from '../../lib/env';
 
 if (isProd) {
@@ -11,10 +12,11 @@ if (isProd) {
 ---
 
 <Layout
-  title="Contact · Book a Conversation with Wavy"
-  description="Let's talk? Fill in the form, book a conversation, or reach us through social media and email."
+  title="Contact · Book a 30-min Conversation | Wavy"
+  description="Three ways to start: form, 30-minute call, or email. Based in Mafra. We work with businesses across Portugal. Reply within 24 working hours."
 >
   <ContactHero lang="en" />
   <ContactForm lang="en" />
+  <ContactWhereWeAre lang="en" />
   <ScrollReveal />
 </Layout>
