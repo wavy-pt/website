@@ -4,6 +4,7 @@ import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
 import bastidoresImage from '../../assets/wavy-bastidores.jpg';
 import ServicesQuiz from './ServicesQuiz.astro';
+import { schedulingHref, schedulingIsExternal } from '../../lib/env';
 
 interface Props {
   lang: Lang;
@@ -11,7 +12,8 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang).servicesPage.cta;
-const contactHref = getLocalizedPath('/contacto', lang);
+// "Marca uma conversa de 30 min" → Calendly em nova aba (como os restantes CTAs de marcação).
+const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
 ---
 
 <section class="bg-offwhite pt-10 md:pt-0 pb-14 md:pb-20">
@@ -57,7 +59,9 @@ const contactHref = getLocalizedPath('/contacto', lang);
               {i.ctaCardDesc}
             </p>
             <a
-              href={contactHref}
+              href={ctaHref}
+              target={schedulingIsExternal ? '_blank' : undefined}
+              rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
               class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full bg-cream text-teal-dark hover:bg-offwhite transition-all duration-300 whitespace-nowrap w-full sm:w-auto self-start"
             >
               {i.ctaCardButton}
