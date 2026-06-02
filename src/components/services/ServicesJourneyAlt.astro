@@ -10,6 +10,7 @@
  */
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
+import { schedulingHref, schedulingIsExternal } from '../../lib/env';
 
 interface Props {
   lang: Lang;
@@ -17,7 +18,8 @@ interface Props {
 
 const { lang } = Astro.props;
 const j = t(lang).servicesPage.journey;
-const contactHref = getLocalizedPath('/contacto', lang);
+// CTAs "Marcar o Raio-X / Conhecer o plano" → Calendly (marcação direta).
+const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 ---
 
 <section id="journey" class="bg-offwhite pt-20 md:pt-28 pb-10 md:pb-0 relative overflow-hidden scroll-mt-24">
@@ -104,8 +106,9 @@ const contactHref = getLocalizedPath('/contacto', lang);
                   {s.desc}
                 </p>
 
-                {/* Deliverables em 2 colunas (mais compacto) */}
-                <div class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                {/* O que recebes / inclui */}
+                <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal mb-4">{s.deliverablesLabel}</p>
+                <div class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-6">
                   {s.deliverables.map((item) => (
                     <div class="flex items-start gap-3">
                       <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
@@ -118,8 +121,72 @@ const contactHref = getLocalizedPath('/contacto', lang);
                   ))}
                 </div>
 
+                {/* Botão para expandir o detalhe completo do serviço */}
+                <button
+                  type="button"
+                  data-service-toggle
+                  aria-expanded="false"
+                  class="inline-flex items-center gap-2 font-sans text-sm font-medium text-teal hover:text-teal-dark transition-colors"
+                >
+                  <span data-toggle-label>{lang === 'en' ? 'See full detail' : 'Ver detalhe completo'}</span>
+                  <i class="ri-arrow-down-s-line text-lg transition-transform duration-300" aria-hidden="true"></i>
+                </button>
+
+                {/* Detalhe colapsável: 3 tipos + como funciona + para quem é */}
+                <div data-service-detail class="overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0">
+                  <div class="pt-6">
+
+                {/* 3 tipos (apenas A Obra) */}
+                {s.types.length > 0 && (
+                  <div class="mb-8">
+                    <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal mb-4">{s.typesLabel}</p>
+                    <div class="grid sm:grid-cols-3 gap-3">
+                      {s.types.map((ty) => (
+                        <div class="bg-cream rounded-2xl p-4">
+                          <p class="font-sans text-[10px] uppercase tracking-wider text-teal-dark/50 mb-1.5 leading-snug">{ty.tag}</p>
+                          <p class="font-serif text-base font-medium text-teal-dark mb-1 leading-snug">{ty.name}</p>
+                          <p class="font-sans text-xs text-muted leading-relaxed">{ty.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Como funciona */}
+                <div class="mb-8">
+                  <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal mb-4">{s.stepsLabel}</p>
+                  <div class="flex flex-col gap-4">
+                    {s.steps.map((st, i) => (
+                      <div class="flex gap-4">
+                        <span class="font-serif text-lg font-medium text-teal/40 leading-none w-6 shrink-0 pt-0.5">{i + 1}</span>
+                        <div>
+                          <p class="font-sans text-sm font-medium text-teal-dark">{st.title}</p>
+                          <p class="font-sans text-sm text-muted leading-relaxed">{st.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Para quem é */}
+                <div class="mb-2">
+                  <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal mb-3">{s.forWhoLabel}</p>
+                  <p class="font-sans text-sm text-teal-dark/80 leading-relaxed mb-4 max-w-2xl">{s.forWhoIntro}</p>
+                  <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                    {s.forWhoCases.map((c) => (
+                      <div class="flex items-start gap-2">
+                        <i class="ri-arrow-right-s-line text-teal mt-0.5 shrink-0" aria-hidden="true"></i>
+                        <span class="font-sans text-sm text-muted leading-relaxed">{c}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                  </div>
+                </div>
+
                 {/* Price + CTA */}
-                <div class="border-t border-teal-dark/10 pt-5 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+                <div class="border-t border-teal-dark/10 pt-5 mt-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
                   <div>
                     <div class="flex items-baseline gap-2 flex-wrap">
                       <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/60">
@@ -141,7 +208,9 @@ const contactHref = getLocalizedPath('/contacto', lang);
                     )}
                   </div>
                   <a
-                    href={contactHref}
+                    href={ctaUrl}
+                    target={schedulingIsExternal ? '_blank' : undefined}
+                    rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
                     class="inline-flex items-center justify-center gap-2 font-sans text-sm font-medium px-6 py-3 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap shrink-0 group"
                   >
                     {s.cta}
@@ -263,10 +332,43 @@ const contactHref = getLocalizedPath('/contacto', lang);
     }
   }
 
-  document.addEventListener('astro:page-load', initJourneyFocus);
-  if (document.readyState !== 'loading') {
+  // --- Toggle "Ver detalhe completo" por card de serviço ---
+  function initServiceToggles() {
+    document.querySelectorAll<HTMLButtonElement>('[data-service-toggle]').forEach((btn) => {
+      if (btn.dataset.bound === 'true') return;
+      btn.dataset.bound = 'true';
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.journey-item');
+        const detail = item?.querySelector<HTMLElement>('[data-service-detail]');
+        const label = btn.querySelector<HTMLElement>('[data-toggle-label]');
+        const icon = btn.querySelector('i');
+        if (!detail) return;
+        const isOpen = !!detail.style.maxHeight && detail.style.maxHeight !== '0px';
+        const en = document.documentElement.lang === 'en';
+        if (isOpen) {
+          detail.style.maxHeight = '0px';
+          btn.setAttribute('aria-expanded', 'false');
+          icon?.classList.remove('rotate-180');
+          if (label) label.textContent = en ? 'See full detail' : 'Ver detalhe completo';
+        } else {
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+          icon?.classList.add('rotate-180');
+          if (label) label.textContent = en ? 'See less' : 'Ver menos';
+        }
+      });
+    });
+  }
+
+  function initJourney() {
     initJourneyFocus();
+    initServiceToggles();
+  }
+
+  document.addEventListener('astro:page-load', initJourney);
+  if (document.readyState !== 'loading') {
+    initJourney();
   } else {
-    document.addEventListener('DOMContentLoaded', initJourneyFocus);
+    document.addEventListener('DOMContentLoaded', initJourney);
   }
 </script>

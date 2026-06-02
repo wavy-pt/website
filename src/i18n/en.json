@@ -223,20 +223,38 @@
           "scriptName": "Strategic Diagnosis",
           "name": "The X-Ray",
           "tagline": "To understand where you stand before moving forward",
-          "desc": "Before any proposal, we analyse what is invisible. In 5 working days you receive a complete map of your digital presence, the 5 priority problems and a concrete action plan for your business. We talk for 30 minutes to explain everything.",
+          "desc": "Before proposing any path, we run a rigorous analysis of everything that makes up your digital presence. We identify what's working, what's broken, and — above all — the 5 priority issues holding your business back online. You get a concrete map: what to fix, in what order, and why.",
+          "deliverablesLabel": "What you get",
           "deliverables": [
-            "Complete digital presence audit",
-            "Identification of the 5 priority problems",
-            "Concrete and detailed action plan",
-            "30-minute conversation to explain everything",
-            "Delivery in 5 working days",
-            "Value deductible in the next project"
+            "Complete website audit (UX, speed, mobile, technical SEO)",
+            "Social media analysis (profiles, content, positioning, audience)",
+            "Local SEO diagnosis (Google Business Profile, keywords, maps)",
+            "Visual identity and communication tone assessment",
+            "Identification of the 5 priority issues to fix",
+            "Concrete, ordered action plan with next steps",
+            "30-minute walkthrough conversation, in person or via video"
+          ],
+          "stepsLabel": "How it works",
+          "steps": [
+            { "title": "Briefing (30 min)", "desc": "Initial call to understand your business, goals, and context." },
+            { "title": "Deep analysis", "desc": "We dive into your digital ecosystem with professional tools. The invisible part of the work — and where 80% of the value lives." },
+            { "title": "Delivery + walkthrough", "desc": "You receive the full report and we meet for 30 minutes to walk you through each finding. We don't just send a PDF and wish you luck." }
+          ],
+          "typesLabel": "",
+          "types": [],
+          "forWhoLabel": "Who it's for",
+          "forWhoIntro": "The X-ray is for any established business that wants clarity before deciding the next digital step — whether or not you already know what you want to do next.",
+          "forWhoCases": [
+            "Businesses that feel digital isn't delivering what it could.",
+            "Owners who've invested in social media or websites without seeing clear results.",
+            "Companies with \"decent\" digital presence wanting to spot where opportunities slip through.",
+            "Brands in transition (rebranding, expansion, generational handover)."
           ],
           "price": "350€",
           "priceLabel": "FROM",
           "pricePeriod": "",
-          "priceNote": "Value 100% deducted if you move forward with the Build.",
-          "cta": "Learn more about the X-Ray",
+          "priceNote": "+ VAT · 100% credited to your next project (within 30 days of delivery).",
+          "cta": "Book my X-Ray",
           "icon": "ri-search-eye-line"
         },
         {
@@ -246,20 +264,42 @@
           "scriptName": "Website and Strategic Identity",
           "name": "The Build",
           "tagline": "To set the right foundations",
-          "desc": "We build the digital foundations your business deserves. Website, online store, visual identity and strategy, all planned and executed by the same team, from start to finish.",
+          "desc": "The Build is where the structural problem gets solved. We rebuild your business's digital foundations — website or online store, visual identity, communication strategy, and complete channel setup. You don't coordinate five vendors: the same team that defines the strategy executes the build.",
+          "deliverablesLabel": "What's included",
           "deliverables": [
-            "Institutional website or online store",
-            "Visual identity (logo, palette, typography)",
-            "Content strategy and positioning",
-            "Complete social media setup",
-            "Communication guide and tone of voice",
-            "Training and initial support"
+            "Strategic positioning session and brand research",
+            "Visual identity (logo, palette, typography, applications)",
+            "Institutional website or online store, responsive and technical-SEO optimised",
+            "Complete setup of social media and Google Business Profile",
+            "Communication guidelines and tone of voice + initial training",
+            "30-day technical warranty after launch"
+          ],
+          "stepsLabel": "How it works",
+          "steps": [
+            { "title": "Post-X-ray briefing", "desc": "We define the exact scope of The Build, priorities and timeline." },
+            { "title": "Strategy + Identity", "desc": "Positioning, visual identity and website architecture in parallel." },
+            { "title": "Development + Content", "desc": "We build the website or store, create initial content and prepare the channels." },
+            { "title": "Launch + Training", "desc": "We launch, train your team, and stay available for 30 days for technical adjustments." }
+          ],
+          "typesLabel": "3 typical types of Build",
+          "types": [
+            { "tag": "For services and professionals", "name": "Strategic Institutional Website", "desc": "Built to generate authority and qualified leads. For clinics, ateliers, practices and professional services." },
+            { "tag": "For retail and product brands", "name": "Strategic Online Store", "desc": "E-commerce built to sell, with conversion-optimised structure and a strategy that connects brand to sales." },
+            { "tag": "For businesses in transition", "name": "Full Rebranding + Website", "desc": "New or refined visual identity with an aligned website. For generational transition, expansion or repositioning." }
+          ],
+          "forWhoLabel": "Who it's for",
+          "forWhoIntro": "The Build is for businesses that already have clarity about the problem and are ready for reconstruction. It typically follows the X-ray, when the diagnosis shows the foundations need to be rebuilt.",
+          "forWhoCases": [
+            "Businesses without a website, or with an outdated one that doesn't convert.",
+            "Brands with amateur or inconsistent visual identity across channels.",
+            "Retailers wanting their own online store, without depending on external platforms.",
+            "Companies in generational transition where the next generation wants to modernise the brand."
           ],
           "price": "1,500€",
           "priceLabel": "FROM",
           "pricePeriod": "",
-          "priceNote": "Each project is quoted individually after the X-Ray.",
-          "cta": "See what the Build includes",
+          "priceNote": "+ VAT · quoted after the X-Ray. Payment in 3 instalments (40% start · 30% midpoint · 30% launch).",
+          "cta": "Book the X-Ray first",
           "icon": "ri-layout-4-line"
         },
         {
@@ -269,19 +309,36 @@
           "scriptName": "Social Media and Local SEO",
           "name": "The Direction",
           "tagline": "To grow without losing control",
-          "desc": "For brands with history that want to grow without losing control. We handle social media management, Google and Maps optimisation (local SEO), content strategy and clear monthly reports.",
+          "desc": "The Direction is where Wavy takes ongoing charge of your digital. Monthly strategy, content, channel management, local SEO and clear reports — to grow without losing control, and without having to manage an internal team. At full level, we operate as your external CMO.",
+          "deliverablesLabel": "What's included",
           "deliverables": [
-            "Monthly content calendar",
-            "Design and editing included",
-            "Google My Business optimisation",
-            "Local SEO (Western Zone and Greater Lisbon)",
-            "Clear monthly reports",
-            "Continuous support and strategy"
+            "Monthly strategy and editorial calendar",
+            "Content creation: copy, design and editing",
+            "Channel management (publishing, community, messages)",
+            "Local SEO (Google Business Profile, keywords, maps)",
+            "Monthly alignment meeting and clear report",
+            "A single point of contact for the whole strategy"
+          ],
+          "stepsLabel": "How it works (monthly cycle)",
+          "steps": [
+            { "title": "Alignment", "desc": "Monthly meeting to review results, adjust priorities and set the month ahead." },
+            { "title": "Execution", "desc": "We produce content, optimise channels and manage communities. You watch the brand come alive." },
+            { "title": "Analysis", "desc": "Clear monthly report: what happened, why, and what we're adjusting next." }
+          ],
+          "typesLabel": "",
+          "types": [],
+          "forWhoLabel": "Who it's for",
+          "forWhoIntro": "The Direction is for businesses that already have a foundation (website and identity) and want to activate communication continuously, with strategy instead of improvisation.",
+          "forWhoCases": [
+            "Brands with a ready website but inactive or inconsistent social media.",
+            "Established businesses wanting to professionalise their monthly digital presence.",
+            "Companies that tried managing social internally and realised they need strategic direction.",
+            "Professionals wanting to delegate the entire digital to a trusted partner."
           ],
           "price": "750€",
           "priceLabel": "FROM",
           "pricePeriod": "/month",
-          "priceNote": "",
+          "priceNote": "+ VAT · 3-month minimum (entry) or 6 months (advanced). Monthly payment in advance.",
           "cta": "Discover the plan",
           "icon": "ri-calendar-event-line"
         }

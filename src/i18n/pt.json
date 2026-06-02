@@ -223,20 +223,38 @@
           "scriptName": "Diagnóstico Estratégico",
           "name": "O Raio-X",
           "tagline": "Para perceberes onde estás antes de avançar",
-          "desc": "Antes de qualquer proposta, analisamos o que está invisível. Em 5 dias úteis recebes um mapa completo da tua presença digital, os 5 problemas prioritários e um plano de ação concreto para o teu negócio. Conversamos 30 minutos, para te explicar tudo.",
+          "desc": "Antes de propor qualquer caminho, fazemos uma análise rigorosa de tudo o que constitui a tua presença digital. Identificamos o que está a funcionar, o que está partido e — sobretudo — os 5 problemas prioritários que estão a impedir o teu negócio de crescer online. Entregamos um mapa concreto: o que arranjar, em que ordem e porquê.",
+          "deliverablesLabel": "O que recebes",
           "deliverables": [
-            "Auditoria completa da presença digital",
-            "Identificação dos 5 problemas prioritários",
-            "Plano de ação concreto e detalhado",
-            "Conversa de 30 minutos para explicar tudo",
-            "Entrega em 5 dias úteis",
-            "Valor deduzível no projeto seguinte"
+            "Auditoria completa do website (UX, velocidade, mobile, SEO técnico)",
+            "Análise das redes sociais (perfis, conteúdo, posicionamento, audiência)",
+            "Diagnóstico de SEO local (Google Business Profile, palavras-chave, mapas)",
+            "Avaliação da identidade visual e tom de comunicação",
+            "Identificação dos 5 problemas prioritários a corrigir",
+            "Plano de ação concreto e ordenado, com próximos passos",
+            "Conversa de 30 minutos para explicar tudo, presencial ou em vídeo"
+          ],
+          "stepsLabel": "Como funciona",
+          "steps": [
+            { "title": "Briefing (30 min)", "desc": "Conversa inicial para entender o teu negócio, objetivos e contexto." },
+            { "title": "Análise profunda", "desc": "Mergulhamos no teu ecossistema digital com ferramentas profissionais. É a parte invisível do trabalho — e onde está 80% do valor." },
+            { "title": "Entrega + sessão de explicação", "desc": "Recebes o relatório completo e conversamos 30 minutos para explicar cada conclusão e prioridade. Não te entregamos um PDF e desejamos boa sorte." }
+          ],
+          "typesLabel": "",
+          "types": [],
+          "forWhoLabel": "Para quem é",
+          "forWhoIntro": "O Raio-X é para qualquer negócio consolidado que queira clareza antes de decidir o próximo passo digital — quer já saiba o que quer fazer, quer não.",
+          "forWhoCases": [
+            "Negócios que sentem que o digital não está a entregar o que poderia.",
+            "Donos que já investiram em redes sociais ou websites e não viram resultados claros.",
+            "Empresas com presença \"razoável\" que querem perceber onde perdem oportunidades.",
+            "Marcas em transição (rebranding, expansão, mudança geracional)."
           ],
           "price": "350€",
           "priceLabel": "DESDE",
           "pricePeriod": "",
-          "priceNote": "Valor 100% deduzido se avançares para a Obra.",
-          "cta": "Saber mais sobre o Raio-X",
+          "priceNote": "+ IVA · 100% deduzível no projeto seguinte (até 30 dias após a entrega).",
+          "cta": "Marcar o meu Raio-X",
           "icon": "ri-search-eye-line"
         },
         {
@@ -246,20 +264,42 @@
           "scriptName": "Website e Identidade Estratégica",
           "name": "A Obra",
           "tagline": "Para construires as fundações certas",
-          "desc": "Construímos as fundações digitais que o teu negócio exige. Website, loja online, identidade visual e estratégia, tudo planeado e executado pela mesma equipa, do início ao fim.",
+          "desc": "A Obra é onde se resolve o problema estrutural. Reconstruímos as fundações digitais do teu negócio — website ou loja online, identidade visual, estratégia de comunicação e setup completo dos canais. Não coordenas cinco fornecedores: a mesma equipa que define a estratégia executa a obra.",
+          "deliverablesLabel": "O que inclui",
           "deliverables": [
-            "Website institucional ou loja online",
-            "Identidade visual (logo, paleta, tipografia)",
-            "Estratégia de conteúdo e posicionamento",
-            "Setup completo de redes sociais",
-            "Guia de comunicação e tom de voz",
-            "Formação e acompanhamento inicial"
+            "Sessão estratégica de posicionamento e pesquisa de marca",
+            "Identidade visual (logótipo, paleta, tipografia, aplicações)",
+            "Website institucional ou loja online, responsivo e otimizado para SEO técnico",
+            "Setup completo de redes sociais e Google Business Profile",
+            "Guia de comunicação e tom de voz + formação inicial",
+            "Garantia técnica de 30 dias após o lançamento"
+          ],
+          "stepsLabel": "Como funciona",
+          "steps": [
+            { "title": "Briefing pós-Raio-X", "desc": "Definimos o âmbito exato da Obra, prioridades e cronograma." },
+            { "title": "Estratégia + Identidade", "desc": "Posicionamento, identidade visual e arquitetura do website em paralelo." },
+            { "title": "Desenvolvimento + Conteúdos", "desc": "Construímos o website ou loja, criamos os conteúdos iniciais e preparamos os canais." },
+            { "title": "Lançamento + Formação", "desc": "Lançamos, damos formação e ficamos disponíveis 30 dias para ajustes técnicos." }
+          ],
+          "typesLabel": "3 tipos típicos de Obra",
+          "types": [
+            { "tag": "Para serviços e profissionais", "name": "Website Institucional Estratégico", "desc": "Pensado para gerar autoridade e contactos qualificados. Para clínicas, ateliers, consultórios e serviços profissionais." },
+            { "tag": "Para comércio e marcas com produto", "name": "Loja Online Estratégica", "desc": "E-commerce construído para vender, com estrutura otimizada para conversão e estratégia que liga marca a vendas." },
+            { "tag": "Para negócios em transição", "name": "Rebranding Completo + Website", "desc": "Identidade nova ou refinada e website alinhado. Para transição geracional, expansão ou reposicionamento." }
+          ],
+          "forWhoLabel": "Para quem é",
+          "forWhoIntro": "A Obra é para negócios que já têm clareza sobre o problema e estão prontos para a reconstrução. Tipicamente segue-se ao Raio-X, quando o diagnóstico mostra que as fundações precisam de ser refeitas.",
+          "forWhoCases": [
+            "Negócios sem website, ou com um website desatualizado que não converte.",
+            "Marcas com identidade visual amadora ou inconsistente entre canais.",
+            "Comércios que querem entrar no online com loja própria, sem depender de plataformas externas.",
+            "Empresas em transição geracional onde a próxima geração quer modernizar a marca."
           ],
           "price": "1.500€",
           "priceLabel": "A PARTIR DE",
           "pricePeriod": "",
-          "priceNote": "Cada projeto é orçamentado individualmente após o Raio-X.",
-          "cta": "Ver o que inclui a Obra",
+          "priceNote": "+ IVA · orçamentado após o Raio-X. Pagamento em 3 tranches (40% início · 30% meio · 30% lançamento).",
+          "cta": "Marcar o Raio-X primeiro",
           "icon": "ri-layout-4-line"
         },
         {
@@ -269,19 +309,36 @@
           "scriptName": "Gestão de Redes Sociais e SEO Local",
           "name": "A Direção",
           "tagline": "Para crescer sem perder o controlo",
-          "desc": "Para marcas com história que querem crescer sem perder o controlo. Tratamos da gestão de redes sociais, otimização do Google e mapas (SEO local), estratégia de conteúdo e relatórios mensais claros.",
+          "desc": "A Direção é onde a Wavy assume a direção contínua do teu digital. Estratégia mensal, conteúdo, gestão dos canais, SEO local e relatórios claros — para crescer sem perder o controlo, e sem ter de coordenar uma equipa interna. Na versão plena, funcionamos como a tua CMO externa.",
+          "deliverablesLabel": "O que inclui",
           "deliverables": [
-            "Calendário mensal de conteúdo",
-            "Design e edição incluídos",
-            "Otimização do Google My Business",
-            "SEO local (Zona Oeste e Grande Lisboa)",
-            "Relatórios mensais claros",
-            "Acompanhamento e estratégia contínua"
+            "Estratégia mensal e calendário editorial",
+            "Criação de conteúdo: copy, design e edição",
+            "Gestão dos canais (publicação, comunidade, mensagens)",
+            "SEO local (Google Business Profile, palavras-chave, mapas)",
+            "Reunião mensal de alinhamento e relatório claro",
+            "Interlocutora única para toda a estratégia"
+          ],
+          "stepsLabel": "Como funciona (ciclo mensal)",
+          "steps": [
+            { "title": "Alinhamento", "desc": "Reunião mensal para rever resultados, ajustar prioridades e definir o mês seguinte." },
+            { "title": "Execução", "desc": "Produzimos os conteúdos, otimizamos os canais e gerimos as comunidades. Tu vês a marca a viver." },
+            { "title": "Análise", "desc": "Relatório mensal claro: o que aconteceu, porquê, e o que vamos ajustar a seguir." }
+          ],
+          "typesLabel": "",
+          "types": [],
+          "forWhoLabel": "Para quem é",
+          "forWhoIntro": "A Direção é para negócios que já têm fundação (website e identidade) e querem ativar a comunicação de forma contínua, com estratégia em vez de improviso.",
+          "forWhoCases": [
+            "Marcas com website pronto mas redes sociais inativas ou inconsistentes.",
+            "Negócios consolidados que querem profissionalizar a presença digital mensal.",
+            "Empresas que tentaram gerir as redes internamente e perceberam que precisam de direção estratégica.",
+            "Profissionais que querem delegar todo o digital a uma parceira de confiança."
           ],
           "price": "750€",
           "priceLabel": "DESDE",
           "pricePeriod": "/mês",
-          "priceNote": "",
+          "priceNote": "+ IVA · mínimo 3 meses (base) ou 6 meses (avançados). Pagamento mensal antecipado.",
           "cta": "Conhecer o plano",
           "icon": "ri-calendar-event-line"
         }
