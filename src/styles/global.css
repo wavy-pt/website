@@ -8,8 +8,8 @@
 @import "@fontsource-variable/dm-sans";
 @import "@fontsource-variable/dm-sans/wght-italic.css";
 
-/* Self-hosted Remix Icons (substitui CDN jsdelivr) */
-@import "remixicon/fonts/remixicon.css";
+/* Remix Icons — subset local com apenas os ícones usados (185KB→3KB, CSS 154KB→2KB) */
+@import "./remixicon-subset.css";
 
 @theme {
   --color-teal: #2A9090;

@@ -1,0 +1,53 @@
+/* Remix Icons — subset (apenas os icones usados). Base: remixicon v4.9.1 */
+@font-face {
+  font-family: "remixicon";
+  src: url("../assets/fonts/remixicon-subset.woff2") format("woff2");
+  font-display: swap;
+}
+[class^="ri-"], [class*=" ri-"] {
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ri-add-line:before { content: "\ea13"; }
+.ri-arrow-down-line:before { content: "\ea4c"; }
+.ri-arrow-down-s-line:before { content: "\ea4e"; }
+.ri-arrow-left-line:before { content: "\ea60"; }
+.ri-arrow-left-s-line:before { content: "\ea64"; }
+.ri-arrow-right-line:before { content: "\ea6c"; }
+.ri-arrow-right-s-line:before { content: "\ea6e"; }
+.ri-arrow-right-up-line:before { content: "\ea70"; }
+.ri-calendar-check-line:before { content: "\eb23"; }
+.ri-calendar-event-line:before { content: "\eb25"; }
+.ri-camera-3-line:before { content: "\eb2d"; }
+.ri-chat-smile-2-line:before { content: "\eb6f"; }
+.ri-check-line:before { content: "\eb7b"; }
+.ri-close-line:before { content: "\eb99"; }
+.ri-compass-3-line:before { content: "\ebbe"; }
+.ri-compass-discover-line:before { content: "\ebc2"; }
+.ri-facebook-line:before { content: "\ecbd"; }
+.ri-file-list-line:before { content: "\ecf1"; }
+.ri-flashlight-line:before { content: "\ed3d"; }
+.ri-global-line:before { content: "\edcf"; }
+.ri-hammer-line:before { content: "\edef"; }
+.ri-history-line:before { content: "\ee17"; }
+.ri-instagram-line:before { content: "\ee66"; }
+.ri-layout-4-line:before { content: "\ee83"; }
+.ri-mail-line:before { content: "\eef6"; }
+.ri-mail-send-line:before { content: "\eefc"; }
+.ri-map-pin-2-line:before { content: "\ef0a"; }
+.ri-map-pin-line:before { content: "\ef14"; }
+.ri-megaphone-line:before { content: "\f385"; }
+.ri-menu-3-line:before { content: "\ef34"; }
+.ri-question-mark:before { content: "\f046"; }
+.ri-radar-line:before { content: "\f04c"; }
+.ri-restart-line:before { content: "\f080"; }
+.ri-search-eye-line:before { content: "\f0cf"; }
+.ri-seedling-line:before { content: "\f0d5"; }
+.ri-sparkling-line:before { content: "\f36d"; }
+.ri-star-fill:before { content: "\f186"; }
+.ri-store-2-line:before { content: "\f1a5"; }
+.ri-survey-line:before { content: "\f1c7"; }
+.ri-time-line:before { content: "\f20f"; }
+.ri-vip-crown-line:before { content: "\f28e"; }
