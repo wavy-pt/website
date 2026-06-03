@@ -11,6 +11,8 @@ const { lang } = Astro.props;
 const c = t(lang).contactPage;
 const f = c.form;
 const cn = c.connect;
+const privacyHref = lang === 'en' ? '/en/privacy' : '/privacidade';
+const privacyLabel = lang === 'en' ? 'Privacy policy' : 'Política de privacidade';
 
 // O formulário é enviado via Resend (rota /api/contact).
 // O CTA "Marca uma conversa" usa o link do Calendly (CALENDLY_URL em src/lib/env.ts).
@@ -72,7 +74,10 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
             </button>
 
             <p data-form-status class="font-sans text-sm hidden" role="status" aria-live="polite"></p>
-            <p class="font-sans text-xs text-muted">{f.privacy}</p>
+            <p class="font-sans text-xs text-muted">
+              {f.privacy}{' '}
+              <a href={privacyHref} class="underline underline-offset-2 hover:text-teal-dark transition-colors">{privacyLabel}</a>.
+            </p>
           </form>
           </div>
 
