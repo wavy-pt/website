@@ -27,6 +27,7 @@ No painel do projeto → **Settings → Git → Production Branch**:
 
 No painel → **Settings → Environment Variables**:
 - Adicionar `PUBLIC_ENV` = `production` no scope **Production**.
+- Adicionar `PUBLIC_GA_ID` = `G-T3Y9N0ZFVM` no scope **Production** (ativa o Google Analytics 4 — só carrega após o utilizador aceitar os cookies).
 
 ### 3. Configurar o ambiente de desenvolvimento (branch `develop`)
 
@@ -94,6 +95,11 @@ Se chegar a altura de também aceitar a página `/contacto`, em `src/lib/env.ts`
 | Variável | Valores | Onde definir |
 |---|---|---|
 | `PUBLIC_ENV` | `production` \| `development` | Vercel dashboard (por scope) + `.env.development` local |
+| `PUBLIC_GA_ID` | `G-T3Y9N0ZFVM` (ID de medição GA4) | Vercel dashboard, scope **Production** apenas |
+
+> **Google Analytics:** o GA4 só ativa em **produção** e só dispara depois do
+> utilizador clicar em **Aceitar** no banner de cookies (Consent Mode v2, estado
+> inicial "denied"). Em dev/preview não há analytics. Propriedade GA4: **Wavy**.
 
 Notas:
 - `.env.development` é committed (default para `npm run dev` local = development).
