@@ -8,7 +8,7 @@
     "diagnosis": "Book a chat"
   },
   "footer": {
-    "tagline": "Digital Direction & Marketing — West & Greater Lisbon.",
+    "tagline": "Digital Direction & Marketing, West & Greater Lisbon.",
     "rights": "© 2026 Wavy. All rights reserved.",
     "navTitle": "Navigation",
     "contactTitle": "Contact"
@@ -16,7 +16,7 @@
   "hero": {
     "tagline": "WEST LISBON & GREATER LISBON · FOR ESTABLISHED BUSINESSES",
     "headline": "Digital direction for businesses with a story to tell.",
-    "subtitle": "We don't redecorate the storefront while the roof is collapsing. We rebuild your digital foundations — strategy, identity, and execution under one direction.",
+    "subtitle": "We don't redecorate the storefront while the roof is collapsing. We rebuild your digital foundations: strategy, identity, and execution under one direction.",
     "cta1": "Find out where I stand",
     "cta1Micro": "5 questions · 2 minutes · personalised result at the end",
     "cta2": "Talk for 30 minutes",
@@ -28,14 +28,14 @@
   "forWho": {
     "label": "recognise yourself?",
     "title": "You have a real business. Your digital presence still does not reflect that.",
-    "subtitle": "We work with established businesses — already profitable, already trusted by loyal customers — where digital hasn't caught up with the quality behind the door. If any of this rings true, you're in the right place.",
+    "subtitle": "We work with established businesses, already profitable, already trusted by loyal customers, where digital hasn't caught up with the quality behind the door. If any of this rings true, you're in the right place.",
     "footer": "What unites our clients isn't the sector. It's the profile: businesses with substance, looking for digital that lives up to the story they've already built.",
     "cards": [
       {
         "number": "01",
         "pill": "I FEEL THAT…",
         "title": "My digital presence doesn't look like me.",
-        "desc": "Your space, your product, your service — all excellent. But anyone landing on your site or social feed finds an image that looks amateur, dated, or cold. It doesn't match the experience behind the door.",
+        "desc": "Your space, your product, your service, all excellent. But anyone landing on your site or social feed finds an image that looks amateur, dated, or cold. It doesn't match the experience behind the door.",
         "quote": "\"It looks like someone else's brand.\""
       },
       {
@@ -48,8 +48,8 @@
       {
         "number": "03",
         "pill": "I'VE TRIED…",
-        "title": "I've invested in digital before — and I've been burned.",
-        "desc": "You've paid someone to run your Instagram. You built a site years ago. Maybe you tried ads. Results? Barely any. Today you hesitate to invest again — fair enough. But you also know standing still isn't an option.",
+        "title": "I've invested in digital before, and I've been burned.",
+        "desc": "You've paid someone to run your Instagram. You built a site years ago. Maybe you tried ads. Results? Barely any. Today you hesitate to invest again, fair enough. But you also know standing still isn't an option.",
         "quote": "\"I won't spend again without knowing why.\""
       }
     ]
@@ -57,17 +57,17 @@
   "personas": {
     "label": "WHO WE WORK WITH",
     "title": "We don't work with everyone. That's why the work goes well.",
-    "subtitle": "We work with owners who've built something real, are done with amateur marketing, and want a partner to direct their digital transformation with method — not luck.",
+    "subtitle": "We work with owners who've built something real, are done with amateur marketing, and want a partner to direct their digital transformation with method, not luck.",
     "cards": [
       {
         "tag": "GENERATIONAL HANDOVER",
         "title": "I inherited a business with history. I want to take it into the next decade.",
-        "desc": "Family or established businesses 15+ years old. Healthy revenue, loyal customers, but digital is still analogue. Transformation isn't a luxury — it's the only way to ensure continuity."
+        "desc": "Family or established businesses 15+ years old. Healthy revenue, loyal customers, but digital is still analogue. Transformation isn't a luxury, it's the only way to ensure continuity."
       },
       {
         "tag": "PREMIUM SERVICE",
         "title": "I deliver excellence every day. I want my digital to show it.",
-        "desc": "Clinics, ateliers, private practices and premium service providers. The current digital presence is amateur — sending the wrong message to clients paying premium prices."
+        "desc": "Clinics, ateliers, private practices and premium service providers. The current digital presence is amateur, sending the wrong message to clients paying premium prices."
       },
       {
         "tag": "GROWING RETAIL",
@@ -77,7 +77,7 @@
       {
         "tag": "NEXT GENERATION",
         "title": "I see what our business could become. I want to be the one to modernise it.",
-        "desc": "Sons and daughters stepping into the family business. They see what digital can do — and need a partner who respects the legacy while building the future."
+        "desc": "Sons and daughters stepping into the family business. They see what digital can do, and need a partner who respects the legacy while building the future."
       }
     ],
     "forTitle": "Wavy is for you if…",
@@ -85,7 +85,7 @@
       "Your business is at least 3 years old, with loyal customers.",
       "You've tried to fix digital before and walked away disappointed.",
       "You want a strategic partner, not just execution.",
-      "You invest in what's worth it — and want to know why.",
+      "You invest in what's worth it, and want to know why.",
       "You value the truth, even when it's uncomfortable."
     ],
     "againstTitle": "It's not for you if…",
@@ -94,7 +94,7 @@
       "You believe digital can be solved with a single campaign.",
       "You want someone who promises followers or likes in 30 days.",
       "You can't spare one hour a month to align.",
-      "You'd rather not know the why behind decisions — you just want someone to \"handle it\"."
+      "You'd rather not know the why behind decisions, you just want someone to \"handle it\"."
     ],
     "ctaText": "Still not sure if Wavy is right for you? Take the quick test. Two minutes is all it takes.",
     "ctaButton": "Take the quick test"
@@ -114,7 +114,7 @@
   "services": {
     "label": "WHAT WE DO",
     "title": "A three-phase method. To rebuild your digital with logic.",
-    "subtitle": "First we assess. Then we rebuild. Then we direct. You can enter at the phase that fits your reality — but the natural path is always: diagnosis → foundation → direction.",
+    "subtitle": "First we assess. Then we rebuild. Then we direct. You can enter at the phase that fits your reality, but the natural path is always: diagnosis → foundation → direction.",
     "scope": ["Strategy", "Website", "Google Business Profile", "Social Media"],
     "start": {
       "tag": "WHERE TO START",
@@ -131,7 +131,7 @@
       "tag": "THE FOUNDATION",
       "scriptName": "Website, Identity and Strategy",
       "name": "The Build",
-      "desc": "We build the digital foundations your business deserves. Website or online store, visual identity, communication strategy, and complete setup — all planned and executed by the same team, from start to finish.",
+      "desc": "We build the digital foundations your business deserves. Website or online store, visual identity, communication strategy, and complete setup, all planned and executed by the same team, from start to finish.",
       "price": "1,500€",
       "priceLabel": "FROM",
       "pricePeriod": "",
@@ -155,7 +155,7 @@
     "hero": {
       "tag": "Wavy Services",
       "headline": "Three services. One method. One direction.",
-      "subtitle": "From strategic diagnosis to ongoing direction. Each phase solves a specific problem — and sets up the one after. We always start with the X-Ray, because building before diagnosing is building blind."
+      "subtitle": "From strategic diagnosis to ongoing direction. Each phase solves a specific problem, and sets up the one after. We always start with the X-Ray, because building before diagnosing is building blind."
     },
     "method": {
       "label": "The Wavy Method",
@@ -170,15 +170,15 @@
         {
           "number": "02",
           "title": "The order of the phases matters more than the features.",
-          "desc": "Most businesses start with Direction (social media management) without having a Foundation (website and identity) — and then feel like they're doing a lot without seeing it pay off, without quite knowing why. The Wavy method reverses that: first we rebuild the foundations, then we activate the communication."
+          "desc": "Most businesses start with Direction (social media management) without having a Foundation (website and identity), and then feel like they're doing a lot without seeing it pay off, without quite knowing why. The Wavy method reverses that: first we rebuild the foundations, then we activate the communication."
         },
         {
           "number": "03",
-          "title": "The X-Ray always has a cost — only when you pay it changes.",
-          "desc": "You either pay €350 up front and gain clarity, or you pay thousands in wrong decisions over the years and regret it. The X-Ray isn't an extra expense — it's the expense that prevents worse ones."
+          "title": "The X-Ray always has a cost, only when you pay it changes.",
+          "desc": "You either pay €350 up front and gain clarity, or you pay thousands in wrong decisions over the years and regret it. The X-Ray isn't an extra expense, it's the expense that prevents worse ones."
         }
       ],
-      "closing": "That's why the X-Ray is always the first step — even for those who arrive convinced of what they already want.",
+      "closing": "That's why the X-Ray is always the first step, even for those who arrive convinced of what they already want.",
       "ctaButton": "Get the X-Ray"
     },
     "faq": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Who owns the website after delivery?",
-          "a": "The website is 100% yours. We don't charge royalties, retain ownership, or charge for \"activating\" features later. You receive complete access to all platforms, accounts and files — including source code, design and visual identity. Our model is simple: we deliver a product that you control. If you ever decide to leave, you leave with everything in your hands."
+          "a": "The website is 100% yours. We don't charge royalties, retain ownership, or charge for \"activating\" features later. You receive complete access to all platforms, accounts and files, including source code, design and visual identity. Our model is simple: we deliver a product that you control. If you ever decide to leave, you leave with everything in your hands."
         },
         {
           "q": "Can I see content before it's published?",
@@ -203,18 +203,18 @@
         },
         {
           "q": "What's included in the monthly reports?",
-          "a": "Reports designed for business owners, not marketing departments: real business indicators (qualified leads, website conversions, calls from your Google Business Profile, presence in local searches — and, for e-commerce, sales data too), analysis of what worked during the month, concrete recommendations for the next one, local SEO ranking and a quarterly comparison. No auto-generated PDFs: every report is interpreted and contextualised by us, in plain language."
+          "a": "Reports designed for business owners, not marketing departments: real business indicators (qualified leads, website conversions, calls from your Google Business Profile, presence in local searches, and, for e-commerce, sales data too), analysis of what worked during the month, concrete recommendations for the next one, local SEO ranking and a quarterly comparison. No auto-generated PDFs: every report is interpreted and contextualised by us, in plain language."
         },
         {
           "q": "What if I need to pause or cancel The Direction?",
-          "a": "After the initial minimum commitment (3 months on the entry plan, 6 months on advanced plans), the service renews monthly. You can cancel with 30 days' notice, no penalties. For specific situations — extended holidays, seasonal lulls, operational changes — we discuss with you case by case to find the best solution. No lock-ins, no gym-like exit hurdles."
+          "a": "After the initial minimum commitment (3 months on the entry plan, 6 months on advanced plans), the service renews monthly. You can cancel with 30 days' notice, no penalties. For specific situations, extended holidays, seasonal lulls, operational changes, we discuss with you case by case to find the best solution. No lock-ins, no gym-like exit hurdles."
         }
       ]
     },
     "journey": {
       "label": "Your journey",
       "title": "Three stages. One path.",
-      "subtitle": "The only mandatory step is The X-Ray — from there, you can move on to The Build or straight to Direction.",
+      "subtitle": "The only mandatory step is The X-Ray, from there, you can move on to The Build or straight to Direction.",
       "services": [
         {
           "number": "01",
@@ -223,7 +223,7 @@
           "scriptName": "Strategic Diagnosis",
           "name": "The X-Ray",
           "tagline": "To understand where you stand before moving forward",
-          "desc": "Before proposing any path, we run a rigorous analysis of everything that makes up your digital presence. We identify what's working, what's broken, and — above all — the 5 priority issues holding your business back online. You get a concrete map: what to fix, in what order, and why.",
+          "desc": "Before proposing any path, we run a rigorous analysis of everything that makes up your digital presence. We identify what's working, what's broken, and, above all, the 5 priority issues holding your business back online. You get a concrete map: what to fix, in what order, and why.",
           "deliverablesLabel": "What you get",
           "deliverables": [
             "Complete website audit (UX, speed, mobile, technical SEO)",
@@ -237,13 +237,13 @@
           "stepsLabel": "How it works",
           "steps": [
             { "title": "Briefing (30 min)", "desc": "Initial call to understand your business, goals, and context." },
-            { "title": "Deep analysis", "desc": "We dive into your digital ecosystem with professional tools. The invisible part of the work — and where 80% of the value lives." },
+            { "title": "Deep analysis", "desc": "We dive into your digital ecosystem with professional tools. The invisible part of the work, and where 80% of the value lives." },
             { "title": "Delivery + walkthrough", "desc": "You receive the full report and we meet for 30 minutes to walk you through each finding. We don't just send a PDF and wish you luck." }
           ],
           "typesLabel": "",
           "types": [],
           "forWhoLabel": "Who it's for",
-          "forWhoIntro": "The X-Ray is for any established business that wants clarity before deciding the next digital step — whether or not you already know what you want to do next.",
+          "forWhoIntro": "The X-Ray is for any established business that wants clarity before deciding the next digital step, whether or not you already know what you want to do next.",
           "forWhoCases": [
             "Businesses that feel digital isn't delivering what it could.",
             "Owners who've invested in social media or websites without seeing clear results.",
@@ -264,7 +264,7 @@
           "scriptName": "Website and Strategic Identity",
           "name": "The Build",
           "tagline": "To set the right foundations",
-          "desc": "The Build is where the structural problem gets solved. We rebuild your business's digital foundations — website or online store, visual identity, communication strategy, and complete channel setup. You don't coordinate five vendors: the same team that defines the strategy executes the build.",
+          "desc": "The Build is where the structural problem gets solved. We rebuild your business's digital foundations, website or online store, visual identity, communication strategy, and complete channel setup. You don't coordinate five vendors: the same team that defines the strategy executes the build.",
           "deliverablesLabel": "What's included",
           "deliverables": [
             "Strategic positioning session and brand research",
@@ -309,7 +309,7 @@
           "scriptName": "Social Media and Local SEO",
           "name": "The Direction",
           "tagline": "To grow without losing control",
-          "desc": "The Direction is where Wavy takes ongoing charge of your digital. Monthly strategy, content, channel management, local SEO and clear reports — to grow without losing control, and without having to manage an internal team. At full level, we operate as your external CMO.",
+          "desc": "The Direction is where Wavy takes ongoing charge of your digital. Monthly strategy, content, channel management, local SEO and clear reports, to grow without losing control, and without having to manage an internal team. At full level, we operate as your external CMO.",
           "deliverablesLabel": "What's included",
           "deliverables": [
             "Monthly strategy and editorial calendar",
@@ -432,19 +432,19 @@
           "tier": "low",
           "level": "Building",
           "headline": "There's a lot of potential to unlock.",
-          "recommendation": "Your business is taking its first digital steps — and that's good news, because there's a lot to gain. Start with the X-Ray to map the priorities; from there, the Build gives you the right foundations."
+          "recommendation": "Your business is taking its first digital steps, and that's good news, because there's a lot to gain. Start with the X-Ray to map the priorities; from there, the Build gives you the right foundations."
         },
         {
           "tier": "mid",
           "level": "Refining",
           "headline": "You have a base, but loose ends remain.",
-          "recommendation": "You've come a long way, but some pieces don't fit yet. The X-Ray shows exactly what to refine before investing more — no waste."
+          "recommendation": "You've come a long way, but some pieces don't fit yet. The X-Ray shows exactly what to refine before investing more, no waste."
         },
         {
           "tier": "high",
           "level": "Growing",
           "headline": "You have a solid base.",
-          "recommendation": "You're well on track. The focus now is consistency and growth — the X-Ray confirms the details and Direction keeps everything rowing the same way."
+          "recommendation": "You're well on track. The focus now is consistency and growth, the X-Ray confirms the details and Direction keeps everything rowing the same way."
         }
       ],
       "ctaButton": "Talk about my X-Ray",
@@ -456,7 +456,7 @@
       "tag": "About",
       "headline": "The story behind",
       "headlineHighlight": "the story.",
-      "subtitle": "Wavy was born from the conviction that businesses built with purpose deserve communication of the same calibre — without betraying themselves, without burning out, without turning into content.",
+      "subtitle": "Wavy was born from the conviction that businesses built with purpose deserve communication of the same calibre, without betraying themselves, without burning out, without turning into content.",
       "marquee": [
         { "type": "stat", "number": "3", "label": "Non-negotiable values", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Founded at home, in a living room.", "cardColor": "cream" },
@@ -477,9 +477,9 @@
       "paragraphs": [
         "I didn't come from marketing. I came from people.",
         "For a long time, I thought my path was too scattered to make sense. I studied languages, went into tourism, worked in events, managed a retail category, took a Master's in Management. From the outside, it might have looked like I was searching. Today I know that, without realising it, I was gathering the right pieces: I learned to communicate, to work with people, to make brands happen, and to understand a business from the inside.",
-        "Design and digital were always my parallel passion — the thing I kept coming back to, that I studied for the love of it, that I practised in every project that passed through my hands. Until I realised it didn't have to be parallel. That it could be the centre.",
+        "Design and digital were always my parallel passion, the thing I kept coming back to, that I studied for the love of it, that I practised in every project that passed through my hands. Until I realised it didn't have to be parallel. That it could be the centre.",
         "Deep down, I've always been more creative than analytical. I learned the numbers and I respect them. But it's in ideas and stories that I feel at home.",
-        "Wavy was born when I realised I hadn't been lost — I'd been preparing. And that I had something rare to offer: the head of someone who understands business and the heart of someone who creates.",
+        "Wavy was born when I realised I hadn't been lost, I'd been preparing. And that I had something rare to offer: the head of someone who understands business and the heart of someone who creates.",
         "I work with both. When you trust me with your brand, I live it as if it were my own. I give it the best I have, and I care for your story as I would for mine."
       ],
       "signature": "~ Mariana",
@@ -492,18 +492,18 @@
       "subtitle": "It's not a manifesto. It's a private checklist we run before taking on any new client.",
       "items": [
         { "number": "i.", "title": "Strategy before Execution", "desc": "Strategy always precedes execution. Creating content without knowing who for, why, and to what end is wasting resources. At Wavy, no digital decision exists without a defined purpose." },
-        { "number": "ii.", "title": "Radical Transparency", "desc": "You have the right to know the reason behind every decision. No opaque strategies, no inflated results. We communicate clearly — including when something isn't working." },
+        { "number": "ii.", "title": "Radical Transparency", "desc": "You have the right to know the reason behind every decision. No opaque strategies, no inflated results. We communicate clearly, including when something isn't working." },
         { "number": "iii.", "title": "Authenticity", "desc": "Your identity is the starting point, never a template. The process always begins with understanding who you are before suggesting anything." },
-        { "number": "iv.", "title": "Sustainability", "desc": "Growth you can't sustain isn't growth — it's pressure. We build rhythms you can manage long-term, with or without continued external support." },
-        { "number": "v.", "title": "Warm Authority", "desc": "Wavy's voice is warm and professional — like a trusted partner you talk business with seriously. Never cold. Never distant. But always competent." }
+        { "number": "iv.", "title": "Sustainability", "desc": "Growth you can't sustain isn't growth, it's pressure. We build rhythms you can manage long-term, with or without continued external support." },
+        { "number": "v.", "title": "Warm Authority", "desc": "Wavy's voice is warm and professional, like a trusted partner you talk business with seriously. Never cold. Never distant. But always competent." }
       ]
     },
     "whyWavy": {
       "headline": "Why",
       "headlineHighlight": "Wavy?",
       "paragraphs": [
-        "In the digital world, some people feel like they're drowning. Too much information, too many platforms, trends that change every week. For many business owners, digital feels like an endless ocean — and they're stuck in the middle, not knowing which way to swim.",
-        "But waves hold a truth many people forget: they aren't chaos. They have rhythm. They have direction. And whoever learns to read them doesn't drown — they navigate.",
+        "In the digital world, some people feel like they're drowning. Too much information, too many platforms, trends that change every week. For many business owners, digital feels like an endless ocean, and they're stuck in the middle, not knowing which way to swim.",
+        "But waves hold a truth many people forget: they aren't chaos. They have rhythm. They have direction. And whoever learns to read them doesn't drown, they navigate.",
         "We chose this name because we believe digital works like the sea. The problem was never the wave. The problem is not having someone to teach you how to read it. Wavy exists for exactly that: to be the direction when the digital ocean feels too big.",
         "And the name is a promise: we don't promise the sea will turn calm. We promise your business will find its rhythm in digital, without losing the essence that made it real."
       ]
@@ -511,7 +511,7 @@
     "cta": {
       "headline": "Now that you know us,",
       "headlineHighlight": "shall we get to know you?",
-      "subtitle": "No pressure, no forced proposal. Just an honest conversation about your business — and the starting point that makes the most sense for you.",
+      "subtitle": "No pressure, no forced proposal. Just an honest conversation about your business, and the starting point that makes the most sense for you.",
       "manifesto": "The next wave is yours. The direction is ours.",
       "button": "Schedule a conversation",
       "socialLabel": "Social media",
@@ -528,7 +528,7 @@
       "titleLine1": "Two projects.",
       "titleLine2": "Two contexts.",
       "titleLine3": "One way of thinking.",
-      "subtitle": "Each case illustrates a different moment in a business's digital journey — from renewing an established brand to building a brand from scratch.",
+      "subtitle": "Each case illustrates a different moment in a business's digital journey, from renewing an established brand to building a brand from scratch.",
       "cards": [
         { "imageKey": "vera-main", "title": "Vera Barata", "category": "Floral design" },
         { "imageKey": "adds-logo", "title": "ADDS", "category": "Technology consultancy" }
@@ -555,16 +555,16 @@
         "headlineBefore": "More visibility. More weddings.",
         "headlineHighlight": "Without losing the essence.",
         "headlineAfter": "",
-        "description": "Vera was already doing excellent work, with clients who trusted her. What she lacked was time — and time is exactly what everyone underestimates. Managing a profile, maintaining visual consistency, staying on top of Google presence: it all kept being pushed to \"later\".",
+        "description": "Vera was already doing excellent work, with clients who trusted her. What she lacked was time, and time is exactly what everyone underestimates. Managing a profile, maintaining visual consistency, staying on top of Google presence: it all kept being pushed to \"later\".",
         "stats": [
           { "value": "+321k", "label": "views (IG + FB · 9 months)" },
           { "value": "+548", "label": "new Instagram followers" },
           { "value": "+4,900", "label": "content interactions" }
         ],
-        "quote": "I found in Mariana the missing piece I needed to develop my page and my personal project. She's tireless, dives into the details, and always shares her honest opinion. The details make all the difference — and Mariana makes all the difference for me.",
+        "quote": "I found in Mariana the missing piece I needed to develop my page and my personal project. She's tireless, dives into the details, and always shares her honest opinion. The details make all the difference, and Mariana makes all the difference for me.",
         "quoteAuthor": "VERA BARATA · ATELIER&FLORES",
         "detail": {
-          "intro": "Vera is a floral designer in Mafra. The work was already excellent and clients trusted her — what she lacked was time for digital to keep up with the pace of the business.",
+          "intro": "Vera is a floral designer in Mafra. The work was already excellent and clients trusted her, what she lacked was time for digital to keep up with the pace of the business.",
           "sections": [
             { "title": "The challenge", "body": "The logo deserved a refresh aligned with the brand's sensibility, the Instagram profile needed editorial direction and room to breathe, and there was no local Google presence yet for those searching for floral design in the area." },
             { "title": "What we did", "body": "Logo refresh aligned with Vera's visual sensibility; Instagram profile overhaul (optimised bio and highlights); editorial direction for a coherent feed; and setup and optimisation of the Google Business Profile." }
@@ -593,20 +593,20 @@
         "headlineBefore": "A complete brand,",
         "headlineHighlight": "built from day one.",
         "headlineAfter": "",
-        "description": "ADDS is a newly created technology consultancy. The expertise, capability and roadmap were already in place. What it didn't have yet was everything that makes a company visible: visual identity, voice, channels. The choice was clear — build the brand seriously, from day one.",
+        "description": "ADDS is a newly created technology consultancy. The expertise, capability and roadmap were already in place. What it didn't have yet was everything that makes a company visible: visual identity, voice, channels. The choice was clear, build the brand seriously, from day one.",
         "stats": [
           { "value": "100%", "label": "identity built from scratch" },
           { "value": "2 channels", "label": "Instagram + LinkedIn active" },
           { "value": "Ongoing", "label": "monthly content production" }
         ],
-        "quote": "I handed over my company's digital presence to Wavy — social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency — it's the partner every business needs to grow online.",
+        "quote": "I handed over my company's digital presence to Wavy, social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
         "quoteAuthor": "JOÃO MARQUES · FOUNDER, ADDS",
         "detail": {
           "intro": "ADDS is a newly created technology consultancy. It had the expertise and the roadmap; what it lacked was the brand. The strategic choice was to build it seriously, from day one.",
           "sections": [
             { "title": "The challenge", "body": "Launching a technology consultancy without identity, brand guidelines or digital presence. In a field where trust is everything, ADDS needed to arrive with a brand that already conveyed seriousness." },
             { "title": "What we did", "body": "Brand research, positioning and verbal identity; logo and visual identity from scratch; brand book (palette, typography, applications); setup and optimisation of Instagram and LinkedIn; content strategy and tone of voice; and monthly content production (ongoing)." },
-            { "title": "Ongoing", "body": "Active digital presence is rolling out now — Instagram and LinkedIn in continuous production. Results will become meaningful over the next 6 months." }
+            { "title": "Ongoing", "body": "Active digital presence is rolling out now, Instagram and LinkedIn in continuous production. Results will become meaningful over the next 6 months." }
           ],
           "stats": [
             { "value": "Brand", "label": "complete and ready to operate" },
@@ -629,21 +629,21 @@
         "headlineBefore": "From farm to brand,",
         "headlineHighlight": "built on strategy.",
         "headlineAfter": "",
-        "description": "Ana's family runs a farm with surplus from several products — honey, olive oil, fruit. Ana saw an opportunity in that surplus: turning it into a brand of organic products with its own identity. She had the name, a small logo and the first product out — the honey. What was missing was the strategic foundation to support everything that would come next.",
+        "description": "Ana's family runs a farm with surplus from several products, honey, olive oil, fruit. Ana saw an opportunity in that surplus: turning it into a brand of organic products with its own identity. She had the name, a small logo and the first product out, the honey. What was missing was the strategic foundation to support everything that would come next.",
         "stats": [
           { "value": "X-Ray", "label": "diagnosis + competitive analysis" },
           { "value": "1 brand", "label": "positioning and voice defined" },
           { "value": "Completed", "label": "ready for new products" }
         ],
-        "quote": "The work plan Mariana built was incredible. From the first moment, she showed an impressive ability to understand my business. She translated ideas I hadn't even structured yet — bringing clarity, strategy and direction to the project. I felt truly supported every step of the way.",
+        "quote": "The work plan Mariana built was incredible. From the first moment, she showed an impressive ability to understand my business. She translated ideas I hadn't even structured yet, bringing clarity, strategy and direction to the project. I felt truly supported every step of the way.",
         "quoteAuthor": "ANA LOPES · FAMILY ORGANIC PRODUCTS BRAND",
         "detail": {
-          "intro": "Ana's family runs a farm with surplus — honey, olive oil, fruit. Ana wanted to turn it into a brand of organic products with its own identity. What was missing was the strategic foundation.",
+          "intro": "Ana's family runs a farm with surplus, honey, olive oil, fruit. Ana wanted to turn it into a brand of organic products with its own identity. What was missing was the strategic foundation.",
           "sections": [
-            { "title": "The challenge", "body": "The market is saturated with vague promises (\"natural\", \"sustainable\", \"made with love\") and no anonymous communication distinguishes a brand with a real story from an invented one. Ana needed a brand that proves — not one that promises." },
-            { "title": "What we did", "body": "Strategic X-Ray (audit, competitive analysis and opportunities); positioning and purpose definition; verbal identity — message pillars and tone of voice; strategic brand book; and a roadmap with concrete next steps." },
+            { "title": "The challenge", "body": "The market is saturated with vague promises (\"natural\", \"sustainable\", \"made with love\") and no anonymous communication distinguishes a brand with a real story from an invented one. Ana needed a brand that proves, not one that promises." },
+            { "title": "What we did", "body": "Strategic X-Ray (audit, competitive analysis and opportunities); positioning and purpose definition; verbal identity, message pillars and tone of voice; strategic brand book; and a roadmap with concrete next steps." },
             { "title": "What was built", "body": "Ana left with a compass: defined positioning, consolidated voice, clear priorities and next steps mapped out. The brand now has the language to talk about the farm, the family and the origin without falling into clichés." },
-            { "title": "The result", "body": "It isn't measured in percentages — it's measured in strategic clarity. The brand now has direction, pillars and a voice ready to support any next step, including bringing new products to market." }
+            { "title": "The result", "body": "It isn't measured in percentages, it's measured in strategic clarity. The brand now has direction, pillars and a voice ready to support any next step, including bringing new products to market." }
           ],
           "stats": [
             { "value": "X-Ray", "label": "full strategic diagnosis" },
@@ -661,21 +661,21 @@
     ],
     "cta": {
       "title": "The next one could be yours.",
-      "subtitle": "Each of these cases started with the same question — \"where are you?\". Yours can begin there too.",
+      "subtitle": "Each of these cases started with the same question, \"where are you?\". Yours can begin there too.",
       "button": "Book my X-Ray",
       "manifesto": "Every project starts with the right question. And always ends with another: where are you going next?",
-      "imageAlt": "Behind the scenes at Wavy — working on a laptop"
+      "imageAlt": "Behind the scenes at Wavy, working on a laptop"
     },
     "transparency": {
       "label": "A note on transparency",
-      "body": "The cases below were carried out by Wavy's founder, applying the same methodology that defines the brand today. Some preceded the formal launch of Wavy — but the hand, the method, and the care are the same."
+      "body": "The cases below were carried out by Wavy's founder, applying the same methodology that defines the brand today. Some preceded the formal launch of Wavy, but the hand, the method, and the care are the same."
     }
   },
   "contactPage": {
     "page": {
       "label": "contact",
       "title": "Let's talk?",
-      "subtitle": "Before any proposal, there's always a conversation. Choose the path that feels most comfortable — there's no wrong answer."
+      "subtitle": "Before any proposal, there's always a conversation. Choose the path that feels most comfortable, there's no wrong answer."
     },
     "options": {
       "label": "three paths",
@@ -727,19 +727,19 @@
     "connect": {
       "ctaContext": "if you already know what you want",
       "ctaTitle": "Book a 30-minute call",
-      "ctaDesc": "Video or phone — your choice. We listen to where you are, decide together if it makes sense to move forward, and — if it does — we explain the next steps. No proposals, no pressure.",
+      "ctaDesc": "Video or phone, your choice. We listen to where you are, decide together if it makes sense to move forward, and, if it does, we explain the next steps. No proposals, no pressure.",
       "ctaButton": "Pick a time",
       "socialTitle": "Follow Wavy",
-      "socialDesc": "Daily life, behind the scenes, and ideas — we share them on Instagram and Facebook.",
+      "socialDesc": "Daily life, behind the scenes, and ideas, we share them on Instagram and Facebook.",
       "emailTitle": "Send us an email",
-      "emailDesc": "For those who prefer free format, no fields. Write whatever you'd like — we reply within 24 working hours.",
+      "emailDesc": "For those who prefer free format, no fields. Write whatever you'd like, we reply within 24 working hours.",
       "email": "geral@wavy.pt"
     },
     "whereWeAre": {
       "label": "Where we are",
       "blocks": [
         { "icon": "ri-map-pin-line", "title": "Location", "body": "Based in Mafra, West Lisbon region." },
-        { "icon": "ri-global-line", "title": "Coverage", "body": "We work with businesses across Portugal — in-person in West and Greater Lisbon, remotely everywhere else." },
+        { "icon": "ri-global-line", "title": "Coverage", "body": "We work with businesses across Portugal, in-person in West and Greater Lisbon, remotely everywhere else." },
         { "icon": "ri-time-line", "title": "Response", "body": "Reply within 24 working hours. Monday to Friday, 9am to 6pm." }
       ]
     }
@@ -747,15 +747,15 @@
   "cases": {
     "label": "real results",
     "title": "What changed. For those it matters to.",
-    "subtitle": "Every Wavy client becomes a case study. We don't publish generic results — we document real transformations, with context, numbers, and the voice of the person who lived through it.",
+    "subtitle": "Every Wavy client becomes a case study. We don't publish generic results, we document real transformations, with context, numbers, and the voice of the person who lived through it.",
     "testimonials": [
       {
-        "quote": "I found in Mariana the missing piece I needed to develop my page and my personal project. She's tireless, dives into the details, and always shares her honest opinion. The details make all the difference — and Mariana makes all the difference for me.",
+        "quote": "I found in Mariana the missing piece I needed to develop my page and my personal project. She's tireless, dives into the details, and always shares her honest opinion. The details make all the difference, and Mariana makes all the difference for me.",
         "author": "Vera Barata",
         "role": "Floral Designer"
       },
       {
-        "quote": "I handed over my company's digital presence to Wavy — social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency — it's the partner every business needs to grow online.",
+        "quote": "I handed over my company's digital presence to Wavy, social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
         "author": "João Marques",
         "role": "Founder, Technology Company"
       }
@@ -765,7 +765,7 @@
     "stat2": "100%",
     "stat2Label": "of clients start with the X-Ray",
     "ctaTitle": "The next story could be yours.",
-    "ctaSubtitle": "Start with the X-Ray. By the end, you'll know exactly where your digital business stands — and what to do next.",
+    "ctaSubtitle": "Start with the X-Ray. By the end, you'll know exactly where your digital business stands, and what to do next.",
     "ctaButton": "Start with the X-Ray"
   },
   "faq": {
@@ -774,19 +774,19 @@
     "items": [
       {
         "q": "What is the X-Ray and why do I have to start there?",
-        "a": "The X-Ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence — website, social media, SEO, communication, and positioning — and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-Ray fee is fully credited to your next project."
+        "a": "The X-Ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence, website, social media, SEO, communication, and positioning, and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-Ray fee is fully credited to your next project."
       },
       {
         "q": "Do you work outside the West or Greater Lisbon?",
-        "a": "Yes. We work with businesses across Portugal through online meetings and remote management. Our focus for in-person visits is concentrated in West and Greater Lisbon — where Wavy is based, in Mafra — but our process is designed to guide you with the same clarity, even from a distance. Outside these regions? Take the quick test or book a 30-minute call and we'll figure out together if there's a fit."
+        "a": "Yes. We work with businesses across Portugal through online meetings and remote management. Our focus for in-person visits is concentrated in West and Greater Lisbon, where Wavy is based, in Mafra, but our process is designed to guide you with the same clarity, even from a distance. Outside these regions? Take the quick test or book a 30-minute call and we'll figure out together if there's a fit."
       },
       {
         "q": "How long does it take to see results with digital marketing?",
-        "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days — not as \"explosive results\" but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time — which is exactly why we work with 3-to-6-month minimum commitments."
+        "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days, not as \"explosive results\" but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time, which is exactly why we work with 3-to-6-month minimum commitments."
       },
       {
         "q": "What's the difference between digital direction and social media management?",
-        "a": "Social media management is a task: someone posts on Instagram, replies to messages, creates stories. Digital direction is a strategic function: it defines who you communicate with, why, on which channels, with which business objective, and how you measure success. In practice: managing social without strategy means executing. Directing your digital means deciding. Wavy doesn't sell posts — it sells direction. Social media is one tool within the strategy, never the starting point."
+        "a": "Social media management is a task: someone posts on Instagram, replies to messages, creates stories. Digital direction is a strategic function: it defines who you communicate with, why, on which channels, with which business objective, and how you measure success. In practice: managing social without strategy means executing. Directing your digital means deciding. Wavy doesn't sell posts, it sells direction. Social media is one tool within the strategy, never the starting point."
       },
       {
         "q": "Do your services have mandatory loyalty periods?",
@@ -799,7 +799,7 @@
     "greeting": "Hello. I'm Mariana, founder of Wavy.",
     "paragraph1": "If you've read this far, something I wrote resonated with you. Maybe you recognise your own business in these challenges. Maybe you've thought about change several times and still haven't found the right partner.",
     "paragraph2": "Whatever your path, I'd like to meet you. No pressure, no forced proposal, no sales pitch. Just an honest conversation about your business.",
-    "signature": "— Mariana Antunes",
+    "signature": "Mariana Antunes",
     "signatureRole": "Founder · Wavy",
     "primaryCta": "Book 15 minutes with me",
     "secondaryCta": "Take the quick test",
