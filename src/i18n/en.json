@@ -663,7 +663,8 @@
       "title": "The next one could be yours.",
       "subtitle": "Each of these cases started with the same question — \"where are you?\". Yours can begin there too.",
       "button": "Book my X-Ray",
-      "manifesto": "Every project starts with the right question. And always ends with another: where are you going next?"
+      "manifesto": "Every project starts with the right question. And always ends with another: where are you going next?",
+      "imageAlt": "Behind the scenes at Wavy — working on a laptop"
     },
     "transparency": {
       "label": "A note on transparency",
