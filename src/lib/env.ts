@@ -1,9 +1,9 @@
 /**
  * Environment helpers.
  *
- * PUBLIC_ENV controls which features are visible:
- * - "production" → only homepage is live, other pages redirect to /
- * - "development" → all pages accessible, dev banner shown, noindex set
+ * PUBLIC_ENV controla o comportamento por ambiente:
+ * - "production" → site público: indexável, sem banner de desenvolvimento
+ * - "development" → banner de desenvolvimento + noindex (preview privado)
  *
  * Set via:
  * - Local: .env.development (committed default = development)
@@ -19,20 +19,6 @@ export const env: Env = raw === 'production' ? 'production' : 'development';
 
 export const isProd = env === 'production';
 export const isDev = env === 'development';
-
-/** Paths that are NOT yet ready for production. */
-export const WIP_PATHS = ['/servicos', '/sobre', '/casos', '/contacto'] as const;
-
-/** Same paths under the EN locale. */
-export const WIP_PATHS_EN = WIP_PATHS.map((p) => `/en${p}`);
-
-export const ALL_WIP_PATHS = [...WIP_PATHS, ...WIP_PATHS_EN];
-
-/** Check if a given pathname is a WIP route. */
-export function isWipPath(pathname: string): boolean {
-  const clean = pathname.replace(/\/$/, '') || '/';
-  return ALL_WIP_PATHS.includes(clean as (typeof ALL_WIP_PATHS)[number]);
-}
 
 /** Email de contacto público da Wavy. */
 export const CONTACT_EMAIL = 'geral@wavy.pt';
