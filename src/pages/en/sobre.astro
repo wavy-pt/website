@@ -6,11 +6,6 @@ import AboutMariana from '../../components/about/AboutMariana.astro';
 import AboutManifesto from '../../components/about/AboutManifesto.astro';
 import AboutWhyWavy from '../../components/about/AboutWhyWavy.astro';
 import AboutCtaBlock from '../../components/about/AboutCtaBlock.astro';
-import { isProd } from '../../lib/env';
-
-if (isProd) {
-  return Astro.redirect('/en', 308);
-}
 ---
 
 <Layout

@@ -5,11 +5,6 @@ import CasesHero from '../components/cases/CasesHero.astro';
 import CasesTransparency from '../components/cases/CasesTransparency.astro';
 import CaseStudy from '../components/cases/CaseStudy.astro';
 import CasesCta from '../components/cases/CasesCta.astro';
-import { isProd } from '../lib/env';
-
-if (isProd) {
-  return Astro.redirect('/', 308);
-}
 ---
 
 <Layout

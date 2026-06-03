@@ -34,19 +34,15 @@ export function isWipPath(pathname: string): boolean {
   return ALL_WIP_PATHS.includes(clean as (typeof ALL_WIP_PATHS)[number]);
 }
 
-/** Contact email used as production fallback for WIP /contacto links. */
+/** Email de contacto público da Wavy. */
 export const CONTACT_EMAIL = 'geral@wavy.pt';
 
 /**
- * Resolve the target for "book a chat" / "contact" CTAs:
- * - In production (/contacto is WIP): falls back to mailto.
- * - In development: real /contacto route.
- *
- * Once the /contacto page is shipped to production this helper can be removed
- * (or updated to point to a Calendly URL).
+ * Destino dos CTAs de contacto: a página /contacto.
+ * Agora pública em dev e em produção, devolve sempre a rota localizada.
  */
 export function contactHref(localizedContactPath: string): string {
-  return isProd ? `mailto:${CONTACT_EMAIL}` : localizedContactPath;
+  return localizedContactPath;
 }
 
 /** Link público do Calendly. Vazio = os CTAs de agendar caem no contacto/email. */

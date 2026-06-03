@@ -4,11 +4,6 @@ import ScrollReveal from '../../components/ScrollReveal.astro';
 import ContactHero from '../../components/contact/ContactHero.astro';
 import ContactForm from '../../components/contact/ContactForm.astro';
 import ContactWhereWeAre from '../../components/contact/ContactWhereWeAre.astro';
-import { isProd } from '../../lib/env';
-
-if (isProd) {
-  return Astro.redirect('/en', 308);
-}
 ---
 
 <Layout

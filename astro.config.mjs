@@ -7,17 +7,8 @@ import vercel from '@astrojs/vercel';
 
 import sitemap from '@astrojs/sitemap';
 
-// Pages still in development — excluded from the public sitemap.
-const WIP_PATHS = [
-  '/servicos',
-  '/sobre',
-  '/casos',
-  '/contacto',
-  '/en/servicos',
-  '/en/sobre',
-  '/en/casos',
-  '/en/contacto',
-];
+// Páginas a excluir do sitemap público (vazio = todas as páginas entram).
+const WIP_PATHS = [];
 
 // https://astro.build/config
 export default defineConfig({
