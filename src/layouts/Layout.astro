@@ -90,9 +90,13 @@ const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    {/* Favicons */}
-    <link rel="icon" type="image/svg+xml" href="/logo-wavy.svg" />
-    <link rel="apple-touch-icon" href="/logo-wavy.svg" />
+    {/* Favicons & app icons */}
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     {/* Fonts são self-hosted via @fontsource em src/styles/global.css.
         Sem CDN externo: melhor LCP, sem DNS lookups, melhor privacy. */}
