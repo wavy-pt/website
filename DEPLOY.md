@@ -96,10 +96,18 @@ Se chegar a altura de também aceitar a página `/contacto`, em `src/lib/env.ts`
 |---|---|---|
 | `PUBLIC_ENV` | `production` \| `development` | Vercel dashboard (por scope) + `.env.development` local |
 | `PUBLIC_GA_ID` | `G-T3Y9N0ZFVM` (ID de medição GA4) | Vercel dashboard, scope **Production** apenas |
+| `RESEND_API_KEY` | chave secreta do Resend (sem prefixo `PUBLIC_`) | Vercel dashboard, scope **Production** + `.env` local (gitignored) |
 
 > **Google Analytics:** o GA4 só ativa em **produção** e só dispara depois do
 > utilizador clicar em **Aceitar** no banner de cookies (Consent Mode v2, estado
 > inicial "denied"). Em dev/preview não há analytics. Propriedade GA4: **Wavy**.
+
+> **Rotação da chave Resend (#99):** auditámos o repositório — a chave **nunca
+> esteve no Git** (verificado em todo o histórico) e só vive no `.env` local
+> (gitignored) e na Vercel. Como foi partilhada durante o setup, a boa prática é,
+> ao configurar a produção, **gerar uma chave nova no Resend**, defini-la na
+> Vercel (`RESEND_API_KEY`) e **apagar a chave antiga** — assim a chave de
+> produção nunca foi exposta em lado nenhum.
 
 Notas:
 - `.env.development` é committed (default para `npm run dev` local = development).
