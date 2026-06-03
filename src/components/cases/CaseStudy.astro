@@ -59,7 +59,7 @@ const img = imageMap[item.imageKey || 'bastidores'];
 const detail = item.detail;
 const ui = cp.ui;
 // Galeria: com 2 imagens (ex.: antes/depois), mostra 2 colunas maiores; com 3+, mantém 3.
-const galleryCols = detail?.gallery?.length === 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3';
+const galleryCols = detail?.gallery?.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-2 md:grid-cols-3';
 
 // Carrosséis: agrupa as imagens de cada subpasta de /carrosseis, ordenadas por nome (1.jpg, 2.jpg, …)
 const carouselFiles = import.meta.glob('../../assets/cases/carrosseis/*/*.{jpg,png}', {
