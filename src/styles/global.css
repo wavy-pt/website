@@ -15,6 +15,10 @@
   --color-teal: #2A9090;
   --color-teal-dark: #1C3C3C;
   --color-teal-light: #3AACAC;
+  /* Teal mais escuro p/ etiquetas pequenas — cumpre AA sobre offwhite (5.5:1) E cream (4.9:1) */
+  --color-teal-deep: #157272;
+  /* Teal fundo p/ painéis com texto claro (cream/cream-70/80) — cumpre AA */
+  --color-teal-panel: #185A5A;
   --color-cream: #F0EDE4;
   --color-offwhite: #FAFAF8;
   --color-muted: #666666;

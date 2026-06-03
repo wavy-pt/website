@@ -151,20 +151,34 @@ const single = images.length <= 1;
 
   .vcarousel-dots {
     display: flex;
-    gap: 6px;
+    gap: 0;
     justify-content: center;
-    margin-top: 14px;
+    margin-top: 8px;
   }
+  /* Botão = área de toque de 24x24 (WCAG 2.5.8); o ponto visual fica dentro, pequeno. */
   .vcarousel-dot {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+  }
+  .vcarousel-dot::before {
+    content: '';
     width: 7px;
     height: 7px;
     border-radius: 9999px;
     background: #c9d3cf;
     transition: width 0.25s ease, background 0.25s ease;
   }
-  .vcarousel-dot[aria-current='true'] {
-    width: 20px;
+  .vcarousel-dot[aria-current='true']::before {
+    width: 18px;
     background: #2a9090;
+  }
+  .vcarousel-dot:focus-visible {
+    outline: 2px solid #2a9090;
+    outline-offset: 0;
   }
 
   @media (prefers-reduced-motion: reduce) {

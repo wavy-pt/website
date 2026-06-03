@@ -118,12 +118,12 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
                     {service.number}
                   </span>
                   <div class="flex-1 min-w-0">
-                    <p class="font-serif text-xs sm:text-sm italic font-medium text-teal mb-0.5">
+                    <p class="font-serif text-xs sm:text-sm italic font-medium text-teal-deep mb-0.5">
                       {service.scriptName}
                     </p>
-                    <h3 class="font-serif text-lg sm:text-xl md:text-2xl font-medium text-teal-dark leading-tight">
+                    <h2 class="font-serif text-lg sm:text-xl md:text-2xl font-medium text-teal-dark leading-tight">
                       {service.name}
-                    </h3>
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -131,19 +131,21 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
           </div>
 
           {/* Pagination dots (indicam posição na rotação) */}
-          <div class="flex items-center justify-center gap-2 mt-6">
+          <div class="flex items-center justify-center gap-1 mt-6">
             {j.services.map((_, idx) => (
               <button
                 type="button"
                 data-deck-dot={idx}
                 aria-label={`Ver fase ${idx + 1}`}
-                class:list={[
-                  'services-deck-dot h-2 rounded-full transition-all duration-300',
-                  idx === 0
-                    ? 'bg-teal w-6'
-                    : 'bg-teal-dark/20 w-2 hover:bg-teal-dark/40',
-                ]}
-              ></button>
+                class="services-deck-dot grid place-items-center h-6 w-6 rounded-full"
+              >
+                <span
+                  class:list={[
+                    'deck-dot-bar h-2 rounded-full transition-all duration-300',
+                    idx === 0 ? 'bg-teal w-6' : 'bg-teal-dark/20 w-2',
+                  ]}
+                ></span>
+              </button>
             ))}
           </div>
         </div>
@@ -154,7 +156,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
     <div class="flex flex-col items-center pt-6 pb-4">
       <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-2">{i.hero.scroll}</p>
       <div class="w-8 h-8 rounded-full border border-teal/30 flex items-center justify-center animate-scroll-hint">
-        <i class="ri-arrow-down-line text-teal text-sm" aria-hidden="true"></i>
+        <i class="ri-arrow-down-line text-teal-deep text-sm" aria-hidden="true"></i>
       </div>
     </div>
   </div>
@@ -261,12 +263,13 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
       active = ((i % total) + total) % total;
       deck.setAttribute('data-active', String(active));
       dots.forEach((dot, idx) => {
+        const bar = dot.querySelector('.deck-dot-bar');
+        if (!bar) return;
         const isActive = idx === active;
-        dot.classList.toggle('bg-teal', isActive);
-        dot.classList.toggle('w-6', isActive);
-        dot.classList.toggle('bg-teal-dark/20', !isActive);
-        dot.classList.toggle('w-2', !isActive);
-        dot.classList.toggle('hover:bg-teal-dark/40', !isActive);
+        bar.classList.toggle('bg-teal', isActive);
+        bar.classList.toggle('w-6', isActive);
+        bar.classList.toggle('bg-teal-dark/20', !isActive);
+        bar.classList.toggle('w-2', !isActive);
       });
     };
 

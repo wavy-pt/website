@@ -214,7 +214,7 @@ const isEven = index % 2 === 0;
 
           {detail.gallery && (
             <div class="mb-8">
-              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-3">{ui.galleryLabel}</p>
+              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal-deep mb-3">{ui.galleryLabel}</p>
               <div class:list={['grid gap-3 md:gap-4', galleryCols]}>
                 {detail.gallery.map((g) => {
                   const gimg = imageMap[g.imageKey || 'bastidores'];
@@ -241,7 +241,7 @@ const isEven = index % 2 === 0;
 
           {detail.carousels && detail.carousels.length > 0 && (
             <div class="mb-10">
-              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-5">{ui.carouselsLabel}</p>
+              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal-deep mb-5">{ui.carouselsLabel}</p>
               <div class="grid gap-10 sm:grid-cols-2 sm:gap-6 md:gap-8 justify-items-center">
                 {detail.carousels.map((c) => {
                   const imgs = carouselRegistry[c.key] || [];
@@ -271,7 +271,7 @@ const isEven = index % 2 === 0;
 
           {detail.stats && (
             <div class="border-t border-cream pt-6 mb-8">
-              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-4">{ui.resultsLabel}</p>
+              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal-deep mb-4">{ui.resultsLabel}</p>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
                 {detail.stats.map((stat) => (
                   <div>

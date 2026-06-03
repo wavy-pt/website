@@ -67,7 +67,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
 
             <button
               type="submit"
-              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal text-cream hover:bg-teal-dark transition-all duration-300 self-start mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal-panel text-cream hover:bg-teal-dark transition-all duration-300 self-start mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {f.submit}
               <i class="ri-arrow-right-line" aria-hidden="true"></i>
@@ -92,7 +92,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
             <button
               type="button"
               data-form-reset
-              class="inline-flex items-center gap-2 font-sans font-medium text-sm text-teal hover:text-teal-dark transition-colors"
+              class="inline-flex items-center gap-2 font-sans font-medium text-sm text-teal-deep hover:text-teal-dark transition-colors"
             >
               <i class="ri-arrow-left-line" aria-hidden="true"></i>
               {f.sendAnother}
@@ -104,7 +104,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
       <!-- Lado direito: CTA + redes + email -->
       <div class="lg:col-span-5 flex flex-col gap-5">
         <!-- CTA: marcar conversa -->
-        <div class="bg-teal rounded-[28px] p-7 md:p-8">
+        <div class="bg-teal-panel rounded-[28px] p-7 md:p-8">
           <p class="font-serif italic text-cream/80 text-sm mb-2">{cn.ctaContext}</p>
           <h3 class="font-serif text-xl md:text-2xl font-medium text-cream mb-3">{cn.ctaTitle}</h3>
           <p class="font-sans text-sm text-cream/80 leading-relaxed mb-6">{cn.ctaDesc}</p>
@@ -151,7 +151,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
           <p class="font-sans text-sm text-muted leading-relaxed mb-4">{cn.emailDesc}</p>
           <a
             href={`mailto:${email}`}
-            class="inline-flex items-center gap-2 font-sans font-medium text-sm text-teal hover:text-teal-dark transition-colors"
+            class="inline-flex items-center gap-2 font-sans font-medium text-sm text-teal-deep hover:text-teal-dark transition-colors"
           >
             <i class="ri-mail-line text-base" aria-hidden="true"></i>
             {email}

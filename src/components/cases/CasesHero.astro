@@ -39,7 +39,7 @@ const cards = i.cards || [];
 <section class="relative bg-offwhite pt-16 md:pt-[72px] min-h-screen flex flex-col overflow-hidden">
   <!-- Texto -->
   <div class="scroll-reveal max-w-3xl mx-auto w-full px-6 md:px-10 pt-10 md:pt-14 text-center">
-    <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-5">
+    <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal-deep mb-5">
       {i.label}
     </p>
     <h1 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.1] mb-5">
@@ -64,7 +64,6 @@ const cards = i.cards || [];
           <a
             href={`#caso-${caseIndex}`}
             data-case-link
-            aria-label={card.title}
             class="cases-fan-card block absolute inset-0 rounded-2xl overflow-hidden bg-teal-dark"
           >
             <Image
