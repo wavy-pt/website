@@ -525,14 +525,13 @@
   "casesPage": {
     "page": {
       "label": "Casos",
-      "titleLine1": "Três projetos.",
-      "titleLine2": "Três contextos.",
+      "titleLine1": "Dois projetos.",
+      "titleLine2": "Dois contextos.",
       "titleLine3": "Uma forma de pensar.",
-      "subtitle": "Cada caso ilustra um momento diferente da jornada digital de um negócio — da renovação de uma marca consolidada, à criação de uma marca de raiz, à clarificação estratégica de uma marca em construção.",
+      "subtitle": "Cada caso ilustra um momento diferente da jornada digital de um negócio — da renovação de uma marca consolidada à criação de uma marca de raiz.",
       "cards": [
-        { "imageKey": "vera-fan", "title": "Vera Barata", "category": "Decoração floral" },
-        { "imageKey": "adds-logo", "title": "ADDS", "category": "Consultoria tecnológica" },
-        { "imageKey": "ana-camomila", "title": "Ana Lopes", "category": "Produtos biológicos" }
+        { "imageKey": "vera-main", "title": "Vera Barata", "category": "Decoração floral" },
+        { "imageKey": "adds-logo", "title": "ADDS", "category": "Consultoria tecnológica" }
       ]
     },
     "ui": {
@@ -540,7 +539,13 @@
       "close": "Fechar",
       "servicesLabel": "O que fizemos",
       "resultsLabel": "Resultados",
-      "galleryLabel": "Galeria"
+      "galleryLabel": "Galeria",
+      "carouselsLabel": "Carrosséis de Instagram",
+      "carouselRole": "carrossel",
+      "carouselSlide": "imagem",
+      "carouselPrev": "Imagem anterior",
+      "carouselNext": "Imagem seguinte",
+      "carouselGoTo": "Ir para a imagem"
     },
     "items": [
       {
@@ -562,19 +567,22 @@
           "intro": "A Vera é decoradora floral em Mafra. O trabalho já era excecional e os clientes confiavam nela — faltava-lhe tempo para o digital acompanhar o ritmo do negócio.",
           "sections": [
             { "title": "O desafio", "body": "O logótipo merecia uma renovação alinhada com a sensibilidade da marca, o perfil de Instagram pedia direção editorial e respiração, e não havia ainda presença local no Google para quem procurasse decoração floral na zona." },
-            { "title": "O que fizemos", "body": "Rebranding do logótipo, alinhado com a estética da Vera; reformulação do perfil de Instagram (bio e destaques otimizados); direção editorial para um feed coerente; e criação e otimização do Google Business Profile." },
-            { "title": "Em construção", "body": "A presença no Google Business Profile está nos primeiros meses. A autoridade local — pesquisas tipo \"decoração floral [zona]\" — começa a construir-se a partir de agora." }
+            { "title": "O que fizemos", "body": "Rebranding do logótipo, alinhado com a estética da Vera; reformulação do perfil de Instagram (bio e destaques otimizados); direção editorial para um feed coerente; e criação e otimização do Google Business Profile." }
           ],
           "stats": [
-            { "value": "+321 mil", "label": "visualizações (IG 96% + FB)" },
+            { "value": "+321 mil", "label": "visualizações" },
             { "value": "+548", "label": "novos seguidores Instagram" },
             { "value": "+4.900", "label": "interações com conteúdos" },
             { "value": "Mais", "label": "casamentos (agenda a crescer)" }
           ],
           "services": ["Rebranding de logótipo", "Direção editorial de Instagram", "Google Business Profile"],
           "gallery": [
-            { "imageKey": "vera-feed-antes", "caption": "Feed — antes" },
-            { "imageKey": "vera-feed-depois", "caption": "Feed — depois" }
+            { "imageKey": "vera-logo-ba", "caption": "Logótipo · antes e depois" },
+            { "imageKey": "vera-feed-ba", "caption": "Feed de Instagram · antes e depois" }
+          ],
+          "carousels": [
+            { "key": "vera-carrossel-1", "label": "Carrossel de Instagram 1" },
+            { "key": "vera-carrossel-2", "label": "Carrossel de Instagram 2" }
           ]
         }
       },
@@ -598,7 +606,6 @@
           "sections": [
             { "title": "O desafio", "body": "Lançar uma consultora tecnológica sem identidade, sem manual de marca e sem presença digital. Numa área onde a confiança é tudo, a ADDS precisava de chegar com uma marca que já transmitisse seriedade." },
             { "title": "O que fizemos", "body": "Pesquisa de marca, posicionamento e identidade verbal; logótipo e identidade visual de raiz; manual de marca (paleta, tipografia, aplicações); setup e otimização de Instagram e LinkedIn; estratégia de conteúdo e tom de voz; e produção mensal de conteúdos (em curso)." },
-            { "title": "O que ficou construído", "body": "Hoje a ADDS tem uma marca completa pronta a operar: logótipo, identidade visual, manual de aplicações, voz definida e canais ativos. Tudo planeado para escalar com a empresa." },
             { "title": "Em curso", "body": "A presença digital ativa-se agora — Instagram e LinkedIn em produção contínua. A leitura de resultados ganhará sentido nos próximos 6 meses." }
           ],
           "stats": [
@@ -609,9 +616,9 @@
           ],
           "services": ["Identidade de raiz", "Manual de marca", "Estratégia de conteúdo", "Instagram + LinkedIn"],
           "gallery": [
-            { "imageKey": "adds-monogram", "caption": "Símbolo da marca" },
             { "imageKey": "adds-post-1", "caption": "Conteúdo · Instagram" },
-            { "imageKey": "adds-post-2", "caption": "Conteúdo · Instagram" }
+            { "imageKey": "adds-post-2", "caption": "Conteúdo · Instagram" },
+            { "imageKey": "adds-website", "caption": "Website" }
           ]
         }
       },
@@ -750,11 +757,6 @@
         "quote": "Entreguei a presença digital da minha empresa à Wavy — redes sociais e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
         "author": "João Marques",
         "role": "Fundador, Empresa Tecnológica"
-      },
-      {
-        "quote": "O plano de trabalho que a Mariana criou foi incrível. Desde o primeiro momento, demonstrou uma capacidade impressionante de compreender o meu negócio. Conseguiu traduzir ideias que eu ainda não tinha estruturado — trazendo clareza, estratégia e direção ao projeto. Senti-me verdadeiramente acompanhada em cada passo.",
-        "author": "Ana Lopes",
-        "role": "Marca de Produtos Biológicos"
       }
     ],
     "stat1": "8",

@@ -525,14 +525,13 @@
   "casesPage": {
     "page": {
       "label": "Cases",
-      "titleLine1": "Three projects.",
-      "titleLine2": "Three contexts.",
+      "titleLine1": "Two projects.",
+      "titleLine2": "Two contexts.",
       "titleLine3": "One way of thinking.",
-      "subtitle": "Each case illustrates a different moment in a business's digital journey — from renewing an established brand, to building a brand from scratch, to strategic clarification of a brand under construction.",
+      "subtitle": "Each case illustrates a different moment in a business's digital journey — from renewing an established brand to building a brand from scratch.",
       "cards": [
-        { "imageKey": "vera-fan", "title": "Vera Barata", "category": "Floral design" },
-        { "imageKey": "adds-logo", "title": "ADDS", "category": "Technology consultancy" },
-        { "imageKey": "ana-camomila", "title": "Ana Lopes", "category": "Organic products" }
+        { "imageKey": "vera-main", "title": "Vera Barata", "category": "Floral design" },
+        { "imageKey": "adds-logo", "title": "ADDS", "category": "Technology consultancy" }
       ]
     },
     "ui": {
@@ -540,7 +539,13 @@
       "close": "Close",
       "servicesLabel": "What we did",
       "resultsLabel": "Results",
-      "galleryLabel": "Gallery"
+      "galleryLabel": "Gallery",
+      "carouselsLabel": "Instagram carousels",
+      "carouselRole": "carousel",
+      "carouselSlide": "image",
+      "carouselPrev": "Previous image",
+      "carouselNext": "Next image",
+      "carouselGoTo": "Go to image"
     },
     "items": [
       {
@@ -562,19 +567,22 @@
           "intro": "Vera is a floral designer in Mafra. The work was already excellent and clients trusted her — what she lacked was time for digital to keep up with the pace of the business.",
           "sections": [
             { "title": "The challenge", "body": "The logo deserved a refresh aligned with the brand's sensibility, the Instagram profile needed editorial direction and room to breathe, and there was no local Google presence yet for those searching for floral design in the area." },
-            { "title": "What we did", "body": "Logo refresh aligned with Vera's visual sensibility; Instagram profile overhaul (optimised bio and highlights); editorial direction for a coherent feed; and setup and optimisation of the Google Business Profile." },
-            { "title": "In progress", "body": "The Google Business Profile presence is in its early months. Local authority — searches like \"floral design [area]\" — is just starting to build." }
+            { "title": "What we did", "body": "Logo refresh aligned with Vera's visual sensibility; Instagram profile overhaul (optimised bio and highlights); editorial direction for a coherent feed; and setup and optimisation of the Google Business Profile." }
           ],
           "stats": [
-            { "value": "+321k", "label": "views (IG 96% + FB)" },
+            { "value": "+321k", "label": "views" },
             { "value": "+548", "label": "new Instagram followers" },
             { "value": "+4,900", "label": "content interactions" },
             { "value": "More", "label": "weddings (agenda growing)" }
           ],
           "services": ["Logo rebranding", "Instagram editorial direction", "Google Business Profile"],
           "gallery": [
-            { "imageKey": "vera-feed-antes", "caption": "Feed — before" },
-            { "imageKey": "vera-feed-depois", "caption": "Feed — after" }
+            { "imageKey": "vera-logo-ba", "caption": "Logo · before & after" },
+            { "imageKey": "vera-feed-ba", "caption": "Instagram feed · before & after" }
+          ],
+          "carousels": [
+            { "key": "vera-carrossel-1", "label": "Instagram carousel 1" },
+            { "key": "vera-carrossel-2", "label": "Instagram carousel 2" }
           ]
         }
       },
@@ -598,7 +606,6 @@
           "sections": [
             { "title": "The challenge", "body": "Launching a technology consultancy without identity, brand guidelines or digital presence. In a field where trust is everything, ADDS needed to arrive with a brand that already conveyed seriousness." },
             { "title": "What we did", "body": "Brand research, positioning and verbal identity; logo and visual identity from scratch; brand book (palette, typography, applications); setup and optimisation of Instagram and LinkedIn; content strategy and tone of voice; and monthly content production (ongoing)." },
-            { "title": "What was built", "body": "Today ADDS has a complete brand ready to operate: logo, visual identity, application guidelines, defined voice and active channels. All built to scale with the company." },
             { "title": "Ongoing", "body": "Active digital presence is rolling out now — Instagram and LinkedIn in continuous production. Results will become meaningful over the next 6 months." }
           ],
           "stats": [
@@ -609,9 +616,9 @@
           ],
           "services": ["Identity from scratch", "Brand book", "Content strategy", "Instagram + LinkedIn"],
           "gallery": [
-            { "imageKey": "adds-monogram", "caption": "Brand symbol" },
             { "imageKey": "adds-post-1", "caption": "Content · Instagram" },
-            { "imageKey": "adds-post-2", "caption": "Content · Instagram" }
+            { "imageKey": "adds-post-2", "caption": "Content · Instagram" },
+            { "imageKey": "adds-website", "caption": "Website" }
           ]
         }
       },
@@ -750,11 +757,6 @@
         "quote": "I handed over my company's digital presence to Wavy — social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency — it's the partner every business needs to grow online.",
         "author": "João Marques",
         "role": "Founder, Technology Company"
-      },
-      {
-        "quote": "The work plan Mariana built was incredible. From the first moment, she showed an impressive ability to understand my business. She translated ideas I hadn't even structured yet — bringing clarity, strategy, and direction to the project. I felt truly supported every step of the way.",
-        "author": "Ana Lopes",
-        "role": "Organic Products Brand"
       }
     ],
     "stat1": "8",

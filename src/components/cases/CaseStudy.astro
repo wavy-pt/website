@@ -1,5 +1,7 @@
 ---
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Carousel from './Carousel.astro';
 import { t } from '../../i18n';
 import type { Lang } from '../../i18n';
 import bastidoresImage from '../../assets/wavy-bastidores.jpg';
@@ -13,9 +15,13 @@ import addsLogo from '../../assets/cases/adds-logo.png';
 import addsMonogram from '../../assets/cases/adds-monogram.png';
 import addsPost1 from '../../assets/cases/adds-post-1.jpg';
 import addsPost2 from '../../assets/cases/adds-post-2.jpg';
+import addsWebsite from '../../assets/cases/adds-website.jpg';
 import anaCamomila from '../../assets/cases/ana-camomila.jpg';
 import anaGranola from '../../assets/cases/ana-granola.jpg';
 import anaAzeitonas from '../../assets/cases/ana-azeitonas.jpg';
+import veraLogoAntigo from '../../assets/cases/vera-logo-antigo.jpg';
+import veraLogoBa from '../../assets/cases/vera-logo-ba.jpg';
+import veraFeedBa from '../../assets/cases/vera-feed-ba.jpg';
 
 interface Props {
   lang: Lang;
@@ -31,12 +37,16 @@ if (!item) throw new Error(`CaseStudy index ${index} out of range`);
 
 const imageMap: Record<string, typeof bastidoresImage> = {
   'vera-main': veraMain,
+  'vera-logo-antigo': veraLogoAntigo,
+  'vera-logo-ba': veraLogoBa,
+  'vera-feed-ba': veraFeedBa,
   'vera-feed-antes': veraFeedAntes,
   'vera-feed-depois': veraFeedDepois,
   'adds-logo': addsLogo,
   'adds-monogram': addsMonogram,
   'adds-post-1': addsPost1,
   'adds-post-2': addsPost2,
+  'adds-website': addsWebsite,
   'ana-camomila': anaCamomila,
   'ana-granola': anaGranola,
   'ana-azeitonas': anaAzeitonas,
@@ -48,6 +58,22 @@ const imageMap: Record<string, typeof bastidoresImage> = {
 const img = imageMap[item.imageKey || 'bastidores'];
 const detail = item.detail;
 const ui = cp.ui;
+// Galeria: com 2 imagens (ex.: antes/depois), mostra 2 colunas maiores; com 3+, mantém 3.
+const galleryCols = detail?.gallery?.length === 2 ? 'grid-cols-2' : 'grid-cols-2 md:grid-cols-3';
+
+// Carrosséis: agrupa as imagens de cada subpasta de /carrosseis, ordenadas por nome (1.jpg, 2.jpg, …)
+const carouselFiles = import.meta.glob('../../assets/cases/carrosseis/*/*.{jpg,png}', {
+  eager: true,
+  import: 'default',
+}) as Record<string, ImageMetadata>;
+const carouselRegistry: Record<string, ImageMetadata[]> = {};
+Object.keys(carouselFiles)
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+  .forEach((path) => {
+    const m = path.match(/carrosseis\/([^/]+)\//);
+    if (!m) return;
+    (carouselRegistry[m[1]] ??= []).push(carouselFiles[path]);
+  });
 
 const isEven = index % 2 === 0;
 ---
@@ -189,12 +215,12 @@ const isEven = index % 2 === 0;
           {detail.gallery && (
             <div class="mb-8">
               <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-3">{ui.galleryLabel}</p>
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              <div class:list={['grid gap-3 md:gap-4', galleryCols]}>
                 {detail.gallery.map((g) => {
                   const gimg = imageMap[g.imageKey || 'bastidores'];
                   return (
                     <figure class="rounded-2xl overflow-hidden bg-cream">
-                      <div class="aspect-square relative">
+                      <div class="aspect-[4/5] relative">
                         <Image
                           src={gimg}
                           alt={g.caption}
@@ -208,6 +234,19 @@ const isEven = index % 2 === 0;
                       <figcaption class="font-sans text-[11px] text-muted px-3 py-2">{g.caption}</figcaption>
                     </figure>
                   );
+                })}
+              </div>
+            </div>
+          )}
+
+          {detail.carousels && detail.carousels.length > 0 && (
+            <div class="mb-10">
+              <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-teal mb-5">{ui.carouselsLabel}</p>
+              <div class="grid gap-10 sm:grid-cols-2 sm:gap-6 md:gap-8 justify-items-center">
+                {detail.carousels.map((c) => {
+                  const imgs = carouselRegistry[c.key] || [];
+                  if (!imgs.length) return null;
+                  return <Carousel images={imgs} lang={lang} label={c.label} />;
                 })}
               </div>
             </div>

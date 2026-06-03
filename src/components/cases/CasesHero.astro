@@ -9,6 +9,7 @@ import servicosImage from '../../assets/wavy-servicos.png';
 import marianaImage from '../../assets/IMG_7230.jpg';
 // Cards reais do leque dos casos
 import veraFan from '../../assets/cases/vera-fan.jpg';
+import veraMainCard from '../../assets/cases/vera-main.jpg';
 import addsLogoCard from '../../assets/cases/adds-logo.png';
 import anaCamomilaCard from '../../assets/cases/ana-camomila.jpg';
 
@@ -23,6 +24,7 @@ const numCases = cp.items.length;
 
 const imageMap: Record<string, typeof bastidoresImage> = {
   'vera-fan': veraFan,
+  'vera-main': veraMainCard,
   'adds-logo': addsLogoCard,
   'ana-camomila': anaCamomilaCard,
   bastidores: bastidoresImage,
@@ -92,8 +94,8 @@ const cards = i.cards || [];
        à semelhança do fallback do ScrollReveal. Sem isto, os cards
        ficariam em opacity:0 e o herói aparecia vazio. */
     .cases-fan-card { opacity: 1 !important; animation: none !important; }
-    .cases-fan-card:nth-child(1) { transform: translateX(-150px) rotate(-8deg) !important; }
-    .cases-fan-card:nth-child(2) { transform: translateX(0) rotate(0deg) !important; }
+    .cases-fan-card:nth-child(1) { transform: translateX(-85px) rotate(-7deg) !important; }
+    .cases-fan-card:nth-child(2) { transform: translateX(85px) rotate(7deg) !important; }
     .cases-fan-card:nth-child(3) { transform: translateX(150px) rotate(8deg) !important; }
   </style>
 </noscript>
@@ -107,8 +109,8 @@ const cards = i.cards || [];
     will-change: transform, opacity;
   }
   /* posição final de cada card (usada na animação e no estado estático) */
-  .cases-fan-card:nth-child(1) { z-index: 3; --tx: -150px; --rot: -8deg; }
-  .cases-fan-card:nth-child(2) { z-index: 2; --tx: 0px; --rot: 0deg; }
+  .cases-fan-card:nth-child(1) { z-index: 3; --tx: -85px; --rot: -7deg; }
+  .cases-fan-card:nth-child(2) { z-index: 2; --tx: 85px; --rot: 7deg; }
   .cases-fan-card:nth-child(3) { z-index: 1; --tx: 150px; --rot: 8deg; }
 
   /* Um só movimento contínuo:
@@ -133,8 +135,8 @@ const cards = i.cards || [];
       transform 0.45s cubic-bezier(0.25, 1, 0.5, 1),
       box-shadow 0.3s ease;
   }
-  .cases-fan.deal-done .cases-fan-card:nth-child(1) { transform: translateX(-150px) rotate(-8deg); }
-  .cases-fan.deal-done .cases-fan-card:nth-child(2) { transform: translateX(0) rotate(0deg); }
+  .cases-fan.deal-done .cases-fan-card:nth-child(1) { transform: translateX(-85px) rotate(-7deg); }
+  .cases-fan.deal-done .cases-fan-card:nth-child(2) { transform: translateX(85px) rotate(7deg); }
   .cases-fan.deal-done .cases-fan-card:nth-child(3) { transform: translateX(150px) rotate(8deg); }
 
   /* Hover: vem para a frente, sobe e endireita */
@@ -148,8 +150,8 @@ const cards = i.cards || [];
   /* Sem animação para quem prefere movimento reduzido: mostra logo o leque */
   @media (prefers-reduced-motion: reduce) {
     .cases-fan-card { opacity: 1; animation: none !important; transition: none; }
-    .cases-fan-card:nth-child(1) { transform: translateX(-150px) rotate(-8deg); }
-    .cases-fan-card:nth-child(2) { transform: translateX(0) rotate(0deg); }
+    .cases-fan-card:nth-child(1) { transform: translateX(-85px) rotate(-7deg); }
+    .cases-fan-card:nth-child(2) { transform: translateX(85px) rotate(7deg); }
     .cases-fan-card:nth-child(3) { transform: translateX(150px) rotate(8deg); }
   }
 </style>

@@ -1,0 +1,235 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { t } from '../../i18n';
+import type { Lang } from '../../i18n';
+
+interface Props {
+  images: ImageMetadata[];
+  lang: Lang;
+  /** rótulo acessível do carrossel (ex.: "Carrossel de Instagram 1") */
+  label?: string;
+}
+
+const { images, lang, label } = Astro.props;
+const ui = t(lang).casesPage.ui;
+const single = images.length <= 1;
+---
+
+<div
+  class="vcarousel"
+  data-carousel
+  role="group"
+  aria-roledescription={ui.carouselRole}
+  aria-label={label}
+>
+  <div class="vcarousel-viewport" data-carousel-track tabindex="0">
+    {images.map((img, i) => (
+      <div
+        class="vcarousel-slide"
+        data-carousel-slide={i}
+        role="group"
+        aria-roledescription={ui.carouselSlide}
+        aria-label={`${i + 1} / ${images.length}`}
+      >
+        <Image
+          src={img}
+          alt=""
+          class="w-full h-full object-cover"
+          widths={[360, 540, 760]}
+          sizes="(min-width: 640px) 380px, 88vw"
+          quality={80}
+          loading="lazy"
+          draggable={false}
+        />
+      </div>
+    ))}
+  </div>
+
+  {!single && (
+    <>
+      <button type="button" class="vcarousel-arrow vcarousel-prev" data-carousel-prev aria-label={ui.carouselPrev}>
+        <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="vcarousel-arrow vcarousel-next" data-carousel-next aria-label={ui.carouselNext}>
+        <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+      </button>
+      <div class="vcarousel-counter" data-carousel-counter aria-hidden="true">1 / {images.length}</div>
+      <div class="vcarousel-dots" data-carousel-dots>
+        {images.map((_, i) => (
+          <button
+            type="button"
+            class="vcarousel-dot"
+            data-carousel-dot={i}
+            aria-label={`${ui.carouselGoTo} ${i + 1}`}
+            aria-current={i === 0 ? 'true' : 'false'}
+          ></button>
+        ))}
+      </div>
+    </>
+  )}
+</div>
+
+<style>
+  .vcarousel {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin-inline: auto;
+  }
+  .vcarousel-viewport {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 20px;
+    background: var(--color-cream, #f0ede4);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    box-shadow: 0 14px 40px -18px rgba(28, 60, 60, 0.45);
+  }
+  .vcarousel-viewport::-webkit-scrollbar {
+    display: none;
+  }
+  .vcarousel-viewport:focus-visible {
+    outline: 2px solid #2a9090;
+    outline-offset: 3px;
+  }
+  .vcarousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  .vcarousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: rgba(250, 250, 248, 0.92);
+    color: #1c3c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 16px -4px rgba(28, 60, 60, 0.45);
+    transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+    z-index: 2;
+  }
+  .vcarousel-arrow:hover {
+    background: #fff;
+  }
+  .vcarousel-prev {
+    left: 10px;
+  }
+  .vcarousel-next {
+    right: 10px;
+  }
+  .vcarousel-arrow[disabled] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .vcarousel-counter {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-family: var(--font-sans, sans-serif);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: #fafaf8;
+    background: rgba(28, 60, 60, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    z-index: 2;
+  }
+
+  .vcarousel-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  .vcarousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: #c9d3cf;
+    transition: width 0.25s ease, background 0.25s ease;
+  }
+  .vcarousel-dot[aria-current='true'] {
+    width: 20px;
+    background: #2a9090;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .vcarousel-viewport {
+      scroll-behavior: auto;
+    }
+  }
+</style>
+
+<script>
+  function initVCarousels() {
+    document.querySelectorAll('[data-carousel]').forEach((car) => {
+      if (car.getAttribute('data-vc-bound') === 'true') return;
+      car.setAttribute('data-vc-bound', 'true');
+
+      const track = car.querySelector('[data-carousel-track]') as HTMLElement | null;
+      const slides = Array.from(car.querySelectorAll('[data-carousel-slide]'));
+      const prev = car.querySelector('[data-carousel-prev]') as HTMLButtonElement | null;
+      const next = car.querySelector('[data-carousel-next]') as HTMLButtonElement | null;
+      const dots = Array.from(car.querySelectorAll('[data-carousel-dot]'));
+      const counter = car.querySelector('[data-carousel-counter]');
+      if (!track || slides.length < 2) return;
+
+      let current = 0;
+
+      function render() {
+        const w = track!.clientWidth || 1;
+        current = Math.max(0, Math.min(slides.length - 1, Math.round(track!.scrollLeft / w)));
+        dots.forEach((d, i) => d.setAttribute('aria-current', i === current ? 'true' : 'false'));
+        if (prev) prev.toggleAttribute('disabled', current === 0);
+        if (next) next.toggleAttribute('disabled', current === slides.length - 1);
+        if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+      }
+
+      function goTo(i: number) {
+        const clamped = Math.max(0, Math.min(slides.length - 1, i));
+        track!.scrollTo({ left: track!.clientWidth * clamped, behavior: 'smooth' });
+      }
+
+      prev?.addEventListener('click', () => goTo(current - 1));
+      next?.addEventListener('click', () => goTo(current + 1));
+      dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+      car.addEventListener('keydown', (e) => {
+        const ev = e as KeyboardEvent;
+        if (ev.key === 'ArrowLeft') {
+          ev.preventDefault();
+          goTo(current - 1);
+        } else if (ev.key === 'ArrowRight') {
+          ev.preventDefault();
+          goTo(current + 1);
+        }
+      });
+
+      let raf = 0;
+      track.addEventListener('scroll', () => {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(render);
+      });
+
+      render();
+    });
+  }
+
+  document.addEventListener('astro:page-load', initVCarousels);
+  document.addEventListener('DOMContentLoaded', initVCarousels);
+  initVCarousels();
+</script>
