@@ -40,8 +40,12 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
 const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
 
 const currentPath = Astro.url.pathname;
-const currentPathClean = currentPath.replace(/^\/(pt|en)/, '') || '/';
 const switchLangPath = resolveSwitchPath(currentPath, otherLang);
+
+// Página atual. Normaliza a barra final para o destaque funcionar tanto em dev
+// como no build estático da Vercel (que serve "/sobre/" com barra final).
+const normalizePath = (p: string) => p.replace(/\/+$/, '') || '/';
+const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(to);
 ---
 
 <header
@@ -72,10 +76,11 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-8">
       {navLinks.map((link) => {
-        const isActive = currentPath === link.to || currentPathClean === link.to;
+        const isActive = isCurrent(link.to);
         return (
           <a
             href={link.to}
+            aria-current={isActive ? 'page' : undefined}
             class:list={[
               'font-sans text-sm transition-colors duration-200 whitespace-nowrap',
               // Não transparent: comportamento original (sempre teal-dark)
@@ -156,10 +161,11 @@ const switchLangPath = resolveSwitchPath(currentPath, otherLang);
     {navLinks.map((link) => (
       <a
         href={link.to}
+        aria-current={isCurrent(link.to) ? 'page' : undefined}
         class:list={[
-          'font-serif text-2xl py-2 px-4',
-          currentPath === link.to || currentPathClean === link.to
-            ? 'text-teal'
+          'font-serif text-2xl py-2 px-5 transition-colors',
+          isCurrent(link.to)
+            ? 'text-teal font-medium bg-teal/10 rounded-full'
             : 'text-teal-dark hover:text-teal',
         ]}
       >
