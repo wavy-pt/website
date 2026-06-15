@@ -28,14 +28,14 @@
   "forWho": {
     "label": "recognise yourself?",
     "title": "You have a real business. Your digital presence still does not reflect that.",
-    "subtitle": "We work with established businesses, already profitable, already trusted by loyal customers, where digital hasn't caught up with the quality behind the door. If any of this rings true, you're in the right place.",
+    "subtitle": "We work with established businesses, already profitable, already trusted by loyal customers, where digital hasn't caught up with the quality you deliver in person. If any of this rings true, you're in the right place.",
     "footer": "What unites our clients isn't the sector. It's the profile: businesses with substance, looking for digital that lives up to the story they've already built.",
     "cards": [
       {
         "number": "01",
         "pill": "I FEEL THAT…",
         "title": "My digital presence doesn't look like me.",
-        "desc": "Your space, your product, your service, all excellent. But anyone landing on your site or social feed finds an image that looks amateur, dated, or cold. It doesn't match the experience behind the door.",
+        "desc": "Your space, your product, your service, all excellent. But anyone landing on your site or social feed finds an image that looks inconsistent, dated, or cold. It doesn't match the experience you deliver in person.",
         "quote": "\"It looks like someone else's brand.\""
       },
       {
@@ -67,7 +67,7 @@
       {
         "tag": "PREMIUM SERVICE",
         "title": "I deliver excellence every day. I want my digital to show it.",
-        "desc": "Clinics, ateliers, private practices and premium service providers. The current digital presence is amateur, sending the wrong message to clients paying premium prices."
+        "desc": "Clinics, ateliers, private practices and premium service providers. The current digital presence is inconsistent, sending the wrong message to clients paying premium prices."
       },
       {
         "tag": "GROWING RETAIL",
@@ -142,7 +142,7 @@
       "tag": "ONGOING DIRECTION",
       "scriptName": "Social Media Management and Local SEO",
       "name": "The Direction",
-      "desc": "Ongoing digital direction for established brands that want to grow without losing control. Monthly strategy, content, channel management, local SEO (Google and Maps), and clear reports. At full level, we operate as your external CMO.",
+      "desc": "Ongoing digital direction for established brands that want to grow without losing control. Monthly strategy, content creation and capture, channel management, local SEO (Google and Maps), and clear reports. At full level, we operate as your external CMO.",
       "price": "750€",
       "priceLabel": "FROM",
       "pricePeriod": "/month",
@@ -203,11 +203,11 @@
         },
         {
           "q": "What's included in the monthly reports?",
-          "a": "Reports designed for business owners, not marketing departments: real business indicators (qualified leads, website conversions, calls from your Google Business Profile, presence in local searches, and, for e-commerce, sales data too), analysis of what worked during the month, concrete recommendations for the next one, local SEO ranking and a quarterly comparison. No auto-generated PDFs: every report is interpreted and contextualised by us, in plain language."
+          "a": "Reports designed for business owners, not marketing departments. Each report brings together the business indicators that matter, qualified leads, website conversions and visibility in local searches (for online stores, we also integrate sales data), alongside an analysis of what worked during the month and concrete recommendations to adjust for the next. Every three months, we run an extended strategic review with evolution comparison. No auto-generated PDFs: each report is interpreted and contextualised by us, in plain language."
         },
         {
           "q": "What if I need to pause or cancel The Direction?",
-          "a": "After the initial minimum commitment (3 months on the entry plan, 6 months on advanced plans), the service renews monthly. You can cancel with 30 days' notice, no penalties. For specific situations, extended holidays, seasonal lulls, operational changes, we discuss with you case by case to find the best solution. No lock-ins, no gym-like exit hurdles."
+          "a": "After the recommended initial period (3 months on the entry plan, 6 months on advanced plans), the service renews monthly. You can cancel with 30 days' notice, no penalties. For specific situations, extended holidays, seasonal lulls, operational changes, we discuss with you case by case to find the best solution. No lock-ins, no gym-like exit hurdles."
         }
       ]
     },
@@ -281,24 +281,25 @@
             { "title": "Development + Content", "desc": "We build the website or store, create initial content and prepare the channels." },
             { "title": "Launch + Training", "desc": "We launch, train your team, and stay available for 30 days for technical adjustments." }
           ],
-          "typesLabel": "3 typical types of Build",
+          "typesLabel": "4 typical types of Build",
           "types": [
             { "tag": "For services and professionals", "name": "Strategic Institutional Website", "desc": "Built to generate authority and qualified leads. For clinics, ateliers, practices and professional services." },
             { "tag": "For retail and product brands", "name": "Strategic Online Store", "desc": "E-commerce built to sell, with conversion-optimised structure and a strategy that connects brand to sales." },
-            { "tag": "For businesses in transition", "name": "Full Rebranding + Website", "desc": "New or refined visual identity with an aligned website. For generational transition, expansion or repositioning." }
+            { "tag": "For businesses in transition", "name": "Full Rebranding + Website", "desc": "New or refined visual identity with an aligned website. For generational transition, expansion or repositioning." },
+            { "tag": "For those who need just the brand foundation", "name": "Strategic Visual Identity", "desc": "For businesses not yet ready for a website but in need of a solid brand foundation. Includes positioning, logo, palette, typography, essential applications and brand book. Designed for pre-launch stage, partial rebranding, or brand expansion." }
           ],
           "forWhoLabel": "Who it's for",
           "forWhoIntro": "The Build is for businesses that already have clarity about the problem and are ready for reconstruction. It typically follows the X-Ray, when the diagnosis shows the foundations need to be rebuilt.",
           "forWhoCases": [
             "Businesses without a website, or with an outdated one that doesn't convert.",
-            "Brands with amateur or inconsistent visual identity across channels.",
+            "Brands with inconsistent visual identity across channels.",
             "Retailers wanting their own online store, without depending on external platforms.",
             "Companies in generational transition where the next generation wants to modernise the brand."
           ],
-          "price": "1,500€",
-          "priceLabel": "FROM",
+          "price": "Custom quote",
+          "priceLabel": "",
           "pricePeriod": "",
-          "priceNote": "+ VAT · quoted after the X-Ray. Payment in 3 instalments (40% start · 30% midpoint · 30% launch).",
+          "priceNote": "Each Build is quoted individually after the X-Ray, based on the agreed scope and the type of project chosen. Payment in three instalments (40% start · 30% midpoint · 30% launch).",
           "cta": "Book the X-Ray first",
           "icon": "ri-layout-4-line"
         },
@@ -309,11 +310,11 @@
           "scriptName": "Social Media and Local SEO",
           "name": "The Direction",
           "tagline": "To grow without losing control",
-          "desc": "The Direction is where Wavy takes ongoing charge of your digital. Monthly strategy, content, channel management, local SEO and clear reports, to grow without losing control, and without having to manage an internal team. At full level, we operate as your external CMO.",
+          "desc": "The Direction is where Wavy takes ongoing charge of your digital. Monthly strategy, content creation and capture, channel management, local SEO and clear reports, to grow without losing control, and without having to manage an internal team. At full level, we operate as your external CMO.",
           "deliverablesLabel": "What's included",
           "deliverables": [
             "Monthly strategy and editorial calendar",
-            "Content creation: copy, design and editing",
+            "Content creation and on-site capture, copy, design, editing, photography and video",
             "Channel management (publishing, community, messages)",
             "Local SEO (Google Business Profile, keywords, maps)",
             "Monthly alignment meeting and clear report",
@@ -335,10 +336,10 @@
             "Companies that tried managing social internally and realised they need strategic direction.",
             "Professionals wanting to delegate the entire digital to a trusted partner."
           ],
-          "price": "750€",
-          "priceLabel": "FROM",
-          "pricePeriod": "/month",
-          "priceNote": "+ VAT · 3-month minimum (entry) or 6 months (advanced). Monthly payment in advance.",
+          "price": "Custom quote",
+          "priceLabel": "",
+          "pricePeriod": "",
+          "priceNote": "Each Direction is quoted individually based on the agreed scope. Minimum commitment of 3 months on the entry plan or 6 months on advanced plans. Monthly payment in advance.",
           "cta": "Discover the plan",
           "icon": "ri-calendar-event-line"
         }
@@ -458,14 +459,14 @@
       "headlineHighlight": "the story.",
       "subtitle": "Wavy was born from the conviction that businesses built with purpose deserve communication of the same calibre, without betraying themselves, without burning out, without turning into content.",
       "marquee": [
-        { "type": "stat", "number": "3", "label": "Non-negotiable values", "cardColor": "teal" },
+        { "type": "stat", "number": "24h", "label": "Response time", "sublabel": "On working days. Human reply, never automated.", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Founded at home, in a living room.", "cardColor": "cream" },
-        { "type": "stat", "number": "5+", "label": "Priority sectors", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "West & Greater Lisbon", "label": "Where to find us", "sublabel": "In person here. Remote across Portugal.", "small": true, "cardColor": "teal-dark" },
         { "type": "image", "imageKey": "hero", "cardColor": "cream" },
         { "type": "stat", "number": "100%", "label": "Start with the X-Ray", "cardColor": "teal" },
         { "type": "stat", "number": "1", "label": "Single point of contact", "cardColor": "teal-dark" },
         { "type": "stat", "number": "0", "label": "Templates followed blindly", "cardColor": "teal" },
-        { "type": "text", "title": "Mariana Antunes", "body": "Founder and the only team at Wavy.", "cardColor": "cream" },
+        { "type": "text", "title": "Mariana Antunes", "body": "Founder and strategist.", "cardColor": "cream" },
         { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },
         { "type": "stat", "number": "30 days", "label": "Warranty on every Build", "cardColor": "teal" }
       ]
@@ -599,7 +600,7 @@
           { "value": "2 channels", "label": "Instagram + LinkedIn active" },
           { "value": "Ongoing", "label": "monthly content production" }
         ],
-        "quote": "I handed over my company's digital presence to Wavy, social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
+        "quote": "I handed over my company's entire digital presence to Wavy, social media, website, and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
         "quoteAuthor": "JOÃO MARQUES · FOUNDER, ADDS",
         "detail": {
           "intro": "ADDS is a newly created technology consultancy. It had the expertise and the roadmap; what it lacked was the brand. The strategic choice was to build it seriously, from day one.",
@@ -660,7 +661,7 @@
       }
     ],
     "cta": {
-      "title": "The next one could be yours.",
+      "title": "The next story could be yours.",
       "subtitle": "Each of these cases started with the same question, \"where are you?\". Yours can begin there too.",
       "button": "Book my X-Ray",
       "manifesto": "Every project starts with the right question. And always ends with another: where are you going next?",
@@ -755,15 +756,19 @@
         "role": "Floral Designer"
       },
       {
-        "quote": "I handed over my company's digital presence to Wavy, social media and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
+        "quote": "I handed over my company's entire digital presence to Wavy, social media, website, and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
         "author": "João Marques",
         "role": "Founder, Technology Company"
       }
     ],
     "stat1": "8",
     "stat1Label": "brands supported across the career",
-    "stat2": "100%",
-    "stat2Label": "of clients start with the X-Ray",
+    "stat2": "0",
+    "stat2Label": "templates blindly followed",
+    "stat3": "100%",
+    "stat3Label": "of clients start with the X-Ray",
+    "stat4": "1",
+    "stat4Label": "direction from start to finish",
     "ctaTitle": "The next story could be yours.",
     "ctaSubtitle": "Start with the X-Ray. By the end, you'll know exactly where your digital business stands, and what to do next.",
     "ctaButton": "Start with the X-Ray"
@@ -775,6 +780,10 @@
       {
         "q": "What is the X-Ray and why do I have to start there?",
         "a": "The X-Ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence, website, social media, SEO, communication, and positioning, and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-Ray fee is fully credited to your next project."
+      },
+      {
+        "q": "How much does it cost to work with Wavy?",
+        "a": "It depends on the service. The X-Ray (strategic diagnosis) starts at €350 + VAT and is credited to your next project. The Build (visual identity and/or website) and The Direction (ongoing management and local SEO) are quoted individually after the X-Ray, based on your project's scope. The Direction has a 3-month minimum on the entry plan or 6 months on advanced plans. We don't negotiate prices down, we adjust the scope to your reality. Wavy principle: transparency in every decision."
       },
       {
         "q": "Do you work outside the West or Greater Lisbon?",
@@ -790,7 +799,7 @@
       },
       {
         "q": "Do your services have mandatory loyalty periods?",
-        "a": "We don't use long-term lock-ins in the traditional sense. We apply minimum commitments to give results time to mature: 3 months on the entry plan and 6 months on the advanced plans. After that initial cycle, you're free to continue month by month or cancel with 30 days' notice. We stay because of the value we deliver, not because of a contract."
+        "a": "We don't work with lock-ins that trap you. We recommend an initial period of 3 months on the entry plan or 6 months on advanced plans, not to tie you to a contract, but because results in digital marketing need time to mature. The first 60 to 90 days are almost invisible; it's from month 4 or 6 that your investment starts to pay off. After that period, you're free to continue month by month or cancel with 30 days' notice. We stay because of the value we deliver, not because of a contract."
       }
     ]
   },

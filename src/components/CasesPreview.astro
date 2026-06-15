@@ -11,6 +11,12 @@ interface Props {
 const { lang } = Astro.props;
 const i = t(lang);
 const testimonials = i.cases.testimonials;
+const stats = [
+  { num: i.cases.stat1, label: i.cases.stat1Label, bg: 'bg-cream', numColor: 'text-teal-dark', labelColor: 'text-muted' },
+  { num: i.cases.stat2, label: i.cases.stat2Label, bg: 'bg-teal-dark', numColor: 'text-cream', labelColor: 'text-cream/80' },
+  { num: i.cases.stat3, label: i.cases.stat3Label, bg: 'bg-teal', numColor: 'text-cream', labelColor: 'text-cream/80' },
+  { num: i.cases.stat4, label: i.cases.stat4Label, bg: 'bg-cream', numColor: 'text-teal-dark', labelColor: 'text-muted' },
+];
 ---
 
 <section class="bg-offwhite py-14 md:py-20">
@@ -103,20 +109,16 @@ const testimonials = i.cases.testimonials;
             </div>
           </div>
 
-          <!-- Stats row -->
+          <!-- Stats row (4 cards, 2x2) -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 flex-1">
-            <div class="bento-card relative bg-cream rounded-[24px] p-6 md:p-8 flex flex-col justify-center">
-              <div class="flex items-baseline gap-1 mb-2">
-                <span class="font-serif text-3xl md:text-4xl font-medium text-teal-dark">{i.cases.stat1}</span>
+            {stats.map((stat) => (
+              <div class:list={['bento-card relative rounded-[24px] p-6 md:p-8 flex flex-col justify-center', stat.bg]}>
+                <div class="flex items-baseline gap-1 mb-2">
+                  <span class:list={['font-serif text-3xl md:text-4xl font-medium', stat.numColor]}>{stat.num}</span>
+                </div>
+                <p class:list={['font-sans text-sm', stat.labelColor]}>{stat.label}</p>
               </div>
-              <p class="font-sans text-sm text-muted">{i.cases.stat1Label}</p>
-            </div>
-            <div class="bento-card relative bg-teal-dark rounded-[24px] p-6 md:p-8 flex flex-col justify-center">
-              <div class="flex items-baseline gap-1 mb-2">
-                <span class="font-serif text-3xl md:text-4xl font-medium text-cream">{i.cases.stat2}</span>
-              </div>
-              <p class="font-sans text-sm text-cream/80">{i.cases.stat2Label}</p>
-            </div>
+            ))}
           </div>
         </div>
 

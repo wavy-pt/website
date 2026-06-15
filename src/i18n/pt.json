@@ -28,14 +28,14 @@
   "forWho": {
     "label": "reconheces-te?",
     "title": "Tens um negócio real. A tua presença digital ainda não reflete isso.",
-    "subtitle": "Trabalhamos com negócios consolidados, que já faturam, cresceram e têm clientes fiéis, mas onde o digital ainda não está à altura da qualidade que se entrega a portas adentro. Se algo aqui te soa familiar, estás no sítio certo.",
+    "subtitle": "Trabalhamos com negócios consolidados, que já faturam, cresceram e têm clientes fiéis, mas onde o digital ainda não está à altura da qualidade que entregas em pessoa. Se algo aqui te soa familiar, estás no sítio certo.",
     "footer": "O que une os nossos clientes não é o setor. É o perfil: negócios com substância que procuram um digital à altura da história que já construíram.",
     "cards": [
       {
         "number": "01",
         "pill": "SINTO QUE…",
         "title": "A minha presença digital não me representa.",
-        "desc": "O teu espaço, o teu produto e o teu atendimento são de excelência. Mas quem chega ao site ou às redes encontra uma imagem amadora, desatualizada ou fria. Não bate certo com o que vives a portas adentro.",
+        "desc": "O teu espaço, o teu produto e o teu atendimento são de excelência. Mas quem chega ao site ou às redes encontra uma imagem inconsistente, desatualizada ou fria. Não bate certo com a experiência que entregas em pessoa.",
         "quote": "\"Parece de outra pessoa.\""
       },
       {
@@ -67,7 +67,7 @@
       {
         "tag": "SERVIÇO PREMIUM",
         "title": "Entrego excelência todos os dias. Quero que o digital comunique isso.",
-        "desc": "Clínicas, ateliers, consultórios e profissionais liberais com serviço de alto valor. A presença digital atual é amadora, manda a mensagem errada a quem paga preços premium."
+        "desc": "Clínicas, ateliers, consultórios e profissionais liberais com serviço de alto valor. A presença digital atual é inconsistente, manda a mensagem errada a quem paga preços premium."
       },
       {
         "tag": "COMÉRCIO EM CRESCIMENTO",
@@ -142,7 +142,7 @@
       "tag": "A CONTINUIDADE",
       "scriptName": "Gestão de Redes Sociais e SEO Local",
       "name": "A Direção",
-      "desc": "Direção digital contínua para marcas com história que querem crescer sem perder o controlo. Estratégia mensal, conteúdo, gestão de canais, SEO local (Google e Maps) e relatórios claros. Na versão plena, funcionamos como a tua CMO externa.",
+      "desc": "Direção digital contínua para marcas com história que querem crescer sem perder o controlo. Estratégia mensal, criação e captação de conteúdo, gestão de canais, SEO local (Google e Maps) e relatórios claros. Na versão plena, funcionamos como a tua CMO externa.",
       "price": "750€",
       "priceLabel": "DESDE",
       "pricePeriod": "/mês",
@@ -203,11 +203,11 @@
         },
         {
           "q": "O que está incluído nos relatórios mensais?",
-          "a": "Relatórios pensados para donos de negócio, não para departamentos de marketing: indicadores de negócio reais (contactos qualificados, conversões no website, chamadas a partir do Google, presença em pesquisas locais, e, para lojas online, também dados de vendas), análise do que funcionou no mês, recomendações concretas para o seguinte, ranking de SEO local e comparativo trimestral. Sem PDFs gerados automaticamente: cada relatório é interpretado e contextualizado por nós, em linguagem simples."
+          "a": "Relatórios pensados para donos de negócio, não para departamentos de marketing. Cada relatório reúne os indicadores de negócio que importam, contactos qualificados, conversões no website e visibilidade nas pesquisas locais (para lojas online, integramos também dados de vendas), acompanhados da análise do que funcionou no mês e das recomendações concretas para ajustar no seguinte. A cada três meses, fazemos uma revisão estratégica alargada com comparativo de evolução. Sem PDFs gerados automaticamente: cada relatório é interpretado e contextualizado por nós, em linguagem simples."
         },
         {
           "q": "E se eu precisar de pausar ou cancelar a Direção?",
-          "a": "Após o compromisso mínimo inicial (3 meses no plano base, 6 meses nos planos avançados), o serviço renova mensalmente. Podes cancelar com 30 dias de aviso prévio, sem penalizações. Para situações específicas, férias prolongadas, baixa sazonal, alteração de operação, falamos contigo caso a caso para encontrar a melhor solução. Sem amarras, sem ginásios de fim de contrato."
+          "a": "Após o período inicial recomendado (3 meses no plano base, 6 meses nos planos avançados), o serviço renova mensalmente. Podes cancelar com 30 dias de aviso prévio, sem penalizações. Para situações específicas, férias prolongadas, baixa sazonal, alteração de operação, falamos contigo caso a caso para encontrar a melhor solução. Sem amarras, sem ginásios de fim de contrato."
         }
       ]
     },
@@ -281,24 +281,25 @@
             { "title": "Desenvolvimento + Conteúdos", "desc": "Construímos o website ou loja, criamos os conteúdos iniciais e preparamos os canais." },
             { "title": "Lançamento + Formação", "desc": "Lançamos, damos formação e ficamos disponíveis 30 dias para ajustes técnicos." }
           ],
-          "typesLabel": "3 tipos típicos de Obra",
+          "typesLabel": "4 tipos típicos de Obra",
           "types": [
             { "tag": "Para serviços e profissionais", "name": "Website Institucional Estratégico", "desc": "Pensado para gerar autoridade e contactos qualificados. Para clínicas, ateliers, consultórios e serviços profissionais." },
             { "tag": "Para comércio e marcas com produto", "name": "Loja Online Estratégica", "desc": "E-commerce construído para vender, com estrutura otimizada para conversão e estratégia que liga marca a vendas." },
-            { "tag": "Para negócios em transição", "name": "Rebranding Completo + Website", "desc": "Identidade nova ou refinada e website alinhado. Para transição geracional, expansão ou reposicionamento." }
+            { "tag": "Para negócios em transição", "name": "Rebranding Completo + Website", "desc": "Identidade nova ou refinada e website alinhado. Para transição geracional, expansão ou reposicionamento." },
+            { "tag": "Para quem precisa só da fundação de marca", "name": "Identidade Visual Estratégica", "desc": "Para negócios que ainda não estão prontos para um website, mas precisam de uma fundação de marca sólida. Inclui posicionamento, logótipo, paleta, tipografia, aplicações essenciais e manual de marca. Indicado para fase pré-lançamento, rebranding parcial ou expansão de marca." }
           ],
           "forWhoLabel": "Para quem é",
           "forWhoIntro": "A Obra é para negócios que já têm clareza sobre o problema e estão prontos para a reconstrução. Tipicamente segue-se ao Raio-X, quando o diagnóstico mostra que as fundações precisam de ser refeitas.",
           "forWhoCases": [
             "Negócios sem website, ou com um website desatualizado que não converte.",
-            "Marcas com identidade visual amadora ou inconsistente entre canais.",
+            "Marcas com identidade visual inconsistente entre canais.",
             "Comércios que querem entrar no online com loja própria, sem depender de plataformas externas.",
             "Empresas em transição geracional onde a próxima geração quer modernizar a marca."
           ],
-          "price": "1.500€",
-          "priceLabel": "A PARTIR DE",
+          "price": "Orçamento personalizado",
+          "priceLabel": "",
           "pricePeriod": "",
-          "priceNote": "+ IVA · orçamentado após o Raio-X. Pagamento em 3 tranches (40% início · 30% meio · 30% lançamento).",
+          "priceNote": "Cada Obra é orçamentada individualmente após o Raio-X, em função do âmbito acordado e do tipo de projeto escolhido. Pagamento em três tranches (40% início · 30% meio · 30% lançamento).",
           "cta": "Marcar o Raio-X primeiro",
           "icon": "ri-layout-4-line"
         },
@@ -309,11 +310,11 @@
           "scriptName": "Gestão de Redes Sociais e SEO Local",
           "name": "A Direção",
           "tagline": "Para crescer sem perder o controlo",
-          "desc": "A Direção é onde a Wavy assume a direção contínua do teu digital. Estratégia mensal, conteúdo, gestão dos canais, SEO local e relatórios claros, para crescer sem perder o controlo, e sem ter de coordenar uma equipa interna. Na versão plena, funcionamos como a tua CMO externa.",
+          "desc": "A Direção é onde a Wavy assume a direção contínua do teu digital. Estratégia mensal, criação e captação de conteúdo, gestão dos canais, SEO local e relatórios claros, para crescer sem perder o controlo, e sem ter de coordenar uma equipa interna. Na versão plena, funcionamos como a tua CMO externa.",
           "deliverablesLabel": "O que inclui",
           "deliverables": [
             "Estratégia mensal e calendário editorial",
-            "Criação de conteúdo: copy, design e edição",
+            "Criação e captação de conteúdo, copy, design, edição, fotografia e vídeo no local",
             "Gestão dos canais (publicação, comunidade, mensagens)",
             "SEO local (Google Business Profile, palavras-chave, mapas)",
             "Reunião mensal de alinhamento e relatório claro",
@@ -335,10 +336,10 @@
             "Empresas que tentaram gerir as redes internamente e perceberam que precisam de direção estratégica.",
             "Profissionais que querem delegar todo o digital a uma parceira de confiança."
           ],
-          "price": "750€",
-          "priceLabel": "DESDE",
-          "pricePeriod": "/mês",
-          "priceNote": "+ IVA · mínimo 3 meses (base) ou 6 meses (avançados). Pagamento mensal antecipado.",
+          "price": "Orçamento personalizado",
+          "priceLabel": "",
+          "pricePeriod": "",
+          "priceNote": "Cada Direção é orçamentada individualmente em função do âmbito acordado. Compromisso mínimo de 3 meses no plano base ou 6 meses nos planos avançados. Pagamento mensal antecipado.",
           "cta": "Conhecer o plano",
           "icon": "ri-calendar-event-line"
         }
@@ -458,14 +459,14 @@
       "headlineHighlight": "da história.",
       "subtitle": "A Wavy nasceu da convicção de que negócios construídos com propósito merecem comunicação ao mesmo nível, sem se trair, sem se exaurir, sem virar conteúdo.",
       "marquee": [
-        { "type": "stat", "number": "3", "label": "Valores não negociáveis", "cardColor": "teal" },
+        { "type": "stat", "number": "24h", "label": "Tempo de resposta", "sublabel": "Em dias úteis. Resposta humana, não automática.", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Fundada em casa, numa sala de estar.", "cardColor": "cream" },
-        { "type": "stat", "number": "5+", "label": "Setores prioritários", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "Zona Oeste & Grande Lisboa", "label": "Onde nos encontras", "sublabel": "Presencialmente aqui. À distância em todo o país.", "small": true, "cardColor": "teal-dark" },
         { "type": "image", "imageKey": "hero", "cardColor": "cream" },
         { "type": "stat", "number": "100%", "label": "Começam pelo Raio-X", "cardColor": "teal" },
         { "type": "stat", "number": "1", "label": "Interlocutora única", "cardColor": "teal-dark" },
         { "type": "stat", "number": "0", "label": "Templates às cegas", "cardColor": "teal" },
-        { "type": "text", "title": "Mariana Antunes", "body": "Fundadora e única equipa da Wavy.", "cardColor": "cream" },
+        { "type": "text", "title": "Mariana Antunes", "body": "Fundadora e estrategista.", "cardColor": "cream" },
         { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },
         { "type": "stat", "number": "30 dias", "label": "Garantia em cada Obra", "cardColor": "teal" }
       ]
@@ -599,7 +600,7 @@
           { "value": "2 canais", "label": "Instagram + LinkedIn ativos" },
           { "value": "Em curso", "label": "produção mensal de conteúdos" }
         ],
-        "quote": "Entreguei a presença digital da minha empresa à Wavy, redes sociais e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
+        "quote": "Entreguei a presença digital da minha empresa à Wavy, redes sociais, website e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
         "quoteAuthor": "JOÃO MARQUES · FUNDADOR, ADDS",
         "detail": {
           "intro": "A ADDS é uma consultora tecnológica recém-criada. Tinha o conhecimento e o roadmap; faltava-lhe a marca. A escolha estratégica foi construí-la a sério, desde o primeiro dia.",
@@ -660,7 +661,7 @@
       }
     ],
     "cta": {
-      "title": "A próxima pode ser a tua.",
+      "title": "A próxima história pode ser a tua.",
       "subtitle": "Cada um destes casos começou pela mesma pergunta, \"onde estás?\". O teu também pode começar daí.",
       "button": "Marcar o meu Raio-X",
       "manifesto": "Cada projeto começa pela pergunta certa. E acaba sempre noutra: para onde vais agora?",
@@ -755,15 +756,19 @@
         "role": "Decoradora Floral"
       },
       {
-        "quote": "Entreguei a presença digital da minha empresa à Wavy, redes sociais e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
+        "quote": "Entreguei a presença digital da minha empresa à Wavy, redes sociais, website e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
         "author": "João Marques",
         "role": "Fundador, Empresa Tecnológica"
       }
     ],
     "stat1": "8",
     "stat1Label": "marcas acompanhadas ao longo da carreira",
-    "stat2": "100%",
-    "stat2Label": "dos clientes começam pelo Raio-X",
+    "stat2": "0",
+    "stat2Label": "templates seguidos às cegas",
+    "stat3": "100%",
+    "stat3Label": "dos clientes começam pelo Raio-X",
+    "stat4": "1",
+    "stat4Label": "direção do início ao fim de cada projeto",
     "ctaTitle": "A próxima história pode ser a tua.",
     "ctaSubtitle": "Começa pelo Raio-X. No fim, sabes exatamente onde está o teu negócio digital, e o que fazer a seguir.",
     "ctaButton": "Fazer o Raio-X"
@@ -775,6 +780,10 @@
       {
         "q": "O que é o Raio-X e porque tenho de começar por aí?",
         "a": "O Raio-X é o diagnóstico estratégico inicial da Wavy. Analisamos toda a tua presença digital, website, redes sociais, SEO, comunicação e posicionamento, e entregamos um mapa claro do que está a funcionar, do que está partido e dos 5 problemas prioritários a corrigir no teu negócio. Começamos sempre aqui porque construir antes de diagnosticar é construir no escuro. Se decidires avançar para a Obra ou para a Direção, o valor do Raio-X é 100% deduzido no projeto seguinte."
+      },
+      {
+        "q": "Quanto custa trabalhar com a Wavy?",
+        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte. A Obra (identidade visual e/ou website) e A Direção (gestão contínua e SEO local) são orçamentadas individualmente após o Raio-X, em função do âmbito do teu projeto. A Direção tem compromisso mínimo de 3 meses no plano base ou 6 meses nos planos avançados. Não negociamos preço para baixo, ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: transparência em cada decisão."
       },
       {
         "q": "Trabalham fora da Zona Oeste ou Grande Lisboa?",
@@ -790,7 +799,7 @@
       },
       {
         "q": "Os vossos serviços têm fidelização obrigatória?",
-        "a": "Não trabalhamos com fidelizações de longo prazo no sentido tradicional. Aplicamos compromissos mínimos para garantir que os resultados têm tempo de maturação: 3 meses no plano base e 6 meses nos planos mais avançados. Após esse ciclo inicial, és livre de continuar mês a mês ou cancelar com 30 dias de aviso prévio. Mantemo-nos por valor entregue, não por contrato."
+        "a": "Não trabalhamos com fidelizações que te prendam. Aconselhamos um período inicial de 3 meses no plano base ou 6 meses nos planos mais avançados, não para te amarrar a um contrato, mas porque os resultados em marketing digital precisam de tempo para maturar. Os primeiros 60 a 90 dias são quase invisíveis; é a partir do 4º ou 6º mês que o investimento começa a render. Após esse período, és livre de continuar mês a mês ou cancelar com 30 dias de aviso prévio. Mantemo-nos por valor entregue, não por contrato."
       }
     ]
   },

@@ -46,7 +46,7 @@ const colorMap: Record<string, { bg: string; text: string; labelText: string; nu
   },
 };
 
-const items = i.marquee;
+const items = i.marquee as readonly any[];
 const row1 = items.slice(0, 5);
 const row2 = items.slice(5, 10);
 ---
@@ -61,7 +61,7 @@ const row2 = items.slice(5, 10);
 
     <div class="flex flex-col gap-4">
       <h1 class="font-serif text-[2.25rem] sm:text-4xl md:text-5xl lg:text-6xl font-medium text-teal-dark leading-[1.1]">
-        {i.headline}
+        {i.headline.replace(/ (\S+)$/, ' $1')}
         <br />
         <em class="text-teal font-serif italic font-medium">{i.headlineHighlight}</em>
       </h1>
@@ -93,7 +93,10 @@ const row2 = items.slice(5, 10);
               c.bg, c.text, c.border,
             ]}>
               <span class:list={['font-sans text-xs uppercase tracking-[0.15em] mb-2', c.labelText]}>{item.label}</span>
-              <span class:list={['font-serif text-3xl sm:text-4xl md:text-5xl font-medium', c.numberText]}>{item.number}</span>
+              <span class:list={[item.small ? 'font-serif text-lg sm:text-xl md:text-2xl font-medium leading-tight' : 'font-serif text-3xl sm:text-4xl md:text-5xl font-medium', c.numberText]}>{item.number}</span>
+              {item.sublabel && (
+                <span class:list={['font-sans text-[10px] sm:text-xs leading-snug mt-1.5', c.bodyText]}>{item.sublabel}</span>
+              )}
             </div>
           );
         }
@@ -129,7 +132,10 @@ const row2 = items.slice(5, 10);
               c.bg, c.text, c.border,
             ]}>
               <span class:list={['font-sans text-xs uppercase tracking-[0.15em] mb-2', c.labelText]}>{item.label}</span>
-              <span class:list={['font-serif text-3xl sm:text-4xl md:text-5xl font-medium', c.numberText]}>{item.number}</span>
+              <span class:list={[item.small ? 'font-serif text-lg sm:text-xl md:text-2xl font-medium leading-tight' : 'font-serif text-3xl sm:text-4xl md:text-5xl font-medium', c.numberText]}>{item.number}</span>
+              {item.sublabel && (
+                <span class:list={['font-sans text-[10px] sm:text-xs leading-snug mt-1.5', c.bodyText]}>{item.sublabel}</span>
+              )}
             </div>
           );
         }

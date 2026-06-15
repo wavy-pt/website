@@ -21,9 +21,9 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
        nível (offset pl-16 md:pl-28, como os items da jornada) -->
   <div class="max-w-5xl mx-auto px-6 md:px-10">
     <div class="scroll-reveal pl-16 md:pl-28">
-      <div class="quiz-frame relative md:pt-12 md:pb-4 md:px-4">
+      <div class="quiz-frame relative pt-12 pb-4 px-4">
         <svg
-          class="quiz-frame-svg hidden md:block absolute inset-0 w-full h-full overflow-visible pointer-events-none"
+          class="quiz-frame-svg block absolute inset-0 w-full h-full overflow-visible pointer-events-none"
           aria-hidden="true"
           data-quiz-frame-svg
         >
@@ -176,13 +176,18 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
       const r = RADIUS;
       const midY = (top + bottom) / 2; // meia-altura do card
 
-      // x da cauda = centro da linha visível da jornada (à esquerda do card)
+      // x da cauda = centro da linha visível da jornada (à esquerda do card).
+      // entryTop = fim REAL da linha da jornada → a cauda arranca exatamente
+      // onde a linha da jornada acaba, ficando contínua (sem salto), mesmo com
+      // o espaçamento entre secções em mobile.
       let entryX = 120;
+      let entryTop = ENTRY_TOP;
       const refEl = journeyTrack || journeyLine;
       if (refEl) {
         const jr = refEl.getBoundingClientRect();
         const sr = svg.getBoundingClientRect();
         entryX = jr.left + jr.width / 2 - sr.left;
+        entryTop = Math.min(ENTRY_TOP, jr.bottom - sr.top);
       }
       entryX = Math.min(left - 4, entryX); // garante que fica à esquerda da moldura
 
@@ -194,7 +199,7 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
       // se aproxima (horizontal) do lado esquerdo da moldura.
       tailPath.setAttribute(
         'd',
-        [`M ${entryX} ${ENTRY_TOP}`, `L ${entryX} ${midY}`, `L ${left} ${midY}`].join(' ')
+        [`M ${entryX} ${entryTop}`, `L ${entryX} ${midY}`, `L ${left} ${midY}`].join(' ')
       );
 
       // Ramo superior: do meio-esquerda, sobe e contorna o topo até ao meio-direita.
