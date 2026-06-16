@@ -106,13 +106,13 @@ const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';
 
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-offwhite font-sans">
+  <body class="min-h-screen bg-offwhite font-sans flex flex-col">
     <a href="#main-content" class="skip-link">
       {lang === 'en' ? 'Skip to content' : 'Saltar para o conteúdo'}
     </a>
     <DevBanner />
     <Header lang={lang} transparent={headerTransparent} />
-    <main id="main-content" tabindex="-1">
+    <main id="main-content" tabindex="-1" class="flex-1">
       <slot />
     </main>
     <Footer lang={lang} />
