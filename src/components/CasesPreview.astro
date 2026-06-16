@@ -205,10 +205,30 @@ const stats = [
   const container = document.getElementById('testimonial-container');
   container?.addEventListener('mouseenter', () => (paused = true));
   container?.addEventListener('mouseleave', () => (paused = false));
+  // Pausa também ao focar os dots por teclado (o foco entra no card) — acessibilidade
+  const card = container?.closest('.bento-card');
+  card?.addEventListener('focusin', () => (paused = true));
+  card?.addEventListener('focusout', () => (paused = false));
 
-  setInterval(() => {
-    if (!paused && total > 1) {
-      setActive((activeIndex + 1) % total);
+  let rotateTimer: number | null = null;
+  function startRotation() {
+    if (rotateTimer !== null || total <= 1) return;
+    rotateTimer = window.setInterval(() => {
+      if (!paused) setActive((activeIndex + 1) % total);
+    }, 4000);
+  }
+  function stopRotation() {
+    if (rotateTimer !== null) {
+      window.clearInterval(rotateTimer);
+      rotateTimer = null;
     }
-  }, 4000);
+  }
+
+  // Respeita prefers-reduced-motion: sem auto-rotação para quem prefere menos movimento
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!prefersReduced.matches) startRotation();
+  prefersReduced.addEventListener('change', (e) => {
+    if (e.matches) stopRotation();
+    else startRotation();
+  });
 </script>

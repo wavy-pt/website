@@ -33,7 +33,7 @@ const personaIcons = ['ri-history-line', 'ri-vip-crown-line', 'ri-store-2-line',
             <div class="w-10 h-10 rounded-full bg-teal/10 text-teal flex items-center justify-center shrink-0">
               <i class={`${personaIcons[idx]} text-lg`} aria-hidden="true"></i>
             </div>
-            <span class="font-sans text-[11px] uppercase tracking-[0.15em] text-teal-dark/60">{card.tag}</span>
+            <span class="font-sans text-[11px] uppercase tracking-[0.15em] text-teal-dark/80">{card.tag}</span>
           </div>
           <p class="font-serif text-lg md:text-xl italic font-medium text-teal-dark leading-snug mb-3">
             &ldquo;{card.title}&rdquo;
@@ -64,7 +64,7 @@ const personaIcons = ['ri-history-line', 'ri-vip-crown-line', 'ri-store-2-line',
           {p.againstItems.map((item) => (
             <li class="flex items-start gap-3">
               <i class="ri-close-line text-teal-dark/40 text-lg mt-0.5 shrink-0" aria-hidden="true"></i>
-              <span class="font-sans text-sm md:text-base text-teal-dark/70 leading-relaxed">{item}</span>
+              <span class="font-sans text-sm md:text-base text-teal-dark/80 leading-relaxed">{item}</span>
             </li>
           ))}
         </ul>
