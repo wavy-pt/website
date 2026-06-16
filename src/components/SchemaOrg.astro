@@ -1,13 +1,16 @@
 ---
 /**
  * Schema.org structured data for Wavy.
- * Emits a JSON-LD <script> tag so Google understands what the business is,
- * where it operates, and who runs it — essential for local SEO.
+ * Emits a JSON-LD <script> tag so search engines AND generative engines
+ * (Google AI Overviews, ChatGPT, Perplexity, etc.) understand what the
+ * business is, where it operates, who runs it, and what it offers.
+ *
+ * Usa @graph para ligar a Organização, os Serviços e o WebSite numa só
+ * estrutura coerente (entidade clara = melhor SEO local + GEO/AIO).
  */
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://wavy.pt';
 
-const schema = {
-  '@context': 'https://schema.org',
+const organization = {
   '@type': 'ProfessionalService',
   '@id': `${site}/#organization`,
   name: 'Wavy',
@@ -51,12 +54,64 @@ const schema = {
     'Website e Identidade Estratégica',
     'Gestão de Redes Sociais e SEO Local',
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Serviços Wavy',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'O Raio-X',
+          description:
+            'Diagnóstico estratégico digital. Ponto de partida de qualquer projeto: analisa o negócio e define o caminho.',
+          url: `${site}/servicos#servico-01`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'A Obra',
+          description:
+            'Identidade visual e/ou website. Construção das fundações digitais do negócio.',
+          url: `${site}/servicos#servico-02`,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'A Direção',
+          description:
+            'Gestão contínua de redes sociais e SEO local, com estratégia e medição de resultados.',
+          url: `${site}/servicos#servico-03`,
+        },
+      },
+    ],
+  },
   sameAs: [
     'https://instagram.com/wavy.digital.pt',
     'https://facebook.com/wavy.digital.pt',
   ],
   priceRange: '€€',
   inLanguage: ['pt-PT', 'en'],
+};
+
+const website = {
+  '@type': 'WebSite',
+  '@id': `${site}/#website`,
+  url: site,
+  name: 'Wavy',
+  description:
+    'Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa.',
+  inLanguage: ['pt-PT', 'en'],
+  publisher: { '@id': `${site}/#organization` },
+};
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [organization, website],
 };
 ---
 
