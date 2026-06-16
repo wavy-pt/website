@@ -5,7 +5,6 @@ import type { Lang } from '../../i18n';
 import bastidoresImage from '../../assets/wavy-bastidores.jpg';
 import heroImage from '../../assets/wavy-hero.jpg';
 import ctaImage from '../../assets/CTA.jpg';
-import servicosImage from '../../assets/wavy-servicos.png';
 import marianaImage from '../../assets/IMG_7230.jpg';
 // Cards reais do leque dos casos
 import veraMainCard from '../../assets/cases/vera-main.jpg';
@@ -28,7 +27,6 @@ const imageMap: Record<string, typeof bastidoresImage> = {
   bastidores: bastidoresImage,
   hero: heroImage,
   cta: ctaImage,
-  servicos: servicosImage,
   mariana: marianaImage,
 };
 const cards = i.cards || [];
@@ -67,7 +65,7 @@ const cards = i.cards || [];
           >
             <Image
               src={cimg}
-              alt=""
+              alt={`${card.title} — ${card.category}`}
               class="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
               widths={[320, 580]}
