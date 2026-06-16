@@ -62,6 +62,12 @@ export const POST: APIRoute = async ({ request }) => {
     return json({ success: false, error: 'validation' }, 400);
   }
 
+  // Valida o formato do email também no servidor (a validação do cliente
+  // pode ser contornada por um POST direto à API).
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return json({ success: false, error: 'validation' }, 400);
+  }
+
   const resend = new Resend(apiKey);
 
   try {
