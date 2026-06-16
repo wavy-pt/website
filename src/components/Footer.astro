@@ -19,6 +19,9 @@ const allNavLinks = [
 ];
 
 const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
+
+// Crédito de desenvolvimento (ADDS) — link dependente do idioma.
+const addsUrl = lang === 'en' ? 'https://addssolutions.com/en/' : 'https://addssolutions.com/';
 ---
 
 <footer class="bg-teal-deep text-cream">
@@ -111,5 +114,16 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
         </button>
       </div>
     </div>
+
+    <!-- Crédito de desenvolvimento (ADDS) -->
+    <p class="mt-8 text-center font-sans text-xs text-cream">
+      {lang === 'en' ? 'Developed by' : 'Desenvolvido pela'}{' '}
+      <a
+        href={addsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-medium underline underline-offset-2 decoration-cream/40 hover:decoration-cream transition-colors"
+      >ADDS</a>
+    </p>
   </div>
 </footer>
