@@ -150,6 +150,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
 <div
   id="mobile-menu"
   tabindex="-1"
+  inert
   class="fixed inset-0 z-40 bg-offwhite flex flex-col items-center justify-center transition-all duration-200 lg:hidden opacity-0 pointer-events-none focus:outline-none"
   role="dialog"
   aria-modal="true"
@@ -200,6 +201,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
   function setMenu(nextOpen: boolean) {
     open = nextOpen;
     if (open) {
+      menu?.removeAttribute('inert');
       menu?.classList.remove('opacity-0', 'pointer-events-none');
       menu?.classList.add('opacity-100', 'pointer-events-auto');
       icon?.classList.remove('ri-menu-3-line');
@@ -209,9 +211,11 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
       document.body.style.overflow = 'hidden';
       // Menu aberto: esconde o logo do header (fica só o logo central do menu)
       headerLogo?.classList.add('opacity-0', 'pointer-events-none');
-      // Foco no contentor do menu (sem anel visível num link) para leitores de ecrã
-      menu?.focus();
+      // Foco no contentor do menu (sem anel visível num link) para leitores de ecrã.
+      // rAF: o inert foi removido agora; o Chrome só permite focar no frame seguinte.
+      requestAnimationFrame(() => menu?.focus());
     } else {
+      menu?.setAttribute('inert', '');
       menu?.classList.add('opacity-0', 'pointer-events-none');
       menu?.classList.remove('opacity-100', 'pointer-events-auto');
       icon?.classList.add('ri-menu-3-line');
@@ -225,11 +229,34 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
 
   toggle?.addEventListener('click', () => setMenu(!open));
 
-  // Esc fecha o menu mobile
+  // Teclado com o menu aberto: Esc fecha; Tab/Shift+Tab ficam presos no menu
+  // (focus-trap) — inclui o botão fechar (toggle) no ciclo.
+  const FOCUSABLE = 'a[href], button:not([disabled])';
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && open) {
+    if (!open) return;
+
+    if (e.key === 'Escape') {
       setMenu(false);
       toggle?.focus();
+      return;
+    }
+
+    if (e.key === 'Tab' && menu) {
+      const items = [toggle, ...Array.from(menu.querySelectorAll(FOCUSABLE))].filter(
+        (el): el is HTMLElement => !!el
+      );
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+
+      if (e.shiftKey && (active === first || active === null || !items.includes(active))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (active === last || active === null || !items.includes(active))) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 
