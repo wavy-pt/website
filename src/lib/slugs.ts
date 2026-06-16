@@ -40,6 +40,9 @@ export function localizedPaths(path: string): { pt: string; en: string } {
 
 /** Path used by the language switcher. */
 export function switchLangPath(path: string, targetLang: Lang): string {
+  const cleanPath = path.replace(/\/$/, '') || '/';
+  // A página 404 não tem equivalente no outro idioma → o seletor vai para a home.
+  if (cleanPath === '/404') return targetLang === 'en' ? '/en' : '/';
   const paths = localizedPaths(path);
   return targetLang === 'en' ? paths.en : paths.pt;
 }
