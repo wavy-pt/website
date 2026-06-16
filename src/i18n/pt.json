@@ -57,7 +57,7 @@
   "personas": {
     "label": "PARA QUEM TRABALHAMOS",
     "title": "Não trabalhamos com toda a gente. E é por isso que o trabalho corre bem.",
-    "subtitle": "Trabalhamos com quem já construiu um negócio a sério, está farto de marketing digital amador e quer uma parceira para dirigir a transformação digital com método, não com sorte.",
+    "subtitle": "Trabalhamos com quem já construiu um negócio a sério, está farto de marketing digital inconsistente e quer uma parceira para dirigir a transformação digital com método, não com sorte.",
     "cards": [
       {
         "tag": "TRANSIÇÃO DE GERAÇÃO",
@@ -146,7 +146,7 @@
       "price": "750€",
       "priceLabel": "DESDE",
       "pricePeriod": "/mês",
-      "priceNote": "+ IVA · mínimo 3 meses",
+      "priceNote": "+ IVA · 3 meses aconselhados",
       "cta": "Conhecer o plano"
     },
     "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo. E o valor entra no projeto seguinte se decidires avançar."
@@ -339,7 +339,7 @@
           "price": "Orçamento personalizado",
           "priceLabel": "",
           "pricePeriod": "",
-          "priceNote": "Cada Direção é orçamentada individualmente em função do âmbito acordado. Compromisso mínimo de 3 meses no plano base ou 6 meses nos planos avançados. Pagamento mensal antecipado.",
+          "priceNote": "Cada Direção é orçamentada individualmente em função do âmbito acordado. Período mínimo aconselhável (não obrigatório): 3 meses no plano base ou 6 meses nos planos avançados. Pagamento mensal antecipado.",
           "cta": "Conhecer o plano",
           "icon": "ri-calendar-event-line"
         }
@@ -783,7 +783,7 @@
       },
       {
         "q": "Quanto custa trabalhar com a Wavy?",
-        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte. A Obra (identidade visual e/ou website) e A Direção (gestão contínua e SEO local) são orçamentadas individualmente após o Raio-X, em função do âmbito do teu projeto. A Direção tem compromisso mínimo de 3 meses no plano base ou 6 meses nos planos avançados. Não negociamos preço para baixo, ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: transparência em cada decisão."
+        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte. A Obra (identidade visual e/ou website) e A Direção (gestão contínua e SEO local) são orçamentadas individualmente após o Raio-X, em função do âmbito do teu projeto. A Direção tem um período mínimo aconselhável, não obrigatório, de 3 meses no plano base ou 6 meses nos planos avançados. Não negociamos preço para baixo, ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: transparência em cada decisão."
       },
       {
         "q": "Trabalham fora da Zona Oeste ou Grande Lisboa?",
@@ -792,10 +792,6 @@
       {
         "q": "Quanto tempo demora a ver resultados com marketing digital?",
         "a": "A resposta honesta: depende do ponto de partida e do canal. Em SEO local e gestão de redes sociais, os primeiros sinais surgem normalmente entre 60 a 90 dias, não como \"resultados explosivos\", mas como tração consistente. Conversões reais (vendas, contactos, agenda preenchida) começam tipicamente entre o 4º e o 6º mês. Quem promete resultados em 30 dias está a vender uma campanha pontual, não direção digital. Marketing digital sustentável demora, e é exatamente por isso que trabalhamos com compromissos mínimos de 3 a 6 meses."
-      },
-      {
-        "q": "Qual é a diferença entre direção digital e gestão de redes sociais?",
-        "a": "A gestão de redes sociais é uma tarefa: alguém publica posts no Instagram, responde a mensagens, cria stories. Direção digital é uma função estratégica: define para quem comunicas, porquê, em que canais, com que objetivo de negócio, e como medes o sucesso. Na prática: quem gere redes sem estratégia executa. Quem dirige o teu digital decide. A Wavy não vende posts, vende direção. As redes sociais são uma ferramenta dentro da estratégia, nunca o ponto de partida."
       },
       {
         "q": "Os vossos serviços têm fidelização obrigatória?",

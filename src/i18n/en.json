@@ -57,7 +57,7 @@
   "personas": {
     "label": "WHO WE WORK WITH",
     "title": "We don't work with everyone. That's why the work goes well.",
-    "subtitle": "We work with owners who've built something real, are done with amateur marketing, and want a partner to direct their digital transformation with method, not luck.",
+    "subtitle": "We work with owners who've built something real, are done with inconsistent marketing, and want a partner to direct their digital transformation with method, not luck.",
     "cards": [
       {
         "tag": "GENERATIONAL HANDOVER",
@@ -146,7 +146,7 @@
       "price": "750€",
       "priceLabel": "FROM",
       "pricePeriod": "/month",
-      "priceNote": "+ VAT · 3-month minimum",
+      "priceNote": "+ VAT · 3 months recommended",
       "cta": "See the plan"
     },
     "planLine": "Not sure where to start? The X-Ray is always the first step. The cost rolls into your next project if you decide to move forward."
@@ -339,7 +339,7 @@
           "price": "Custom quote",
           "priceLabel": "",
           "pricePeriod": "",
-          "priceNote": "Each Direction is quoted individually based on the agreed scope. Minimum commitment of 3 months on the entry plan or 6 months on advanced plans. Monthly payment in advance.",
+          "priceNote": "Each Direction is quoted individually based on the agreed scope. Recommended (not mandatory) minimum of 3 months on the entry plan or 6 months on advanced plans. Monthly payment in advance.",
           "cta": "Discover the plan",
           "icon": "ri-calendar-event-line"
         }
@@ -783,7 +783,7 @@
       },
       {
         "q": "How much does it cost to work with Wavy?",
-        "a": "It depends on the service. The X-Ray (strategic diagnosis) starts at €350 + VAT and is credited to your next project. The Build (visual identity and/or website) and The Direction (ongoing management and local SEO) are quoted individually after the X-Ray, based on your project's scope. The Direction has a 3-month minimum on the entry plan or 6 months on advanced plans. We don't negotiate prices down, we adjust the scope to your reality. Wavy principle: transparency in every decision."
+        "a": "It depends on the service. The X-Ray (strategic diagnosis) starts at €350 + VAT and is credited to your next project. The Build (visual identity and/or website) and The Direction (ongoing management and local SEO) are quoted individually after the X-Ray, based on your project's scope. The Direction has a recommended (not mandatory) minimum of 3 months on the entry plan or 6 months on advanced plans. We don't negotiate prices down, we adjust the scope to your reality. Wavy principle: transparency in every decision."
       },
       {
         "q": "Do you work outside the West or Greater Lisbon?",
@@ -792,10 +792,6 @@
       {
         "q": "How long does it take to see results with digital marketing?",
         "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days, not as \"explosive results\" but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time, which is exactly why we work with 3-to-6-month minimum commitments."
-      },
-      {
-        "q": "What's the difference between digital direction and social media management?",
-        "a": "Social media management is a task: someone posts on Instagram, replies to messages, creates stories. Digital direction is a strategic function: it defines who you communicate with, why, on which channels, with which business objective, and how you measure success. In practice: managing social without strategy means executing. Directing your digital means deciding. Wavy doesn't sell posts, it sells direction. Social media is one tool within the strategy, never the starting point."
       },
       {
         "q": "Do your services have mandatory loyalty periods?",

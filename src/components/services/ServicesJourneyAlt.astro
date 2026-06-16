@@ -62,7 +62,8 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
       <div class="flex flex-col gap-10 md:gap-14">
         {j.services.map((s) => (
           <div
-            class="journey-item scroll-reveal group/journey relative pl-16 md:pl-28"
+            id={`servico-${s.number}`}
+            class="journey-item scroll-reveal group/journey relative pl-16 md:pl-28 scroll-mt-28"
             data-active="false"
           >
             {/* Number circle no eixo da timeline — destaca-se quando o card está em foco */}
