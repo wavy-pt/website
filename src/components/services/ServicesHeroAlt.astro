@@ -109,6 +109,8 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
                     widths={[320, 480, 640]}
                     sizes="(min-width: 1024px) 420px, 60vw"
                     quality={80}
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={idx === 0 ? 'high' : 'auto'}
                   />
                 </div>
 
