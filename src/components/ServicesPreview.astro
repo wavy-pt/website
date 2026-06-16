@@ -17,18 +17,18 @@ const services = [
 ] as const;
 ---
 
-<section class="bg-teal py-14 md:py-20 overflow-hidden">
+<section class="bg-teal-deep py-14 md:py-20 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 md:px-10">
     <!-- Header -->
     <div class="scroll-reveal mb-10 md:mb-12">
-      <p class="font-sans text-xs uppercase tracking-widest text-cream/80 mb-3">
+      <p class="font-sans text-xs uppercase tracking-widest text-cream/90 mb-3">
         {i.services.label}
       </p>
       <div class="flex flex-col gap-4">
         <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-cream leading-[1.15] max-w-3xl">
           {i.services.title}
         </h2>
-        <p class="font-sans text-base text-cream/70 leading-relaxed max-w-2xl">
+        <p class="font-sans text-base text-cream/90 leading-relaxed max-w-2xl">
           {i.services.subtitle}
         </p>
       </div>
@@ -38,7 +38,7 @@ const services = [
     <div class="scroll-reveal flex flex-wrap items-center gap-x-1 gap-y-2 mb-12 md:mb-14">
       {scopeItems.map((item, idx) => (
         <div class="flex items-center gap-1">
-          <span class="font-sans text-xs text-cream/70 bg-teal-dark/15 px-3 py-1.5 rounded-full">
+          <span class="font-sans text-xs text-cream/90 bg-teal-dark/25 px-3 py-1.5 rounded-full">
             {item}
           </span>
           {idx < scopeItems.length - 1 && (
@@ -71,7 +71,7 @@ const services = [
                 {number}
               </span>
             </div>
-            <span class="step-label font-sans text-xs uppercase tracking-wider text-cream/60 transition-colors duration-300 whitespace-nowrap">
+            <span class="step-label font-sans text-xs uppercase tracking-wider text-cream/90 transition-colors duration-300 whitespace-nowrap">
               {lang === 'en' ? shortEn : short}
             </span>
           </button>
@@ -113,7 +113,7 @@ const services = [
 
           <!-- Content -->
           <div class="relative flex flex-col min-h-[400px] md:min-h-[440px] max-w-2xl">
-            <span class="inline-flex self-start font-sans text-[11px] uppercase tracking-wider px-3 py-1.5 rounded-full mb-5 md:mb-6 bg-teal text-cream">
+            <span class="inline-flex self-start font-sans text-[11px] uppercase tracking-wider px-3 py-1.5 rounded-full mb-5 md:mb-6 bg-teal-deep text-cream">
               {data.tag}
             </span>
 
