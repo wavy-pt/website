@@ -36,11 +36,11 @@ const maxScore = q.questions.reduce(
   id="services-quiz"
   data-state="intro"
   data-max-score={maxScore}
-  class="services-quiz relative overflow-hidden rounded-[32px] bg-cream border border-teal-dark/10 shadow-[0_20px_60px_-24px_rgba(28,60,60,0.20)]"
+  class="services-quiz relative overflow-hidden rounded-[32px] bg-cream border border-teal-deep/10 shadow-[0_20px_60px_-24px_rgba(28,60,60,0.20)]"
 >
   <!-- Decorações subtis -->
   <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-teal/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-teal-dark/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-teal-deep/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
   <div class="relative p-8 sm:p-10 md:p-14 min-h-[380px] flex flex-col justify-center">
     <!-- ============ INTRO ============ -->
@@ -60,7 +60,7 @@ const maxScore = q.questions.reduce(
           <button
             type="button"
             data-quiz-start
-            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap group"
+            class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full bg-teal-deep text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap group"
           >
             {c.explorerCta}
             <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></i>
@@ -95,10 +95,10 @@ const maxScore = q.questions.reduce(
             {q.restartButton}
           </button>
         </div>
-        <div class="h-1.5 rounded-full bg-teal-dark/10 overflow-hidden">
+        <div class="h-1.5 rounded-full bg-teal-deep/10 overflow-hidden">
           <div
             data-quiz-progress-bar
-            class="h-full rounded-full bg-gradient-to-r from-teal to-teal-dark transition-[width] duration-500 ease-out"
+            class="h-full rounded-full bg-gradient-to-r from-teal to-teal-deep transition-[width] duration-500 ease-out"
             style="width: 0%"
           ></div>
         </div>
@@ -118,12 +118,12 @@ const maxScore = q.questions.reduce(
               <button
                 type="button"
                 data-score={opt.score}
-                class="quiz-option group flex items-center justify-between gap-4 w-full text-left px-5 py-4 rounded-2xl border border-teal-dark/15 bg-white hover:border-teal hover:bg-teal/5 focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer"
+                class="quiz-option group flex items-center justify-between gap-4 w-full text-left px-5 py-4 rounded-2xl border border-teal-deep/15 bg-white hover:border-teal hover:bg-teal/5 focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer"
               >
                 <span class="font-sans text-sm sm:text-base text-teal-dark">
                   {opt.label}
                 </span>
-                <span class="w-7 h-7 flex-shrink-0 rounded-full border border-teal-dark/20 flex items-center justify-center text-teal-dark/40 group-hover:border-teal group-hover:bg-teal group-hover:text-cream transition-all duration-200">
+                <span class="w-7 h-7 flex-shrink-0 rounded-full border border-teal-deep/20 flex items-center justify-center text-teal-dark/40 group-hover:border-teal group-hover:bg-teal group-hover:text-cream transition-all duration-200">
                   <i class="ri-arrow-right-line text-sm" aria-hidden="true"></i>
                 </span>
               </button>
@@ -147,7 +147,7 @@ const maxScore = q.questions.reduce(
               <span
                 class:list={[
                   'h-2 w-14 rounded-full transition-colors',
-                  s <= ridx ? `quiz-seg-${r.tier}` : 'bg-teal-dark/10',
+                  s <= ridx ? `quiz-seg-${r.tier}` : 'bg-teal-deep/10',
                 ]}
               ></span>
             ))}
@@ -171,7 +171,7 @@ const maxScore = q.questions.reduce(
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-8">
         <a
           href={ctaHref}
-          class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap group"
+          class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full bg-teal-deep text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap group"
         >
           {q.ctaButton}
           <i class="ri-arrow-right-up-line transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true"></i>
@@ -179,7 +179,7 @@ const maxScore = q.questions.reduce(
         <button
           type="button"
           data-quiz-restart
-          class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300 whitespace-nowrap"
+          class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-8 md:py-4 rounded-full border border-teal-deep/15 text-teal-dark hover:border-teal-deep hover:bg-teal-deep/5 transition-all duration-300 whitespace-nowrap"
         >
           <i class="ri-restart-line" aria-hidden="true"></i>
           {q.restartButton}
@@ -206,12 +206,12 @@ const maxScore = q.questions.reduce(
   .quiz-result[data-tier="high"] .quiz-result-tier[data-result-tier="high"] { display: block; }
 
   /* Cor do nível por tier (todas visíveis sobre o card cream) */
-  .quiz-result-tier[data-result-tier="low"] .quiz-level { color: var(--color-teal-dark); }
+  .quiz-result-tier[data-result-tier="low"] .quiz-level { color: var(--color-teal-deep); }
   .quiz-result-tier[data-result-tier="mid"] .quiz-level { color: var(--color-teal); }
   .quiz-result-tier[data-result-tier="high"] .quiz-level { color: var(--color-teal-light); }
 
   /* Segmentos preenchidos por tier */
-  .quiz-seg-low { background-color: var(--color-teal-dark); }
+  .quiz-seg-low { background-color: var(--color-teal-deep); }
   .quiz-seg-mid { background-color: var(--color-teal); }
   .quiz-seg-high { background-color: var(--color-teal-light); }
 

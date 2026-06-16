@@ -61,7 +61,7 @@ const cards = i.cards || [];
           <a
             href={`#caso-${caseIndex}`}
             data-case-link
-            class="cases-fan-card block absolute inset-0 rounded-2xl overflow-hidden bg-teal-dark"
+            class="cases-fan-card block absolute inset-0 rounded-2xl overflow-hidden bg-teal-deep"
           >
             <Image
               src={cimg}
@@ -72,9 +72,9 @@ const cards = i.cards || [];
               sizes="320px"
               quality={78}
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-teal-dark/90 via-teal-dark/20 to-transparent" aria-hidden="true"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-teal-deep/90 via-teal-deep/20 to-transparent" aria-hidden="true"></div>
             <div class="absolute bottom-0 inset-x-0 p-6">
-              <p class="font-sans text-[10px] uppercase tracking-[0.15em] text-cream/70 mb-1">{card.category}</p>
+              <p class="font-sans text-[10px] uppercase tracking-[0.15em] text-cream mb-1">{card.category}</p>
               <p class="font-serif text-xl font-medium text-cream leading-tight">{card.title}</p>
             </div>
           </a>

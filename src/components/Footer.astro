@@ -21,7 +21,7 @@ const allNavLinks = [
 const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
 ---
 
-<footer class="bg-teal-dark text-cream">
+<footer class="bg-teal-deep text-cream">
   <div class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
       <!-- Brand -->
@@ -36,7 +36,7 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
             target="_blank"
             rel="nofollow noreferrer"
             aria-label="Instagram da Wavy"
-            class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream/90 hover:text-cream hover:border-cream/80 transition-all duration-200"
+            class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
           </a>
@@ -45,14 +45,14 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
             target="_blank"
             rel="nofollow noreferrer"
             aria-label="Facebook da Wavy"
-            class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream/90 hover:text-cream hover:border-cream/80 transition-all duration-200"
+            class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
           </a>
           <a
             href="mailto:geral@wavy.pt"
             aria-label="Enviar email para geral@wavy.pt"
-            class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream/90 hover:text-cream hover:border-cream/80 transition-all duration-200"
+            class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-mail-line text-lg" aria-hidden="true"></i>
           </a>
@@ -61,14 +61,14 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
 
       <!-- Navigation -->
       <div>
-        <p class="font-sans text-xs uppercase tracking-widest text-cream/90 mb-5">
+        <p class="font-sans text-xs uppercase tracking-widest text-cream mb-5">
           {i.footer.navTitle}
         </p>
         <nav class="flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               href={link.to}
-              class="font-sans text-sm text-cream/90 hover:text-cream transition-colors duration-200 py-2 -my-1 inline-block"
+              class="font-sans text-sm text-cream hover:text-cream transition-colors duration-200 py-2 -my-1 inline-block"
             >
               {link.label}
             </a>
@@ -78,13 +78,13 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
 
       <!-- Contact -->
       <div>
-        <p class="font-sans text-xs uppercase tracking-widest text-cream/90 mb-5">
+        <p class="font-sans text-xs uppercase tracking-widest text-cream mb-5">
           {i.footer.contactTitle}
         </p>
         <div class="flex flex-col gap-1">
           <a
             href="mailto:geral@wavy.pt"
-            class="font-sans text-sm text-cream/90 hover:text-cream transition-colors duration-200 py-2 -my-1 inline-block"
+            class="font-sans text-sm text-cream hover:text-cream transition-colors duration-200 py-2 -my-1 inline-block"
           >
             geral@wavy.pt
           </a>
@@ -94,18 +94,18 @@ const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
 
     <!-- Bottom bar -->
     <div class="mt-16 pt-8 border-t border-cream/20 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
-      <p class="font-sans text-sm text-cream/80 py-2">{i.footer.rights}</p>
+      <p class="font-sans text-sm text-cream py-2">{i.footer.rights}</p>
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
         <a
           href={lang === 'en' ? '/en/privacy' : '/privacidade'}
-          class="font-sans text-sm text-cream/80 hover:text-cream transition-colors py-2 inline-block"
+          class="font-sans text-sm text-cream hover:text-cream transition-colors py-2 inline-block"
         >
           {lang === 'en' ? 'Privacy policy' : 'Política de privacidade'}
         </a>
         <button
           type="button"
           onclick="window.wavyOpenCookieSettings && window.wavyOpenCookieSettings()"
-          class="font-sans text-sm text-cream/80 hover:text-cream transition-colors cursor-pointer py-2"
+          class="font-sans text-sm text-cream hover:text-cream transition-colors cursor-pointer py-2"
         >
           {lang === 'en' ? 'Manage cookies' : 'Gerir cookies'}
         </button>

@@ -25,7 +25,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 <section id="journey" class="bg-offwhite pt-14 md:pt-20 pb-10 md:pb-0 relative overflow-hidden scroll-mt-24">
   <!-- Decorações subtis (mesma família do hero) -->
   <div class="absolute top-1/4 -right-40 w-[32rem] h-[32rem] rounded-full bg-teal/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
-  <div class="absolute bottom-1/3 -left-40 w-[28rem] h-[28rem] rounded-full bg-teal-dark/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-1/3 -left-40 w-[28rem] h-[28rem] rounded-full bg-teal-deep/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
   <div class="relative max-w-5xl mx-auto px-6 md:px-10">
     <!-- Section header (curto, faz ligação ao hero que já introduziu) -->
@@ -67,21 +67,21 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
             data-active="false"
           >
             {/* Number circle no eixo da timeline — destaca-se quando o card está em foco */}
-            <div class="absolute left-0 top-6 w-12 h-12 md:w-20 md:h-20 rounded-full bg-white shadow-md flex items-center justify-center z-10 border-2 border-teal-dark/15 transition-all duration-500 ease-out group-data-[active=true]/journey:border-teal group-data-[active=true]/journey:shadow-[0_0_0_6px_rgba(63,142,142,0.10)]">
+            <div class="absolute left-0 top-6 w-12 h-12 md:w-20 md:h-20 rounded-full bg-white shadow-md flex items-center justify-center z-10 border-2 border-teal-deep/15 transition-all duration-500 ease-out group-data-[active=true]/journey:border-teal group-data-[active=true]/journey:shadow-[0_0_0_6px_rgba(63,142,142,0.10)]">
               <span class="font-serif text-base md:text-2xl font-medium text-teal-dark">
                 {s.number}
               </span>
             </div>
 
             {/* Content card — ganha border teal + shadow maior + opacidade total quando em foco */}
-            <div class="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 border border-teal-dark/10 shadow-[0_4px_28px_-12px_rgba(28,60,60,0.10)] opacity-70 transition-all duration-500 ease-out group-data-[active=true]/journey:opacity-100 group-data-[active=true]/journey:border-teal/40 group-data-[active=true]/journey:shadow-[0_18px_50px_-12px_rgba(28,60,60,0.18)]">
+            <div class="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 border border-teal-deep/10 shadow-[0_4px_28px_-12px_rgba(28,60,60,0.10)] opacity-70 transition-all duration-500 ease-out group-data-[active=true]/journey:opacity-100 group-data-[active=true]/journey:border-teal/40 group-data-[active=true]/journey:shadow-[0_18px_50px_-12px_rgba(28,60,60,0.18)]">
               {/* Tag (pill — "Ponto de partida obrigatório" no Raio-X é o destaque suficiente) */}
               <div class="flex flex-wrap items-center gap-2 mb-5">
                 <span class:list={[
                   'inline-flex font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1.5 rounded-full',
                   s.tagHighlight
                     ? 'text-teal-dark bg-teal/15 border border-teal/30'
-                    : 'text-muted bg-teal-dark/5 border border-teal-dark/10',
+                    : 'text-muted bg-teal-deep/5 border border-teal-deep/10',
                 ]}>
                   {s.tag}
                 </span>
@@ -187,7 +187,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                 </div>
 
                 {/* Price + CTA */}
-                <div class="border-t border-teal-dark/10 pt-5 mt-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
+                <div class="border-t border-teal-deep/10 pt-5 mt-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
                   <div>
                     <div class="flex items-baseline gap-2 flex-wrap">
                       <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/60">
@@ -212,7 +212,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                     href={ctaUrl}
                     target={schedulingIsExternal ? '_blank' : undefined}
                     rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
-                    class="inline-flex items-center justify-center gap-2 font-sans text-sm font-medium px-6 py-3 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap shrink-0 group"
+                    class="inline-flex items-center justify-center gap-2 font-sans text-sm font-medium px-6 py-3 rounded-full bg-teal-deep text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap shrink-0 group"
                   >
                     {s.cta}
                     <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></i>

@@ -26,7 +26,7 @@ const ctaHref = CALENDLY_URL
   || `mailto:${email}?subject=${encodeURIComponent('Marcar conversa de 15 minutos')}`;
 
 const inputClass =
-  'w-full bg-offwhite border border-teal-dark/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors';
+  'w-full bg-offwhite border border-teal-deep/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors';
 const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted mb-2';
 ---
 
@@ -67,7 +67,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
 
             <button
               type="submit"
-              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal-panel text-cream hover:bg-teal-dark transition-all duration-300 self-start mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal-panel text-cream hover:bg-teal-deep transition-all duration-300 self-start mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {f.submit}
               <i class="ri-arrow-right-line" aria-hidden="true"></i>
@@ -105,9 +105,9 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
       <div class="lg:col-span-5 flex flex-col gap-5">
         <!-- CTA: marcar conversa -->
         <div class="bg-teal-panel rounded-[28px] p-7 md:p-8">
-          <p class="font-serif italic text-cream/80 text-sm mb-2">{cn.ctaContext}</p>
+          <p class="font-serif italic text-cream text-sm mb-2">{cn.ctaContext}</p>
           <h3 class="font-serif text-xl md:text-2xl font-medium text-cream mb-3">{cn.ctaTitle}</h3>
-          <p class="font-sans text-sm text-cream/80 leading-relaxed mb-6">{cn.ctaDesc}</p>
+          <p class="font-sans text-sm text-cream leading-relaxed mb-6">{cn.ctaDesc}</p>
           <a
             href={ctaHref}
             target={ctaExternal ? '_blank' : undefined}

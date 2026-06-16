@@ -21,14 +21,14 @@ const services = [
   <div class="max-w-7xl mx-auto px-6 md:px-10">
     <!-- Header -->
     <div class="scroll-reveal mb-10 md:mb-12">
-      <p class="font-sans text-xs uppercase tracking-widest text-cream/90 mb-3">
+      <p class="font-sans text-xs uppercase tracking-widest text-cream mb-3">
         {i.services.label}
       </p>
       <div class="flex flex-col gap-4">
         <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-cream leading-[1.15] max-w-3xl">
           {i.services.title}
         </h2>
-        <p class="font-sans text-base text-cream/90 leading-relaxed max-w-2xl">
+        <p class="font-sans text-base text-cream leading-relaxed max-w-2xl">
           {i.services.subtitle}
         </p>
       </div>
@@ -38,7 +38,7 @@ const services = [
     <div class="scroll-reveal flex flex-wrap items-center gap-x-1 gap-y-2 mb-12 md:mb-14">
       {scopeItems.map((item, idx) => (
         <div class="flex items-center gap-1">
-          <span class="font-sans text-xs text-cream/90 bg-teal-dark/25 px-3 py-1.5 rounded-full">
+          <span class="font-sans text-xs text-cream bg-teal-deep/25 px-3 py-1.5 rounded-full">
             {item}
           </span>
           {idx < scopeItems.length - 1 && (
@@ -67,11 +67,11 @@ const services = [
             aria-label={lang === 'en' ? `Stage ${number}: ${shortEn}` : `Etapa ${number}: ${short}`}
           >
             <div class="step-circle w-14 h-14 md:w-16 md:h-16 rounded-full border border-cream/30 bg-teal flex items-center justify-center transition-all duration-300">
-              <span class="step-number font-serif text-xl md:text-2xl font-medium text-cream/80 transition-colors duration-300">
+              <span class="step-number font-serif text-xl md:text-2xl font-medium text-cream transition-colors duration-300">
                 {number}
               </span>
             </div>
-            <span class="step-label font-sans text-xs uppercase tracking-wider text-cream/90 transition-colors duration-300 whitespace-nowrap">
+            <span class="step-label font-sans text-xs uppercase tracking-wider text-cream transition-colors duration-300 whitespace-nowrap">
               {lang === 'en' ? shortEn : short}
             </span>
           </button>
@@ -133,7 +133,7 @@ const services = [
             <div class="mt-auto">
               <a
                 href={`${getLocalizedPath('/servicos', lang)}#servico-${number}`}
-                class="inline-flex items-center gap-2 px-6 py-3 md:px-7 md:py-3.5 rounded-full bg-teal text-cream font-sans font-medium text-sm hover:bg-teal-dark transition-all duration-300 group"
+                class="inline-flex items-center gap-2 px-6 py-3 md:px-7 md:py-3.5 rounded-full bg-teal text-cream font-sans font-medium text-sm hover:bg-teal-deep transition-all duration-300 group"
               >
                 {data.cta}
                 <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>

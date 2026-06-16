@@ -63,7 +63,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
           <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-start">
             <a
               href="#journey"
-              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full bg-teal-dark text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap"
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full bg-teal-deep text-cream hover:bg-teal transition-all duration-300 whitespace-nowrap"
             >
               {lang === 'en' ? 'Start with the X-Ray' : 'Começar pelo Raio-X'}
             </a>
@@ -71,7 +71,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
               href={schedulingUrl}
               target={schedulingIsExternal ? '_blank' : undefined}
               rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
-              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full border border-teal-dark/15 text-teal-dark hover:border-teal-dark hover:bg-teal-dark/5 transition-all duration-300 whitespace-nowrap"
+              class="inline-flex items-center justify-center gap-2 font-sans font-medium text-sm md:text-base px-7 py-3.5 md:px-9 md:py-4 rounded-full border border-teal-deep/15 text-teal-dark hover:border-teal-deep hover:bg-teal-deep/5 transition-all duration-300 whitespace-nowrap"
             >
               {lang === 'en' ? 'Talk first (30 min)' : 'Falar primeiro (30 min)'}
             </a>
@@ -97,7 +97,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
                 class:list={[
                   'services-deck-card absolute inset-0 rounded-[28px] bg-white flex flex-col overflow-hidden cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2',
                   'shadow-[0_24px_60px_-16px_rgba(28,60,60,0.40)]',
-                  'border border-teal-dark/10',
+                  'border border-teal-deep/10',
                 ]}
               >
                 {/* Imagem ocupa quase todo o card (flex-1) */}
@@ -142,7 +142,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
                 <span
                   class:list={[
                     'deck-dot-bar h-2 rounded-full transition-all duration-300',
-                    idx === 0 ? 'bg-teal w-6' : 'bg-teal-dark/20 w-2',
+                    idx === 0 ? 'bg-teal w-6' : 'bg-teal-deep/20 w-2',
                   ]}
                 ></span>
               </button>
@@ -268,7 +268,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
         const isActive = idx === active;
         bar.classList.toggle('bg-teal', isActive);
         bar.classList.toggle('w-6', isActive);
-        bar.classList.toggle('bg-teal-dark/20', !isActive);
+        bar.classList.toggle('bg-teal-deep/20', !isActive);
         bar.classList.toggle('w-2', !isActive);
       });
     };

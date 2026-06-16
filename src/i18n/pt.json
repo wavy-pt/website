@@ -461,10 +461,10 @@
       "marquee": [
         { "type": "stat", "number": "24h", "label": "Tempo de resposta", "sublabel": "Em dias úteis. Resposta humana, não automática.", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Fundada em casa, numa sala de estar.", "cardColor": "cream" },
-        { "type": "stat", "number": "Zona Oeste & Grande Lisboa", "label": "Onde nos encontras", "sublabel": "Presencialmente aqui. À distância em todo o país.", "small": true, "cardColor": "teal-dark" },
+        { "type": "stat", "number": "Zona Oeste & Grande Lisboa", "label": "Onde nos encontras", "sublabel": "Presencialmente aqui. À distância em todo o país.", "small": true, "cardColor": "teal-deep" },
         { "type": "image", "imageKey": "hero", "cardColor": "cream" },
         { "type": "stat", "number": "100%", "label": "Começam pelo Raio-X", "cardColor": "teal" },
-        { "type": "stat", "number": "1", "label": "Interlocutora única", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "1", "label": "Interlocutora única", "cardColor": "teal-deep" },
         { "type": "stat", "number": "0", "label": "Templates às cegas", "cardColor": "teal" },
         { "type": "text", "title": "Mariana Antunes", "body": "Fundadora e estrategista.", "cardColor": "cream" },
         { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },

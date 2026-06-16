@@ -8,10 +8,10 @@ interface Props {
   lang: Lang;
   /**
    * Estado inicial do header sobre uma hero com imagem:
-   *   - `false` (default) → opaco, texto teal-dark (comportamento normal).
+   *   - `false` (default) → opaco, texto teal-deep (comportamento normal).
    *   - `true`           → fundo transparente, texto cream (sobre imagem ESCURA).
-   *                        Ao scroll, ganha bg-offwhite e texto volta a teal-dark.
-   *   - `'light'`        → fundo transparente, texto fica teal-dark (sobre imagem CLARA).
+   *                        Ao scroll, ganha bg-offwhite e texto volta a teal-deep.
+   *   - `'light'`        → fundo transparente, texto fica teal-deep (sobre imagem CLARA).
    *                        Ao scroll, ganha bg-offwhite (texto mantém-se).
    */
   transparent?: boolean | 'light';
@@ -83,9 +83,9 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
             aria-current={isActive ? 'page' : undefined}
             class:list={[
               'font-sans text-sm transition-colors duration-200 whitespace-nowrap',
-              // Não transparent: comportamento original (sempre teal-dark)
+              // Não transparent: comportamento original (sempre teal-deep)
               !usesLightText && (isActive ? 'text-teal-dark font-medium' : 'text-teal-dark/70 hover:text-teal-dark'),
-              // Transparent: cor depende do state do header (top → cream, scrolled → teal-dark)
+              // Transparent: cor depende do state do header (top → cream, scrolled → teal-deep)
               usesLightText && (isActive ? 'font-medium' : ''),
               usesLightText && (isActive
                 ? 'text-cream group-data-[state=scrolled]/header:text-teal-dark'
@@ -100,7 +100,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
         href={ctaHref}
         target={schedulingIsExternal ? '_blank' : undefined}
         rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
-        class="inline-flex items-center gap-2 font-sans text-sm font-medium bg-teal-dark text-cream px-5 py-2.5 rounded-full hover:bg-teal transition-colors duration-200 whitespace-nowrap animate-pulse-ring"
+        class="inline-flex items-center gap-2 font-sans text-sm font-medium bg-teal-deep text-cream px-5 py-2.5 rounded-full hover:bg-teal transition-colors duration-200 whitespace-nowrap animate-pulse-ring"
       >
         <i class="ri-calendar-check-line text-base"></i>
         {i.nav.diagnosis}
@@ -177,7 +177,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
       href={ctaHref}
       target={schedulingIsExternal ? '_blank' : undefined}
       rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
-      class="font-sans text-lg bg-teal-dark text-cream px-6 py-3 rounded-full"
+      class="font-sans text-lg bg-teal-deep text-cream px-6 py-3 rounded-full"
     >
       {i.nav.diagnosis}
     </a>

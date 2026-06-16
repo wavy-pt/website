@@ -461,10 +461,10 @@
       "marquee": [
         { "type": "stat", "number": "24h", "label": "Response time", "sublabel": "On working days. Human reply, never automated.", "cardColor": "teal" },
         { "type": "text", "title": "Mafra, Portugal", "body": "Founded at home, in a living room.", "cardColor": "cream" },
-        { "type": "stat", "number": "West & Greater Lisbon", "label": "Where to find us", "sublabel": "In person here. Remote across Portugal.", "small": true, "cardColor": "teal-dark" },
+        { "type": "stat", "number": "West & Greater Lisbon", "label": "Where to find us", "sublabel": "In person here. Remote across Portugal.", "small": true, "cardColor": "teal-deep" },
         { "type": "image", "imageKey": "hero", "cardColor": "cream" },
         { "type": "stat", "number": "100%", "label": "Start with the X-Ray", "cardColor": "teal" },
-        { "type": "stat", "number": "1", "label": "Single point of contact", "cardColor": "teal-dark" },
+        { "type": "stat", "number": "1", "label": "Single point of contact", "cardColor": "teal-deep" },
         { "type": "stat", "number": "0", "label": "Templates followed blindly", "cardColor": "teal" },
         { "type": "text", "title": "Mariana Antunes", "body": "Founder and strategist.", "cardColor": "cream" },
         { "type": "image", "imageKey": "bastidores", "cardColor": "cream" },
