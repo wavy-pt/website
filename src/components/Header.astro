@@ -58,7 +58,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
   ]}
 >
   <div class="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-[72px]">
-    <a href={getLocalizedPath('/', lang)} class="flex items-center shrink-0">
+    <a href={getLocalizedPath('/', lang)} id="header-logo" class="flex items-center shrink-0 transition-opacity duration-200">
       <img
         src="/logo-wavy-tight.svg"
         alt="Wavy"
@@ -149,7 +149,8 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
 <!-- Mobile menu -->
 <div
   id="mobile-menu"
-  class="fixed inset-0 z-40 bg-offwhite flex flex-col items-center justify-center transition-all duration-300 lg:hidden opacity-0 pointer-events-none"
+  tabindex="-1"
+  class="fixed inset-0 z-40 bg-offwhite flex flex-col items-center justify-center transition-all duration-300 lg:hidden opacity-0 pointer-events-none focus:outline-none"
   role="dialog"
   aria-modal="true"
   aria-label={lang === 'en' ? 'Navigation menu' : 'Menu de navegação'}
@@ -193,6 +194,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
   const toggle = document.getElementById('mobile-toggle');
   const menu = document.getElementById('mobile-menu');
   const icon = document.getElementById('menu-icon');
+  const headerLogo = document.getElementById('header-logo');
   let open = false;
 
   function setMenu(nextOpen: boolean) {
@@ -205,9 +207,10 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
       toggle?.setAttribute('aria-expanded', 'true');
       toggle?.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Close menu' : 'Fechar menu');
       document.body.style.overflow = 'hidden';
-      // Foco no primeiro link do menu para leitores de ecrã
-      const firstLink = menu?.querySelector('a, button') as HTMLElement | null;
-      firstLink?.focus();
+      // Menu aberto: esconde o logo do header (fica só o logo central do menu)
+      headerLogo?.classList.add('opacity-0', 'pointer-events-none');
+      // Foco no contentor do menu (sem anel visível num link) para leitores de ecrã
+      menu?.focus();
     } else {
       menu?.classList.add('opacity-0', 'pointer-events-none');
       menu?.classList.remove('opacity-100', 'pointer-events-auto');
@@ -216,6 +219,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
       toggle?.setAttribute('aria-expanded', 'false');
       toggle?.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Open menu' : 'Abrir menu');
       document.body.style.overflow = '';
+      headerLogo?.classList.remove('opacity-0', 'pointer-events-none');
     }
   }
 
