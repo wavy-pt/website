@@ -1,7 +1,7 @@
 ---
-import { t, getLocalizedPath } from '../i18n';
+import { t } from '../i18n';
 import type { Lang } from '../i18n';
-import { isProd } from '../lib/env';
+import { getNavLinks } from '../lib/nav';
 
 interface Props {
   lang: Lang;
@@ -10,15 +10,7 @@ interface Props {
 const { lang } = Astro.props;
 const i = t(lang);
 
-const allNavLinks = [
-  { label: i.nav.home, to: getLocalizedPath('/', lang), wip: false },
-  { label: i.nav.services, to: getLocalizedPath('/servicos', lang), wip: false },
-  { label: i.nav.about, to: getLocalizedPath('/sobre', lang), wip: false },
-  { label: i.nav.cases, to: getLocalizedPath('/casos', lang), wip: false },
-  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang), wip: false },
-];
-
-const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
+const navLinks = getNavLinks(lang);
 
 // Crédito de desenvolvimento (ADDS) — link dependente do idioma.
 const addsUrl = lang === 'en' ? 'https://addssolutions.com/en/' : 'https://addssolutions.com/';

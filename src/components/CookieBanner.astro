@@ -133,10 +133,7 @@ const copy = isEn
 
       function init() {
         const banner = document.getElementById('cookie-banner');
-        if (!banner) {
-          console.warn('[CookieBanner] #cookie-banner não encontrado');
-          return;
-        }
+        if (!banner) return;
 
         // Initial state — mostrar banner se ainda não houve escolha
         let stored = null;

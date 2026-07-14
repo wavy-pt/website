@@ -1,8 +1,9 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
-import { isProd, schedulingHref, schedulingIsExternal } from '../lib/env';
+import { schedulingHref, schedulingIsExternal } from '../lib/env';
 import { switchLangPath as resolveSwitchPath } from '../lib/slugs';
+import { getNavLinks } from '../lib/nav';
 
 interface Props {
   lang: Lang;
@@ -27,16 +28,7 @@ const usesLightText = transparent === true;
 const i = t(lang);
 const otherLang = lang === 'pt' ? 'en' : 'pt';
 
-// Navegação. Páginas com wip:true ficam escondidas em produção (nenhuma de momento).
-const allNavLinks = [
-  { label: i.nav.home, to: getLocalizedPath('/', lang), wip: false },
-  { label: i.nav.services, to: getLocalizedPath('/servicos', lang), wip: false },
-  { label: i.nav.about, to: getLocalizedPath('/sobre', lang), wip: false },
-  { label: i.nav.cases, to: getLocalizedPath('/casos', lang), wip: false },
-  { label: i.nav.contact, to: getLocalizedPath('/contacto', lang), wip: false },
-];
-
-const navLinks = isProd ? allNavLinks.filter((l) => !l.wip) : allNavLinks;
+const navLinks = getNavLinks(lang);
 const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
 
 const currentPath = Astro.url.pathname;

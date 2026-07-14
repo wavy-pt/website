@@ -1,7 +1,7 @@
 ---
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
-import { contactHref, schedulingHref, schedulingIsExternal } from '../lib/env';
+import { schedulingHref, schedulingIsExternal } from '../lib/env';
 
 interface Props {
   lang: Lang;
@@ -9,7 +9,6 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang);
-const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 // Teste rápido → /servicos (onde vive o quiz) provisoriamente.
 const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;

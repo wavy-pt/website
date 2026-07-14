@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { t, getLocalizedPath } from '../i18n';
 import type { Lang } from '../i18n';
-import { contactHref, schedulingHref, schedulingIsExternal } from '../lib/env';
+import { schedulingHref, schedulingIsExternal } from '../lib/env';
 import heroImage from '../assets/wavy-hero.jpg';
 
 interface Props {
@@ -11,7 +11,6 @@ interface Props {
 
 const { lang } = Astro.props;
 const i = t(lang);
-const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 // CTA primário (teste rápido / Raio-X) aponta provisoriamente para /servicos,
 // onde vive o quiz. Destino final a decidir quando fizermos a página de Serviços.

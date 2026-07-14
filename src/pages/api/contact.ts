@@ -68,6 +68,11 @@ export const POST: APIRoute = async ({ request }) => {
     return json({ success: false, error: 'validation' }, 400);
   }
 
+  // Limites de tamanho — evita payloads abusivos (desperdício de recursos/Resend).
+  if (name.length > 120 || email.length > 200 || business.length > 200 || message.length > 5000) {
+    return json({ success: false, error: 'validation' }, 400);
+  }
+
   const resend = new Resend(apiKey);
 
   try {
@@ -75,7 +80,7 @@ export const POST: APIRoute = async ({ request }) => {
       from: FROM,
       to: [TO],
       replyTo: email,
-      subject: `Nova mensagem do site Wavy, ${name}`,
+      subject: `Nova mensagem do site Wavy, ${name.replace(/[\r\n]+/g, ' ')}`,
       text:
         `Nome: ${name}\n` +
         `Email: ${email}\n` +

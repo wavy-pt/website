@@ -99,18 +99,6 @@
     "ctaText": "Still not sure if Wavy is right for you? Take the quick test. Two minutes is all it takes.",
     "ctaButton": "Take the quick test"
   },
-  "difference": {
-    "label": "what makes us different",
-    "title": "We're not an agency. We're not a freelancer.",
-    "subtitle": "We occupy a specific space in the market: the meeting point between rigorous digital strategy and human sensitivity.",
-    "headers": ["Dimension", "Traditional agencies", "Generic freelancers", "Wavy"],
-    "rows": [
-      { "dim": "Approach", "agency": "Templates and scale", "freelance": "One-off execution", "wavy": "Identity → Strategy → Execution" },
-      { "dim": "Focus", "agency": "Metrics and volume", "freelance": "Low price", "wavy": "Coherence, soul and sustainability" },
-      { "dim": "Relationship", "agency": "One account among many", "freelance": "Transactional", "wavy": "Long-term partnership" },
-      { "dim": "Differentiator", "agency": "Structure and scale", "freelance": "Accessibility", "wavy": "Authenticity and local proximity" }
-    ]
-  },
   "services": {
     "label": "WHAT WE DO",
     "title": "A three-phase method. To rebuild your digital with logic.",
@@ -797,16 +785,8 @@
   },
   "finalCta": {
     "label": "Now that you know us",
-    "greeting": "Hello. I'm Mariana, founder of Wavy.",
-    "paragraph1": "If you've read this far, something I wrote resonated with you. Maybe you recognise your own business in these challenges. Maybe you've thought about change several times and still haven't found the right partner.",
-    "paragraph2": "Whatever your path, I'd like to meet you. No pressure, no forced proposal, no sales pitch. Just an honest conversation about your business.",
-    "signature": "Mariana Antunes",
-    "signatureRole": "Founder · Wavy",
-    "primaryCta": "Book 15 minutes with me",
     "secondaryCta": "Take the quick test",
-    "secondaryNote": "or if you're still exploring:",
     "contactPrompt": "Prefer to write?",
-    "contactEmail": "geral@wavy.pt",
-    "socialPrompt": "You'll also find me at"
+    "contactEmail": "geral@wavy.pt"
   }
 }

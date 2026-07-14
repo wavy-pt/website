@@ -20,7 +20,7 @@
 import { Image } from 'astro:assets';
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
-import { contactHref, schedulingHref, schedulingIsExternal } from '../../lib/env';
+import { schedulingHref, schedulingIsExternal } from '../../lib/env';
 // Uma imagem por fase — ficheiros nomeados diretamente pela Mariana:
 //   Raio-X   → Raio X.jpg
 //   Obra     → wavy-bastidores.jpg (a Mariana a construir / bastidores da obra)
@@ -37,7 +37,6 @@ const { lang } = Astro.props;
 const i = t(lang);
 const sp = i.servicesPage;
 const j = sp.journey;
-const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
 const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 
 // Imagens dos cards — ordem alinhada com j.services (Raio-X, Obra, Direção).
