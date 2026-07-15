@@ -14,6 +14,12 @@ const navLinks = getNavLinks(lang);
 
 // Crédito de desenvolvimento (ADDS) — link dependente do idioma.
 const addsUrl = lang === 'en' ? 'https://addssolutions.com/en/' : 'https://addssolutions.com/';
+
+// Livro de Reclamações eletrónico. Obrigatório por lei em local visível e destacado
+// do site (DL 156/2005, art. 5.º-B n.º 2, aditado pelo DL 74/2017) — não remover.
+// Sem variante por idioma: a plataforma troca para inglês por sessão, sem mudar de
+// URL (o botão "English" lá dentro), e /en/inicio dá 404. Ambos apontam para o mesmo.
+const livroReclamacoesUrl = 'https://www.livroreclamacoes.pt/inicio';
 ---
 
 <footer class="bg-teal-deep text-cream">
@@ -104,6 +110,14 @@ const addsUrl = lang === 'en' ? 'https://addssolutions.com/en/' : 'https://addss
         >
           {lang === 'en' ? 'Manage cookies' : 'Gerir cookies'}
         </button>
+        <a
+          href={livroReclamacoesUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-sans text-sm text-cream hover:text-cream transition-colors py-2 inline-block"
+        >
+          {lang === 'en' ? 'Complaints book' : 'Livro de Reclamações'}
+        </a>
       </div>
     </div>
 
