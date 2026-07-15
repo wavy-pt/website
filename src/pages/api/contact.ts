@@ -18,6 +18,13 @@ function json(body: unknown, status = 200) {
   });
 }
 
+// Um POST em JSON pode trazer campos que não são texto (ex.: `"name": 123`), e aí
+// o .trim() rebentava com um 500 em vez de responder 400. Tudo o que não seja
+// string conta como ausente → cai na validação normal.
+function text(value: unknown): string {
+  return typeof value === 'string' ? value.trim() : '';
+}
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, '&amp;')
@@ -53,10 +60,10 @@ export const POST: APIRoute = async ({ request }) => {
     return json({ success: true });
   }
 
-  const name = (data.name || '').trim();
-  const email = (data.email || '').trim();
-  const message = (data.message || '').trim();
-  const business = (data.business || '').trim();
+  const name = text(data.name);
+  const email = text(data.email);
+  const message = text(data.message);
+  const business = text(data.business);
 
   if (!name || !email || !message) {
     return json({ success: false, error: 'validation' }, 400);
