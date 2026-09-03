@@ -102,7 +102,7 @@
   "services": {
     "label": "WHAT WE DO",
     "title": "A three-phase method. To rebuild your digital with logic.",
-    "subtitle": "First we assess. Then we rebuild. Then we direct. You can enter at the phase that fits your reality, but the natural path is always: diagnosis → foundation → direction.",
+    "subtitle": "First we assess. Then we rebuild. Then we direct. We always start with the X-Ray; from there, the path adapts to your reality.",
     "scope": ["Strategy", "Website", "Google Business Profile", "Social Media"],
     "start": {
       "tag": "WHERE TO START",
@@ -730,8 +730,8 @@
     "whereWeAre": {
       "label": "Where we are",
       "blocks": [
-        { "icon": "ri-map-pin-line", "title": "Location", "body": "Based in Mafra, in the West region." },
-        { "icon": "ri-global-line", "title": "Coverage", "body": "We work with businesses across Portugal, in-person in West and Greater Lisbon, remotely everywhere else." },
+        { "icon": "ri-map-pin-line", "title": "Location", "body": "Based in Mafra, in the West region, with a second base in Samora Correia." },
+        { "icon": "ri-global-line", "title": "Coverage", "body": "We work with businesses across Portugal, in-person in West, Greater Lisbon and Samora Correia, remotely everywhere else." },
         { "icon": "ri-time-line", "title": "Response", "body": "Reply within 24 working hours. Monday to Friday, 9am to 6pm." }
       ]
     }
@@ -760,7 +760,7 @@
     "stat2Label": "of clients start with the X-Ray",
     "ctaTitle": "The next story could be yours.",
     "ctaSubtitle": "Start with the X-Ray. By the end, you'll know exactly where your digital business stands, and what to do next.",
-    "ctaButton": "Start with the X-Ray"
+    "ctaButton": "Find out where I stand"
   },
   "faq": {
     "label": "frequently asked questions",

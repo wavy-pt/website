@@ -102,7 +102,7 @@
   "services": {
     "label": "O QUE FAZEMOS",
     "title": "Um método em três fases. Para reconstruir o teu digital com lógica.",
-    "subtitle": "Primeiro avaliamos. Depois reconstruímos. Por fim, dirigimos. Podes entrar na fase que faz sentido para a tua realidade, mas o caminho natural é sempre: diagnóstico → fundação → direção.",
+    "subtitle": "Primeiro avaliamos. Depois reconstruímos. Por fim, dirigimos. Começamos sempre pelo Raio-X; a partir daí, o caminho ajusta-se à tua realidade.",
     "scope": ["Estratégia", "Website", "Google Business Profile", "Redes sociais"],
     "start": {
       "tag": "POR ONDE COMEÇAR",
@@ -730,8 +730,8 @@
     "whereWeAre": {
       "label": "Onde estamos",
       "blocks": [
-        { "icon": "ri-map-pin-line", "title": "Localização", "body": "Sediada em Mafra, na Zona Oeste." },
-        { "icon": "ri-global-line", "title": "Cobertura", "body": "Trabalhamos com negócios em todo o país, presenciais na Zona Oeste e Grande Lisboa, à distância no resto de Portugal." },
+        { "icon": "ri-map-pin-line", "title": "Localização", "body": "Sediada em Mafra, na Zona Oeste, com segunda base em Samora Correia." },
+        { "icon": "ri-global-line", "title": "Cobertura", "body": "Trabalhamos com negócios em todo o país, presenciais na Zona Oeste, Grande Lisboa e Samora Correia, à distância no resto de Portugal." },
         { "icon": "ri-time-line", "title": "Resposta", "body": "Resposta em até 24 horas úteis. De segunda a sexta, das 9h às 18h." }
       ]
     }
@@ -760,7 +760,7 @@
     "stat2Label": "dos clientes começam pelo Raio-X",
     "ctaTitle": "A próxima história pode ser a tua.",
     "ctaSubtitle": "Começa pelo Raio-X. No fim, sabes exatamente onde está o teu negócio digital, e o que fazer a seguir.",
-    "ctaButton": "Fazer o Raio-X"
+    "ctaButton": "Descobrir onde estou"
   },
   "faq": {
     "label": "perguntas frequentes",

@@ -91,7 +91,8 @@ ${markdown}
 ## Notas
 
 - Idiomas: Português (pt-PT, versão principal) e Inglês (${SITE}/en/).
-- Zona de atuação: ${i.contactPage.whereWeAre.blocks[1]?.body ?? 'Zona Oeste e Grande Lisboa, Portugal.'}
+- Zona de atuação: ${i.contactPage.whereWeAre.blocks[1]?.body ?? 'Zona Oeste, Grande Lisboa e Samora Correia, Portugal.'}
+- Bases: Mafra e Samora Correia (Portugal).
 - Utilização do conteúdo: permitida com atribuição. Ver ${SITE}/robots.txt (Content-Signal).
 `;
 
