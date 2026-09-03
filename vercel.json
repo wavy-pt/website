@@ -1,5 +1,127 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/index.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/servicos(/?)",
+      "destination": "/servicos.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/sobre(/?)",
+      "destination": "/sobre.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/casos(/?)",
+      "destination": "/casos.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/contacto(/?)",
+      "destination": "/contacto.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/en(/?)",
+      "destination": "/en.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/en/servicos(/?)",
+      "destination": "/en/servicos.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/en/sobre(/?)",
+      "destination": "/en/sobre.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/en/casos(/?)",
+      "destination": "/en/casos.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    },
+    {
+      "source": "/en/contacto(/?)",
+      "destination": "/en/contacto.md",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/markdown.*"
+        }
+      ]
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -62,6 +184,96 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=2592000, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</index.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/servicos(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</servicos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/sobre(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</sobre.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/casos(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</casos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/contacto(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</contacto.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/en(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</en.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/en/servicos(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</en/servicos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/en/sobre(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</en/sobre.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/en/casos(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</en/casos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/en/contacto(/?)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</en/contacto.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
         }
       ]
     }
