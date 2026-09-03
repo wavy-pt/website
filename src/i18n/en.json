@@ -704,7 +704,7 @@
       "message": "Message",
       "messagePlaceholder": "Tell us where you are and what you're looking for",
       "submit": "Send message",
-      "privacy": "Your data is treated with respect. Never shared. You won't end up on automated email lists.",
+      "privacy": "Your data is only used to reply to you. It is never sold or passed on to third parties, and you won't end up on automated email lists.",
       "sending": "Sending…",
       "successTitle": "Message sent!",
       "success": "Thank you! We'll read it carefully and reply within 24 working hours.",
