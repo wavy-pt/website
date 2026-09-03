@@ -352,7 +352,7 @@
       "title": "How we work together",
       "subtitle": "A simple, transparent process with no surprises. Every step is designed so you feel supported and safe.",
       "steps": [
-        { "number": "01", "title": "Conversation", "desc": "A 15-minute call to get to know each other and see if working together makes sense." },
+        { "number": "01", "title": "Conversation", "desc": "A 30-minute call to get to know each other and see if working together makes sense." },
         { "number": "02", "title": "Diagnosis", "desc": "Detailed analysis of your business, current digital presence and goals." },
         { "number": "03", "title": "Proposal", "desc": "A tailored, clear and transparent proposal, with no surprises." },
         { "number": "04", "title": "Start", "desc": "We start working together, with close support at every step." }
@@ -680,9 +680,9 @@
         "icon": "ri-calendar-check-line",
         "context": "if you already know what you want",
         "title": "Book a conversation",
-        "desc": "15 minutes by video or phone. We will understand where you are, where you want to go, and if it makes sense to move forward together.",
+        "desc": "30 minutes by video or phone. We will understand where you are, where you want to go, and if it makes sense to move forward together.",
         "cta": "Choose a time",
-        "time": "15 minutes"
+        "time": "30 minutes"
       },
       "card3": {
         "icon": "ri-mail-send-line",

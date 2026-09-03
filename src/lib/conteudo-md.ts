@@ -57,13 +57,13 @@ export const juntar = (...partes: unknown[]): string =>
     .trim();
 
 /** Preço legível: "desde 350€ + IVA · 100% deduzido no projeto seguinte". */
-const preco = (s: {
+export const preco = (s: {
   price?: string;
   priceLabel?: string;
   pricePeriod?: string;
   priceNote?: string;
 }): string => {
-  const valor = [s.priceLabel?.toLowerCase(), s.price].filter(Boolean).join(' ');
+  const valor = [s.priceLabel?.toLowerCase(), s.price].filter(Boolean).join(' ').trim();
   const comPeriodo = `${valor}${s.pricePeriod ?? ''}`;
   return [comPeriodo, s.priceNote].filter(Boolean).join(' · ');
 };
@@ -73,12 +73,18 @@ const preco = (s: {
 /** Os três serviços, em resumo (como aparecem na home). */
 export const secaoServicos = (s: Strings): string => {
   const sv = s.services;
-  const cartoes = [sv.start, sv.boost, sv.flow].map((c) =>
+  // O PREÇO VEM DE `servicesPage.journey`, NÃO DE `services.*`.
+  // Os campos `services.boost.price` (1.500€) e `services.flow.price` (750€)
+  // existem no i18n mas NÃO estão em lado nenhum do site — a página mostra
+  // "Orçamento personalizado" para os dois, e a home nem sequer renderiza
+  // preços. Publicá-los aqui dava a agentes valores que o negócio não anuncia.
+  const jornada = s.servicesPage.journey.services;
+  const cartoes = [sv.start, sv.boost, sv.flow].map((c, idx) =>
     bloco(
       `### ${c.name} — ${c.scriptName}`,
-      `*${c.tag}*`,
+      c.tag ? `*${c.tag}*` : '',
       c.desc,
-      `**Preço:** ${preco(c)}`
+      jornada[idx] ? `**Preço:** ${preco(jornada[idx])}` : ''
     )
   );
   return bloco(`## ${sv.title}`, sv.subtitle, ...cartoes, sv.planLine);
@@ -121,20 +127,6 @@ export const secaoMetodo = (s: Strings): string => {
     m.subtitle,
     ...m.principles.map((p) => bloco(`### ${p.number}. ${p.title}`, p.desc)),
     m.closing
-  );
-};
-
-/** Add-ons e processo de trabalho. */
-export const secaoAddonsProcesso = (s: Strings): string => {
-  const a = s.servicesPage.addons;
-  const p = s.servicesPage.process;
-  return bloco(
-    `## ${a.title}`,
-    a.subtitle,
-    lista(a.items.map((i) => `**${i.name}** — ${i.desc} (${i.price})`)),
-    `## ${p.title}`,
-    p.subtitle,
-    ...p.steps.map((st) => bloco(`### ${st.number}. ${st.title}`, st.desc))
   );
 };
 
@@ -232,7 +224,18 @@ export const secaoFaq = (
     ...fonte.items.map((i) => bloco(`### ${i.q}`, i.a))
   );
 
-/** Como contactar e onde a Wavy está. */
+/**
+ * Como contactar e onde a Wavy está.
+ *
+ * USA `connect`, NÃO `options`. A secção `contactPage.options` existe no i18n
+ * mas NENHUM componente a renderiza — é conteúdo morto. Publicá-la no .md
+ * anunciava a agentes três "caminhos" que a página não mostra. Mesma armadilha
+ * dos add-ons e do processo, removidos daqui pela mesma razão, e do 3.º caso em
+ * standby: o i18n tem mais do que o site publica.
+ *
+ * Regra ao acrescentar secções aqui: confirmar que o texto aparece mesmo no
+ * HTML construído, não que a chave existe no i18n.
+ */
 export const secaoContacto = (
   s: Strings,
   lang: Lang,
@@ -241,17 +244,19 @@ export const secaoContacto = (
   comCabecalho = true
 ): string => {
   const c = s.contactPage;
-  const cartoes = [c.options.card1, c.options.card2, c.options.card3];
+  const n = c.connect;
   const base = lang === 'en' ? 'https://wavy.pt/en/contacto' : 'https://wavy.pt/contacto';
   return bloco(
     comCabecalho ? `## ${c.page.title}` : '',
     comCabecalho ? c.page.subtitle : '',
-    ...cartoes.map((o) => bloco(`### ${o.title}`, o.desc, o.time ? `*${o.time}*` : '')),
+    bloco(`### ${n.ctaTitle}`, n.ctaDesc),
+    bloco(`### ${n.emailTitle}`, n.emailDesc),
+    bloco(`### ${n.socialTitle}`, n.socialDesc),
     `### ${c.whereWeAre.label}`,
     ...c.whereWeAre.blocks.map((b) => bloco(`**${b.title}**`, b.body)),
     lista([
-      `Email: ${c.connect.email}`,
-      `${c.connect.ctaTitle}: https://calendly.com/mariana-antunes-wavy/30min`,
+      `Email: ${n.email}`,
+      `${n.ctaTitle}: https://calendly.com/mariana-antunes-wavy/30min`,
       `${lang === 'en' ? 'Contact page' : 'Página de contacto'}: ${base}`,
     ])
   );

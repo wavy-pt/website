@@ -20,7 +20,6 @@ import { ROTAS_MD, rotaParaParam } from '../lib/paginas-md';
 import {
   bloco,
   juntar,
-  secaoAddonsProcesso,
   secaoCasos,
   secaoContacto,
   secaoFaq,
@@ -67,7 +66,6 @@ const PAGINAS: Record<string, Def> = {
         s.servicesPage.hero.subtitle,
         secaoMetodo(s),
         secaoServicosDetalhe(s),
-        secaoAddonsProcesso(s),
         secaoFaq(s.servicesPage.faq)
       ),
   },

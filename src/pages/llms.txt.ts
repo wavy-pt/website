@@ -15,30 +15,26 @@
 import type { APIRoute } from 'astro';
 import { t } from '../i18n';
 import { ROTAS_MD } from '../lib/paginas-md';
+// Importado, não recopiado: havia duas versões de `preco` e só uma foi
+// corrigida quando o rótulo passou a poder ser vazio — daí um espaço a mais.
+import { preco } from '../lib/conteudo-md';
 
 const SITE = 'https://wavy.pt';
-
-/** Preço legível a partir das chaves do i18n. */
-const preco = (c: {
-  price: string;
-  priceLabel: string;
-  pricePeriod: string;
-  priceNote: string;
-}) =>
-  [`${c.priceLabel.toLowerCase()} ${c.price}${c.pricePeriod}`, c.priceNote]
-    .filter(Boolean)
-    .join(' · ');
 
 export const GET: APIRoute = () => {
   const i = t('pt');
 
   // Serviços: nome + o que é + para que serve + preço, tudo do i18n.
   const jornada = i.servicesPage.journey.services;
+  // O preço vem de `journey`, que é o que a página mostra. Os valores em
+  // `services.boost.price` / `services.flow.price` (1.500€ e 750€) NÃO estão
+  // publicados no site — lá lê-se "Orçamento personalizado".
   const servicos = [i.services.start, i.services.boost, i.services.flow]
     .map((c, idx) => {
       const ancora = `${SITE}/servicos#servico-0${idx + 1}`;
-      const tagline = jornada[idx]?.tagline ?? '';
-      return `- [${c.name}](${ancora}): ${c.scriptName}. ${tagline}. Preço: ${preco(c)}.`;
+      const j = jornada[idx];
+      const tagline = j?.tagline ?? '';
+      return `- [${c.name}](${ancora}): ${c.scriptName}. ${tagline}. Preço: ${j ? preco(j) : 'sob consulta'}.`;
     })
     .join('\n');
 
