@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { CASOS_PUBLICADOS } from '../../lib/paginas-md';
 import ScrollReveal from '../../components/ScrollReveal.astro';
 import CasesHero from '../../components/cases/CasesHero.astro';
 import CasesTransparency from '../../components/cases/CasesTransparency.astro';
@@ -13,8 +14,9 @@ import CasesCta from '../../components/cases/CasesCta.astro';
 >
   <CasesHero lang="en" />
   <CasesTransparency lang="en" />
-  <CaseStudy lang="en" index={0} />
-  <CaseStudy lang="en" index={1} />
+  {Array.from({ length: CASOS_PUBLICADOS }, (_, i) => (
+    <CaseStudy lang="en" index={i} />
+  ))}
   <CasesCta lang="en" />
   <ScrollReveal />
 </Layout>

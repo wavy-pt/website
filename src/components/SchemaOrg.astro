@@ -20,6 +20,7 @@
  * versão nas duas línguas.
  */
 import { t, getLocalizedPath } from '../i18n';
+import { INSTAGRAM_URL, FACEBOOK_URL } from '../lib/env';
 import type { Lang } from '../i18n';
 
 interface Props {
@@ -109,10 +110,7 @@ const organization = {
       },
     })),
   },
-  sameAs: [
-    'https://instagram.com/wavy.digital.pt',
-    'https://facebook.com/wavy.digital.pt',
-  ],
+  sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
   priceRange: '€€',
   inLanguage: ['pt-PT', 'en'],
 };

@@ -1,5 +1,6 @@
 ---
 import { t } from '../i18n';
+import { INSTAGRAM_URL, FACEBOOK_URL, REL_EXTERNO } from '../lib/env';
 import type { Lang } from '../i18n';
 import { getNavLinks } from '../lib/nav';
 
@@ -33,18 +34,18 @@ const livroReclamacoesUrl = 'https://www.livroreclamacoes.pt/inicio';
         </p>
         <div class="flex items-center gap-4">
           <a
-            href="https://instagram.com/wavy.digital.pt"
+            href={INSTAGRAM_URL}
             target="_blank"
-            rel="nofollow noreferrer"
+            rel={REL_EXTERNO}
             aria-label="Instagram da Wavy"
             class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
           </a>
           <a
-            href="https://facebook.com/wavy.digital.pt"
+            href={FACEBOOK_URL}
             target="_blank"
-            rel="nofollow noreferrer"
+            rel={REL_EXTERNO}
             aria-label="Facebook da Wavy"
             class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >

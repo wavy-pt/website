@@ -29,6 +29,22 @@ export const ROTAS_MD: Record<string, string> = {
   '/en/contacto': '/en/contacto.md',
 };
 
+/**
+ * Quantos casos estão PUBLICADOS.
+ *
+ * O i18n tem mais casos do que a página mostra: o 3.º (a Ana) está em standby.
+ * Este número estava decidido em quatro sítios — os índices fixos em casos.astro
+ * e en/casos.astro, o `page.cards.length` no gerador dos .md, e o
+ * `items.length` no CasesHero, que contava pelo lado errado (3 em vez de 2).
+ * Hoje coincidiam por acaso; no dia em que o 3.º caso for ligado, quem só
+ * acrescentasse o cartão ao i18n ficava com os ficheiros para agentes de IA a
+ * anunciar três casos e a página a mostrar dois — sem erro nenhum no build.
+ *
+ * PARA PUBLICAR O 3.º CASO: mudar aqui para 3, e repor os imports das imagens
+ * em CaseStudy.astro (ver o comentário no imageMap desse ficheiro).
+ */
+export const CASOS_PUBLICADOS = 2;
+
 /** A rota escrita como o endpoint a espera em `params.pagina` (sem barra inicial). */
 export const rotaParaParam = (rota: string): string =>
   rota === '/' ? 'index' : rota.replace(/^\//, '');

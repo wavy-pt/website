@@ -44,3 +44,24 @@ export function schedulingHref(localizedContactPath: string): string {
 
 /** True quando os links de agendamento vão para o Calendly (externo → abre em nova aba). */
 export const schedulingIsExternal = Boolean(CALENDLY_URL);
+
+/**
+ * Perfis sociais da Wavy.
+ *
+ * Estavam escritos à mão em 14 linhas de 7 ficheiros — e a cópia já se tinha
+ * descolado: metade dos links levava `rel="nofollow noreferrer"` e a outra
+ * metade `rel="noopener noreferrer"`, ou seja, metade dizia aos motores de
+ * busca para não associarem o site às contas da própria marca.
+ */
+export const INSTAGRAM_URL = 'https://instagram.com/wavy.digital.pt';
+export const FACEBOOK_URL = 'https://facebook.com/wavy.digital.pt';
+
+/**
+ * `rel` para links externos que abrem em nova aba.
+ *
+ * `noopener` impede que a página aberta mexa na que a abriu; `noreferrer`
+ * já o implica, mas os dois juntos são o par seguro e explícito. Sem
+ * `nofollow`, por decisão: são perfis da própria Wavy e queremos que os
+ * motores de busca façam a associação — o Schema.org já os declara em `sameAs`.
+ */
+export const REL_EXTERNO = 'noopener noreferrer';

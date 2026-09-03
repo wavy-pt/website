@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { INSTAGRAM_URL, FACEBOOK_URL, REL_EXTERNO } from '../../lib/env';
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
 import ctaImage from '../../assets/CTA.jpg';
@@ -70,7 +71,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
               </div>
               <div class="flex gap-3">
                 <a
-                  href="https://instagram.com/wavy.digital.pt"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram da Wavy"
@@ -79,7 +80,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
                   <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://facebook.com/wavy.digital.pt"
+                  href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook da Wavy"

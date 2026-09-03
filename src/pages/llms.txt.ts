@@ -15,6 +15,10 @@
 import type { APIRoute } from 'astro';
 import { t } from '../i18n';
 import { ROTAS_MD } from '../lib/paginas-md';
+// Importadas, não recopiadas: eram literais aqui e nos .md, e no dia em que
+// mudassem os botões do site apontavam bem enquanto estes ficheiros — os que os
+// agentes de IA leem — continuavam a anunciar o antigo, sem erro no build.
+import { CALENDLY_URL, INSTAGRAM_URL, FACEBOOK_URL } from '../lib/env';
 // Importado, não recopiado: havia duas versões de `preco` e só uma foi
 // corrigida quando o rótulo passou a poder ser vazio — daí um espaço a mais.
 import { preco } from '../lib/conteudo-md';
@@ -34,7 +38,7 @@ export const GET: APIRoute = () => {
       const ancora = `${SITE}/servicos#servico-0${idx + 1}`;
       const j = jornada[idx];
       const tagline = j?.tagline ?? '';
-      return `- [${c.name}](${ancora}): ${c.scriptName}. ${tagline}. Preço: ${j ? preco(j) : 'sob consulta'}.`;
+      return `- [${c.name}](${ancora}): ${c.scriptName}. ${tagline}. Preço: ${j ? preco(j) : 'sob consulta'}`;
     })
     .join('\n');
 
@@ -80,9 +84,9 @@ ${markdown}
 ## Contacto e redes
 
 - Email: geral@wavy.pt
-- Marcação de conversa (Calendly): https://calendly.com/mariana-antunes-wavy/30min
-- Instagram: https://instagram.com/wavy.digital.pt
-- Facebook: https://facebook.com/wavy.digital.pt
+- Marcação de conversa (Calendly): ${CALENDLY_URL}
+- Instagram: ${INSTAGRAM_URL}
+- Facebook: ${FACEBOOK_URL}
 
 ## Notas
 

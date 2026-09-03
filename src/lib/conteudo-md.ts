@@ -18,6 +18,8 @@
 import ptStrings from '../i18n/pt.json';
 import enStrings from '../i18n/en.json';
 import type { Lang } from '../i18n';
+import { CALENDLY_URL } from './env';
+import { CASOS_PUBLICADOS } from './paginas-md';
 
 export type Strings = typeof ptStrings;
 
@@ -170,7 +172,7 @@ export const secaoSobre = (s: Strings): string => {
     ...a.mariana.paragraphs,
     `## ${juntar(a.manifesto.headline, a.manifesto.headlineHighlight)}`,
     a.manifesto.subtitle,
-    ...a.manifesto.items.map((i) => bloco(`### ${i.number}. ${i.title}`, i.desc)),
+    ...a.manifesto.items.map((i) => bloco(`### ${i.number} ${i.title}`, i.desc)),
     `## ${juntar(a.whyWavy.headline, a.whyWavy.headlineHighlight)}`,
     ...a.whyWavy.paragraphs
   );
@@ -185,7 +187,7 @@ export const secaoCasos = (s: Strings): string => {
   // não liga. `page.cards` é a lista que desenha a grelha visível, por isso é
   // ela que manda aqui: percorrer `items` às cegas publicaria num .md conteúdo
   // que foi deliberadamente retido do site.
-  const publicados = c.items.slice(0, c.page.cards.length);
+  const publicados = c.items.slice(0, CASOS_PUBLICADOS);
 
   const casos = publicados.map((it) => {
     const d = it.detail as
@@ -271,7 +273,7 @@ export const secaoContacto = (
     ...c.whereWeAre.blocks.map((b) => bloco(`**${b.title}**`, b.body)),
     lista([
       `Email: ${n.email}`,
-      `${n.ctaTitle}: https://calendly.com/mariana-antunes-wavy/30min`,
+      `${n.ctaTitle}: ${CALENDLY_URL}`,
       `${rotulos(lang).paginaContacto}: ${base}`,
     ])
   );

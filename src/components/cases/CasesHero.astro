@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { CASOS_PUBLICADOS } from '../../lib/paginas-md';
 import { t } from '../../i18n';
 import type { Lang } from '../../i18n';
 import bastidoresImage from '../../assets/wavy-bastidores.jpg';
@@ -17,7 +18,9 @@ interface Props {
 const { lang } = Astro.props;
 const cp = t(lang).casesPage;
 const i = cp.page;
-const numCases = cp.items.length;
+// `items.length` contava 3 (inclui o caso em standby). O limite tem de ser o
+// número de casos PUBLICADOS, senão um cartão a mais apontaria para o caso retido.
+const numCases = CASOS_PUBLICADOS;
 
 const imageMap: Record<string, typeof bastidoresImage> = {
   'vera-main': veraMainCard,

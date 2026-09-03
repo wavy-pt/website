@@ -1,5 +1,6 @@
 ---
 import { t } from '../../i18n';
+import { INSTAGRAM_URL, FACEBOOK_URL } from '../../lib/env';
 import type { Lang } from '../../i18n';
 import { CALENDLY_URL } from '../../lib/env';
 
@@ -18,8 +19,8 @@ const privacyLabel = lang === 'en' ? 'Privacy policy' : 'Política de privacidad
 // O CTA "Marca uma conversa" usa o link do Calendly (CALENDLY_URL em src/lib/env.ts).
 
 const email = cn.email;
-const igUrl = 'https://instagram.com/wavy.digital.pt';
-const fbUrl = 'https://facebook.com/wavy.digital.pt';
+const igUrl = INSTAGRAM_URL;
+const fbUrl = FACEBOOK_URL;
 
 const ctaExternal = Boolean(CALENDLY_URL);
 const ctaHref = CALENDLY_URL
