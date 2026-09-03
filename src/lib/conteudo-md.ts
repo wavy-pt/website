@@ -88,20 +88,24 @@ export const preco = (s: {
 // ---------- Secções ----------
 
 /** Os três serviços, em resumo (como aparecem na home). */
-export const secaoServicos = (s: Strings, lang: Lang): string => {
+export const secaoServicos = (s: Strings): string => {
   const sv = s.services;
   // O PREÇO VEM DE `servicesPage.journey`, NÃO DE `services.*`.
   // Os campos `services.boost.price` (1.500€) e `services.flow.price` (750€)
   // existem no i18n mas NÃO estão em lado nenhum do site — a página mostra
   // "Orçamento personalizado" para os dois, e a home nem sequer renderiza
   // preços. Publicá-los aqui dava a agentes valores que o negócio não anuncia.
-  const jornada = s.servicesPage.journey.services;
-  const cartoes = [sv.start, sv.boost, sv.flow].map((c, idx) =>
+  const cartoes = [sv.start, sv.boost, sv.flow].map((c) =>
     bloco(
       `### ${c.name} — ${c.scriptName}`,
       c.tag ? `*${c.tag}*` : '',
       c.desc,
-      jornada[idx] ? `**${rotulos(lang).preco}:** ${preco(jornada[idx])}` : ''
+      // SEM PREÇO, de propósito. A homepage não mostra preços — foi decisão
+      // deliberada (há um comentário no ServicesPreview a dizê-lo: "Preços
+      // removidos da homepage por decisão: só visíveis em /servicos"). O .md
+      // espelha a página, logo também não os mostra. Quem quiser preços tem-nos
+      // em /servicos.md, onde a página os mostra.
+      ''
     )
   );
   return bloco(`## ${sv.title}`, sv.subtitle, ...cartoes, sv.planLine);

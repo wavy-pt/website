@@ -53,7 +53,7 @@ const PAGINAS: Record<string, Def> = {
       bloco(
         s.hero.subtitle,
         secaoParaQuem(s),
-        secaoServicos(s, l),
+        secaoServicos(s),
         secaoResultados(s),
         secaoFaq(s.faq),
         secaoContacto(s, l)

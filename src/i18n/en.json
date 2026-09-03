@@ -249,7 +249,7 @@
           "number": "02",
           "tag": "THE NEXT STEP",
           "tagHighlight": false,
-          "scriptName": "Website and Strategic Identity",
+          "scriptName": "Website, Identity and Strategy",
           "name": "The Build",
           "tagline": "To set the right foundations",
           "desc": "The Build is where the structural problem gets solved. We rebuild your business's digital foundations, website or online store, visual identity, communication strategy, and complete channel setup. You don't coordinate five vendors: the same team that defines the strategy executes the build.",
@@ -295,7 +295,7 @@
           "number": "03",
           "tag": "ONGOING MANAGEMENT",
           "tagHighlight": false,
-          "scriptName": "Social Media and Local SEO",
+          "scriptName": "Social Media Management and Local SEO",
           "name": "The Direction",
           "tagline": "To grow without losing control",
           "desc": "The Direction is where Wavy takes ongoing charge of your digital. Monthly strategy, content creation and capture, channel management, local SEO and clear reports, to grow without losing control, and without having to manage an internal team. At full level, we operate as your external CMO.",
@@ -730,7 +730,7 @@
     "whereWeAre": {
       "label": "Where we are",
       "blocks": [
-        { "icon": "ri-map-pin-line", "title": "Location", "body": "Based in Mafra, West Lisbon region." },
+        { "icon": "ri-map-pin-line", "title": "Location", "body": "Based in Mafra, in the West region." },
         { "icon": "ri-global-line", "title": "Coverage", "body": "We work with businesses across Portugal, in-person in West and Greater Lisbon, remotely everywhere else." },
         { "icon": "ri-time-line", "title": "Response", "body": "Reply within 24 working hours. Monday to Friday, 9am to 6pm." }
       ]
@@ -740,6 +740,8 @@
     "label": "real results",
     "title": "What changed. For those it matters to.",
     "subtitle": "Every Wavy client becomes a case study. We don't publish generic results, we document real transformations, with context, numbers, and the voice of the person who lived through it.",
+    "behindTheScenes": "Behind the scenes at Wavy",
+    "behindTheScenesAlt": "Behind the scenes at Wavy, Mariana at her laptop",
     "testimonials": [
       {
         "quote": "I found in Mariana the missing piece I needed to develop my page and my personal project. She's tireless, dives into the details, and always shares her honest opinion. The details make all the difference, and Mariana makes all the difference for me.",

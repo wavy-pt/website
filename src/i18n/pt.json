@@ -249,7 +249,7 @@
           "number": "02",
           "tag": "O PASSO SEGUINTE",
           "tagHighlight": false,
-          "scriptName": "Website e Identidade Estratégica",
+          "scriptName": "Website, Identidade e Estratégia",
           "name": "A Obra",
           "tagline": "Para construires as fundações certas",
           "desc": "A Obra é onde se resolve o problema estrutural. Reconstruímos as fundações digitais do teu negócio, website ou loja online, identidade visual, estratégia de comunicação e setup completo dos canais. Não coordenas cinco fornecedores: a mesma equipa que define a estratégia executa a obra.",
@@ -730,7 +730,7 @@
     "whereWeAre": {
       "label": "Onde estamos",
       "blocks": [
-        { "icon": "ri-map-pin-line", "title": "Localização", "body": "Sediada em Mafra, Zona Oeste de Lisboa." },
+        { "icon": "ri-map-pin-line", "title": "Localização", "body": "Sediada em Mafra, na Zona Oeste." },
         { "icon": "ri-global-line", "title": "Cobertura", "body": "Trabalhamos com negócios em todo o país, presenciais na Zona Oeste e Grande Lisboa, à distância no resto de Portugal." },
         { "icon": "ri-time-line", "title": "Resposta", "body": "Resposta em até 24 horas úteis. De segunda a sexta, das 9h às 18h." }
       ]
@@ -740,6 +740,8 @@
     "label": "resultados reais",
     "title": "O que mudou. Para quem importa.",
     "subtitle": "Cada cliente Wavy é um caso de estudo. Não publicamos resultados genéricos, documentamos transformações reais, com contexto, números e a voz de quem viveu o processo.",
+    "behindTheScenes": "Bastidores Wavy",
+    "behindTheScenesAlt": "Bastidores Wavy, Mariana ao computador",
     "testimonials": [
       {
         "quote": "Encontrei na Mariana a peça que me faltava para desenvolver a minha página e o meu projeto pessoal. É incansável, vai aos detalhes e partilha sempre a opinião dela com transparência. Os detalhes fazem a diferença, e a Mariana faz toda a diferença para mim.",
