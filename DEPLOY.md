@@ -4,8 +4,8 @@ Este projeto está preparado para correr em **dois ambientes** no Vercel:
 
 | Ambiente | Branch Git | URL | `PUBLIC_ENV` | O que mostra |
 |---|---|---|---|---|
-| **Produção** | `main` | `wavy.pt` (a configurar) | `production` | Só a homepage. Links WIP escondidos. Indexável pelo Google. |
-| **Desenvolvimento** | `develop` | URL Vercel preview | `development` | Tudo, incluindo páginas WIP. Banner de dev. `noindex`. |
+| **Produção** | `main` | `wavy.pt` | `production` | As 12 páginas. Sem banner. Indexável pelo Google. |
+| **Desenvolvimento** | `develop` | URL Vercel preview | `development` | As mesmas 12 páginas. Banner de dev. `noindex`. |
 
 ---
 
@@ -18,7 +18,8 @@ Este projeto está preparado para correr em **dois ambientes** no Vercel:
 3. Importar o repositório `Wavy` (depois de o ligares ao GitHub/GitLab).
 4. Framework Preset: **Astro** (deteta automaticamente).
 5. Build command: `npm run build` (default).
-6. Output directory: `dist` (default).
+6. Output directory: deixar vazio. O adaptador `@astrojs/vercel` escreve para
+   `.vercel/output` e a Vercel lê-o automaticamente — **não** é `dist`.
 
 ### 2. Configurar a produção (branch `main`)
 
@@ -72,21 +73,29 @@ git push origin main
 
 ---
 
-## Como adicionar uma nova página ao ambiente público
+## Como esconder ou repor uma página
 
-Quando uma página WIP estiver pronta para ir live:
+Nenhuma página está escondida — as 12 estão publicadas. O mecanismo continua a
+existir, para o caso de ser preciso:
 
-1. Em `src/components/Header.astro` e `src/components/Footer.astro`, mudar `wip: true` → `wip: false` na entrada correspondente.
-2. Em `src/pages/<rota>.astro` (e equivalente `/en/`), remover o bloco:
-   ```ts
-   if (isProd) {
-     return Astro.redirect('/', 308);
-   }
-   ```
-3. Substituir o componente `<WipPlaceholder>` pelo conteúdo real da página.
-4. Commit em `develop`, validar no preview, e fazer merge para `main`.
+1. `WIP_PATHS` em `astro.config.mjs` — os caminhos aí listados saem do sitemap.
+2. `wip: true` na entrada correspondente de `src/lib/nav.ts` — esconde o link da
+   navegação em produção (o `getNavLinks` filtra por `isProd`).
 
-Se chegar a altura de também aceitar a página `/contacto`, em `src/lib/env.ts` o helper `contactHref` pode ser removido (ou apontar para o Calendly).
+Para repor, basta o inverso. Não há nenhum componente `<WipPlaceholder>` nem
+redirecionamentos `308` — esse mecanismo foi removido quando as páginas foram
+publicadas.
+
+---
+
+## ⚠️ Publicar SEMPRE por Git, nunca da pasta local
+
+O site publica-se por `git push` para `main`. **Nunca** correr `vercel deploy
+--prebuilt` nem publicar a partir da pasta local: esse comando envia o conteúdo
+de `.vercel/output` do teu disco, e o build local é feito com o `.env` local.
+
+Publicar por Git faz a Vercel construir nos servidores dela, com as variáveis
+do painel — que é o único sítio onde os segredos devem viver.
 
 ---
 

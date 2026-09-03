@@ -23,7 +23,7 @@ Variáveis de ambiente:
 # Default (correr em modo development)
 npm run dev
 
-# Simular produção (links WIP escondidos, sem dev banner)
+# Simular produção (sem dev banner, indexável)
 PUBLIC_ENV=production npm run dev
 ```
 
@@ -38,7 +38,7 @@ src/
 ├── i18n/           # JSONs de tradução (pt.json, en.json)
 ├── layouts/        # Layout.astro (shared head, schema.org, cookie banner)
 ├── lib/            # Helpers (env.ts, slugs.ts)
-├── pages/          # Rotas — index.astro (PT) + en/ (EN) + páginas WIP
+├── pages/          # Rotas — 6 páginas PT + as mesmas em en/, api/, .md e llms.txt
 └── styles/         # global.css (Tailwind + tokens + fonts self-hosted)
 public/             # Static assets (logos, og-image)
 ```
@@ -50,9 +50,12 @@ public/             # Static assets (logos, og-image)
 | `main` | Produção | wavy.pt | `production` |
 | `develop` | Preview | URL Vercel de preview | `development` |
 
-Em produção só a homepage está visível; o resto das páginas (Serviços, Sobre,
-Casos, Contacto) redireciona para `/`. Em desenvolvimento tudo é navegável e
-tem dev banner.
+As 12 páginas (6 por idioma) estão publicadas e acessíveis nos dois ambientes.
+A diferença é outra: em desenvolvimento há dev banner e as páginas levam
+`noindex`; em produção não há banner e o site é indexável.
+
+O mecanismo de esconder páginas ainda existe (`WIP_PATHS` no `astro.config.mjs`
+e `wip` no `src/lib/nav.ts`), mas está vazio — nenhuma página está escondida.
 
 ---
 
@@ -98,4 +101,4 @@ npx lighthouse http://localhost:4325/ --view --form-factor=mobile
 Ver [`DEPLOY.md`](./DEPLOY.md) para o passo-a-passo do Vercel:
 - Setup inicial (envs, branches, domínio)
 - Headers de segurança HTTP (CSP, HSTS, etc. via `vercel.json`)
-- Como ativar uma página WIP em produção
+- Como esconder ou repor uma página (WIP_PATHS)
