@@ -113,7 +113,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                   {s.deliverables.map((item) => (
                     <div class="flex items-start gap-3">
                       <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
-                        <i class="ri-check-line text-teal font-bold"></i>
+                        <i class="ri-check-line text-teal font-bold" aria-hidden="true"></i>
                       </div>
                       <span class="font-sans text-sm leading-relaxed text-teal-dark">
                         {item}
@@ -127,6 +127,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                   type="button"
                   data-service-toggle
                   aria-expanded="false"
+                  aria-controls={`servico-${s.number}-detalhe`}
                   class="inline-flex items-center gap-2 font-sans text-sm font-medium text-teal-deep hover:text-teal-dark transition-colors"
                 >
                   <span data-toggle-label>{lang === 'en' ? 'See full detail' : 'Ver detalhe completo'}</span>
@@ -134,7 +135,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                 </button>
 
                 {/* Detalhe colapsável: 3 tipos + como funciona + para quem é */}
-                <div data-service-detail class="overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0">
+                <div data-service-detail id={`servico-${s.number}-detalhe`} class="service-detail overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0">
                   <div class="pt-6">
 
                 {/* 3 tipos (apenas A Obra) */}
@@ -226,6 +227,18 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
     </div>
   </div>
 </section>
+
+<noscript>
+  <style is:global>
+    /* Sem JavaScript o botão "Ver detalhe completo" não faz nada e o painel
+       ficava escondido para sempre. Aberto de origem, como já na FAQ. */
+    .service-detail {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    [data-service-toggle] { display: none !important; }
+  </style>
+</noscript>
 
 <style>
   /**
@@ -335,6 +348,23 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 
   // --- Toggle "Ver detalhe completo" por card de serviço ---
   function initServiceToggles() {
+    // M#29 — o painel com `max-height: 0` fica RECORTADO, não removido: um
+    // leitor de ecrã lia o detalhe completo dos três serviços apesar de o botão
+    // anunciar aria-expanded="false". `inert` é a ferramenta feita para isto —
+    // tira o elemento da árvore de acessibilidade E do percurso do teclado, sem
+    // tocar em CSS, layout ou transições.
+    //
+    // Aplicado por JavaScript e não no HTML servido de propósito: sem JS não
+    // haveria quem o retirasse e o conteúdo que o <noscript> abre ficaria
+    // inacessível.
+    document.querySelectorAll<HTMLElement>('[data-service-detail]').forEach((painel) => {
+      // Derivado do estado real e não fixo em `true`: esta função também corre
+      // em `astro:page-load`, e marcar tudo como inerte esconderia dos leitores
+      // de ecrã um painel que o utilizador tivesse acabado de abrir.
+      const fechado = !painel.style.maxHeight || painel.style.maxHeight === '0px';
+      painel.inert = fechado;
+    });
+
     document.querySelectorAll<HTMLButtonElement>('[data-service-toggle]').forEach((btn) => {
       if (btn.dataset.bound === 'true') return;
       btn.dataset.bound = 'true';
@@ -348,11 +378,13 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
         const en = document.documentElement.lang === 'en';
         if (isOpen) {
           detail.style.maxHeight = '0px';
+          detail.inert = true;
           btn.setAttribute('aria-expanded', 'false');
           icon?.classList.remove('rotate-180');
           if (label) label.textContent = en ? 'See full detail' : 'Ver detalhe completo';
         } else {
           detail.style.maxHeight = detail.scrollHeight + 'px';
+          detail.inert = false;
           btn.setAttribute('aria-expanded', 'true');
           icon?.classList.add('rotate-180');
           if (label) label.textContent = en ? 'See less' : 'Ver menos';

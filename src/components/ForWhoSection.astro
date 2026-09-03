@@ -39,12 +39,12 @@ const icons = ['ri-question-mark', 'ri-sparkling-line', 'ri-flashlight-line'];
               {card.pill}
             </span>
 
-            <span class="absolute top-7 right-7 md:right-8 font-serif text-7xl md:text-8xl font-medium text-teal/20 group-hover:text-offwhite leading-none select-none transition-all duration-500">
+            <span aria-hidden="true" class="absolute top-7 right-7 md:right-8 font-serif text-7xl md:text-8xl font-medium text-teal/20 group-hover:text-offwhite leading-none select-none transition-all duration-500">
               {card.number}
             </span>
 
             <div class="w-11 h-11 flex items-center justify-center rounded-full bg-teal/10 text-teal group-hover:bg-offwhite/15 group-hover:text-offwhite mb-4 transition-all duration-500">
-              <i class={`${icons[idx]} text-xl`}></i>
+              <i class={`${icons[idx]} text-xl`} aria-hidden="true"></i>
             </div>
 
             <h3 class="font-serif text-xl md:text-2xl font-medium text-teal-dark group-hover:text-offwhite mb-2 leading-snug transition-all duration-500">

@@ -43,7 +43,7 @@ const direitos = i.footer.rights.replace('{ano}', String(new Date().getFullYear(
             href={INSTAGRAM_URL}
             target="_blank"
             rel={REL_EXTERNO}
-            aria-label="Instagram da Wavy"
+            aria-label={lang === 'en' ? 'Wavy on Instagram' : 'Instagram da Wavy'}
             class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
@@ -52,14 +52,14 @@ const direitos = i.footer.rights.replace('{ano}', String(new Date().getFullYear(
             href={FACEBOOK_URL}
             target="_blank"
             rel={REL_EXTERNO}
-            aria-label="Facebook da Wavy"
+            aria-label={lang === 'en' ? 'Wavy on Facebook' : 'Facebook da Wavy'}
             class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
           </a>
           <a
             href="mailto:geral@wavy.pt"
-            aria-label="Enviar email para geral@wavy.pt"
+            aria-label={lang === 'en' ? 'Email geral@wavy.pt' : 'Enviar email para geral@wavy.pt'}
             class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-mail-line text-lg" aria-hidden="true"></i>
@@ -72,7 +72,7 @@ const direitos = i.footer.rights.replace('{ano}', String(new Date().getFullYear(
         <p class="font-sans text-xs uppercase tracking-widest text-cream mb-5">
           {i.footer.navTitle}
         </p>
-        <nav class="flex flex-col gap-1">
+        <nav aria-label={lang === 'en' ? 'Footer' : 'Rodapé'} class="flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               href={link.to}

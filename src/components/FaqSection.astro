@@ -71,7 +71,7 @@ const faqSchema = {
                     {faq.q}
                   </span>
                   <span class="faq-icon-wrapper w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-teal/10 text-teal shrink-0 transition-all duration-300 group-hover:bg-teal group-hover:text-cream" aria-hidden="true">
-                    <i class="faq-icon ri-add-line text-lg transition-transform duration-300"></i>
+                    <i class="faq-icon ri-add-line text-lg transition-transform duration-300" aria-hidden="true"></i>
                   </span>
                 </button>
                 <div
@@ -107,6 +107,21 @@ const faqSchema = {
 </noscript>
 
 <script>
+  // M#29 — um painel com `max-height: 0` fica RECORTADO, não removido: um leitor
+  // de ecrã lia todas as respostas de seguida, apesar de o botão anunciar
+  // aria-expanded="false". `inert` é a ferramenta feita para isto — tira o
+  // elemento da árvore de acessibilidade E do percurso do teclado, sem tocar
+  // em CSS, layout ou transições. A alternativa (esconder por `visibility`)
+  // obrigava a coordenar a transição com a animação da altura, e qualquer
+  // engano aí parte a abertura dos painéis.
+  //
+  // Aplicado por JavaScript e não no HTML servido de propósito: sem JS não há
+  // quem o retire, e o conteúdo — que o <noscript> abre — ficaria inacessível.
+  document.querySelectorAll<HTMLElement>('.faq-content').forEach((painel) => {
+    const fechado = !painel.style.maxHeight || painel.style.maxHeight === '0px';
+    painel.inert = fechado;
+  });
+
   document.querySelectorAll('.faq-toggle').forEach((btn) => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
@@ -120,7 +135,10 @@ const faqSchema = {
         const otherContent = other.querySelector('.faq-content') as HTMLElement;
         const otherIcon = other.querySelector('.faq-icon');
         const otherIconWrapper = other.querySelector('.faq-icon-wrapper');
-        if (otherContent) otherContent.style.maxHeight = '0px';
+        if (otherContent) {
+          otherContent.style.maxHeight = '0px';
+          otherContent.inert = true;
+        }
         otherBtn?.setAttribute('aria-expanded', 'false');
         otherIcon?.classList.remove('rotate-45');
         otherIconWrapper?.classList.remove('bg-teal', 'text-cream');
@@ -129,6 +147,7 @@ const faqSchema = {
 
       if (!isOpen && content) {
         content.style.maxHeight = content.scrollHeight + 'px';
+        content.inert = false;
         btn.setAttribute('aria-expanded', 'true');
         icon?.classList.add('rotate-45');
         iconWrapper?.classList.remove('bg-teal/10');

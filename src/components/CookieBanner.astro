@@ -18,6 +18,8 @@ const lang = getLangFromUrl(Astro.url);
 const isEn = lang === 'en';
 const privacyHref = isEn ? '/en/privacy' : '/privacidade';
 
+const rotuloBanner = isEn ? 'Cookie consent' : 'Consentimento de cookies';
+
 const copy = isEn
   ? {
       message:
@@ -56,6 +58,10 @@ const copy = isEn
 
     <div
       id="cookie-banner"
+      role="dialog"
+      aria-modal="false"
+      aria-label={rotuloBanner}
+      tabindex="-1"
       data-state="hidden"
       class="fixed bottom-4 left-4 right-4 md:bottom-6 md:left-1/2 md:right-auto md:-translate-x-1/2 md:max-w-2xl md:w-[calc(100%-3rem)] z-[70] data-[state=hidden]:hidden"
     >
@@ -113,7 +119,14 @@ const copy = isEn
 
       function setBannerState(state) {
         const el = document.getElementById('cookie-banner');
-        if (el) el.dataset.state = state;
+        if (!el) return;
+        el.dataset.state = state;
+        // Levar o foco até ao pedido de consentimento. Sem isto, quem navega
+        // com teclado só lá chegava depois de percorrer a página inteira, e
+        // quem usa leitor de ecrã não era avisado de que tinha aparecido.
+        if (state === 'visible') {
+          try { el.focus({ preventScroll: true }); } catch (_) { el.focus(); }
+        }
       }
 
       function applyConsent(value) {

@@ -189,6 +189,13 @@ const single = images.length <= 1;
 </style>
 
 <script>
+  // Quem ligou "reduzir movimento" no sistema não quer ver a página deslizar.
+  // A regra CSS equivalente já existe neste ficheiro, mas o `behavior` passado
+  // aqui sobrepõe-se-lhe sempre — tem de ser decidido no JavaScript.
+  const semMovimento = () =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+
   function initVCarousels() {
     document.querySelectorAll('[data-carousel]').forEach((car) => {
       if (car.getAttribute('data-vc-bound') === 'true') return;
@@ -215,7 +222,7 @@ const single = images.length <= 1;
 
       function goTo(i: number) {
         const clamped = Math.max(0, Math.min(slides.length - 1, i));
-        track!.scrollTo({ left: track!.clientWidth * clamped, behavior: 'smooth' });
+        track!.scrollTo({ left: track!.clientWidth * clamped, behavior: semMovimento() });
       }
 
       prev?.addEventListener('click', () => goTo(current - 1));

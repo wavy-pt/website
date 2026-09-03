@@ -41,12 +41,12 @@ const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;
         <!-- Decorative icon -->
         <div class="absolute top-6 right-6 md:top-10 md:right-10">
           <div class="w-11 h-11 md:w-14 md:h-14 rounded-full bg-teal/10 flex items-center justify-center">
-            <i class="ri-compass-discover-line text-teal text-lg md:text-2xl"></i>
+            <i class="ri-compass-discover-line text-teal text-lg md:text-2xl" aria-hidden="true"></i>
           </div>
         </div>
 
         <!-- Decorative shape -->
-        <span class="absolute bottom-4 right-6 md:bottom-6 md:right-8 font-serif text-[140px] sm:text-[170px] md:text-[200px] font-medium text-teal/15 leading-none select-none pointer-events-none">
+        <span aria-hidden="true" class="absolute bottom-4 right-6 md:bottom-6 md:right-8 font-serif text-[140px] sm:text-[170px] md:text-[200px] font-medium text-teal/15 leading-none select-none pointer-events-none">
           ?
         </span>
 
@@ -69,7 +69,7 @@ const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal-deep text-cream font-sans font-medium text-sm hover:bg-teal transition-all duration-300 group"
             >
               {i.finalCta.secondaryCta}
-              <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
+              <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></i>
             </a>
             <p class="font-serif italic text-xs text-teal-dark/75 mt-4">
               {lang === 'en' ? '2 minutes · no strings attached · answer at the end' : '2 minutos · sem compromisso · resposta no fim'}
@@ -83,7 +83,7 @@ const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;
         <!-- Decorative icon -->
         <div class="absolute top-6 right-6 md:top-10 md:right-10">
           <div class="w-11 h-11 md:w-14 md:h-14 rounded-full bg-cream/15 flex items-center justify-center">
-            <i class="ri-calendar-check-line text-cream text-lg md:text-2xl"></i>
+            <i class="ri-calendar-check-line text-cream text-lg md:text-2xl" aria-hidden="true"></i>
           </div>
         </div>
 
@@ -112,9 +112,9 @@ const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;
               rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
               class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-teal-dark font-sans font-medium text-sm hover:bg-offwhite transition-all duration-300 group"
             >
-              <i class="ri-calendar-check-line"></i>
+              <i class="ri-calendar-check-line" aria-hidden="true"></i>
               {lang === 'en' ? 'Book a call (30 min)' : 'Marcar conversa (30 min)'}
-              <i class="ri-arrow-right-up-line transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+              <i class="ri-arrow-right-up-line transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true"></i>
             </a>
             <p class="font-serif italic text-xs text-cream mt-4">
               {lang === 'en' ? '30 minutes · no strings attached · you pick the time' : '30 minutos · sem compromisso · escolhes o horário'}
@@ -127,7 +127,7 @@ const diagnosisUrl = `${getLocalizedPath('/servicos', lang)}#teste`;
     <!-- Contact strip -->
     <div class="scroll-reveal mt-10 md:mt-12 flex flex-col items-center sm:flex-row sm:justify-center gap-4 sm:gap-8 text-sm">
       <div class="flex items-center gap-2">
-        <i class="ri-mail-line text-teal"></i>
+        <i class="ri-mail-line text-teal" aria-hidden="true"></i>
         <span class="font-sans text-muted">{i.finalCta.contactPrompt}</span>
         <a
           href={`mailto:${i.finalCta.contactEmail}`}

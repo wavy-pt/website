@@ -76,7 +76,7 @@ const row2 = items.slice(5, 10);
   <!-- Cards no fundo, full-width, a ocupar o espaço restante -->
   <div class="flex-1 flex flex-col justify-center overflow-hidden py-8 md:py-12">
     <!-- Row 1: animate-marquee-left -->
-    <div class="flex gap-4 md:gap-5 mb-3 md:mb-4 w-max animate-marquee-left">
+    <div aria-hidden="true" class="flex gap-4 md:gap-5 mb-3 md:mb-4 w-max animate-marquee-left">
       {[...row1, ...row1].map((item) => {
         const c = colorMap[item.cardColor || 'cream'];
         if (item.type === 'image') {
@@ -107,7 +107,7 @@ const row2 = items.slice(5, 10);
             'shrink-0 w-44 sm:w-52 md:w-64 lg:w-72 h-44 sm:h-48 md:h-52 lg:h-56 rounded-2xl flex flex-col justify-end p-4 sm:p-5 md:p-6',
             c.bg, c.text, c.border,
           ]}>
-            <h2 class="font-serif text-base sm:text-lg md:text-xl font-medium mb-1">{item.title}</h2>
+            <p class="font-serif text-base sm:text-lg md:text-xl font-medium mb-1">{item.title}</p>
             <p class:list={['font-sans text-xs md:text-sm leading-relaxed', c.bodyText]}>{item.body}</p>
           </div>
         );
@@ -115,7 +115,7 @@ const row2 = items.slice(5, 10);
     </div>
 
     <!-- Row 2: animate-marquee-right -->
-    <div class="flex gap-4 md:gap-5 w-max animate-marquee-right">
+    <div aria-hidden="true" class="flex gap-4 md:gap-5 w-max animate-marquee-right">
       {[...row2, ...row2].map((item) => {
         const c = colorMap[item.cardColor || 'cream'];
         if (item.type === 'image') {
@@ -146,7 +146,7 @@ const row2 = items.slice(5, 10);
             'shrink-0 w-44 sm:w-52 md:w-64 lg:w-72 h-44 sm:h-48 md:h-52 lg:h-56 rounded-2xl flex flex-col justify-end p-4 sm:p-5 md:p-6',
             c.bg, c.text, c.border,
           ]}>
-            <h2 class="font-serif text-base sm:text-lg md:text-xl font-medium mb-1">{item.title}</h2>
+            <p class="font-serif text-base sm:text-lg md:text-xl font-medium mb-1">{item.title}</p>
             <p class:list={['font-sans text-xs md:text-sm leading-relaxed', c.bodyText]}>{item.body}</p>
           </div>
         );

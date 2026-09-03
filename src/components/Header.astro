@@ -66,7 +66,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-8">
+    <nav aria-label={lang === 'en' ? 'Main menu' : 'Menu principal'} class="hidden lg:flex items-center gap-8">
       {navLinks.map((link) => {
         const isActive = isCurrent(link.to);
         return (
@@ -94,11 +94,12 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
         rel={schedulingIsExternal ? 'noopener noreferrer' : undefined}
         class="inline-flex items-center gap-2 font-sans text-sm font-medium bg-teal-deep text-cream px-5 py-2.5 rounded-full hover:bg-teal transition-colors duration-200 whitespace-nowrap animate-pulse-ring"
       >
-        <i class="ri-calendar-check-line text-base"></i>
+        <i class="ri-calendar-check-line text-base" aria-hidden="true"></i>
         {i.nav.diagnosis}
       </a>
       <a
         href={switchLangPath}
+        aria-label={lang === 'pt' ? 'Switch to English' : 'Mudar para Português'}
         class:list={[
           'font-sans text-sm transition-colors whitespace-nowrap ml-2',
           !usesLightText && 'text-teal-dark/70 hover:text-teal-dark',
@@ -108,7 +109,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
         <span class:list={[
           !usesLightText && lang === 'pt' && 'text-teal-dark font-medium',
           usesLightText && lang === 'pt' && 'font-medium text-cream group-data-[state=scrolled]/header:text-teal-dark',
-        ]}>PT</span>
+        ]} aria-current={lang === 'pt' ? 'true' : undefined}>PT</span>
         <span class:list={[
           'mx-1.5',
           !usesLightText && 'text-teal-dark/30',
@@ -117,7 +118,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
         <span class:list={[
           !usesLightText && lang === 'en' && 'text-teal-dark font-medium',
           usesLightText && lang === 'en' && 'font-medium text-cream group-data-[state=scrolled]/header:text-teal-dark',
-        ]}>EN</span>
+        ]} aria-current={lang === 'en' ? 'true' : undefined}>EN</span>
       </a>
     </nav>
 
@@ -148,7 +149,7 @@ const isCurrent = (to: string) => normalizePath(currentPath) === normalizePath(t
   aria-modal="true"
   aria-label={lang === 'en' ? 'Navigation menu' : 'Menu de navegação'}
 >
-  <nav class="flex flex-col items-center gap-6">
+  <nav aria-label={lang === 'en' ? 'Mobile menu' : 'Menu móvel'} class="flex flex-col items-center gap-6">
     <a href={getLocalizedPath('/', lang)} class="mb-2 py-2">
       <img src="/logo-wavy-tight.svg" alt="Wavy" class="h-12 w-auto" />
     </a>

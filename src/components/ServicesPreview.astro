@@ -85,10 +85,10 @@ const services = [
       <button
         id="card-prev"
         type="button"
-        aria-label="Anterior"
+        aria-label={lang === 'en' ? 'Previous' : 'Anterior'}
         class="card-nav hidden md:flex shrink-0 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-cream/10 hover:bg-cream/20 border border-cream/25 text-cream items-center justify-center transition-all duration-300 disabled:opacity-25 disabled:cursor-not-allowed disabled:hover:bg-cream/10"
       >
-        <i class="ri-arrow-left-line text-xl"></i>
+        <i class="ri-arrow-left-line text-xl" aria-hidden="true"></i>
       </button>
 
       <!-- Cards -->
@@ -102,13 +102,13 @@ const services = [
           ]}
         >
           <!-- Decorative giant number behind content -->
-          <span class="absolute bottom-4 right-5 sm:-bottom-2 sm:-right-4 font-serif text-[120px] sm:text-[260px] md:text-[400px] font-medium text-teal/10 leading-none select-none pointer-events-none">
+          <span aria-hidden="true" class="absolute bottom-4 right-5 sm:-bottom-2 sm:-right-4 font-serif text-[120px] sm:text-[260px] md:text-[400px] font-medium text-teal/10 leading-none select-none pointer-events-none">
             {number}
           </span>
 
           <!-- Icon badge -->
           <div class="absolute top-6 right-6 md:top-12 md:right-12 w-11 h-11 md:w-14 md:h-14 rounded-full bg-teal/10 flex items-center justify-center">
-            <i class={`${icon} text-teal text-lg md:text-2xl`}></i>
+            <i class={`${icon} text-teal text-lg md:text-2xl`} aria-hidden="true"></i>
           </div>
 
           <!-- Content -->
@@ -136,7 +136,7 @@ const services = [
                 class="inline-flex items-center gap-2 px-6 py-3 md:px-7 md:py-3.5 rounded-full bg-teal-deep text-cream font-sans font-medium text-sm hover:bg-teal-panel transition-all duration-300 group"
               >
                 {data.cta}
-                <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
+                <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -148,10 +148,10 @@ const services = [
       <button
         id="card-next"
         type="button"
-        aria-label="Próximo"
+        aria-label={lang === 'en' ? 'Next' : 'Próximo'}
         class="card-nav hidden md:flex shrink-0 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-cream/10 hover:bg-cream/20 border border-cream/25 text-cream items-center justify-center transition-all duration-300 disabled:opacity-25 disabled:cursor-not-allowed disabled:hover:bg-cream/10"
       >
-        <i class="ri-arrow-right-line text-xl"></i>
+        <i class="ri-arrow-right-line text-xl" aria-hidden="true"></i>
       </button>
     </div>
 
@@ -160,18 +160,18 @@ const services = [
       <button
         id="card-prev-mobile"
         type="button"
-        aria-label="Anterior"
+        aria-label={lang === 'en' ? 'Previous' : 'Anterior'}
         class="card-nav-mobile w-11 h-11 rounded-full bg-cream/10 border border-cream/25 text-cream flex items-center justify-center transition-all disabled:opacity-25 disabled:cursor-not-allowed"
       >
-        <i class="ri-arrow-left-line text-lg"></i>
+        <i class="ri-arrow-left-line text-lg" aria-hidden="true"></i>
       </button>
       <button
         id="card-next-mobile"
         type="button"
-        aria-label="Próximo"
+        aria-label={lang === 'en' ? 'Next' : 'Próximo'}
         class="card-nav-mobile w-11 h-11 rounded-full bg-cream/10 border border-cream/25 text-cream flex items-center justify-center transition-all disabled:opacity-25 disabled:cursor-not-allowed"
       >
-        <i class="ri-arrow-right-line text-lg"></i>
+        <i class="ri-arrow-right-line text-lg" aria-hidden="true"></i>
       </button>
     </div>
 

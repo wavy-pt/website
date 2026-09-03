@@ -122,9 +122,9 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
                     <p class="font-serif text-xs sm:text-sm italic font-medium text-teal-deep mb-0.5">
                       {service.scriptName}
                     </p>
-                    <h2 class="font-serif text-lg sm:text-xl md:text-2xl font-medium text-teal-dark leading-tight">
+                    <p class="font-serif text-lg sm:text-xl md:text-2xl font-medium text-teal-dark leading-tight">
                       {service.name}
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -137,7 +137,7 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
               <button
                 type="button"
                 data-deck-dot={idx}
-                aria-label={`Ver fase ${idx + 1}`}
+                aria-label={lang === 'en' ? `View stage ${idx + 1}` : `Ver fase ${idx + 1}`}
                 class="services-deck-dot grid place-items-center h-6 w-6 rounded-full"
               >
                 <span

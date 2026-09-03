@@ -74,7 +74,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
                   href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram da Wavy"
+                  aria-label={lang === 'en' ? 'Wavy on Instagram' : 'Instagram da Wavy'}
                   class="w-11 h-11 rounded-full bg-cream/15 hover:bg-cream/25 flex items-center justify-center text-cream transition-colors"
                 >
                   <i class="ri-instagram-line text-lg" aria-hidden="true"></i>
@@ -83,7 +83,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
                   href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook da Wavy"
+                  aria-label={lang === 'en' ? 'Wavy on Facebook' : 'Facebook da Wavy'}
                   class="w-11 h-11 rounded-full bg-cream/15 hover:bg-cream/25 flex items-center justify-center text-cream transition-colors"
                 >
                   <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
