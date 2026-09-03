@@ -9,7 +9,19 @@ export const prerender = false;
 // Domínio wavy.pt verificado no Resend → enviamos de um endereço @wavy.pt.
 // FROM é só a identidade de quem envia (qualquer endereço @wavy.pt serve);
 // as respostas vão para quem preencheu o formulário, via reply-to.
-const FROM = 'Wavy <contacto@wavy.pt>';
+//
+// `noreply@` e não `contacto@`: aquele endereço nunca existiu como caixa de
+// correio (confirmado com a Mariana) e não aparece em lado nenhum do site — o
+// único endereço público é o geral@. O nome passa a dizer o que a caixa é, que
+// é a mesma convenção do site da ADDS.
+//
+// Não usar `geral@` como remetente: é também o destinatário, e a Mariana
+// passaria a receber emails de si própria — perdia a filtragem por remetente e
+// é um padrão que alguns filtros tratam com desconfiança.
+//
+// As devoluções NÃO dependem deste endereço: a Resend envia pelo envelope
+// `send.wavy.pt` (MX para o feedback-smtp da AWS), e é lá que ficam registadas.
+const FROM = 'Wavy <noreply@wavy.pt>';
 const TO = 'geral@wavy.pt';
 
 function json(body: unknown, status = 200) {
