@@ -53,7 +53,7 @@ const PAGINAS: Record<string, Def> = {
       bloco(
         s.hero.subtitle,
         secaoParaQuem(s),
-        secaoServicos(s),
+        secaoServicos(s, l),
         secaoResultados(s),
         secaoFaq(s.faq),
         secaoContacto(s, l)
@@ -61,11 +61,11 @@ const PAGINAS: Record<string, Def> = {
   },
   '/servicos': {
     titulo: (s) => s.servicesPage.hero.headline,
-    corpo: (s) =>
+    corpo: (s, l) =>
       bloco(
         s.servicesPage.hero.subtitle,
         secaoMetodo(s),
-        secaoServicosDetalhe(s),
+        secaoServicosDetalhe(s, l),
         secaoFaq(s.servicesPage.faq)
       ),
   },

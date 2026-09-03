@@ -29,6 +29,21 @@ export const bloco = (...partes: (string | undefined | null)[]): string =>
   partes.filter((p): p is string => Boolean(p && p.trim())).join('\n\n');
 
 /**
+ * Rótulos que o GERADOR acrescenta e que não vêm do i18n — o site não os mostra,
+ * por isso não têm chave lá.
+ *
+ * Ficam todos aqui de propósito: estavam espalhados em literais pelo ficheiro, e
+ * foi assim que "**Preço:**" acabou dentro dos ficheiros Markdown INGLESES, em
+ * cima da informação mais sensível da página. Um sítio só significa que
+ * acrescentar um rótulo ou um idioma é uma alteração, não uma caça ao literal
+ * esquecido.
+ */
+const rotulos = (lang: Lang) =>
+  lang === 'en'
+    ? { preco: 'Price', paginaContacto: 'Contact page' }
+    : { preco: 'Preço', paginaContacto: 'Página de contacto' };
+
+/**
  * Lista de tópicos.
  *
  * Rejeita o que não é texto de propósito: no i18n há listas de strings e listas
@@ -71,7 +86,7 @@ export const preco = (s: {
 // ---------- Secções ----------
 
 /** Os três serviços, em resumo (como aparecem na home). */
-export const secaoServicos = (s: Strings): string => {
+export const secaoServicos = (s: Strings, lang: Lang): string => {
   const sv = s.services;
   // O PREÇO VEM DE `servicesPage.journey`, NÃO DE `services.*`.
   // Os campos `services.boost.price` (1.500€) e `services.flow.price` (750€)
@@ -84,14 +99,14 @@ export const secaoServicos = (s: Strings): string => {
       `### ${c.name} — ${c.scriptName}`,
       c.tag ? `*${c.tag}*` : '',
       c.desc,
-      jornada[idx] ? `**Preço:** ${preco(jornada[idx])}` : ''
+      jornada[idx] ? `**${rotulos(lang).preco}:** ${preco(jornada[idx])}` : ''
     )
   );
   return bloco(`## ${sv.title}`, sv.subtitle, ...cartoes, sv.planLine);
 };
 
 /** Os três serviços em detalhe (a jornada, na página de Serviços). */
-export const secaoServicosDetalhe = (s: Strings): string => {
+export const secaoServicosDetalhe = (s: Strings, lang: Lang): string => {
   const j = s.servicesPage.journey;
   const servicos = j.services.map((c) =>
     bloco(
@@ -113,7 +128,7 @@ export const secaoServicosDetalhe = (s: Strings): string => {
       c.forWhoCases?.length
         ? `**${c.forWhoLabel}:** ${c.forWhoIntro ?? ''}\n${lista(c.forWhoCases)}`
         : '',
-      `**Preço:** ${preco(c)}`
+      `**${rotulos(lang).preco}:** ${preco(c)}`
     )
   );
   return bloco(`## ${j.title}`, j.subtitle, ...servicos);
@@ -257,7 +272,7 @@ export const secaoContacto = (
     lista([
       `Email: ${n.email}`,
       `${n.ctaTitle}: https://calendly.com/mariana-antunes-wavy/30min`,
-      `${lang === 'en' ? 'Contact page' : 'Página de contacto'}: ${base}`,
+      `${rotulos(lang).paginaContacto}: ${base}`,
     ])
   );
 };
