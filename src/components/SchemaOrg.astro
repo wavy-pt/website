@@ -7,23 +7,57 @@
  *
  * Usa @graph para ligar a Organização, os Serviços e o WebSite numa só
  * estrutura coerente (entidade clara = melhor SEO local + GEO/AIO).
+ *
+ * RECEBE O IDIOMA. Antes não recebia, e as cinco páginas inglesas entregavam
+ * aos motores e aos assistentes de IA uma ficha inteiramente em português —
+ * serviços chamados "O Raio-X", "A Obra" e "A Direção", a apontar para as
+ * páginas PT. Quem respondesse em inglês citava nomes portugueses e mandava o
+ * leitor para páginas que não sabia ler.
+ *
+ * Os nomes dos serviços vêm do i18n, não escritos aqui: é a mesma fonte que a
+ * página mostra, logo não podem divergir. Os campos que são metadados de
+ * pesquisa (knowsAbout, alternateName) não existem no i18n e ficam aqui, com
+ * versão nas duas línguas.
  */
+import { t, getLocalizedPath } from '../i18n';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+const en = lang === 'en';
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://wavy.pt';
+
+// Os três serviços, na ordem em que a página os apresenta. O nome e o subtítulo
+// vêm do i18n; a frase curta vem da jornada, que é o que /servicos renderiza.
+const jornada = i.servicesPage.journey.services;
+const servicos = [i.services.start, i.services.boost, i.services.flow].map((s, idx) => ({
+  nome: s.name,
+  tipo: s.scriptName,
+  descricao: [s.scriptName, jornada[idx]?.tagline].filter(Boolean).join('. ') + '.',
+  url: `${site}${getLocalizedPath('/servicos', lang)}#servico-0${idx + 1}`,
+}));
 
 const organization = {
   '@type': 'ProfessionalService',
+  // O @id é um identificador, não texto: tem de ser o MESMO nas duas línguas,
+  // senão o Google passa a ver duas entidades diferentes em vez de uma.
   '@id': `${site}/#organization`,
   name: 'Wavy',
-  alternateName: 'Wavy, Direção e Marketing Digital',
+  alternateName: en ? 'Wavy, Digital Direction & Marketing' : 'Wavy, Direção e Marketing Digital',
   url: site,
   logo: `${site}/logo-wavy.svg`,
   image: `${site}/og-image.jpg`,
-  description:
-    'Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa. Estratégia, websites, redes sociais e SEO local.',
+  description: en
+    ? 'Digital direction and marketing for established businesses in West and Greater Lisbon. Strategy, websites, social media and local SEO.'
+    : 'Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa. Estratégia, websites, redes sociais e SEO local.',
   founder: {
     '@type': 'Person',
     name: 'Mariana Antunes',
-    jobTitle: 'Fundadora e Diretora',
+    jobTitle: en ? 'Founder and Director' : 'Fundadora e Diretora',
   },
   email: 'geral@wavy.pt',
   address: {
@@ -32,6 +66,7 @@ const organization = {
     addressRegion: 'Lisboa',
     addressCountry: 'PT',
   },
+  // Topónimos: nomes próprios, não se traduzem.
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Mafra' },
     { '@type': 'AdministrativeArea', name: 'Samora Correia' },
@@ -39,56 +74,40 @@ const organization = {
     { '@type': 'Place', name: 'Grande Lisboa' },
     { '@type': 'Country', name: 'Portugal' },
   ],
-  knowsAbout: [
-    'Marketing Digital',
-    'Direção Digital',
-    'Estratégia Digital',
-    'Desenvolvimento de Websites',
-    'Gestão de Redes Sociais',
-    'SEO Local',
-    'Google Business Profile',
-    'Identidade Visual',
-  ],
-  serviceType: [
-    'Diagnóstico Estratégico',
-    'Website e Identidade Estratégica',
-    'Gestão de Redes Sociais e SEO Local',
-  ],
+  knowsAbout: en
+    ? [
+        'Digital Marketing',
+        'Digital Direction',
+        'Digital Strategy',
+        'Website Development',
+        'Social Media Management',
+        'Local SEO',
+        'Google Business Profile',
+        'Visual Identity',
+      ]
+    : [
+        'Marketing Digital',
+        'Direção Digital',
+        'Estratégia Digital',
+        'Desenvolvimento de Websites',
+        'Gestão de Redes Sociais',
+        'SEO Local',
+        'Google Business Profile',
+        'Identidade Visual',
+      ],
+  serviceType: servicos.map((s) => s.tipo),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Serviços Wavy',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'O Raio-X',
-          description:
-            'Diagnóstico estratégico digital. Ponto de partida de qualquer projeto: analisa o negócio e define o caminho.',
-          url: `${site}/servicos#servico-01`,
-        },
+    name: en ? 'Wavy Services' : 'Serviços Wavy',
+    itemListElement: servicos.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: s.nome,
+        description: s.descricao,
+        url: s.url,
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'A Obra',
-          description:
-            'Identidade visual e/ou website. Construção das fundações digitais do negócio.',
-          url: `${site}/servicos#servico-02`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'A Direção',
-          description:
-            'Gestão contínua de redes sociais e SEO local, com estratégia e medição de resultados.',
-          url: `${site}/servicos#servico-03`,
-        },
-      },
-    ],
+    })),
   },
   sameAs: [
     'https://instagram.com/wavy.digital.pt',
@@ -103,8 +122,9 @@ const website = {
   '@id': `${site}/#website`,
   url: site,
   name: 'Wavy',
-  description:
-    'Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa.',
+  description: en
+    ? 'Digital direction and marketing for established businesses in West and Greater Lisbon.'
+    : 'Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa.',
   inLanguage: ['pt-PT', 'en'],
   publisher: { '@id': `${site}/#organization` },
 };
