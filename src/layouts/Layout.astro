@@ -4,6 +4,16 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DevBanner from '../components/DevBanner.astro';
 import SchemaOrg from '../components/SchemaOrg.astro';
+
+// As duas fontes normais latinas, importadas para o BUILD resolver o caminho.
+// Foi por isto que o preload tinha sido rejeitado antes: os ficheiros levam um
+// código no nome que muda, e um preload escrito à mão ficava desatualizado e
+// desperdiçava um pedido em 404. Assim o caminho é gerado na compilação e nunca
+// pode divergir. Só estas duas: são as únicas usadas no topo de TODAS as
+// páginas. As itálicas e os ícones ficam de fora — fazer preload do que não é
+// imediatamente preciso rouba largura de banda ao que é.
+import dmSansUrl from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
+import playfairUrl from '@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url';
 import CookieBanner from '../components/CookieBanner.astro';
 import { getLangFromUrl, t } from '../i18n';
 import type { Lang } from '../i18n';
@@ -57,6 +67,12 @@ const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';
     <meta name="description" content={description} />
     <meta name="theme-color" content="#2A9090" />
     <meta name="author" content="Wavy, Mariana Antunes" />
+
+    {/* Fontes: anunciadas aqui para o browser as pedir já, em vez de só as
+        descobrir depois de descarregar e ler o CSS — que era uma ida e volta
+        extra antes de o texto aparecer com o tipo de letra certo. */}
+    <link rel="preload" as="font" type="font/woff2" href={dmSansUrl} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={playfairUrl} crossorigin />
 
     {/* Robots */}
     {isDev ? (

@@ -6,7 +6,13 @@
 @import "@fontsource-variable/playfair-display";
 @import "@fontsource-variable/playfair-display/wght-italic.css";
 @import "@fontsource-variable/dm-sans";
-@import "@fontsource-variable/dm-sans/wght-italic.css";
+/* A itálica da DM Sans NÃO é importada de propósito. O ficheiro pesa 39,7 KB —
+   o maior de todas as fontes do site — e servia UM elemento por página: a
+   assinatura do rodapé. Sem a face itálica declarada, o browser inclina a
+   normal (itálico sintético): quase indistinguível num texto pequeno, e poupa
+   25% de todo o peso de fontes. A itálica do Playfair fica, essa é usada 108
+   vezes. Se um dia a itálica da DM Sans passar a ser precisa a sério, é só
+   repor este import. */
 
 /* Remix Icons — subset local com apenas os ícones usados (185KB→3KB, CSS 154KB→2KB) */
 @import "./remixicon-subset.css";
