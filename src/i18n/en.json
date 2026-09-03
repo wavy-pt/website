@@ -9,7 +9,7 @@
   },
   "footer": {
     "tagline": "Digital Direction & Marketing, West & Greater Lisbon.",
-    "rights": "© 2026 Wavy. All rights reserved.",
+    "rights": "© {ano} Wavy. All rights reserved.",
     "navTitle": "Navigation",
     "contactTitle": "Contact"
   },
@@ -112,7 +112,7 @@
       "price": "350€",
       "priceLabel": "FROM",
       "pricePeriod": "",
-      "priceNote": "+ VAT · fully credited to your next project",
+      "priceNote": "+ VAT · fully credited to your next project (within 30 days of delivery)",
       "cta": "Learn more about the X-Ray"
     },
     "boost": {
@@ -137,7 +137,7 @@
       "priceNote": "+ VAT · 3 months recommended",
       "cta": "See the plan"
     },
-    "planLine": "Not sure where to start? The X-Ray is always the first step. The cost rolls into your next project if you decide to move forward."
+    "planLine": "Not sure where to start? The X-Ray is always the first step. The cost rolls into your next project if you decide to move forward within 30 days of delivery."
   },
   "servicesPage": {
     "hero": {
@@ -175,7 +175,7 @@
       "items": [
         {
           "q": "Can I skip straight to The Build without the X-Ray?",
-          "a": "No. The X-Ray is the only mandatory step of the Wavy method. We work this way because we've seen too many projects fail from being built without diagnosis. Without understanding what's broken and in what order to fix it, any Build or Direction is construction in the dark. The good news: if you decide to move forward to The Build or The Direction, the X-Ray fee (from €350 + VAT) is fully credited to your next project."
+          "a": "No. The X-Ray is the only mandatory step of the Wavy method. We work this way because we've seen too many projects fail from being built without diagnosis. Without understanding what's broken and in what order to fix it, any Build or Direction is construction in the dark. The good news: if you decide to move forward to The Build or The Direction, the X-Ray fee (from €350 + VAT) is fully credited to your next project, within 30 days of delivery."
         },
         {
           "q": "How long does it take to build a website?",
@@ -361,7 +361,7 @@
     "cta": {
       "explorerTitle": "Still exploring?",
       "explorerSubtitle": "Take the diagnosis and discover where you stand.",
-      "explorerDuration": "3 minutes",
+      "explorerDuration": "2 minutes",
       "explorerCta": "Know where I stand",
         "quizNoscript": "This quiz needs JavaScript. Without it, you can talk to us directly:",
       "ctaCardTitle": "Made your decision?",
@@ -766,11 +766,11 @@
     "items": [
       {
         "q": "What is the X-Ray and why do I have to start there?",
-        "a": "The X-Ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence, website, social media, SEO, communication, and positioning, and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction, the X-Ray fee is fully credited to your next project."
+        "a": "The X-Ray is Wavy's initial strategic diagnosis. We analyse your entire digital presence, website, social media, SEO, communication, and positioning, and deliver a clear map of what's working, what's broken, and the 5 priority issues to fix in your business. We always start here because building before diagnosing is building blind. If you decide to move forward to The Build or The Direction within 30 days of delivery, the X-Ray fee is fully credited to your next project."
       },
       {
         "q": "How much does it cost to work with Wavy?",
-        "a": "It depends on the service. The X-Ray (strategic diagnosis) starts at €350 + VAT and is credited to your next project. The Build (visual identity and/or website) and The Direction (ongoing management and local SEO) are quoted individually after the X-Ray, based on your project's scope. The Direction has a recommended (not mandatory) minimum of 3 months on the entry plan or 6 months on advanced plans. We don't negotiate prices down, we adjust the scope to your reality. Wavy principle: transparency in every decision."
+        "a": "It depends on the service. The X-Ray (strategic diagnosis) starts at €350 + VAT and is credited to your next project if you move forward within 30 days of delivery. The Build (visual identity and/or website) and The Direction (ongoing management and local SEO) are quoted individually after the X-Ray, based on your project's scope. The Direction has a recommended (not mandatory) minimum of 3 months on the entry plan or 6 months on advanced plans. We don't negotiate prices down, we adjust the scope to your reality. Wavy principle: transparency in every decision."
       },
       {
         "q": "Do you work outside the West or Greater Lisbon?",
@@ -778,7 +778,7 @@
       },
       {
         "q": "How long does it take to see results with digital marketing?",
-        "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days, not as \"explosive results\" but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time, which is exactly why we work with 3-to-6-month minimum commitments."
+        "a": "The honest answer: it depends on your starting point and channel. With local SEO and social media management, the first signals usually appear between 60 and 90 days, not as \"explosive results\" but as consistent traction. Real conversions (sales, leads, a fuller calendar) typically begin between months 4 and 6. Anyone promising results in 30 days is selling a one-off campaign, not digital direction. Sustainable digital marketing takes time, which is exactly why we recommend periods of 3 to 6 months."
       },
       {
         "q": "Do your services have mandatory loyalty periods?",

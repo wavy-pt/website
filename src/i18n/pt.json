@@ -9,7 +9,7 @@
   },
   "footer": {
     "tagline": "Direção e Marketing Digital, Zona Oeste e Grande Lisboa.",
-    "rights": "© 2026 Wavy. Todos os direitos reservados.",
+    "rights": "© {ano} Wavy. Todos os direitos reservados.",
     "navTitle": "Navegação",
     "contactTitle": "Contacto"
   },
@@ -112,7 +112,7 @@
       "price": "350€",
       "priceLabel": "DESDE",
       "pricePeriod": "",
-      "priceNote": "+ IVA · 100% deduzido no projeto seguinte",
+      "priceNote": "+ IVA · 100% deduzido no projeto seguinte (até 30 dias após a entrega)",
       "cta": "Saber mais sobre o Raio-X"
     },
     "boost": {
@@ -137,7 +137,7 @@
       "priceNote": "+ IVA · 3 meses aconselhados",
       "cta": "Conhecer o plano"
     },
-    "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo. E o valor entra no projeto seguinte se decidires avançar."
+    "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo. E o valor entra no projeto seguinte se decidires avançar até 30 dias após a entrega."
   },
   "servicesPage": {
     "hero": {
@@ -175,7 +175,7 @@
       "items": [
         {
           "q": "Posso passar direto à Obra sem fazer Raio-X?",
-          "a": "Não. O Raio-X é a única etapa obrigatória do método Wavy. Trabalhamos assim porque vimos demasiados projetos a falhar por se construir sem diagnóstico. Sem perceber o que está partido e em que ordem corrigir, qualquer Obra ou Direção é construção no escuro. A boa notícia: se decidires avançar para a Obra ou para a Direção, o valor do Raio-X (desde 350€ + IVA) é 100% deduzido no projeto seguinte."
+          "a": "Não. O Raio-X é a única etapa obrigatória do método Wavy. Trabalhamos assim porque vimos demasiados projetos a falhar por se construir sem diagnóstico. Sem perceber o que está partido e em que ordem corrigir, qualquer Obra ou Direção é construção no escuro. A boa notícia: se decidires avançar para a Obra ou para a Direção, o valor do Raio-X (desde 350€ + IVA) é 100% deduzido no projeto seguinte, até 30 dias após a entrega."
         },
         {
           "q": "Quanto tempo demora a construção de um website?",
@@ -361,7 +361,7 @@
     "cta": {
       "explorerTitle": "Ainda a explorar?",
       "explorerSubtitle": "Faz o diagnóstico e descobre onde estás.",
-      "explorerDuration": "3 minutos",
+      "explorerDuration": "2 minutos",
       "explorerCta": "Saber onde estou",
         "quizNoscript": "Este teste precisa de JavaScript. Sem ele, podes falar connosco directamente:",
       "ctaCardTitle": "Já decidiste?",
@@ -766,11 +766,11 @@
     "items": [
       {
         "q": "O que é o Raio-X e porque tenho de começar por aí?",
-        "a": "O Raio-X é o diagnóstico estratégico inicial da Wavy. Analisamos toda a tua presença digital, website, redes sociais, SEO, comunicação e posicionamento, e entregamos um mapa claro do que está a funcionar, do que está partido e dos 5 problemas prioritários a corrigir no teu negócio. Começamos sempre aqui porque construir antes de diagnosticar é construir no escuro. Se decidires avançar para a Obra ou para a Direção, o valor do Raio-X é 100% deduzido no projeto seguinte."
+        "a": "O Raio-X é o diagnóstico estratégico inicial da Wavy. Analisamos toda a tua presença digital, website, redes sociais, SEO, comunicação e posicionamento, e entregamos um mapa claro do que está a funcionar, do que está partido e dos 5 problemas prioritários a corrigir no teu negócio. Começamos sempre aqui porque construir antes de diagnosticar é construir no escuro. Se decidires avançar para a Obra ou para a Direção até 30 dias após a entrega, o valor do Raio-X é 100% deduzido no projeto seguinte."
       },
       {
         "q": "Quanto custa trabalhar com a Wavy?",
-        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte. A Obra (identidade visual e/ou website) e A Direção (gestão contínua e SEO local) são orçamentadas individualmente após o Raio-X, em função do âmbito do teu projeto. A Direção tem um período mínimo aconselhável, não obrigatório, de 3 meses no plano base ou 6 meses nos planos avançados. Não negociamos preço para baixo, ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: transparência em cada decisão."
+        "a": "Depende do serviço. O Raio-X (diagnóstico estratégico) começa em 350€ + IVA e é deduzido no projeto seguinte, se avançares até 30 dias após a entrega. A Obra (identidade visual e/ou website) e A Direção (gestão contínua e SEO local) são orçamentadas individualmente após o Raio-X, em função do âmbito do teu projeto. A Direção tem um período mínimo aconselhável, não obrigatório, de 3 meses no plano base ou 6 meses nos planos avançados. Não negociamos preço para baixo, ajustamos sempre o âmbito do projeto à tua realidade. Princípio Wavy: transparência em cada decisão."
       },
       {
         "q": "Trabalham fora da Zona Oeste ou Grande Lisboa?",
@@ -778,7 +778,7 @@
       },
       {
         "q": "Quanto tempo demora a ver resultados com marketing digital?",
-        "a": "A resposta honesta: depende do ponto de partida e do canal. Em SEO local e gestão de redes sociais, os primeiros sinais surgem normalmente entre 60 a 90 dias, não como \"resultados explosivos\", mas como tração consistente. Conversões reais (vendas, contactos, agenda preenchida) começam tipicamente entre o 4º e o 6º mês. Quem promete resultados em 30 dias está a vender uma campanha pontual, não direção digital. Marketing digital sustentável demora, e é exatamente por isso que trabalhamos com compromissos mínimos de 3 a 6 meses."
+        "a": "A resposta honesta: depende do ponto de partida e do canal. Em SEO local e gestão de redes sociais, os primeiros sinais surgem normalmente entre 60 a 90 dias, não como \"resultados explosivos\", mas como tração consistente. Conversões reais (vendas, contactos, agenda preenchida) começam tipicamente entre o 4º e o 6º mês. Quem promete resultados em 30 dias está a vender uma campanha pontual, não direção digital. Marketing digital sustentável demora, e é exatamente por isso que aconselhamos períodos de 3 a 6 meses."
       },
       {
         "q": "Os vossos serviços têm fidelização obrigatória?",

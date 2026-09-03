@@ -21,6 +21,12 @@ const addsUrl = lang === 'en' ? 'https://addssolutions.com/en/' : 'https://addss
 // Sem variante por idioma: a plataforma troca para inglês por sessão, sem mudar de
 // URL (o botão "English" lá dentro), e /en/inicio dá 404. Ambos apontam para o mesmo.
 const livroReclamacoesUrl = 'https://www.livroreclamacoes.pt/inicio';
+
+// O ano estava escrito à mão no i18n ("© 2026 Wavy…"). A 1 de janeiro as 13
+// páginas passavam a mostrar um ano errado até alguém se lembrar — o sinal
+// clássico de um site abandonado. Calculado no build, que é quando o site é
+// gerado: um deploy novo em janeiro traz o ano certo sozinho.
+const direitos = i.footer.rights.replace('{ano}', String(new Date().getFullYear()));
 ---
 
 <footer class="bg-teal-deep text-cream">
@@ -96,7 +102,7 @@ const livroReclamacoesUrl = 'https://www.livroreclamacoes.pt/inicio';
 
     <!-- Bottom bar -->
     <div class="mt-16 pt-8 border-t border-cream/20 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
-      <p class="font-sans text-sm text-cream py-2">{i.footer.rights}</p>
+      <p class="font-sans text-sm text-cream py-2">{direitos}</p>
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
         <a
           href={lang === 'en' ? '/en/privacy' : '/privacidade'}
