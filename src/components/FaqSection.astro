@@ -93,6 +93,19 @@ const faqSchema = {
   </div>
 </section>
 
+<noscript>
+  <style is:global>
+    /* Sem JavaScript as respostas ficavam com `max-height: 0` e
+       `overflow: hidden` — ilegíveis. Ficam todas abertas, que é a única forma
+       de o conteúdo existir para quem não corre scripts. */
+    .faq-content {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    .faq-icon-wrapper { display: none !important; }
+  </style>
+</noscript>
+
 <script>
   document.querySelectorAll('.faq-toggle').forEach((btn) => {
     btn.addEventListener('click', () => {

@@ -10,6 +10,26 @@ const isEn = lang === 'en';
 const homePath = isEn ? '/en' : '/';
 const ctaHref = contactHref(isEn ? '/en/contacto' : '/contacto');
 
+// A 404 é pré-construída UMA vez. No build, Astro.url é /404, logo `lang` dá
+// sempre 'pt' e o ramo inglês abaixo nunca era alcançado: um visitante que
+// errasse um endereço em /en/ aterrava numa página em português, com os botões
+// de saída a levá-lo para a home portuguesa — um beco sem saída para quem não
+// percebe português.
+//
+// Não dá para resolver no build (é um ficheiro só para todas as rotas falhadas),
+// por isso as duas versões vão no HTML e um script curto troca-as quando o
+// endereço começa por /en. Sem JavaScript fica o português, como hoje.
+const EN = {
+  tag: 'Error 404',
+  heading: 'This page got lost in the waves.',
+  sub: 'The page you were looking for is not here. It might have moved, or the link you followed is no longer valid.',
+  ctaPrimary: 'Back to home',
+  ctaSecondary: 'Talk to Mariana',
+  or: 'Or write to',
+  home: '/en',
+  contact: '/en/contacto',
+};
+
 const copy = isEn
   ? {
       tag: 'Error 404',
@@ -41,35 +61,37 @@ const copy = isEn
     </span>
 
     <div class="relative text-center max-w-lg">
-      <p class="font-sans text-xs uppercase tracking-[0.3em] text-teal-dark mb-5">
+      <p class="font-sans text-xs uppercase tracking-[0.3em] text-teal-dark mb-5" data-en={EN.tag}>
         {copy.tag}
       </p>
       <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-teal-dark mb-5 leading-[1.1]">
-        {copy.heading}
+        <span data-en={EN.heading}>{copy.heading}</span>
       </h1>
       <p class="font-sans text-base md:text-lg text-muted mb-10 leading-relaxed">
-        {copy.sub}
+        <span data-en={EN.sub}>{copy.sub}</span>
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
         <a
           href={homePath}
+          data-en-href={EN.home}
           class="inline-flex items-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal text-white hover:bg-teal-deep transition-all duration-300 group"
         >
           <i class="ri-arrow-left-line transition-transform duration-200 group-hover:-translate-x-1"></i>
-          {copy.ctaPrimary}
+          <span data-en={EN.ctaPrimary}>{copy.ctaPrimary}</span>
         </a>
         <a
           href={ctaHref}
+          data-en-href={EN.contact}
           class="inline-flex items-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full border border-teal-deep/15 text-teal-dark hover:border-teal-deep hover:bg-teal-deep/5 transition-all duration-300"
         >
           <i class="ri-mail-line"></i>
-          {copy.ctaSecondary}
+          <span data-en={EN.ctaSecondary}>{copy.ctaSecondary}</span>
         </a>
       </div>
 
       <p class="font-serif italic text-sm text-muted/70 mt-10">
-        {isEn ? 'Or write to' : 'Ou escreve para'}
+        <span data-en={EN.or}>{isEn ? 'Or write to' : 'Ou escreve para'}</span>
         {' '}
         <a href={`mailto:${CONTACT_EMAIL}`} class="text-teal-deep hover:text-teal-dark transition-colors">
           {CONTACT_EMAIL}
@@ -77,4 +99,20 @@ const copy = isEn
       </p>
     </div>
   </main>
+
+  {/* Troca para inglês quando o endereço pedido está em /en. `is:inline` para
+      correr já, antes de a pessoa ler o texto errado. */}
+  <script is:inline>
+    (function () {
+      var p = location.pathname;
+      if (p !== '/en' && p.indexOf('/en/') !== 0) return;
+      document.documentElement.lang = 'en';
+      document.querySelectorAll('[data-en]').forEach(function (el) {
+        el.textContent = el.getAttribute('data-en');
+      });
+      document.querySelectorAll('[data-en-href]').forEach(function (el) {
+        el.setAttribute('href', el.getAttribute('data-en-href'));
+      });
+    })();
+  </script>
 </Layout>

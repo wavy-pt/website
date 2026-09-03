@@ -41,7 +41,28 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
             {f.title}
           </h2>
 
-          <form id="wavy-contact-form" class="flex flex-col gap-5" novalidate>
+          {/*
+              `action` e `method` existem para o caso de o JavaScript não correr.
+              Sem eles, o formulário fazia o que um form sem atributos faz por
+              omissão: um GET para a PRÓPRIA página. O resultado era o pior de
+              três mundos — a página recarregava e parecia ter enviado, nada era
+              enviado de facto, e o nome, o email e a mensagem ficavam escritos
+              no endereço do browser (histórico do computador e registos do
+              servidor). Com POST para a API os dados saem do endereço e a
+              mensagem chega mesmo.
+
+              Com JavaScript nada muda: o handler faz preventDefault().
+
+              Comentário em {/* */} e não em HTML: os comentários HTML são
+              servidos ao público, estes não.
+            */}
+            <form
+              id="wavy-contact-form"
+              class="flex flex-col gap-5"
+              action="/api/contact"
+              method="post"
+              novalidate
+            >
             <div>
               <label for="contact-name" class={labelClass}>{f.name}</label>
               <input id="contact-name" name="name" type="text" required class={inputClass} placeholder={f.namePlaceholder} />
@@ -72,6 +93,13 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
               {f.submit}
               <i class="ri-arrow-right-line" aria-hidden="true"></i>
             </button>
+
+            <noscript>
+              <p class="font-sans text-sm text-teal-dark bg-cream rounded-xl px-4 py-3">
+                {f.noscript}{' '}
+                <a href={`mailto:${email}`} class="underline underline-offset-2 font-medium">{email}</a>.
+              </p>
+            </noscript>
 
             <p data-form-status class="font-sans text-sm hidden" role="status" aria-live="polite"></p>
             <p class="font-sans text-xs text-muted">

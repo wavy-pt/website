@@ -363,6 +363,7 @@
       "explorerSubtitle": "Faz o diagnóstico e descobre onde estás.",
       "explorerDuration": "3 minutos",
       "explorerCta": "Saber onde estou",
+        "quizNoscript": "Este teste precisa de JavaScript. Sem ele, podes falar connosco directamente:",
       "ctaCardTitle": "Já decidiste?",
       "ctaCardDesc": "Marca uma conversa de 30 minutos.",
       "ctaCardButton": "Marcar uma conversa",
@@ -525,6 +526,7 @@
     },
     "ui": {
       "seeMore": "Ver caso completo",
+      "caseNoscript": "O detalhe completo deste caso precisa de JavaScript. Sem ele, escreve-nos e contamos-te tudo:",
       "close": "Fechar",
       "servicesLabel": "O que fizemos",
       "resultsLabel": "Resultados",
@@ -705,6 +707,7 @@
       "messagePlaceholder": "Conta-nos onde estás e o que procuras",
       "submit": "Enviar mensagem",
       "privacy": "Os teus dados são usados só para te responder. Não são vendidos nem cedidos a terceiros e não vais entrar em listas de email automáticas.",
+        "noscript": "O teu browser tem o JavaScript desativado. O formulário funciona à mesma, mas a confirmação aparece em texto simples. Se preferires, escreve directamente para",
       "sending": "A enviar…",
       "successTitle": "Mensagem enviada!",
       "success": "Obrigada! Lemos com atenção e respondemos em até 24h úteis.",

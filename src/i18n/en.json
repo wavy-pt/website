@@ -363,6 +363,7 @@
       "explorerSubtitle": "Take the diagnosis and discover where you stand.",
       "explorerDuration": "3 minutes",
       "explorerCta": "Know where I stand",
+        "quizNoscript": "This quiz needs JavaScript. Without it, you can talk to us directly:",
       "ctaCardTitle": "Made your decision?",
       "ctaCardDesc": "Book a 30-minute conversation.",
       "ctaCardButton": "Book a call",
@@ -525,6 +526,7 @@
     },
     "ui": {
       "seeMore": "View full case",
+      "caseNoscript": "The full detail of this case needs JavaScript. Without it, write to us and we will tell you everything:",
       "close": "Close",
       "servicesLabel": "What we did",
       "resultsLabel": "Results",
@@ -705,6 +707,7 @@
       "messagePlaceholder": "Tell us where you are and what you're looking for",
       "submit": "Send message",
       "privacy": "Your data is only used to reply to you. It is never sold or passed on to third parties, and you won't end up on automated email lists.",
+        "noscript": "Your browser has JavaScript disabled. The form still works, but the confirmation will appear as plain text. If you prefer, write directly to",
       "sending": "Sending…",
       "successTitle": "Message sent!",
       "success": "Thank you! We'll read it carefully and reply within 24 working hours.",
