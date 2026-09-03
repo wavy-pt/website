@@ -9,7 +9,6 @@ import marianaImage from '../../assets/IMG_7230.jpg';
 // Cards reais do leque dos casos
 import veraMainCard from '../../assets/cases/vera-main.jpg';
 import addsLogoCard from '../../assets/cases/adds-logo.png';
-import anaCamomilaCard from '../../assets/cases/ana-camomila.jpg';
 
 interface Props {
   lang: Lang;
@@ -23,7 +22,7 @@ const numCases = cp.items.length;
 const imageMap: Record<string, typeof bastidoresImage> = {
   'vera-main': veraMainCard,
   'adds-logo': addsLogoCard,
-  'ana-camomila': anaCamomilaCard,
+  // 'ana-camomila' fora de propósito — ver o comentário em CaseStudy.astro.
   bastidores: bastidoresImage,
   hero: heroImage,
   cta: ctaImage,

@@ -13,9 +13,6 @@ import addsLogo from '../../assets/cases/adds-logo.png';
 import addsPost1 from '../../assets/cases/adds-post-1.jpg';
 import addsPost2 from '../../assets/cases/adds-post-2.jpg';
 import addsWebsite from '../../assets/cases/adds-website.jpg';
-import anaCamomila from '../../assets/cases/ana-camomila.jpg';
-import anaGranola from '../../assets/cases/ana-granola.jpg';
-import anaAzeitonas from '../../assets/cases/ana-azeitonas.jpg';
 import veraLogoBa from '../../assets/cases/vera-logo-ba.jpg';
 import veraFeedBa from '../../assets/cases/vera-feed-ba.jpg';
 
@@ -39,15 +36,35 @@ const imageMap: Record<string, typeof bastidoresImage> = {
   'adds-post-1': addsPost1,
   'adds-post-2': addsPost2,
   'adds-website': addsWebsite,
-  'ana-camomila': anaCamomila,
-  'ana-granola': anaGranola,
-  'ana-azeitonas': anaAzeitonas,
+  // AS TRÊS IMAGENS DO 3.º CASO (a Ana) NÃO ESTÃO AQUI DE PROPÓSITO.
+  //
+  // O caso está em standby e a página só desenha os índices 0 e 1. Mas um
+  // `import` no topo do ficheiro faz o Astro publicar a imagem MESMO que nunca
+  // seja usada — as três estavam a ser servidas em wavy.pt/_astro/ana-*.jpg,
+  // 583 KB de fotografias de uma cliente que ainda não autorizou a publicação.
+  //
+  // Pior: como não passavam pelo <Image>, o Astro copiava-as EM BRUTO. As
+  // imagens usadas são convertidas para .webp, o que apaga os metadados; estas
+  // iam com o bloco XMP intacto — nome completo da Mariana e os identificadores
+  // do documento e da conta Canva dela. Eram os únicos 3 dos 123 ficheiros de
+  // imagem publicados com metadados.
+  //
+  // PARA PUBLICAR O CASO: repor os três `import` acima e estas três linhas.
+  // Ao passarem pelo <Image>, os metadados são removidos na conversão.
   // legados (fallback)
   bastidores: bastidoresImage,
   hero: heroImage,
   cta: ctaImage,
 };
 const img = imageMap[item.imageKey || 'bastidores'];
+// Sem isto, uma chave em falta dava um erro obscuro do <Image>. Acontece se o
+// 3.º caso for ligado sem repor os imports — ver o comentário no imageMap.
+if (!img) {
+  throw new Error(
+    `CaseStudy: sem imagem para a chave "${item.imageKey}" (índice ${index}). ` +
+      'Se é o 3.º caso a sair do standby, repor os imports ana-* e as entradas do imageMap.'
+  );
+}
 const detail = item.detail;
 const ui = cp.ui;
 // Galeria: com 2 imagens (ex.: antes/depois), mostra 2 colunas maiores; com 3+, mantém 3.
