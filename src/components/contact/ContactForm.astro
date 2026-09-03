@@ -102,7 +102,19 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
               </p>
             </noscript>
 
-            <p data-form-status class="font-sans text-sm hidden" role="status" aria-live="polite"></p>
+            {/* A região fica SEMPRE na árvore de acessibilidade, vazia quando não há
+              mensagem. Antes tinha `hidden` (display:none) e o texto era escrito
+              ANTES de a tirar — a mensagem era escrita num elemento que o leitor
+              de ecrã nem via, e a região "aparecia" já com conteúdo, o que muitos
+              leitores não anunciam. Tirar o `hidden` primeiro não bastava, e o
+              `empty:hidden` também não: qualquer `display:none` mantém a região
+              fora da árvore até ao instante em que aparece já com texto.
+
+              Fica sempre renderizada. Vazia tem altura zero, mas continuava a
+              contar para o `gap-5` do formulário — daí o `empty:-mt-5`, que
+              anula exatamente esses 20px enquanto não há mensagem. Custo visual
+              zero, medido. */}
+            <p data-form-status class="font-sans text-sm empty:-mt-5" role="status" aria-live="polite"></p>
             <p class="font-sans text-xs text-muted">
               {f.privacy}{' '}
               <a href={privacyHref} class="underline underline-offset-2 hover:text-teal-dark transition-colors">{privacyLabel}</a>.
@@ -116,7 +128,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
               <span class="success-ring absolute inset-0 rounded-full bg-teal/40" aria-hidden="true"></span>
               <i class="ri-check-line text-cream text-4xl relative" aria-hidden="true"></i>
             </div>
-            <h3 class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-2">{f.successTitle}</h3>
+            <h3 data-success-title tabindex="-1" class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-2 focus:outline-none">{f.successTitle}</h3>
             <p class="font-sans text-sm md:text-base text-muted leading-relaxed max-w-sm mb-7">{f.success}</p>
             <button
               type="button"
@@ -249,20 +261,26 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
 
     function setStatus(msg, color) {
       if (!statusEl) return;
-      statusEl.textContent = msg;
+      // Só o texto muda. A região já está na árvore de acessibilidade, que é o
+      // que faz o `aria-live` ser anunciado.
       statusEl.style.color = color;
-      statusEl.classList.remove('hidden');
+      statusEl.textContent = msg;
     }
     function clearStatus() {
       if (!statusEl) return;
       statusEl.textContent = '';
-      statusEl.classList.add('hidden');
     }
     function showSuccess() {
       if (formView) formView.classList.add('hidden');
       if (successView) {
         successView.classList.remove('hidden');
         successView.classList.add('flex');
+        // Sem isto o foco caía para o início da página: o botão de enviar ficava
+        // em display:none e quem usa leitor de ecrã não ouvia nada, sem saber se
+        // a mensagem tinha sido enviada. O rAF é preciso porque o elemento só é
+        // focável no frame seguinte ao deixar de estar oculto.
+        const titulo = successView.querySelector('[data-success-title]');
+        if (titulo) requestAnimationFrame(function () { titulo.focus(); });
       }
     }
     function showForm() {
