@@ -66,17 +66,17 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
             >
             <div>
               <label for="contact-name" class={labelClass}>{f.name}</label>
-              <input id="contact-name" name="name" type="text" required class={inputClass} placeholder={f.namePlaceholder} />
+              <input id="contact-name" name="name" type="text" autocomplete="name" required class={inputClass} placeholder={f.namePlaceholder} />
             </div>
 
             <div>
               <label for="contact-email" class={labelClass}>{f.email}</label>
-              <input id="contact-email" name="email" type="email" required class={inputClass} placeholder={f.emailPlaceholder} />
+              <input id="contact-email" name="email" type="email" autocomplete="email" required class={inputClass} placeholder={f.emailPlaceholder} />
             </div>
 
             <div>
               <label for="contact-business" class={labelClass}>{f.business}</label>
-              <input id="contact-business" name="business" type="text" class={inputClass} placeholder={f.businessPlaceholder} />
+              <input id="contact-business" name="business" type="text" autocomplete="organization" class={inputClass} placeholder={f.businessPlaceholder} />
             </div>
 
             <div>
