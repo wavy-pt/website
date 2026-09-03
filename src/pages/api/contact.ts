@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
+import { getSecret } from 'astro:env/server';
 
 // Rota renderizada no servidor (serverless na Vercel), não estática.
 export const prerender = false;
@@ -34,7 +35,16 @@ function escapeHtml(value: string): string {
 }
 
 export const POST: APIRoute = async ({ request }) => {
-  const apiKey = import.meta.env.RESEND_API_KEY || process.env.RESEND_API_KEY;
+  // `getSecret` lê a chave EM EXECUÇÃO. O que aqui estava antes,
+  // `import.meta.env.RESEND_API_KEY || process.env.RESEND_API_KEY`, era resolvido
+  // pelo compilador: colava o valor da chave dentro do ficheiro compilado e
+  // eliminava a alternativa por já não ser alcançável. Duas consequências: a
+  // chave ficava em texto simples no disco, e trocá-la na Vercel não tinha efeito
+  // sem um build novo — foi essa a razão real da avaria do formulário em junho,
+  // que só passou com o Redeploy. Não usar `process.env` sozinho: em `astro dev`
+  // essa variável não existe (o Astro só a popula durante o build) e o formulário
+  // deixava de funcionar em local. Medido nos dois ambientes.
+  const apiKey = getSecret('RESEND_API_KEY');
   if (!apiKey) {
     return json({ success: false, error: 'missing_key' }, 500);
   }
