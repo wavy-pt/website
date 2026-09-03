@@ -117,7 +117,7 @@ const services = [
               {data.tag}
             </span>
 
-            <p class="font-serif text-xl sm:text-2xl md:text-3xl italic font-medium mb-2 text-teal">
+            <p class="font-serif text-xl sm:text-2xl md:text-3xl italic font-medium mb-2 text-teal-deep">
               {data.scriptName}
             </p>
             <h3 class="font-serif text-[2.25rem] leading-[1.05] sm:text-5xl md:text-6xl font-medium mb-5 text-teal-dark md:leading-tight">
@@ -133,7 +133,7 @@ const services = [
             <div class="mt-auto">
               <a
                 href={`${getLocalizedPath('/servicos', lang)}#servico-${number}`}
-                class="inline-flex items-center gap-2 px-6 py-3 md:px-7 md:py-3.5 rounded-full bg-teal text-cream font-sans font-medium text-sm hover:bg-teal-deep transition-all duration-300 group"
+                class="inline-flex items-center gap-2 px-6 py-3 md:px-7 md:py-3.5 rounded-full bg-teal-deep text-cream font-sans font-medium text-sm hover:bg-teal-panel transition-all duration-300 group"
               >
                 {data.cta}
                 <i class="ri-arrow-right-line transition-transform duration-200 group-hover:translate-x-1"></i>
@@ -202,9 +202,19 @@ const services = [
     color: #F0EDE4;
   }
 
+  /* `visibility: hidden` além do `opacity: 0`.
+     Só com opacity, os cartões inativos continuavam a receber o foco do
+     teclado: quem navega com Tab passava por dois cartões completamente
+     transparentes e o anel de foco desaparecia do ecrã durante duas paragens
+     seguidas. Um leitor de ecrã lia os três ao mesmo tempo. O `visibility`
+     tira-os da ordem de tabulação e da árvore de acessibilidade, e como está
+     na lista de transições o desvanecimento continua igual. */
   .service-card {
-    transition: opacity 900ms cubic-bezier(0.4, 0, 0.2, 1), transform 900ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 900ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 900ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0s linear 900ms;
     opacity: 0;
+    visibility: hidden;
     transform: translateX(0);
     pointer-events: none;
     will-change: transform, opacity;
@@ -219,6 +229,9 @@ const services = [
   }
   .service-card.is-active {
     opacity: 1;
+    /* Sem atraso a entrar: fica visível já, e o desvanecimento faz o resto. */
+    visibility: visible;
+    transition-delay: 0s;
     transform: translateX(0);
     pointer-events: auto;
   }
