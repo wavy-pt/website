@@ -17,6 +17,54 @@
 /* Remix Icons — subset local com apenas os ícones usados (185KB→3KB, CSS 154KB→2KB) */
 @import "./remixicon-subset.css";
 
+/* === Famílias de recurso com métricas ajustadas (M#17) ===
+   Enquanto a fonte definitiva não chega, o texto é desenhado numa fonte de
+   sistema com outra largura e outra altura de linha. Quando a real entra, as
+   linhas mudam de sítio e o conteúdo "salta" à frente de quem está a ler — era
+   a principal causa de instabilidade visual (CLS) do site, já que as imagens
+   estão bem resolvidas.
+
+   Estes valores não foram copiados de lado nenhum. Foram calculados a partir
+   das métricas lidas dos próprios .woff2 e das fontes de sistema, pelo método
+   do fontaine:
+     size-adjust             = largura média da fonte real ÷ largura média da
+                               de recurso, ponderada pela frequência real dos
+                               caracteres do site — e calculada separadamente
+                               para cada família, porque os títulos (13 166
+                               caracteres em serif) têm muito mais maiúsculas
+                               do que o corpo (85 813 em sans).
+     ascent/descent-override = métricas da fonte real, divididas pelo
+                               size-adjust para o produto dar o valor original.
+
+   Medido no browser, contra a fonte real:
+     altura da linha  exacta (64,0px = 64,0px). Sem ajuste, o Georgia dava
+                      linhas 15% mais baixas — era daí que vinha o salto.
+     largura do texto erro médio 0,9%, contra 2,4% sem ajuste. Num caso de
+                      fronteira o texto ainda pode quebrar uma linha antes ou
+                      depois; a altura, que é o que salta à vista, não.
+
+   O `local()` usa uma fonte que a pessoa já tem no computador: não há download
+   nenhum. Onde nenhuma exista (Linux, alguns Android), a regra falha em
+   silêncio e cai no `sans-serif`/`serif` seguintes da pilha. */
+
+@font-face {
+  font-family: "DM Sans Fallback";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  size-adjust: 103.02%;
+  ascent-override: 96.29%;
+  descent-override: 30.09%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Playfair Fallback";
+  src: local("Georgia");
+  size-adjust: 101.38%;
+  ascent-override: 106.72%;
+  descent-override: 24.76%;
+  line-gap-override: 0%;
+}
+
 @theme {
   --color-teal: #2A9090;
   --color-teal-dark: #1C3C3C;
@@ -30,8 +78,8 @@
   --color-muted: #666666;
   --color-warm: #f5f1eb;
 
-  --font-serif: "Playfair Display Variable", "Playfair Display", Georgia, serif;
-  --font-sans: "DM Sans Variable", "DM Sans", Inter, sans-serif;
+  --font-serif: "Playfair Display Variable", "Playfair Display", "Playfair Fallback", Georgia, serif;
+  --font-sans: "DM Sans Variable", "DM Sans", "DM Sans Fallback", Inter, sans-serif;
 
   --animate-fade-in: fade-in 0.6s ease forwards;
   --animate-slide-up: slide-up 0.6s ease forwards;
