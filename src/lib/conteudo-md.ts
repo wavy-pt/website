@@ -248,11 +248,11 @@ export const secaoFaq = (
 /**
  * Como contactar e onde a Wavy está.
  *
- * USA `connect`, NÃO `options`. A secção `contactPage.options` existe no i18n
- * mas NENHUM componente a renderiza — é conteúdo morto. Publicá-la no .md
- * anunciava a agentes três "caminhos" que a página não mostra. Mesma armadilha
- * dos add-ons e do processo, removidos daqui pela mesma razão, e do 3.º caso em
- * standby: o i18n tem mais do que o site publica.
+ * USA `connect`. Houve uma `contactPage.options` que nenhum componente
+ * renderizava e que, se tivesse entrado aqui, anunciava a agentes de IA três
+ * "caminhos" que a página não mostra — foi apagada do i18n, com os add-ons e o
+ * processo, pela mesma razão. O 3.º caso em standby é o exemplo que fica: o
+ * i18n continua a ter mais do que o site publica.
  *
  * Regra ao acrescentar secções aqui: confirmar que o texto aparece mesmo no
  * HTML construído, não que a chave existe no i18n.
