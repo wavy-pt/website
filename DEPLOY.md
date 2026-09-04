@@ -36,7 +36,9 @@ No painel → **Settings → Environment Variables**:
 - Adicionar `PUBLIC_ENV` = `development` no scope **Preview**.
 
 O Vercel cria um deploy preview automático sempre que houver commit em `develop`.
-O URL é tipo `wavy-astro-git-develop-<conta>.vercel.app`.
+O URL é `wavy-git-develop-<conta>.vercel.app` — o prefixo é o nome ACTUAL do
+projeto na Vercel (`wavy`). Este documento dizia `wavy-astro-...`, do tempo em
+que o projeto tinha o nome antigo.
 
 ### 4. (Opcional) Domínio dedicado para o ambiente dev
 
