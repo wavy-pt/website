@@ -113,6 +113,36 @@ do painel — que é o único sítio onde os segredos devem viver.
 > utilizador clicar em **Aceitar** no banner de cookies (Consent Mode v2, estado
 > inicial "denied"). Em dev/preview não há analytics. Propriedade GA4: **Wavy**.
 
+> **Rate limit do formulário — a regra que existe e não estava escrita.**
+> Na Vercel, em *Firewall → Custom Rules*, há uma regra chamada
+> `Rate limit — formulário de contacto`:
+>
+> | | |
+> |---|---|
+> | Condição | Request Path **Equals** `/api/contact` |
+> | Algoritmo | Fixed Window |
+> | Janela | **600 segundos** (10 minutos) |
+> | Limite | **5 pedidos** |
+> | Chave | IP Address |
+> | Acção | Too Many Requests (**429**) |
+>
+> É por isto que um `429` no formulário NÃO é uma avaria: é a regra a funcionar.
+> A resposta traz `x-vercel-mitigated: deny` e o resto do site continua a 200 —
+> se alguma vez o formulário falhar, esse cabeçalho distingue o rate limit de um
+> erro a sério.
+>
+> Sendo *fixed window*, o contador reinicia no início de cada bloco de 10
+> minutos, não 10 minutos depois do último pedido. Na prática pode reabrir em
+> segundos.
+>
+> **Atenção ao testar:** um agente que corra na máquina do João sai do MESMO IP
+> que o browser dele e gasta a mesma quota — cinco pedidos de teste bastam para
+> lhe fechar o formulário. Aconteceu em 04/09/2026.
+>
+> O plano Hobby só permite **uma** regra de rate limit, e é esta. Foi por isso
+> que a regra para o `/_image` (achado M#40) nunca poderia ser criada sem passar
+> a Pro — além de ter sido descartada por decisão do João.
+
 > **Rotação da chave Resend (#99) — FEITA em 04/09/2026.** A chave original
 > nunca esteve no Git (verificado nos 115 commits do histórico), mas ficava em
 > texto simples dentro dos ficheiros de build no disco, porque o código a lia com
