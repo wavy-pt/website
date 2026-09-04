@@ -21,7 +21,7 @@ const services = [
   <div class="max-w-7xl mx-auto px-6 md:px-10">
     <!-- Header -->
     <div class="scroll-reveal mb-10 md:mb-12">
-      <p class="font-sans text-xs uppercase tracking-widest text-cream mb-3">
+      <p class="font-sans eyebrow text-cream mb-3">
         {i.services.label}
       </p>
       <div class="flex flex-col gap-4">
@@ -71,7 +71,7 @@ const services = [
                 {number}
               </span>
             </div>
-            <span class="step-label font-sans text-xs uppercase tracking-wider text-cream transition-colors duration-300 whitespace-nowrap">
+            <span class="step-label font-sans eyebrow text-cream transition-colors duration-300 whitespace-nowrap">
               {lang === 'en' ? shortEn : short}
             </span>
           </button>
@@ -97,7 +97,7 @@ const services = [
         <div
           data-card={number}
           class:list={[
-            'service-card absolute inset-0 bg-cream rounded-[24px] md:rounded-[32px] p-6 sm:p-8 md:p-12 overflow-hidden',
+            'service-card absolute inset-0 bg-cream rounded-card md:rounded-panel p-6 sm:p-8 md:p-12 overflow-hidden',
             idx === 0 ? 'is-active' : 'position-right',
           ]}
         >
@@ -113,7 +113,7 @@ const services = [
 
           <!-- Content -->
           <div class="relative flex flex-col min-h-[400px] md:min-h-[440px] max-w-2xl">
-            <span class="inline-flex self-start font-sans text-[11px] uppercase tracking-wider px-3 py-1.5 rounded-full mb-5 md:mb-6 bg-teal-deep text-cream">
+            <span class="inline-flex self-start font-sans eyebrow px-3 py-1.5 rounded-full mb-5 md:mb-6 bg-teal-deep text-cream">
               {data.tag}
             </span>
 

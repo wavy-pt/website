@@ -27,8 +27,8 @@ const ctaHref = CALENDLY_URL
   || `mailto:${email}?subject=${encodeURIComponent('Marcar conversa de 30 minutos')}`;
 
 const inputClass =
-  'w-full bg-offwhite border border-teal-deep/70 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted focus:border-teal-deep transition-colors';
-const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted mb-2';
+  'w-full bg-offwhite border border-teal-deep/70 rounded-inner px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted focus:border-teal-deep transition-colors';
+const labelClass = 'block font-sans eyebrow text-muted mb-2';
 ---
 
 <section class="bg-offwhite pb-14 md:pb-20">
@@ -36,7 +36,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
     <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-stretch">
       <!-- Formulário -->
       <div class="lg:col-span-7 flex flex-col">
-        <div class="bg-cream rounded-[28px] p-7 sm:p-9 md:p-10 flex-1">
+        <div class="bg-cream rounded-card p-7 sm:p-9 md:p-10 flex-1">
           <div data-form-view>
           <h2 class="font-serif text-2xl md:text-3xl font-medium text-teal-dark mb-7">
             {f.title}
@@ -96,7 +96,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
             </button>
 
             <noscript>
-              <p class="font-sans text-sm text-teal-dark bg-cream rounded-xl px-4 py-3">
+              <p class="font-sans text-sm text-teal-dark bg-cream rounded-inner px-4 py-3">
                 {f.noscript}{' '}
                 <a href={`mailto:${email}`} class="underline underline-offset-2 font-medium">{email}</a>.
               </p>
@@ -145,7 +145,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
       <!-- Lado direito: CTA + redes + email -->
       <div class="lg:col-span-5 flex flex-col gap-5">
         <!-- CTA: marcar conversa -->
-        <div class="bg-teal-panel rounded-[28px] p-7 md:p-8">
+        <div class="bg-teal-panel rounded-card p-7 md:p-8">
           <p class="font-serif italic text-cream text-sm mb-2">{cn.ctaContext}</p>
           <h3 class="font-serif text-xl md:text-2xl font-medium text-cream mb-3">{cn.ctaTitle}</h3>
           <p class="font-sans text-sm text-cream leading-relaxed mb-6">{cn.ctaDesc}</p>
@@ -161,7 +161,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
         </div>
 
         <!-- Redes sociais -->
-        <div class="bg-cream rounded-[28px] p-7 md:p-8">
+        <div class="bg-cream rounded-card p-7 md:p-8">
           <h3 class="font-serif text-xl font-medium text-teal-dark mb-1">{cn.socialTitle}</h3>
           <p class="font-sans text-sm text-muted leading-relaxed mb-5">{cn.socialDesc}</p>
           <div class="flex gap-3">
@@ -187,7 +187,7 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
         </div>
 
         <!-- Email -->
-        <div class="bg-cream rounded-[28px] p-7 md:p-8">
+        <div class="bg-cream rounded-card p-7 md:p-8">
           <h3 class="font-serif text-xl font-medium text-teal-dark mb-1">{cn.emailTitle}</h3>
           <p class="font-sans text-sm text-muted leading-relaxed mb-4">{cn.emailDesc}</p>
           <a

@@ -18,7 +18,7 @@ const icons = ['ri-question-mark', 'ri-sparkling-line', 'ri-flashlight-line'];
     <div class="scroll-reveal">
       <!-- Header -->
       <div class="mb-8 md:mb-10">
-        <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">{i.forWho.label}</p>
+        <p class="font-sans eyebrow text-teal-dark mb-3">{i.forWho.label}</p>
         <div class="flex flex-col gap-4">
           <h2 class="font-serif text-[2rem] sm:text-4xl md:text-5xl font-medium text-teal-dark leading-[1.15] max-w-3xl">
             {i.forWho.title}
@@ -33,9 +33,9 @@ const icons = ['ri-question-mark', 'ri-sparkling-line', 'ri-flashlight-line'];
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {cards.map((card, idx) => (
           <div
-            class="group relative bg-cream hover:bg-teal rounded-[24px] p-6 md:p-7 flex flex-col min-h-[260px] transition-all duration-500 hover:-translate-y-1"
+            class="group relative bg-cream hover:bg-teal rounded-card p-6 md:p-7 flex flex-col min-h-[260px] transition-all duration-500 hover:-translate-y-1"
           >
-            <span class="inline-flex self-start font-sans text-[11px] uppercase tracking-wider text-teal-dark/80 bg-offwhite border border-teal-deep/10 group-hover:text-offwhite group-hover:bg-teal-deep/30 group-hover:border-offwhite/20 px-3 py-1.5 rounded-full mb-5 transition-all duration-500">
+            <span class="inline-flex self-start font-sans eyebrow text-teal-dark/80 bg-offwhite border border-teal-deep/10 group-hover:text-offwhite group-hover:bg-teal-deep/30 group-hover:border-offwhite/20 px-3 py-1.5 rounded-full mb-5 transition-all duration-500">
               {card.pill}
             </span>
 

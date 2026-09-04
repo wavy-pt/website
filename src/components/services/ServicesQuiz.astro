@@ -36,7 +36,7 @@ const maxScore = q.questions.reduce(
   id="services-quiz"
   data-state="intro"
   data-max-score={maxScore}
-  class="services-quiz relative overflow-hidden rounded-[32px] bg-cream border border-teal-deep/10 shadow-[0_20px_60px_-24px_rgba(28,60,60,0.20)]"
+  class="services-quiz relative overflow-hidden rounded-panel bg-cream border border-teal-deep/10 shadow-[0_20px_60px_-24px_rgba(28,60,60,0.20)]"
 >
   <!-- Decorações subtis -->
   <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-teal/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
@@ -47,7 +47,7 @@ const maxScore = q.questions.reduce(
     <div class="quiz-panel quiz-intro">
       <div class="flex items-center justify-between gap-8">
         <div class="max-w-2xl">
-          <span class="inline-flex items-center gap-2 font-sans text-xs font-medium uppercase tracking-widest text-teal-dark bg-teal/10 px-4 py-2 rounded-full mb-6">
+          <span class="inline-flex items-center gap-2 font-sans font-medium eyebrow text-teal-dark bg-teal/10 px-4 py-2 rounded-full mb-6">
             <i class="ri-compass-3-line text-sm" aria-hidden="true"></i>
             {c.explorerDuration}
           </span>
@@ -90,7 +90,7 @@ const maxScore = q.questions.reduce(
           <span
             data-quiz-progress
             data-progress-template={q.progressTemplate}
-            class="font-sans text-xs uppercase tracking-widest text-teal-dark/80"
+            class="font-sans eyebrow text-teal-dark/80"
           ></span>
           <button
             type="button"
@@ -124,7 +124,7 @@ const maxScore = q.questions.reduce(
               <button
                 type="button"
                 data-score={opt.score}
-                class="group flex items-center justify-between gap-4 w-full text-left px-5 py-4 rounded-2xl border border-teal-deep/15 bg-white hover:border-teal hover:bg-teal/5 focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer"
+                class="group flex items-center justify-between gap-4 w-full text-left px-5 py-4 rounded-inner border border-teal-deep/15 bg-white hover:border-teal hover:bg-teal/5 focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer"
               >
                 <span class="font-sans text-sm sm:text-base text-teal-dark">
                   {opt.label}
@@ -141,7 +141,7 @@ const maxScore = q.questions.reduce(
 
     <!-- ============ RESULT ============ -->
     <div class="quiz-panel quiz-result max-w-2xl w-full mx-auto" data-tier="">
-      <p class="font-sans text-xs uppercase tracking-widest text-teal-dark/80 mb-6">
+      <p class="font-sans eyebrow text-teal-dark/80 mb-6">
         {q.resultLabel}
       </p>
 

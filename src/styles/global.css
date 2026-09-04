@@ -65,6 +65,22 @@
   line-gap-override: 0%;
 }
 
+/* A etiqueta em maiúsculas por cima de cada título — o elemento que dá ritmo
+   ao site inteiro. Estava escrita de 16 maneiras diferentes em 53 sítios: seis
+   valores de espaçamento (0,05 a 0,3em) e quatro tamanhos, com o
+   ServicesJourneyAlt sozinho a usar quatro combinações. O olho não identifica
+   o motivo, mas sente que as páginas não são da mesma família.
+
+   Só tamanho, espaçamento e maiúsculas. A cor e as margens continuam a ser
+   escolhidas caso a caso, porque variam com o fundo. */
+@layer components {
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+}
+
 @theme {
   --color-teal: #2A9090;
   --color-teal-dark: #1C3C3C;
@@ -77,11 +93,34 @@
   --color-offwhite: #FAFAF8;
   --color-muted: #666666;
   --color-warm: #f5f1eb;
+  /* Verde do logótipo. NÃO é o mesmo que o --color-teal dos botões e ligações:
+     o símbolo da marca tem o seu próprio, e vêem-se lado a lado na barra de
+     progresso de /servicos. Estava escrito à mão em 3 sítios com o comentário
+     "verde do logo Wavy" — agora tem nome, e a diferença é uma escolha e não
+     um valor solto que ninguém sabe de onde veio. */
+  --color-brand: #13979d;
   /* Vermelho das mensagens de erro do formulário. Estava escrito à mão em 4
      sítios do ContactForm; o valor não muda, passa só a ter nome. */
   --color-erro: #b3261e;
   /* Cinzento dos pontos do carrossel de /casos, idem. */
   --color-ponto: #c9d3cf;
+
+  /* Raios de canto — três degraus, um por nível de aninhamento.
+     Antes eram cinco valores soltos (12, 16, 24, 28 e 32px) e os cartões com o
+     MESMO fundo cream usavam os cinco. O CaseStudy usava 24 e 28 dentro do
+     mesmo ficheiro; o FaqSection, 24 e 32.
+
+     panel  secções inteiras e painéis grandes
+     card   os cartões — absorve os 15 que estavam a 28px
+     inner  o que vive DENTRO de um cartão (opções do quiz, cartões do
+            carrossel, campos do formulário, figuras dentro do modal)
+
+     ATENÇÃO: o --radius-panel está acoplado ao JavaScript do ServicesCtaBlock,
+     que desenha a moldura curva à volta do quiz com `RADIUS = 32 + GAP`. Mudar
+     este valor sem mudar aquele desalinha a linha. */
+  --radius-panel: 32px;
+  --radius-card: 24px;
+  --radius-inner: 16px;
 
   --font-serif: "Playfair Display Variable", "Playfair Display", "Playfair Fallback", Georgia, serif;
   --font-sans: "DM Sans Variable", "DM Sans", "DM Sans Fallback", Inter, sans-serif;

@@ -30,7 +30,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
   <div class="relative max-w-5xl mx-auto px-6 md:px-10">
     <!-- Section header (curto, faz ligação ao hero que já introduziu) -->
     <div class="scroll-reveal text-center mb-14 md:mb-20 max-w-2xl mx-auto">
-      <p class="font-sans text-xs uppercase tracking-widest text-teal-dark mb-3">
+      <p class="font-sans eyebrow text-teal-dark mb-3">
         {j.label}
       </p>
       <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-teal-dark leading-tight mb-4">
@@ -54,8 +54,8 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
         class="journey-timeline absolute left-6 md:left-10 top-6 bottom-0 pointer-events-none"
         aria-hidden="true"
       >
-        <div class="journey-track absolute inset-y-0 left-0 bg-[#13979d]/15 rounded-full"></div>
-        <div class="journey-fill absolute top-0 left-0 bg-[#13979d] rounded-full"></div>
+        <div class="journey-track absolute inset-y-0 left-0 bg-[var(--color-brand)]/15 rounded-full"></div>
+        <div class="journey-fill absolute top-0 left-0 bg-[var(--color-brand)] rounded-full"></div>
       </div>
 
       <!-- Items -->
@@ -74,11 +74,11 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
             </div>
 
             {/* Content card — ganha border teal + shadow maior + opacidade total quando em foco */}
-            <div class="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 border border-teal-deep/10 shadow-[0_4px_28px_-12px_rgba(28,60,60,0.10)] opacity-70 transition-all duration-500 ease-out group-data-[active=true]/journey:opacity-100 group-data-[active=true]/journey:border-teal/40 group-data-[active=true]/journey:shadow-[0_18px_50px_-12px_rgba(28,60,60,0.18)]">
+            <div class="bg-white rounded-card p-6 sm:p-8 md:p-10 border border-teal-deep/10 shadow-[0_4px_28px_-12px_rgba(28,60,60,0.10)] opacity-70 transition-all duration-500 ease-out group-data-[active=true]/journey:opacity-100 group-data-[active=true]/journey:border-teal/40 group-data-[active=true]/journey:shadow-[0_18px_50px_-12px_rgba(28,60,60,0.18)]">
               {/* Tag (pill — "Ponto de partida obrigatório" no Raio-X é o destaque suficiente) */}
               <div class="flex flex-wrap items-center gap-2 mb-5">
                 <span class:list={[
-                  'inline-flex font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] px-3 py-1.5 rounded-full',
+                  'inline-flex font-sans font-semibold eyebrow px-3 py-1.5 rounded-full',
                   s.tagHighlight
                     ? 'text-teal-dark bg-teal/15 border border-teal/30'
                     : 'text-muted bg-teal-deep/5 border border-teal-deep/10',
@@ -98,7 +98,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                 </h3>
 
                 {/* Tagline */}
-                <p class="font-sans text-sm uppercase tracking-wider text-muted mb-5">
+                <p class="font-sans eyebrow text-muted mb-5">
                   {s.tagline}
                 </p>
 
@@ -108,7 +108,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                 </p>
 
                 {/* O que recebes / inclui */}
-                <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal-deep mb-4">{s.deliverablesLabel}</p>
+                <p class="font-sans eyebrow text-teal-deep mb-4">{s.deliverablesLabel}</p>
                 <div class="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-6">
                   {s.deliverables.map((item) => (
                     <div class="flex items-start gap-3">
@@ -141,11 +141,11 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                 {/* 3 tipos (apenas A Obra) */}
                 {s.types.length > 0 && (
                   <div class="mb-8">
-                    <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal-deep mb-4">{s.typesLabel}</p>
+                    <p class="font-sans eyebrow text-teal-deep mb-4">{s.typesLabel}</p>
                     <div class="grid sm:grid-cols-2 gap-3">
                       {s.types.map((ty) => (
-                        <div class="bg-cream rounded-2xl p-4">
-                          <p class="font-sans text-[10px] uppercase tracking-wider text-teal-dark/80 mb-1.5 leading-snug">{ty.tag}</p>
+                        <div class="bg-cream rounded-inner p-4">
+                          <p class="font-sans eyebrow text-teal-dark/80 mb-1.5 leading-snug">{ty.tag}</p>
                           <p class="font-serif text-base font-medium text-teal-dark mb-1 leading-snug">{ty.name}</p>
                           <p class="font-sans text-xs text-muted leading-relaxed">{ty.desc}</p>
                         </div>
@@ -156,7 +156,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 
                 {/* Como funciona */}
                 <div class="mb-8">
-                  <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal-deep mb-4">{s.stepsLabel}</p>
+                  <p class="font-sans eyebrow text-teal-deep mb-4">{s.stepsLabel}</p>
                   <div class="flex flex-col gap-4">
                     {s.steps.map((st, i) => (
                       <div class="flex gap-4">
@@ -172,7 +172,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 
                 {/* Para quem é */}
                 <div class="mb-2">
-                  <p class="font-sans text-[11px] uppercase tracking-[0.18em] text-teal-deep mb-3">{s.forWhoLabel}</p>
+                  <p class="font-sans eyebrow text-teal-deep mb-3">{s.forWhoLabel}</p>
                   <p class="font-sans text-sm text-teal-dark/80 leading-relaxed mb-4 max-w-2xl">{s.forWhoIntro}</p>
                   <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2">
                     {s.forWhoCases.map((c) => (
@@ -191,7 +191,7 @@ const ctaUrl = schedulingHref(getLocalizedPath('/contacto', lang));
                 <div class="border-t border-teal-deep/10 pt-5 mt-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
                   <div>
                     <div class="flex items-baseline gap-2 flex-wrap">
-                      <span class="font-sans text-xs uppercase tracking-wider text-teal-dark/80">
+                      <span class="font-sans eyebrow text-teal-dark/80">
                         {s.priceLabel}
                       </span>
                       <span class="font-serif text-4xl sm:text-5xl font-medium text-teal-dark leading-none">

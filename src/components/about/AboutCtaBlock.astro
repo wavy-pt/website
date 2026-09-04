@@ -20,7 +20,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
     <div class="scroll-reveal">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5">
         <!-- Image card -->
-        <div class="lg:col-span-7 relative rounded-[28px] overflow-hidden min-h-[300px] sm:min-h-[360px] md:min-h-[460px]">
+        <div class="lg:col-span-7 relative rounded-card overflow-hidden min-h-[300px] sm:min-h-[360px] md:min-h-[460px]">
           <Image
             src={ctaImage}
             alt={i.imageAlt}
@@ -36,7 +36,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
         <!-- Right column -->
         <div class="lg:col-span-5 flex flex-col gap-4 md:gap-5">
           <!-- Text card + button "Agendar conversa" -->
-          <div class="flex-1 bg-cream rounded-[28px] shadow-[0_10px_30px_-14px_rgba(28,60,60,0.16)] p-6 sm:p-7 md:p-8 flex flex-col justify-between gap-6">
+          <div class="flex-1 bg-cream rounded-card shadow-[0_10px_30px_-14px_rgba(28,60,60,0.16)] p-6 sm:p-7 md:p-8 flex flex-col justify-between gap-6">
             <div>
               <h2 class="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-teal-dark leading-[1.1] mb-3 md:mb-4">
                 {i.headline}
@@ -61,9 +61,9 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
           <!-- Two cards: social + email -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
             <!-- Social card -->
-            <div class="bg-teal-deep rounded-[28px] p-6 sm:p-7 flex flex-col justify-between gap-5 min-h-[150px]">
+            <div class="bg-teal-deep rounded-card p-6 sm:p-7 flex flex-col justify-between gap-5 min-h-[150px]">
               <div>
-                <p class="font-sans text-xs uppercase tracking-[0.15em] text-cream mb-2">
+                <p class="font-sans eyebrow text-cream mb-2">
                   {i.socialLabel}
                 </p>
                 <p class="font-serif text-lg md:text-xl text-cream font-medium leading-snug">
@@ -93,9 +93,9 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
             </div>
 
             <!-- Email card -->
-            <div class="bg-teal-deep rounded-[28px] p-6 sm:p-7 flex flex-col justify-between gap-5 min-h-[150px]">
+            <div class="bg-teal-deep rounded-card p-6 sm:p-7 flex flex-col justify-between gap-5 min-h-[150px]">
               <div>
-                <p class="font-sans text-xs uppercase tracking-[0.15em] text-cream mb-2">
+                <p class="font-sans eyebrow text-cream mb-2">
                   {i.emailLabel}
                 </p>
                 <p class="font-serif text-lg md:text-xl text-cream font-medium leading-snug">

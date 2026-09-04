@@ -61,7 +61,7 @@ const serviceAlts = lang === 'en'
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
         <!-- Text -->
         <div>
-          <span class="inline-block font-sans text-xs font-medium uppercase tracking-widest text-teal-dark bg-teal/15 px-4 py-2 rounded-full mb-6">
+          <span class="inline-block font-sans font-medium eyebrow text-teal-dark bg-teal/15 px-4 py-2 rounded-full mb-6">
             {sp.hero.tag}
           </span>
           <h1 class="font-serif text-[2.5rem] leading-[1.05] sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-teal-dark mb-5 md:mb-6">
@@ -106,7 +106,7 @@ const serviceAlts = lang === 'en'
                 tabindex="0"
                 aria-label={`${service.number}, ${service.name}`}
                 class:list={[
-                  'services-deck-card absolute inset-0 rounded-[28px] bg-white flex flex-col overflow-hidden cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2',
+                  'services-deck-card absolute inset-0 rounded-card bg-white flex flex-col overflow-hidden cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2',
                   'shadow-[0_24px_60px_-16px_rgba(28,60,60,0.40)]',
                   'border border-teal-deep/10',
                 ]}
@@ -168,7 +168,7 @@ const serviceAlts = lang === 'en'
 
     <!-- Scroll indicator (mesmo da homepage) -->
     <div class="flex flex-col items-center pt-6 pb-4">
-      <p class="font-sans text-[11px] uppercase tracking-[0.2em] text-muted mb-2">{i.hero.scroll}</p>
+      <p class="font-sans eyebrow text-muted mb-2">{i.hero.scroll}</p>
       <div class="w-8 h-8 rounded-full border border-teal/30 flex items-center justify-center animate-scroll-hint">
         <i class="ri-arrow-down-line text-teal-deep text-sm" aria-hidden="true"></i>
       </div>

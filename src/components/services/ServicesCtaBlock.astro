@@ -41,7 +41,7 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
   <div class="max-w-7xl mx-auto px-6 md:px-10 mt-10 md:mt-14">
     <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
         <!-- Main CTA card (teal) -->
-        <div class="relative rounded-[28px] overflow-hidden min-h-[220px] bg-teal-deep">
+        <div class="relative rounded-card overflow-hidden min-h-[220px] bg-teal-deep">
           {/* alt vazio de propósito: é o FUNDO do cartão (absolute inset-0),
               com o texto da chamada à ação por cima. A informação está no
               texto; descrever a fotografia só acrescentaria ruído. */}
@@ -78,7 +78,7 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
         <!-- Social + email -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <!-- Social card -->
-          <div class="bg-cream rounded-[28px] p-5 md:p-6 flex flex-col justify-center">
+          <div class="bg-cream rounded-card p-5 md:p-6 flex flex-col justify-center">
             <p class="font-sans text-sm font-medium text-teal-dark mb-4">
               {i.socialLabel}
             </p>
@@ -107,7 +107,7 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
           <!-- Email card -->
           <a
             href={`mailto:${i.emailAddress}`}
-            class="bg-cream rounded-[28px] p-5 md:p-6 flex items-center gap-4 hover:bg-warm transition-all duration-300 group"
+            class="bg-cream rounded-card p-5 md:p-6 flex items-center gap-4 hover:bg-warm transition-all duration-300 group"
           >
             <div class="w-12 h-12 flex items-center justify-center rounded-full bg-teal/10 flex-shrink-0">
               <i class="ri-mail-send-line text-teal text-xl" aria-hidden="true"></i>
@@ -127,7 +127,7 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
 <style>
   /* Cor de todos os traços da moldura (verde do logo Wavy) */
   .quiz-frame [data-quiz-frame-svg] path {
-    stroke: #13979d;
+    stroke: var(--color-brand);
   }
 </style>
 
@@ -156,7 +156,7 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
     const PAD_BOTTOM = 16;
     const GAP = 8; // distância da linha à borda do card
     const ENTRY_TOP = -6; // cauda sobe um pouco para sobrepor o fim da linha da jornada
-    const RADIUS = 32 + GAP; // raio do card (rounded-[32px]) + gap
+    const RADIUS = 32 + GAP; // raio do card (rounded-panel) + gap
     const TAIL_PORTION = 0.3; // fração inicial do scroll dedicada à cauda
 
     // Linha da jornada: .journey-timeline guarda o --p; .journey-track é a
