@@ -120,7 +120,7 @@ const services = [
             <p class="font-serif text-xl sm:text-2xl md:text-3xl italic font-medium mb-2 text-teal-deep">
               {data.scriptName}
             </p>
-            <h3 class="font-serif text-[2.25rem] leading-[1.05] sm:text-5xl md:text-6xl font-medium mb-5 text-teal-dark md:leading-tight">
+            <h3 class="font-serif text-4xl leading-[1.05] sm:text-5xl md:text-6xl font-medium mb-5 text-teal-dark md:leading-tight">
               {data.name}
             </h3>
             <p class="font-sans text-base md:text-lg leading-relaxed mb-7 md:mb-8 text-teal-dark/80 max-w-xl">
@@ -210,22 +210,22 @@ const services = [
 
 <style>
   .step-btn.is-active .step-circle {
-    background-color: #F0EDE4; /* cream */
-    border-color: #F0EDE4;
+    background-color: var(--color-cream); /* cream */
+    border-color: var(--color-cream);
   }
   .step-btn.is-active .step-number {
-    color: #2A9090; /* teal */
+    color: var(--color-teal); /* teal */
   }
   .step-btn.is-active .step-label {
-    color: #F0EDE4; /* cream */
+    color: var(--color-cream); /* cream */
     font-weight: 500;
   }
   .step-btn:hover .step-circle {
-    border-color: #F0EDE4;
+    border-color: var(--color-cream);
   }
   .step-btn:hover .step-number,
   .step-btn:hover .step-label {
-    color: #F0EDE4;
+    color: var(--color-cream);
   }
 
   /* `visibility: hidden` além do `opacity: 0`.

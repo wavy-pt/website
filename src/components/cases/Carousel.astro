@@ -90,7 +90,7 @@ const single = images.length <= 1;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border-radius: 20px;
-    background: var(--color-cream, #f0ede4);
+    background: var(--color-cream, var(--color-cream));
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     box-shadow: 0 14px 40px -18px rgba(28, 60, 60, 0.45);
@@ -99,7 +99,7 @@ const single = images.length <= 1;
     display: none;
   }
   .vcarousel-viewport:focus-visible {
-    outline: 2px solid #2a9090;
+    outline: 2px solid var(--color-teal);
     outline-offset: 3px;
   }
   .vcarousel-slide {
@@ -117,7 +117,7 @@ const single = images.length <= 1;
     height: 40px;
     border-radius: 9999px;
     background: rgba(250, 250, 248, 0.92);
-    color: #1c3c3c;
+    color: var(--color-teal-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +147,7 @@ const single = images.length <= 1;
     font-family: var(--font-sans, sans-serif);
     font-size: 11px;
     letter-spacing: 0.05em;
-    color: #fafaf8;
+    color: var(--color-offwhite);
     background: rgba(28, 60, 60, 0.55);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -176,15 +176,15 @@ const single = images.length <= 1;
     width: 7px;
     height: 7px;
     border-radius: 9999px;
-    background: #c9d3cf;
+    background: var(--color-ponto);
     transition: width 0.25s ease, background 0.25s ease;
   }
   .vcarousel-dot[aria-current='true']::before {
     width: 18px;
-    background: #2a9090;
+    background: var(--color-teal);
   }
   .vcarousel-dot:focus-visible {
-    outline: 2px solid #2a9090;
+    outline: 2px solid var(--color-teal);
     outline-offset: 0;
   }
 

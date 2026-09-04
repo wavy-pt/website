@@ -308,19 +308,19 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
 
       // Validação no cliente com feedback (campos obrigatórios + formato do email).
       if (!name || !mail || !message) {
-        setStatus(txtRequired, '#b3261e');
+        setStatus(txtRequired, 'var(--color-erro)');
         const firstEmpty = !name ? nameEl : !mail ? emailEl : messageEl;
         if (firstEmpty) firstEmpty.focus();
         return;
       }
       const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
       if (!emailOk) {
-        setStatus(txtEmail, '#b3261e');
+        setStatus(txtEmail, 'var(--color-erro)');
         if (emailEl) emailEl.focus();
         return;
       }
 
-      setStatus(txtSending, '#666666');
+      setStatus(txtSending, 'var(--color-muted)');
       if (submitBtn) submitBtn.disabled = true;
 
       try {
@@ -333,10 +333,10 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
           form.reset();
           showSuccess();
         } else {
-          setStatus(txtError, '#b3261e');
+          setStatus(txtError, 'var(--color-erro)');
         }
       } catch (err) {
-        setStatus(txtError, '#b3261e');
+        setStatus(txtError, 'var(--color-erro)');
       }
 
       if (submitBtn) submitBtn.disabled = false;

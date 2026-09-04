@@ -77,6 +77,11 @@
   --color-offwhite: #FAFAF8;
   --color-muted: #666666;
   --color-warm: #f5f1eb;
+  /* Vermelho das mensagens de erro do formulário. Estava escrito à mão em 4
+     sítios do ContactForm; o valor não muda, passa só a ter nome. */
+  --color-erro: #b3261e;
+  /* Cinzento dos pontos do carrossel de /casos, idem. */
+  --color-ponto: #c9d3cf;
 
   --font-serif: "Playfair Display Variable", "Playfair Display", "Playfair Fallback", Georgia, serif;
   --font-sans: "DM Sans Variable", "DM Sans", "DM Sans Fallback", Inter, sans-serif;
