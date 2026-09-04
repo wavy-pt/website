@@ -566,7 +566,7 @@
             { "value": "+4.900", "label": "interações com conteúdos" },
             { "value": "Mais", "label": "casamentos (agenda a crescer)" }
           ],
-          "services": ["Rebranding de logótipo", "Direção editorial de Instagram", "Google Business Profile"],
+          "services": ["Raio-X estratégico", "Rebranding de logótipo", "Direção editorial de Instagram", "Google Business Profile"],
           "gallery": [
             { "imageKey": "vera-logo-ba", "caption": "Logótipo · antes e depois" },
             { "imageKey": "vera-feed-ba", "caption": "Feed de Instagram · antes e depois" }
@@ -605,7 +605,7 @@
             { "value": "Manual", "label": "de marca e aplicações" },
             { "value": "Em curso", "label": "produção mensal" }
           ],
-          "services": ["Identidade de raiz", "Manual de marca", "Estratégia de conteúdo", "Instagram + LinkedIn"],
+          "services": ["Raio-X estratégico", "Identidade de raiz", "Manual de marca", "Estratégia de conteúdo", "Instagram + LinkedIn"],
           "gallery": [
             { "imageKey": "adds-post-1", "caption": "Conteúdo · Instagram" },
             { "imageKey": "adds-post-2", "caption": "Conteúdo · Instagram" },
@@ -751,7 +751,7 @@
       {
         "quote": "Entreguei a presença digital da minha empresa à Wavy, redes sociais, website e comunicação. Só posso dizer: extraordinário. Exigência máxima, profissionalismo fora de série e um cuidado genuíno com cada detalhe. A Wavy não é só uma empresa, é o parceiro que qualquer negócio precisa para crescer no digital.",
         "author": "João Marques",
-        "role": "Fundador, Empresa Tecnológica"
+        "role": "Fundador, ADDS"
       }
     ],
     "stat1": "8",

@@ -63,7 +63,7 @@ export const GET: APIRoute = () => {
 
 > Direção e marketing digital para negócios com história, na Zona Oeste e Grande Lisboa. Estratégia, websites, redes sociais e SEO local — com rigor e sensibilidade humana.
 
-A Wavy é uma agência de direção e marketing digital fundada por Mariana Antunes. Trabalha com negócios já estabelecidos que procuram uma parceira para dirigir a sua transformação digital com método, não com sorte. O princípio é simples: estratégia antes de execução — a Wavy não vende "posts", vende direção. Atua na Zona Oeste e Grande Lisboa (Portugal), em português e inglês.
+A Wavy é o estúdio de direção e marketing digital de Mariana Antunes, apoiado por uma rede de especialistas. Acompanha negócios já estabelecidos que procuram uma parceira para dirigir a sua transformação digital com método, não com sorte. O princípio é simples: estratégia antes de execução — a Wavy não vende "posts", vende direção. Atua na Zona Oeste e Grande Lisboa (Portugal), em português e inglês.
 
 ## Serviços
 

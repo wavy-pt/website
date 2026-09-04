@@ -566,7 +566,7 @@
             { "value": "+4,900", "label": "content interactions" },
             { "value": "More", "label": "weddings (agenda growing)" }
           ],
-          "services": ["Logo rebranding", "Instagram editorial direction", "Google Business Profile"],
+          "services": ["Strategic X-Ray", "Logo rebranding", "Instagram editorial direction", "Google Business Profile"],
           "gallery": [
             { "imageKey": "vera-logo-ba", "caption": "Logo · before & after" },
             { "imageKey": "vera-feed-ba", "caption": "Instagram feed · before & after" }
@@ -605,7 +605,7 @@
             { "value": "Brand book", "label": "and applications" },
             { "value": "Ongoing", "label": "monthly production" }
           ],
-          "services": ["Identity from scratch", "Brand book", "Content strategy", "Instagram + LinkedIn"],
+          "services": ["Strategic X-Ray", "Identity from scratch", "Brand book", "Content strategy", "Instagram + LinkedIn"],
           "gallery": [
             { "imageKey": "adds-post-1", "caption": "Content · Instagram" },
             { "imageKey": "adds-post-2", "caption": "Content · Instagram" },
@@ -751,7 +751,7 @@
       {
         "quote": "I handed over my company's entire digital presence to Wavy, social media, website, and communications. All I can say is: extraordinary. The highest standards, exceptional professionalism, and genuine care for every detail. Wavy isn't just an agency, it's the partner every business needs to grow online.",
         "author": "João Marques",
-        "role": "Founder, Technology Company"
+        "role": "Founder, ADDS"
       }
     ],
     "stat1": "8",
