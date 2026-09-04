@@ -320,29 +320,6 @@
       ],
       "connector": "depois"
     },
-    "addons": {
-      "label": "complementares",
-      "title": "Add-ons disponíveis",
-      "subtitle": "Serviços adicionais que podes combinar com qualquer plano, quando fizerem sentido para o teu negócio.",
-      "items": [
-        { "name": "Captação de conteúdo", "desc": "Fotografia e vídeo profissional para redes sociais", "price": "A partir de 180€" },
-        { "name": "Auditoria Digital Express", "desc": "Análise rápida da presença atual com 5 a 7 recomendações.", "price": "100€" },
-        { "name": "Gestão de anúncios pagos", "desc": "Gestão e monitorização de anúncios: Meta Ads e Google Ads", "price": "A partir de 200€/mês + investimento" },
-        { "name": "Google Business Profile", "desc": "Configuração completa + otimização para SEO local", "price": "A partir de 170€" },
-        { "name": "Sessão de consultoria pontual", "desc": "60 minutos de estratégia e alinhamento", "price": "90€" }
-      ]
-    },
-    "process": {
-      "label": "processo",
-      "title": "Como trabalhamos juntas",
-      "subtitle": "Um processo simples, transparente e sem surpresas. Cada etapa é pensada para que te sintas acompanhada e segura.",
-      "steps": [
-        { "number": "01", "title": "Conversa", "desc": "Uma chamada de 30 minutos para nos conhecermos e perceber se faz sentido trabalharmos juntas." },
-        { "number": "02", "title": "Diagnóstico", "desc": "Análise detalhada do teu negócio, presença digital atual e objetivos." },
-        { "number": "03", "title": "Proposta", "desc": "Uma proposta à medida, clara e transparente, sem surpresas." },
-        { "number": "04", "title": "Início", "desc": "Começamos a trabalhar juntas, com acompanhamento próximo em cada etapa." }
-      ]
-    },
     "cta": {
       "explorerTitle": "Ainda a explorar?",
       "explorerSubtitle": "Faz o diagnóstico e descobre onde estás.",
@@ -672,33 +649,6 @@
       "label": "contacto",
       "title": "Vamos conversar?",
       "subtitle": "Antes de qualquer proposta, há sempre uma conversa. Escolhe o caminho mais confortável, não há resposta errada."
-    },
-    "options": {
-      "label": "três caminhos",
-      "card1": {
-        "icon": "ri-file-list-line",
-        "context": "se ainda estás a explorar",
-        "title": "Faz o autodiagnóstico",
-        "desc": "5 perguntas simples. No fim, descobres em que ponto está o teu negócio digital e qual o próximo passo que faz sentido.",
-        "cta": "Fazer o diagnóstico",
-        "time": "3 minutos"
-      },
-      "card2": {
-        "icon": "ri-calendar-check-line",
-        "context": "se já sabes o que queres",
-        "title": "Marca uma conversa",
-        "desc": "30 minutos em vídeo ou telefone. Vamos perceber onde estás, para onde queres ir, e se faz sentido avançarmos juntas.",
-        "cta": "Escolher horário",
-        "time": "30 minutos"
-      },
-      "card3": {
-        "icon": "ri-mail-send-line",
-        "context": "preferes escrever",
-        "title": "Manda-me uma mensagem",
-        "desc": "Conta-nos o teu negócio e o que procuras. Respondemos em até 24h úteis com total atenção.",
-        "cta": "Escrever mensagem",
-        "time": "Resposta em 24h"
-      }
     },
     "form": {
       "title": "Manda-nos uma mensagem",

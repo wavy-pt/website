@@ -320,29 +320,6 @@
       ],
       "connector": "then"
     },
-    "addons": {
-      "label": "add-ons",
-      "title": "Available add-ons",
-      "subtitle": "Additional services you can combine with any plan, whenever they make sense for your business.",
-      "items": [
-        { "name": "Content capture", "desc": "Professional photography and video for social media", "price": "From 180€" },
-        { "name": "Express Digital Audit", "desc": "Quick analysis of current presence with 5 to 7 recommendations.", "price": "100€" },
-        { "name": "Paid ads management", "desc": "Management and monitoring of ads: Meta Ads and Google Ads", "price": "From 200€/month + investment" },
-        { "name": "Google Business Profile", "desc": "Complete setup + local SEO optimisation", "price": "From 170€" },
-        { "name": "One-time consulting session", "desc": "60 minutes of strategy and alignment", "price": "90€" }
-      ]
-    },
-    "process": {
-      "label": "process",
-      "title": "How we work together",
-      "subtitle": "A simple, transparent process with no surprises. Every step is designed so you feel supported and safe.",
-      "steps": [
-        { "number": "01", "title": "Conversation", "desc": "A 30-minute call to get to know each other and see if working together makes sense." },
-        { "number": "02", "title": "Diagnosis", "desc": "Detailed analysis of your business, current digital presence and goals." },
-        { "number": "03", "title": "Proposal", "desc": "A tailored, clear and transparent proposal, with no surprises." },
-        { "number": "04", "title": "Start", "desc": "We start working together, with close support at every step." }
-      ]
-    },
     "cta": {
       "explorerTitle": "Still exploring?",
       "explorerSubtitle": "Take the diagnosis and discover where you stand.",
@@ -672,33 +649,6 @@
       "label": "contact",
       "title": "Let's talk?",
       "subtitle": "Before any proposal, there's always a conversation. Choose the path that feels most comfortable, there's no wrong answer."
-    },
-    "options": {
-      "label": "three paths",
-      "card1": {
-        "icon": "ri-file-list-line",
-        "context": "if you are still exploring",
-        "title": "Take the self-diagnosis",
-        "desc": "5 simple questions. At the end, you discover where your digital business stands and which next step makes the most sense.",
-        "cta": "Take the diagnosis",
-        "time": "3 minutes"
-      },
-      "card2": {
-        "icon": "ri-calendar-check-line",
-        "context": "if you already know what you want",
-        "title": "Book a conversation",
-        "desc": "30 minutes by video or phone. We will understand where you are, where you want to go, and if it makes sense to move forward together.",
-        "cta": "Choose a time",
-        "time": "30 minutes"
-      },
-      "card3": {
-        "icon": "ri-mail-send-line",
-        "context": "if you prefer to write",
-        "title": "Send us a message",
-        "desc": "Tell us about your business and what you are looking for. We reply within 24 working hours with full attention.",
-        "cta": "Write a message",
-        "time": "Reply in 24h"
-      }
     },
     "form": {
       "title": "Send us a message",
