@@ -184,6 +184,10 @@
         {
           "key": "Link",
           "value": "</index.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -193,6 +197,10 @@
         {
           "key": "Link",
           "value": "</servicos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -202,6 +210,10 @@
         {
           "key": "Link",
           "value": "</sobre.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -211,6 +223,10 @@
         {
           "key": "Link",
           "value": "</casos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -220,6 +236,10 @@
         {
           "key": "Link",
           "value": "</contacto.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -229,6 +249,10 @@
         {
           "key": "Link",
           "value": "</en.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -238,6 +262,10 @@
         {
           "key": "Link",
           "value": "</en/servicos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -247,6 +275,10 @@
         {
           "key": "Link",
           "value": "</en/sobre.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -256,6 +288,10 @@
         {
           "key": "Link",
           "value": "</en/casos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -265,6 +301,10 @@
         {
           "key": "Link",
           "value": "</en/contacto.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },

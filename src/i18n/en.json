@@ -572,8 +572,28 @@
             { "imageKey": "vera-feed-ba", "caption": "Instagram feed · before & after" }
           ],
           "carousels": [
-            { "key": "vera-carrossel-1", "label": "Instagram carousel 1" },
-            { "key": "vera-carrossel-2", "label": "Instagram carousel 2" }
+            {
+              "key": "vera-carrossel-1",
+              "label": "Instagram carousel 1",
+              "alts": [
+                "Carousel cover: a bride in a lace dress holding a white and green bouquet. Text in Portuguese: \"The colour of your bouquet says more about you than you think\".",
+                "\"A Livre Espírito\" bouquet: cream and peach roses with pampas grass, next to its colour palette.",
+                "\"A Minimalista\" bouquet: eucalyptus, baby’s breath and dried wheat, next to its colour palette.",
+                "\"A Radiante\" bouquet: sunflowers, white roses and blue accents, next to its colour palette.",
+                "\"A Romântica\" bouquet: white roses, lilac blooms and chamomile, next to its colour palette.",
+                "\"A Sofisticada\" bouquet: white hydrangeas and blue tulips, next to its colour palette.",
+                "Final slide, inviting readers to comment their favourite bouquet and tag a bride-to-be."
+              ]
+            },
+            {
+              "key": "vera-carrossel-2",
+              "label": "Instagram carousel 2",
+              "alts": [
+                "Carousel cover, in dusty pink. Text in Portuguese: \"No floral design starts with the flowers!\".",
+                "The wedding venue — a garden staircase set with ceremony chairs — and the inspiration moodboard.",
+                "The chosen colour palette (magenta, orange, yellow and blue) and the final result: the outdoor table set in those colours."
+              ]
+            }
           ]
         }
       },

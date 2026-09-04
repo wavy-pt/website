@@ -105,7 +105,7 @@ const isEven = index % 2 === 0;
                 class="w-full h-full object-cover object-center"
                 loading="lazy"
                 widths={[480, 720, 960, 1100]}
-width={1100}
+                width={1100}
                 sizes="(min-width: 1024px) 41vw, 100vw"
                 quality={82}
               />
@@ -243,7 +243,7 @@ width={1100}
                           class="w-full h-full object-cover object-center"
                           loading="lazy"
                           widths={[320, 480, 640]}
-width={640}
+                          width={640}
                           sizes="320px"
                           quality={78}
                         />
@@ -263,7 +263,7 @@ width={640}
                 {detail.carousels.map((c) => {
                   const imgs = carouselRegistry[c.key] || [];
                   if (!imgs.length) return null;
-                  return <Carousel images={imgs} lang={lang} label={c.label} />;
+                  return <Carousel images={imgs} lang={lang} label={c.label} alts={c.alts} />;
                 })}
               </div>
             </div>

@@ -9,9 +9,15 @@ interface Props {
   lang: Lang;
   /** rótulo acessível do carrossel (ex.: "Carrossel de Instagram 1") */
   label?: string;
+  /**
+   * Texto alternativo de cada slide, pela ordem das imagens. Estas peças têm
+   * texto embutido na própria imagem (o nome do bouquet, a paleta, a chamada
+   * à ação) — sem alt, quem não vê perde o conteúdo todo do carrossel.
+   */
+  alts?: string[];
 }
 
-const { images, lang, label } = Astro.props;
+const { images, lang, label, alts = [] } = Astro.props;
 const ui = t(lang).casesPage.ui;
 const single = images.length <= 1;
 ---
@@ -34,10 +40,10 @@ const single = images.length <= 1;
       >
         <Image
           src={img}
-          alt=""
+          alt={alts[i] ?? ''}
           class="w-full h-full object-cover"
           widths={[360, 540, 760]}
-width={760}
+          width={760}
           sizes="(min-width: 640px) 380px, 88vw"
           quality={80}
           loading="lazy"

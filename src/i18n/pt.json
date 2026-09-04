@@ -572,8 +572,28 @@
             { "imageKey": "vera-feed-ba", "caption": "Feed de Instagram · antes e depois" }
           ],
           "carousels": [
-            { "key": "vera-carrossel-1", "label": "Carrossel de Instagram 1" },
-            { "key": "vera-carrossel-2", "label": "Carrossel de Instagram 2" }
+            {
+              "key": "vera-carrossel-1",
+              "label": "Carrossel de Instagram 1",
+              "alts": [
+                "Capa do carrossel: noiva de vestido de renda com um bouquet branco e verde. Texto: «A cor do teu bouquet diz mais sobre ti do que pensas».",
+                "Bouquet «A Livre Espírito»: rosas creme e pêssego com pampas, ao lado da paleta de cores.",
+                "Bouquet «A Minimalista»: eucalipto, gipsófila e espigas secas, ao lado da paleta de cores.",
+                "Bouquet «A Radiante»: girassóis, rosas brancas e apontamentos azuis, ao lado da paleta de cores.",
+                "Bouquet «A Romântica»: rosas brancas, flores lilás e camomila, ao lado da paleta de cores.",
+                "Bouquet «A Sofisticada»: hortênsias brancas e tulipas azuis, ao lado da paleta de cores.",
+                "Último slide, a convidar a comentar o bouquet favorito e a marcar uma futura noiva."
+              ]
+            },
+            {
+              "key": "vera-carrossel-2",
+              "label": "Carrossel de Instagram 2",
+              "alts": [
+                "Capa do carrossel, em rosa velho: «Nenhuma decoração floral começa pelas flores!».",
+                "O espaço do casamento — uma escadaria de jardim com cadeiras para a cerimónia — e o moodboard de inspiração.",
+                "A paleta de cores escolhida (magenta, laranja, amarelo e azul) e o resultado final: a mesa posta ao ar livre nessas cores."
+              ]
+            }
           ]
         }
       },

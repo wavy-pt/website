@@ -32,6 +32,13 @@ interface Props {
    *   - `'light'`        → transparente, texto teal-deep (sobre imagem CLARA).
    */
   headerTransparent?: boolean | 'light';
+  /**
+   * Páginas que não devem entrar nos motores de busca (hoje: a 404).
+   * Além do noindex, deixam de declarar canonical e hreflang — uma página de
+   * erro não é a versão oficial de nada, e o par de idioma dela apontava para
+   * um endereço que também devolve erro.
+   */
+  semIndexacao?: boolean;
 }
 
 const lang = getLangFromUrl(Astro.url) as Lang;
@@ -45,6 +52,7 @@ const {
     : 'Direção digital para negócios com história, na Zona Oeste e Grande Lisboa. Estratégia, websites, redes sociais e SEO local com rigor e sensibilidade humana.',
   ogImage = '/og-image.jpg',
   headerTransparent = false,
+  semIndexacao = false,
 } = Astro.props;
 
 // Canonical / hreflang URLs (absolute when site is configured).
@@ -74,18 +82,28 @@ const ogLocaleAlt = lang === 'en' ? 'pt_PT' : 'en_US';
     <link rel="preload" as="font" type="font/woff2" href={dmSansUrl} crossorigin />
     <link rel="preload" as="font" type="font/woff2" href={playfairUrl} crossorigin />
 
-    {/* Robots */}
+    {/* Robots. `follow` mesmo nas páginas não indexáveis: a 404 tem links
+        úteis (home e contacto) e não há razão para os cortar. */}
     {isDev ? (
       <meta name="robots" content="noindex, nofollow" />
+    ) : semIndexacao ? (
+      <meta name="robots" content="noindex, follow" />
     ) : (
       <meta name="robots" content="index, follow, max-image-preview:large" />
     )}
 
-    {/* Canonical + hreflang */}
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="pt-PT" href={ptUrl} />
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="x-default" href={ptUrl} />
+    {/* Canonical + hreflang — omitidos nas páginas não indexáveis. A 404
+        declarava-se canónica de si própria e anunciava uma versão inglesa em
+        https://wavy.pt/en/404, que também devolve erro: era o único link
+        partido de todo o site. */}
+    {!semIndexacao && (
+      <>
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hreflang="pt-PT" href={ptUrl} />
+        <link rel="alternate" hreflang="en" href={enUrl} />
+        <link rel="alternate" hreflang="x-default" href={ptUrl} />
+      </>
+    )}
 
     {/* Open Graph */}
     <meta property="og:type" content="website" />

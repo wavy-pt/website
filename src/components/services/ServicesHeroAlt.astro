@@ -41,6 +41,18 @@ const schedulingUrl = schedulingHref(getLocalizedPath('/contacto', lang));
 
 // Imagens dos cards — ordem alinhada com j.services (Raio-X, Obra, Direção).
 const serviceImages = [imgRaioX, imgObra, imgDirecao];
+
+// As três fotos são de retrato profissional e não ilustram cada serviço — o
+// comentário no topo do ficheiro já as trata como placeholders. O alt descreve
+// o que se vê, sem fingir que a imagem representa o serviço e sem repetir o
+// nome que já está em texto ao lado.
+const serviceAlts = lang === 'en'
+  ? ['Mariana Antunes standing, holding an open laptop.',
+     'Mariana Antunes at a wooden desk, taking notes beside the laptop.',
+     'Mariana Antunes wearing headphones, working at the laptop.']
+  : ['Mariana Antunes de pé, com um portátil aberto nas mãos.',
+     'Mariana Antunes a uma secretária de madeira, a tomar notas ao lado do portátil.',
+     'Mariana Antunes de auscultadores, a trabalhar no portátil.'];
 ---
 
 <section class="relative bg-offwhite pt-16 md:pt-[72px] min-h-screen flex flex-col overflow-hidden">
@@ -103,10 +115,10 @@ const serviceImages = [imgRaioX, imgObra, imgDirecao];
                 <div class="relative flex-1 overflow-hidden bg-cream">
                   <Image
                     src={serviceImages[idx]}
-                    alt=""
+                    alt={serviceAlts[idx]}
                     class="w-full h-full object-cover"
                     widths={[320, 480, 640, 960]}
-width={960}
+                    width={960}
                     sizes="(min-width: 1024px) 480px, 60vw"
                     quality={80}
                     loading={idx === 0 ? 'eager' : 'lazy'}

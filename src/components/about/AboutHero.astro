@@ -76,6 +76,9 @@ const row2 = items.slice(5, 10);
   <!-- Cards no fundo, full-width, a ocupar o espaço restante -->
   <div class="flex-1 flex flex-col justify-center overflow-hidden py-8 md:py-12">
     <!-- Row 1: animate-marquee-left -->
+    {/* aria-hidden e alt vazio de propósito: os cartões estão duplicados para o
+        efeito de rolagem infinita, e descrevê-los faria um leitor de ecrã ouvir
+        a mesma coisa duas vezes. O conteúdo real da página está a seguir. */}
     <div aria-hidden="true" class="flex gap-4 md:gap-5 mb-3 md:mb-4 w-max animate-marquee-left">
       {[...row1, ...row1].map((item) => {
         const c = colorMap[item.cardColor || 'cream'];
@@ -84,7 +87,7 @@ const row2 = items.slice(5, 10);
           return (
             <div class="shrink-0 w-52 sm:w-60 md:w-72 lg:w-80 h-44 sm:h-48 md:h-52 lg:h-56 rounded-2xl overflow-hidden relative">
               <Image src={img} alt="" class="w-full h-full object-cover object-center" loading="lazy" widths={[320, 480, 640]}
-width={640} sizes="320px" quality={75} />
+              width={640} sizes="320px" quality={75} />
               <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" aria-hidden="true"></div>
             </div>
           );
@@ -124,7 +127,7 @@ width={640} sizes="320px" quality={75} />
           return (
             <div class="shrink-0 w-52 sm:w-60 md:w-72 lg:w-80 h-44 sm:h-48 md:h-52 lg:h-56 rounded-2xl overflow-hidden relative">
               <Image src={img} alt="" class="w-full h-full object-cover object-center" loading="lazy" widths={[320, 480, 640]}
-width={640} sizes="320px" quality={75} />
+              width={640} sizes="320px" quality={75} />
               <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" aria-hidden="true"></div>
             </div>
           );

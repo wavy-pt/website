@@ -42,13 +42,16 @@ const ctaHref = schedulingHref(getLocalizedPath('/contacto', lang));
     <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-2 gap-5 items-stretch">
         <!-- Main CTA card (teal) -->
         <div class="relative rounded-[28px] overflow-hidden min-h-[220px] bg-teal-deep">
+          {/* alt vazio de propósito: é o FUNDO do cartão (absolute inset-0),
+              com o texto da chamada à ação por cima. A informação está no
+              texto; descrever a fotografia só acrescentaria ruído. */}
           <Image
             src={bastidoresImage}
             alt=""
             class="absolute inset-0 w-full h-full object-cover object-center"
             loading="lazy"
             widths={[480, 640, 960, 1536]}
-width={1536}
+            width={1536}
             sizes="(min-width: 1024px) 50vw, 100vw"
             quality={75}
           />
