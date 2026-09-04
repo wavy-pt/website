@@ -76,7 +76,7 @@ const copy = isEn
         <a
           href={homePath}
           data-en-href={EN.home}
-          class="inline-flex items-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal text-white hover:bg-teal-deep transition-all duration-300 group"
+          class="inline-flex items-center gap-2 font-sans font-medium text-sm px-7 py-3.5 rounded-full bg-teal-deep text-white hover:bg-teal-dark transition-all duration-300 group"
         >
           <i class="ri-arrow-left-line transition-transform duration-200 group-hover:-translate-x-1" aria-hidden="true"></i>
           <span data-en={EN.ctaPrimary}>{copy.ctaPrimary}</span>
@@ -91,7 +91,7 @@ const copy = isEn
         </a>
       </div>
 
-      <p class="font-serif italic text-sm text-muted/70 mt-10">
+      <p class="font-serif italic text-sm text-muted mt-10">
         <span data-en={EN.or}>{isEn ? 'Or write to' : 'Ou escreve para'}</span>
         {' '}
         <a href={`mailto:${CONTACT_EMAIL}`} class="text-teal-deep hover:text-teal-dark transition-colors">

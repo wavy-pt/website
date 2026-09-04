@@ -27,7 +27,7 @@ const ctaHref = CALENDLY_URL
   || `mailto:${email}?subject=${encodeURIComponent('Marcar conversa de 30 minutos')}`;
 
 const inputClass =
-  'w-full bg-offwhite border border-teal-deep/10 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted/60 focus:outline-none focus:border-teal transition-colors';
+  'w-full bg-offwhite border border-teal-deep/70 rounded-xl px-5 py-3 font-sans text-sm text-teal-dark placeholder:text-muted focus:border-teal-deep transition-colors';
 const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted mb-2';
 ---
 
@@ -54,8 +54,8 @@ const labelClass = 'block font-sans text-xs uppercase tracking-wider text-muted 
 
               Com JavaScript nada muda: o handler faz preventDefault().
 
-              Comentário em {/* */} e não em HTML: os comentários HTML são
-              servidos ao público, estes não.
+              Escrito como comentário do Astro e não como comentário HTML: os
+              de HTML são servidos ao público, estes não.
             */}
             <form
               id="wavy-contact-form"
