@@ -113,12 +113,21 @@ do painel — que é o único sítio onde os segredos devem viver.
 > utilizador clicar em **Aceitar** no banner de cookies (Consent Mode v2, estado
 > inicial "denied"). Em dev/preview não há analytics. Propriedade GA4: **Wavy**.
 
-> **Rotação da chave Resend (#99):** auditámos o repositório — a chave **nunca
-> esteve no Git** (verificado em todo o histórico) e só vive no `.env` local
-> (gitignored) e na Vercel. Como foi partilhada durante o setup, a boa prática é,
-> ao configurar a produção, **gerar uma chave nova no Resend**, defini-la na
-> Vercel (`RESEND_API_KEY`) e **apagar a chave antiga** — assim a chave de
-> produção nunca foi exposta em lado nenhum.
+> **Rotação da chave Resend (#99) — FEITA em 04/09/2026.** A chave original
+> nunca esteve no Git (verificado nos 115 commits do histórico), mas ficava em
+> texto simples dentro dos ficheiros de build no disco, porque o código a lia com
+> `import.meta.env` e o compilador colava lá o valor. Foi essa a causa real da
+> avaria do formulário em junho: trocá-la na Vercel não tinha efeito sem um build
+> novo, e só o Redeploy resolvia.
+>
+> Hoje o código usa `getSecret('RESEND_API_KEY')` de `astro:env/server`, que lê em
+> execução — verificado que o pacote compilado tem ZERO chaves lá dentro. Chave
+> nova gerada, definida na Vercel (Production e Preview), reposta no `.env` local,
+> e a antiga apagada. Testado com envios reais dos dois lados depois de apagar.
+>
+> **Se voltar a ser preciso rodar:** gerar a nova no Resend, substituir na Vercel,
+> confirmar com um envio, actualizar o `.env` local, e só então apagar a antiga.
+> Nunca apagar antes de confirmar — e nunca commitar o `.env`.
 
 Notas:
 - `.env.development` é committed (default para `npm run dev` local = development).
