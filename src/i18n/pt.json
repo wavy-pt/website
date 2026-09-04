@@ -109,10 +109,6 @@
       "scriptName": "Diagnóstico Estratégico",
       "name": "O Raio-X",
       "desc": "Antes de qualquer proposta, analisamos o que está invisível. Recebes um mapa completo da tua presença digital, os 5 problemas prioritários e um plano de ação concreto para o teu negócio. Discutimos tudo numa conversa de 30 minutos.",
-      "price": "350€",
-      "priceLabel": "DESDE",
-      "pricePeriod": "",
-      "priceNote": "+ IVA · 100% deduzido no projeto seguinte (até 30 dias após a entrega)",
       "cta": "Saber mais sobre o Raio-X"
     },
     "boost": {
@@ -120,10 +116,6 @@
       "scriptName": "Website, Identidade e Estratégia",
       "name": "A Obra",
       "desc": "Construímos as fundações digitais que o teu negócio merece. Website ou loja online, identidade visual, estratégia de comunicação e setup completo, tudo planeado e executado pela mesma equipa, do início ao fim.",
-      "price": "1.500€",
-      "priceLabel": "A PARTIR DE",
-      "pricePeriod": "",
-      "priceNote": "+ IVA · orçamento após o Raio-X",
       "cta": "Ver o que inclui A Obra"
     },
     "flow": {
@@ -131,10 +123,6 @@
       "scriptName": "Gestão de Redes Sociais e SEO Local",
       "name": "A Direção",
       "desc": "Direção digital contínua para marcas com história que querem crescer sem perder o controlo. Estratégia mensal, criação e captação de conteúdo, gestão de canais, SEO local (Google e Maps) e relatórios claros. Na versão plena, funcionamos como a tua CMO externa.",
-      "price": "750€",
-      "priceLabel": "DESDE",
-      "pricePeriod": "/mês",
-      "priceNote": "+ IVA · 3 meses aconselhados",
       "cta": "Conhecer o plano"
     },
     "planLine": "Não sabes por onde começar? O Raio-X é sempre o primeiro passo. E o valor entra no projeto seguinte se decidires avançar até 30 dias após a entrega."
@@ -142,7 +130,8 @@
   "servicesPage": {
     "hero": {
       "tag": "Serviços Wavy",
-      "headline": "Três serviços. Um método. Uma direção.",
+      "headline": "Três serviços.",
+      "headlineHighlight": "Um método. Uma direção.",
       "subtitle": "Do diagnóstico estratégico à direção contínua. Cada fase resolve um problema específico, e prepara o terreno para a seguinte. Começamos sempre pelo Raio-X, porque construir antes de diagnosticar é construir no escuro."
     },
     "method": {
@@ -242,8 +231,7 @@
           "priceLabel": "DESDE",
           "pricePeriod": "",
           "priceNote": "+ IVA · 100% deduzível no projeto seguinte (até 30 dias após a entrega).",
-          "cta": "Marcar o meu Raio-X",
-          "icon": "ri-search-eye-line"
+          "cta": "Marcar o meu Raio-X"
         },
         {
           "number": "02",
@@ -288,8 +276,7 @@
           "priceLabel": "",
           "pricePeriod": "",
           "priceNote": "Cada Obra é orçamentada individualmente após o Raio-X, em função do âmbito acordado e do tipo de projeto escolhido. Pagamento em três tranches (40% início · 30% meio · 30% lançamento).",
-          "cta": "Marcar o Raio-X primeiro",
-          "icon": "ri-layout-4-line"
+          "cta": "Marcar o Raio-X primeiro"
         },
         {
           "number": "03",
@@ -328,11 +315,9 @@
           "priceLabel": "",
           "pricePeriod": "",
           "priceNote": "Cada Direção é orçamentada individualmente em função do âmbito acordado. Período mínimo aconselhável (não obrigatório): 3 meses no plano base ou 6 meses nos planos avançados. Pagamento mensal antecipado.",
-          "cta": "Conhecer o plano",
-          "icon": "ri-calendar-event-line"
+          "cta": "Conhecer o plano"
         }
       ],
-      "obligatoryBadge": "Obrigatório",
       "connector": "depois"
     },
     "addons": {

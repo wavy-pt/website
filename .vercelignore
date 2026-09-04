@@ -1,0 +1,6 @@
+# O .gitignore já trava estes ficheiros, e a Vercel constrói a partir do Git —
+# por isso o site publicado nunca os teve. Este ficheiro é o cinto a somar aos
+# suspensórios: se algum dia alguém publicar com `vercel --prod` a partir desta
+# pasta, o .DS_Store (que revela a lista de nomes de ficheiros de cada pasta)
+# continua a não subir.
+.DS_Store

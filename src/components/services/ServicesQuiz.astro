@@ -1,4 +1,5 @@
 ---
+import { CONTACT_EMAIL } from '../../lib/env';
 /**
  * Quiz de diagnóstico digital (full-width) na página /servicos.
  *
@@ -13,7 +14,6 @@
  */
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
-import { contactHref } from '../../lib/env';
 
 interface Props {
   lang: Lang;
@@ -23,7 +23,7 @@ const { lang } = Astro.props;
 const sp = t(lang).servicesPage;
 const c = sp.cta; // strings de intro reutilizadas (explorerTitle, etc.)
 const q = sp.quiz;
-const ctaHref = contactHref(getLocalizedPath('/contacto', lang));
+const ctaHref = getLocalizedPath('/contacto', lang);
 
 // Score máximo possível (soma do maior score de cada pergunta) → usado no JS
 const maxScore = q.questions.reduce(
@@ -68,7 +68,7 @@ const maxScore = q.questions.reduce(
           <noscript>
             <p class="font-sans text-sm text-muted mt-4">
               {c.quizNoscript}{' '}
-              <a href="mailto:geral@wavy.pt" class="text-teal-deep underline underline-offset-2">geral@wavy.pt</a>
+              <a href={`mailto:${CONTACT_EMAIL}`} class="text-teal-deep underline underline-offset-2">{CONTACT_EMAIL}</a>
             </p>
           </noscript>
         </div>
@@ -124,7 +124,7 @@ const maxScore = q.questions.reduce(
               <button
                 type="button"
                 data-score={opt.score}
-                class="quiz-option group flex items-center justify-between gap-4 w-full text-left px-5 py-4 rounded-2xl border border-teal-deep/15 bg-white hover:border-teal hover:bg-teal/5 focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer"
+                class="group flex items-center justify-between gap-4 w-full text-left px-5 py-4 rounded-2xl border border-teal-deep/15 bg-white hover:border-teal hover:bg-teal/5 focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer"
               >
                 <span class="font-sans text-sm sm:text-base text-teal-dark">
                   {opt.label}

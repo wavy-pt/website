@@ -109,10 +109,6 @@
       "scriptName": "Strategic Diagnosis",
       "name": "The X-Ray",
       "desc": "Before any proposal, we analyse what's invisible. You receive a complete map of your digital presence, the 5 priority issues to fix, and a concrete action plan for your business. We walk through everything in a 30-minute conversation.",
-      "price": "350€",
-      "priceLabel": "FROM",
-      "pricePeriod": "",
-      "priceNote": "+ VAT · fully credited to your next project (within 30 days of delivery)",
       "cta": "Learn more about the X-Ray"
     },
     "boost": {
@@ -120,10 +116,6 @@
       "scriptName": "Website, Identity and Strategy",
       "name": "The Build",
       "desc": "We build the digital foundations your business deserves. Website or online store, visual identity, communication strategy, and complete setup, all planned and executed by the same team, from start to finish.",
-      "price": "1,500€",
-      "priceLabel": "FROM",
-      "pricePeriod": "",
-      "priceNote": "+ VAT · custom quote after the X-Ray",
       "cta": "See what The Build includes"
     },
     "flow": {
@@ -131,10 +123,6 @@
       "scriptName": "Social Media Management and Local SEO",
       "name": "The Direction",
       "desc": "Ongoing digital direction for established brands that want to grow without losing control. Monthly strategy, content creation and capture, channel management, local SEO (Google and Maps), and clear reports. At full level, we operate as your external CMO.",
-      "price": "750€",
-      "priceLabel": "FROM",
-      "pricePeriod": "/month",
-      "priceNote": "+ VAT · 3 months recommended",
       "cta": "See the plan"
     },
     "planLine": "Not sure where to start? The X-Ray is always the first step. The cost rolls into your next project if you decide to move forward within 30 days of delivery."
@@ -142,7 +130,8 @@
   "servicesPage": {
     "hero": {
       "tag": "Wavy Services",
-      "headline": "Three services. One method. One direction.",
+      "headline": "Three services.",
+      "headlineHighlight": "One method. One direction.",
       "subtitle": "From strategic diagnosis to ongoing direction. Each phase solves a specific problem, and sets up the one after. We always start with the X-Ray, because building before diagnosing is building blind."
     },
     "method": {
@@ -242,8 +231,7 @@
           "priceLabel": "FROM",
           "pricePeriod": "",
           "priceNote": "+ VAT · 100% credited to your next project (within 30 days of delivery).",
-          "cta": "Book my X-Ray",
-          "icon": "ri-search-eye-line"
+          "cta": "Book my X-Ray"
         },
         {
           "number": "02",
@@ -288,8 +276,7 @@
           "priceLabel": "",
           "pricePeriod": "",
           "priceNote": "Each Build is quoted individually after the X-Ray, based on the agreed scope and the type of project chosen. Payment in three instalments (40% start · 30% midpoint · 30% launch).",
-          "cta": "Book the X-Ray first",
-          "icon": "ri-layout-4-line"
+          "cta": "Book the X-Ray first"
         },
         {
           "number": "03",
@@ -328,11 +315,9 @@
           "priceLabel": "",
           "pricePeriod": "",
           "priceNote": "Each Direction is quoted individually based on the agreed scope. Recommended (not mandatory) minimum of 3 months on the entry plan or 6 months on advanced plans. Monthly payment in advance.",
-          "cta": "Discover the plan",
-          "icon": "ri-calendar-event-line"
+          "cta": "Discover the plan"
         }
       ],
-      "obligatoryBadge": "Mandatory",
       "connector": "then"
     },
     "addons": {

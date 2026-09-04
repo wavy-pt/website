@@ -20,7 +20,7 @@
  * versão nas duas línguas.
  */
 import { t, getLocalizedPath } from '../i18n';
-import { INSTAGRAM_URL, FACEBOOK_URL } from '../lib/env';
+import { INSTAGRAM_URL, FACEBOOK_URL, CONTACT_EMAIL } from '../lib/env';
 import type { Lang } from '../i18n';
 
 interface Props {
@@ -60,7 +60,7 @@ const organization = {
     name: 'Mariana Antunes',
     jobTitle: en ? 'Founder and Director' : 'Fundadora e Diretora',
   },
-  email: 'geral@wavy.pt',
+  email: CONTACT_EMAIL,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Mafra',

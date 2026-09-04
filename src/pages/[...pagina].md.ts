@@ -60,7 +60,7 @@ const PAGINAS: Record<string, Def> = {
       ),
   },
   '/servicos': {
-    titulo: (s) => s.servicesPage.hero.headline,
+    titulo: (s) => juntar(s.servicesPage.hero.headline, s.servicesPage.hero.headlineHighlight),
     corpo: (s, l) =>
       bloco(
         s.servicesPage.hero.subtitle,

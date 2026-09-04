@@ -65,8 +65,8 @@ const serviceAlts = lang === 'en'
             {sp.hero.tag}
           </span>
           <h1 class="font-serif text-[2.5rem] leading-[1.05] sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-teal-dark mb-5 md:mb-6">
-            {lang === 'en' ? 'Three services.' : 'Três serviços.'}
-            <span class="block font-serif italic text-teal">{lang === 'en' ? 'One method. One direction.' : 'Um método. Uma direção.'}</span>
+            {sp.hero.headline}
+            <span class="block font-serif italic text-teal">{sp.hero.headlineHighlight}</span>
           </h1>
           <p class="font-sans text-base md:text-lg text-muted leading-relaxed mb-7 md:mb-8 max-w-lg">
             {sp.hero.subtitle}
@@ -151,7 +151,7 @@ const serviceAlts = lang === 'en'
                 type="button"
                 data-deck-dot={idx}
                 aria-label={lang === 'en' ? `View stage ${idx + 1}` : `Ver fase ${idx + 1}`}
-                class="services-deck-dot grid place-items-center h-6 w-6 rounded-full"
+                class="grid place-items-center h-6 w-6 rounded-full"
               >
                 <span
                   class:list={[

@@ -1,6 +1,6 @@
 ---
 import { t } from '../i18n';
-import { INSTAGRAM_URL, FACEBOOK_URL, REL_EXTERNO } from '../lib/env';
+import { INSTAGRAM_URL, FACEBOOK_URL, REL_EXTERNO, CONTACT_EMAIL } from '../lib/env';
 import type { Lang } from '../i18n';
 import { getNavLinks } from '../lib/nav';
 
@@ -58,8 +58,8 @@ const direitos = i.footer.rights.replace('{ano}', String(new Date().getFullYear(
             <i class="ri-facebook-line text-lg" aria-hidden="true"></i>
           </a>
           <a
-            href="mailto:geral@wavy.pt"
-            aria-label={lang === 'en' ? 'Email geral@wavy.pt' : 'Enviar email para geral@wavy.pt'}
+            href={`mailto:${CONTACT_EMAIL}`}
+            aria-label={lang === 'en' ? `Email ${CONTACT_EMAIL}` : `Enviar email para ${CONTACT_EMAIL}`}
             class="w-11 h-11 flex items-center justify-center rounded-full border border-cream/50 text-cream hover:text-cream hover:border-cream/80 transition-all duration-200"
           >
             <i class="ri-mail-line text-lg" aria-hidden="true"></i>
@@ -91,10 +91,10 @@ const direitos = i.footer.rights.replace('{ano}', String(new Date().getFullYear(
         </p>
         <div class="flex flex-col gap-1">
           <a
-            href="mailto:geral@wavy.pt"
+            href={`mailto:${CONTACT_EMAIL}`}
             class="font-sans text-sm text-cream hover:text-cream transition-colors duration-200 py-2 -my-1 inline-block"
           >
-            geral@wavy.pt
+            {CONTACT_EMAIL}
           </a>
         </div>
       </div>

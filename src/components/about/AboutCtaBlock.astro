@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { INSTAGRAM_URL, FACEBOOK_URL, REL_EXTERNO } from '../../lib/env';
+import { INSTAGRAM_URL, FACEBOOK_URL, REL_EXTERNO, CONTACT_EMAIL } from '../../lib/env';
 import { t, getLocalizedPath } from '../../i18n';
 import type { Lang } from '../../i18n';
 import ctaImage from '../../assets/CTA.jpg';
@@ -103,7 +103,7 @@ const contactHref = schedulingHref(getLocalizedPath('/contacto', lang));
                 </p>
               </div>
               <a
-                href="mailto:geral@wavy.pt"
+                href={`mailto:${CONTACT_EMAIL}`}
                 class="inline-flex items-center gap-2 font-sans font-medium text-sm text-cream hover:text-cream transition-colors"
               >
                 <i class="ri-mail-line text-base" aria-hidden="true"></i>

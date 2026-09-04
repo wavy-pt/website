@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 import { getSecret } from 'astro:env/server';
+import { CONTACT_EMAIL } from '../../lib/env';
 
 // Rota renderizada no servidor (serverless na Vercel), não estática.
 export const prerender = false;
@@ -22,7 +23,7 @@ export const prerender = false;
 // As devoluções NÃO dependem deste endereço: a Resend envia pelo envelope
 // `send.wavy.pt` (MX para o feedback-smtp da AWS), e é lá que ficam registadas.
 const FROM = 'Wavy <noreply@wavy.pt>';
-const TO = 'geral@wavy.pt';
+const TO = CONTACT_EMAIL;
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {

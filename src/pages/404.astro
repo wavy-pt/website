@@ -1,14 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getLangFromUrl, t } from '../i18n';
-import { contactHref, CONTACT_EMAIL } from '../lib/env';
+import { CONTACT_EMAIL } from '../lib/env';
 
 const lang = getLangFromUrl(Astro.url);
 const i = t(lang);
 const isEn = lang === 'en';
 
 const homePath = isEn ? '/en' : '/';
-const ctaHref = contactHref(isEn ? '/en/contacto' : '/contacto');
+const ctaHref = isEn ? '/en/contacto' : '/contacto';
 
 // A 404 é pré-construída UMA vez. No build, Astro.url é /404, logo `lang` dá
 // sempre 'pt' e o ramo inglês abaixo nunca era alcançado: um visitante que
