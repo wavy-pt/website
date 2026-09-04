@@ -248,7 +248,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</en.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+          "value": "</en.md>; rel=\"alternate\"; type=\"text/markdown\", </en/llms.txt>; rel=\"describedby\""
         },
         {
           "key": "Vary",
@@ -261,7 +261,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</en/servicos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+          "value": "</en/servicos.md>; rel=\"alternate\"; type=\"text/markdown\", </en/llms.txt>; rel=\"describedby\""
         },
         {
           "key": "Vary",
@@ -274,7 +274,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</en/sobre.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+          "value": "</en/sobre.md>; rel=\"alternate\"; type=\"text/markdown\", </en/llms.txt>; rel=\"describedby\""
         },
         {
           "key": "Vary",
@@ -287,7 +287,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</en/casos.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+          "value": "</en/casos.md>; rel=\"alternate\"; type=\"text/markdown\", </en/llms.txt>; rel=\"describedby\""
         },
         {
           "key": "Vary",
@@ -300,7 +300,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</en/contacto.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+          "value": "</en/contacto.md>; rel=\"alternate\"; type=\"text/markdown\", </en/llms.txt>; rel=\"describedby\""
         },
         {
           "key": "Vary",

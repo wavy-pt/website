@@ -108,7 +108,7 @@ export const getStaticPaths: GetStaticPaths = () => {
   // Link a apontar para um 404. Falha o build em vez de ficar em silêncio.
   let vercel: {
     redirects?: { destination?: string }[];
-    headers?: { headers?: { key: string; value: string }[] }[];
+    headers?: { source?: string; headers?: { key: string; value: string }[] }[];
   };
   try {
     vercel = JSON.parse(readFileSync('vercel.json', 'utf8'));
@@ -135,6 +135,22 @@ export const getStaticPaths: GetStaticPaths = () => {
     ...diff(esperados, nosHeaders).map((r) => `sem cabeçalho Link: ${r}`),
     ...diff(nosHeaders, esperados).map((r) => `Link a apontar para .md inexistente: ${r}`),
   ];
+  // Guarda 3 — cada rota tem de anunciar o índice do SEU idioma. As cinco
+  // páginas inglesas apontavam para o /llms.txt português, e um assistente a
+  // trabalhar em inglês encontrava os serviços com os nomes portugueses.
+  for (const bloco of vercel.headers ?? []) {
+    const link = (bloco.headers ?? []).find((h) => h.key.toLowerCase() === 'link');
+    if (!link) continue;
+    const declarado = link.value.match(/<([^>]*llms\.txt)>;\s*rel="describedby"/)?.[1];
+    if (!declarado) continue;
+    const esperado = bloco.source?.startsWith('/en') ? '/en/llms.txt' : '/llms.txt';
+    if (declarado !== esperado) {
+      problemas.push(
+        `${bloco.source} anuncia ${declarado} em rel="describedby"; devia ser ${esperado}`
+      );
+    }
+  }
+
   if (problemas.length) {
     throw new Error(`vercel.json divergente de ROTAS_MD:\n  - ${problemas.join('\n  - ')}`);
   }
