@@ -114,7 +114,12 @@ const copy = isEn
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
         s.dataset.ga = 'loaded';
         document.head.appendChild(s);
-        safeGtag('config', gaId, { anonymize_ip: true });
+        // Sem `anonymize_ip`: é um parâmetro do Universal Analytics que o GA4
+        // ignora (a documentação do Google di-lo). Dava a impressão de uma
+        // protecção que não vem daí — o que protege é o GA4 já não guardar o
+        // IP por omissão. Tirado para o código não prometer o que não faz,
+        // agora que a política passou a dizer "pseudonimizados".
+        safeGtag('config', gaId);
       }
 
       function setBannerState(state) {
@@ -129,6 +134,35 @@ const copy = isEn
         }
       }
 
+      // M#9 — o RGPD diz que retirar o consentimento tem de ser tão fácil como
+      // dá-lo. Não era: quem aceitava e depois se arrependia ficava com o
+      // identificador do Google no computador até dois anos. O sinal de
+      // consentimento mudava, os cookies ficavam.
+      function apagarCookiesDoGoogle() {
+        var nomes = [];
+        document.cookie.split(';').forEach(function (c) {
+          var nome = c.split('=')[0].trim();
+          if (/^_ga/.test(nome) || /^_gid$/.test(nome) || /^_gat/.test(nome)) nomes.push(nome);
+        });
+        if (!nomes.length) return;
+
+        // Um cookie só é apagado se acertarmos no par domínio+caminho com que
+        // foi escrito, e daqui não se sabe qual foi. O Google usa o domínio
+        // raiz (wavy.pt) com ponto inicial, mas em localhost e em preview é
+        // outro — por isso tenta-se toda a hierarquia, com e sem ponto.
+        var partes = location.hostname.split('.');
+        var dominios = [null];
+        for (var i = 0; i < partes.length - 1; i++) {
+          var d = partes.slice(i).join('.');
+          dominios.push(d, '.' + d);
+        }
+        nomes.forEach(function (nome) {
+          dominios.forEach(function (d) {
+            document.cookie = nome + '=; max-age=0; path=/' + (d ? '; domain=' + d : '');
+          });
+        });
+      }
+
       function applyConsent(value) {
         try {
           localStorage.setItem(STORAGE_KEY, value);
@@ -140,6 +174,7 @@ const copy = isEn
           loadGa();
         } else {
           safeGtag('consent', 'update', { analytics_storage: 'denied' });
+          apagarCookiesDoGoogle();
         }
         setBannerState('hidden');
       }
@@ -175,8 +210,31 @@ const copy = isEn
         // Expose a global helper so the footer can re-open the banner
         window.wavyOpenCookieSettings = function () {
           try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+          // Enquanto o banner está aberto à espera de nova escolha, o estado
+          // volta ao seguro. Antes, quem clicasse em "Gerir cookies" e fechasse
+          // o separador sem escolher continuava com o Analytics a correr nessa
+          // visita, como se não tivesse mexido em nada.
+          safeGtag('consent', 'update', { analytics_storage: 'denied' });
           setBannerState('visible');
         };
+
+        // OBS#6/26 — o "Gerir cookies" do rodapé era um <button> com onclick
+        // que, se esta função não existisse (Analytics não configurado, chave
+        // mal copiada, JavaScript desligado), não fazia absolutamente nada:
+        // sem erro, sem aviso, e é o botão que uma pessoa carrega quando está
+        // a tentar exercer um direito. Agora é um link para a política, que o
+        // script intercepta quando há mesmo banner para abrir. Falha para o
+        // lado seguro.
+        // Sem role="button": o elemento TEM destino real e continua a ser um
+        // link — o script só melhora a experiência abrindo o banner em vez de
+        // navegar. Anunciá-lo como botão obrigaria a responder também à barra
+        // de espaços, que os links não fazem, e ficava pior do que está.
+        document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.wavyOpenCookieSettings();
+          });
+        });
       }
 
       if (document.readyState === 'loading') {
